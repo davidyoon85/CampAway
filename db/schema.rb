@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 2019_03_26_203841) do
     t.string "username", null: false
     t.string "first_name", null: false
     t.string "last_name", null: false
-    t.string "email_address", null: false
     t.integer "zip_code", null: false
+    t.string "email_address", null: false
     t.string "password_digest", null: false
     t.string "session_token", null: false
     t.datetime "created_at", null: false
