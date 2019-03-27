@@ -6,7 +6,12 @@ class SessionForm extends React.Component {
         super(props);
         this.state = {
             username: "",
-            password: ""
+            first_name: "",
+            last_name: "",
+            zip_code: "",
+            email_address: "",
+            password: "",
+
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -38,7 +43,7 @@ class SessionForm extends React.Component {
     render() {
         return (
             <div>
-                <form onSubmit={() => this.handleSubmit(this.state)}>
+                <form onSubmit={this.handleSubmit}>
                 Please {this.props.formType}
                 {this.renderErrors()}
                 <div>
