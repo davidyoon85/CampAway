@@ -64,3 +64,21 @@
    text-transform: capitalize;
  }
 
+.form-text {
+        -moz-box-sizing:border-box;
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box;
+}
+
+input {
+    margin: auto 0;
+}
+
+button {
+    background-color: #40d9ac;
+    color: white;
+    border: 0px;
+    width: 70px;
+    height: 25px;
+    border-radius: 5px;
+}
