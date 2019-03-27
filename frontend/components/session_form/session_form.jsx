@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
@@ -18,7 +19,7 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        this.props.processForm(user).then(this.props.closeModal);
     }
 
     update(field) {
@@ -30,8 +31,8 @@ class SessionForm extends React.Component {
     renderErrors() {
         return (
             <ul>
-                {this.props.errors.map((error) => (
-                    <li>
+                {this.props.errors.map((error, i) => (
+                    <li key={`errors-${i}`}>
                         {error}
                     </li>
                 ))}
@@ -41,22 +42,25 @@ class SessionForm extends React.Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                Please {this.props.formType}
+            <div className="login-form-container">
+                <form onSubmit={this.handleSubmit} className="login-form-box">
+                Please {this.props.formType} or {this.props.otherForm}
+                <div onClick={this.props.closeModal} className="close-x">X</div>
                 {this.renderErrors()}
-                <div>
+                <div className="login-form">
                     <label>Email Address</label>
                     <input type="text" value={this.state.email_address}
                     onChange={this.update('email_address')}
+                    className="login-input"
                     />
                     <br/>
                     <label>Password</label>
                     <input type="password" value={this.state.password}
                     onChange={this.update('password')}
+                    className="login-input"
                     />
                     <br/>
-                    <input type="submit" value={this.props.formType}/>
+                    <input type="submit" value={this.props.formType} className="session-submit"/>
                 </div>
                 </form>
             </div>
@@ -64,4 +68,4 @@ class SessionForm extends React.Component {
     }
 }
 
-export default SessionForm;
+export default withRouter(SessionForm);
