@@ -58,6 +58,9 @@ class SessionForm extends React.Component {
                     className="session-submit" />
                     <br />
 
+                    <h1>or</h1>
+
+                    <br/>
                     <input type="text"
                     onChange={this.update('email_address')}
                     className="login-input"
@@ -75,16 +78,16 @@ class SessionForm extends React.Component {
                     value={this.props.formType} 
                     className="session-submit"/>
                     <br/>
-                    <div className="modal_footer">
+                    <div className="modal_footer1">
                         Don't have a CampAway account? 
                         &nbsp;
                         <span className="modal_signin">{this.props.otherForm}{`!`}</span>
-                </div>
+                    </div>
                 </div>
                 </form>
             </div>
         )
-        } else if (this.props.formType === 'Signup'){
+        } else if (this.props.formType === 'Sign up'){
             return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -94,17 +97,20 @@ class SessionForm extends React.Component {
                 <div onClick={this.props.closeModal} className="close-x">X</div>
                 {this.renderErrors()}
                 <div className="login-form">
-                    <input type="text"
+                <table>
+                    <td>
+                        <input type="text"
                     onChange={this.update('first_name')}
-                    className="login-input"
+                    id="login-input-beside"
                     placeholder="First name..."
-                    />
-                    <br/>
+                    /></td>
+                    <td>
                     <input type="text"
                     onChange={this.update('last_name')}
-                    className="login-input"
+                    id="login-input-beside"
                     placeholder="Last name..."
-                    />
+                    /></td>
+                </table>
                     <br/>
                     <input type="text"
                     onChange={this.update('zip_code')}
@@ -128,6 +134,9 @@ class SessionForm extends React.Component {
                     id="login_submit" 
                     type="submit"
                     className="session-submit"/>
+                    <div className="modal_footer2">
+                    By signing up, I agree to CampAway's<br/> terms and privacy policy.
+                    </div>
                 </div>
                 </form>
             </div>

@@ -62,16 +62,17 @@ time, mark, audio, video, button {
    padding: 10px;
    background: white;
    position: relative;
- }
-
- .close-x {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  cursor: pointer;
-}
-
- .login-form {
+  }
+  
+  .close-x {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+  }
+  
+  .login-form {
+   width: 330px;
    display: flex;
    justify-content: center;
    flex-direction: column;
@@ -79,6 +80,12 @@ time, mark, audio, video, button {
   }
   
   .login-input {
+    margin-left: 20px;
+    font-size: 10px;
+    margin: 0 auto;
+ }
+
+   .login-input-beside {
     margin-left: 20px;
     font-size: 10px;
     margin: 0 auto;
@@ -184,6 +191,13 @@ time, mark, audio, video, button {
     margin: 0 auto;
   }
 
+  input#login-input-beside:placeholder-shown {
+    width: 62%;
+    height: 38px;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
   input:placeholder-shown {
     width: 80%;
     height: 38px;
@@ -205,6 +219,7 @@ time, mark, audio, video, button {
     color: white;
     border: 0;
     background-color: #40d9ac;
+    margin-bottom: 18px;
   }
 
   input#login_submit_demo {
@@ -230,4 +245,10 @@ time, mark, audio, video, button {
 
   .modal_signin {
     font-weight: 700;
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  .modal_signin:hover {
+    border-bottom: 1px solid black;
+    cursor: pointer;
   }

@@ -13,3 +13,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.modal_footer1 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.modal_footer2 {
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin: 2px;
+}
