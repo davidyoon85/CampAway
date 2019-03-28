@@ -17,6 +17,7 @@
 
  img {
      height: 50px;
+     float: left;
  }
 
  a {
@@ -32,6 +33,7 @@
      /* font-family: 'Raleway', sans-serif; */
      font-family: "Calibre", Helvetica, Arial, sans-serif;
      font-size: 20px;
+      width: 100%;
  }
 
 .login-form-container {
@@ -39,11 +41,10 @@
    justify-content: center;
    text-align: center;
    font-size: 20px;
-   box-shadow: 0px 0px 5px 2px gray;
+   box-shadow: 0px 0px 7px 0px rgb(170, 169, 169);
  }
 
  .login-form-box {
-   outline: 1px solid black;
    padding: 50px;
    background: white;
    position: relative;
@@ -73,12 +74,6 @@
    text-transform: capitalize;
  }
 
-.form-text {
-        -moz-box-sizing:border-box;
-        -webkit-box-sizing:border-box;
-        box-sizing:border-box;
-}
-
 input {
     margin: auto 0;
 }
@@ -90,30 +85,7 @@ button {
     width: 70px;
     height: 25px;
     border-radius: 5px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-
-.header_img {
-  margin: left;
-  display: block
-}
-
-.header_title {
-  display: block;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.header_nav {
-  display: block;
-  font-size: 14px;
+    margin: 5px;
 }
 
 li {
@@ -129,4 +101,50 @@ h1 {
 .modal_session {
   display: flex;
   margin: right;
+}
+
+.main_nav {
+  display: flex;
+  align-items: row;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  font-size: 12px;
+}
+
+.user_session {
+  display: flex;
+  align-items: center;
+}
+
+big.title {
+  display: block;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  margin: 10px;
+  color: black;
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+}
+
+big.subtitle {
+  display: block;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+  margin: 10px;
+  color: #757575;
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
 }

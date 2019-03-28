@@ -14,3 +14,12 @@
     zip_code: 123456,
     email_address: 'david@yoon.com'
 }
+
+{
+    username: 'demo',
+    password: '123456',
+    first_name: 'Demo User',
+    last_name: 'demo',
+    zip_code: 123456,
+    email_address: 'demo@demo.com'
+}

@@ -8,28 +8,10 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     </head>
-    
     <body>  
-    <header>
-    <nav>
-      <div class="header">
-        <div class="header_img">
-          <%=image_tag "hipcamp_logo.jpg"%>
-        </div>
-        <div class="header_title">
-        Camp Away
-        </div>
-        <div class="header_nav">
-        <ul>
-          <li><a href="/">Camp</a></li>
-          <li><a href="/">Host</a></li>
-          <li><a href="/">Community</a></li>
-          <li><a href="/">Help</a></li>
-          <li></ul>
-        </div>
+    <div className="logo">
+      <%=image_tag"hipcamp_logo.jpg"%>
       </div>
-    </nav>
-    </header>
     <%= yield %>
   </body>
 </html>

@@ -7,14 +7,16 @@ import SignupFormContainer from './session_form/signup_form_container';
 import Modal from './modal/modal';
 
 const App = () => (
-    <div>    
+    <div className="main_nav">  
         <Modal />                
-        <header className="modal_session">
-            {/* <Link to='/'>
+            <div className="left">
+            <Link to='/'>
                 <h1>Camp Away</h1>
-            </Link> */}
+            </Link>
+            </div>
+            <div className="right">
             <GreetingContainer />
-        </header>
+            </div>
     </div>       
 );
 
