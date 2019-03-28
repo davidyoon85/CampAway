@@ -8,9 +8,7 @@ const Nav = () => (
     <div className="main_nav">
         <Modal />
         <div className="left">
-            <Link to='/'>
-                <h1>CampAway</h1>
-            </Link>
+                <h1>CAMP AWAY</h1>
         </div>
         <div className="right">
             <GreetingContainer />

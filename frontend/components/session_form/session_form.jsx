@@ -41,16 +41,23 @@ class SessionForm extends React.Component {
     }
 
     render() {
-        if (this.props.formType === 'Login'){
+        if (this.props.formType === 'Log in'){
             return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                <big className="title">Welcome Back!</big>
+                <big className="title">Welcome back!</big>
                 <big className="subtitle">It's about time for another camping trip</big>
 
                 <div onClick={this.props.closeModal} className="close-x">X</div>
                 {this.renderErrors()}
-                <div className="login-form">
+                    <div className="login-form">
+                    {/* <button onClick={() => login(demoUser)}>Demo<button> */}
+                    <input id="login_submit_demo"
+                    type="submit"
+                    value="Log in as Demo User"
+                    className="session-submit" />
+                    <br />
+
                     <input type="text"
                     onChange={this.update('email_address')}
                     className="login-input"
@@ -69,7 +76,9 @@ class SessionForm extends React.Component {
                     className="session-submit"/>
                     <br/>
                     <div className="modal_footer">
-                        Don't have a CampAway account? {this.props.otherForm}
+                        Don't have a CampAway account? 
+                        &nbsp;
+                        <span className="modal_signin">{this.props.otherForm}{`!`}</span>
                 </div>
                 </div>
                 </form>

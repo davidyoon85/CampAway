@@ -14,7 +14,9 @@ const Greeting = ({ currentUser, login, logout, openModal }) => {
     
     const personalGreeting = () => (
         <div>
-            <h2>Hi, {currentUser.first_name}!<button onClick={logout}>Log Out</button></h2>
+            <h2 id="greeting_text">Hi, {currentUser.first_name}!
+            &nbsp;&nbsp;
+            <button onClick={logout}>Log Out</button></h2>
         </div>
     )
 

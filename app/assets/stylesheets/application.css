@@ -27,7 +27,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, button {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -35,12 +35,6 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-
- img {
-     height: 50px;
-     float: left;
-     padding: 10px;
- }
 
  a {
      text-decoration: none;
@@ -53,8 +47,6 @@ time, mark, audio, video {
 
  body {
     font-family: "Calibre", Helvetica, Arial, sans-serif;
-    font-size: 25px;
-    font-weight: 600;
     width: 100%;
  }
 
@@ -100,14 +92,21 @@ time, mark, audio, video {
     margin: auto 0;
   }
 
-  button {
-    background-color: #40d9ac;
-    color: white;
-    border: 0px;
+  .user_session button {
+    display: inline-block;
+    color: #333331;
+    border-bottom: 1px solid #ebebeb;
     width: 70px;
     height: 25px;
-    border-radius: 5px;
-    margin: 5px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+    font-weight: 100px;
+  }
+
+  .user_session button:hover {
+    border-bottom: 1px solid black;
+    cursor: pointer;
   }
 
   li {
@@ -140,6 +139,9 @@ time, mark, audio, video {
     width: 80%;
     padding: 10px;
     padding-left: 18px;
+    font-size: 25px;
+    font-weight: 600;
+    font-weight: 700;
   }
 
   .right {
@@ -157,12 +159,13 @@ time, mark, audio, video {
 
   big.title {
     display: block;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 700;
     text-align: center;
     margin: 10px;
     color: black;
     font-family: "Calibre", Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
   }
 
   big.subtitle {
@@ -196,9 +199,35 @@ time, mark, audio, video {
   input#login_submit {
     vertical-align: middle;
     width: 91%;
-    height: 68px;
+    height: 65px;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 15px;
     color: white;
+    border: 0;
     background-color: #40d9ac;
+  }
+
+  input#login_submit_demo {
+    vertical-align: middle;
+    width: 91%;
+    height: 65px;
+    font-weight: 700;
+    font-size: 15px;
+    color: white;
+    border: 0;
+    background-color: #3b5998;
+  }
+
+  .splash_main {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #greeting_text {
+    padding: 5px;
+  }
+
+  .modal_signin {
+    font-weight: 700;
   }
