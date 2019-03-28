@@ -9,10 +9,10 @@ import Modal from './modal/modal';
 const App = () => (
     <div>    
         <Modal />                
-        <header>
-            <Link to='/'>
+        <header className="modal_session">
+            {/* <Link to='/'>
                 <h1>Camp Away</h1>
-            </Link>
+            </Link> */}
             <GreetingContainer />
         </header>
     </div>       
