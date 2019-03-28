@@ -1,5 +1,6 @@
 import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
+import { openModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
@@ -36,6 +37,12 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
+    processForm: (user) => dispatch(login(user)),
+    otherForm: (
+      <button onClick={() => dispatch(openModal('signup'))}>
+        Signup
+      </button>
+    ),
     closeModal: () => dispatch(closeModal())
   };
 };

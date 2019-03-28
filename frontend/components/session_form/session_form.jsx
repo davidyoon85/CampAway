@@ -51,26 +51,31 @@ class SessionForm extends React.Component {
                 <div onClick={this.props.closeModal} className="close-x">X</div>
                 {this.renderErrors()}
                 <div className="login-form">
-                    <label>Email Address</label>
                     <input type="text"
                     onChange={this.update('email_address')}
                     className="login-input"
                     placeholder="Email address"
                     />
                     <br/>
-                    <label>Password</label>
                     <input type="password"
                     onChange={this.update('password')}
                     className="login-input"
                     placeholder="Password"
                     />
                     <br/>
-                    <input type="submit" value={this.props.formType} className="session-submit"/>
+                    <input id="login_submit" 
+                    type="submit" 
+                    value={this.props.formType} 
+                    className="session-submit"/>
+                    <br/>
+                    <div className="modal_footer">
+                        Don't have a CampAway account? {this.props.otherForm}
+                </div>
                 </div>
                 </form>
             </div>
         )
-        } else {
+        } else if (this.props.formType === 'Signup'){
             return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -80,47 +85,45 @@ class SessionForm extends React.Component {
                 <div onClick={this.props.closeModal} className="close-x">X</div>
                 {this.renderErrors()}
                 <div className="login-form">
-                    <label>First Name</label>
                     <input type="text"
                     onChange={this.update('first_name')}
                     className="login-input"
-                    placeholder="First name"
+                    placeholder="First name..."
                     />
                     <br/>
-                    <label>Last Name</label>
                     <input type="text"
                     onChange={this.update('last_name')}
                     className="login-input"
-                    placeholder="Last name"
+                    placeholder="Last name..."
                     />
                     <br/>
-                    <label>Zip Code</label>
                     <input type="text"
                     onChange={this.update('zip_code')}
                     className="login-input"
-                    placeholder="Zip code"
+                    placeholder="Zip code..."
                     />
                     <br/>
-                    <label>Email Address</label>
                     <input type="text"
                     onChange={this.update('email_address')}
                     className="login-input"
-                    placeholder="Email address"
+                    placeholder="Email address..."
                     />
                     <br/>
-                    <label>Password</label>
                     <input type="password"
                     onChange={this.update('password')}
                     className="login-input"
-                    placeholder="Password"
+                    placeholder="Password..."
                     />
                     <br/>
-                    <input type="submit"
+                    <input 
+                    id="login_submit" 
+                    type="submit"
                     className="session-submit"/>
                 </div>
                 </form>
             </div>
-        )}
+        )
+        } 
     }
 }
 

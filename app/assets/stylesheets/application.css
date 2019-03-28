@@ -15,9 +15,31 @@
  *= require 'modal.css'
  */
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
  img {
      height: 50px;
      float: left;
+     padding: 10px;
  }
 
  a {
@@ -30,10 +52,10 @@
  }
 
  body {
-     /* font-family: 'Raleway', sans-serif; */
-     font-family: "Calibre", Helvetica, Arial, sans-serif;
-     font-size: 20px;
-      width: 100%;
+    font-family: "Calibre", Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    width: 100%;
  }
 
 .login-form-container {
@@ -45,7 +67,7 @@
  }
 
  .login-form-box {
-   padding: 50px;
+   padding: 10px;
    background: white;
    position: relative;
  }
@@ -74,11 +96,11 @@
    text-transform: capitalize;
  }
 
-input {
+  input {
     margin: auto 0;
-}
+  }
 
-button {
+  button {
     background-color: #40d9ac;
     color: white;
     border: 0px;
@@ -86,65 +108,97 @@ button {
     height: 25px;
     border-radius: 5px;
     margin: 5px;
-}
+  }
 
-li {
-  display: inline;
-  color: black;
-  margin: 10px;
-}
+  li {
+    display: inline;
+    color: black;
+    margin: 10px;
+  }
 
-h1 {
-  display: inline;
-}
+  h1 {
+    display: inline;
+  }
 
-.modal_session {
-  display: flex;
-  margin: right;
-}
+  .modal_session {
+    display: flex;
+    margin: right;
+  }
 
-.main_nav {
-  display: flex;
-  align-items: row;
-  justify-content: space-between;
-}
+  .main_nav {
+    display: flex;
+    align-items: row;
+    justify-content: space-between;
+    padding: 10px;
+    font-family: "Calibre", Helvetica, Arial, sans-serif;
+  }
 
-.left {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-}
+  .left {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 80%;
+    padding: 10px;
+    padding-left: 18px;
+  }
 
-.right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 20%;
-  font-size: 12px;
-}
+  .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    font-size: 12px;
+  }
 
-.user_session {
-  display: flex;
-  align-items: center;
-}
+  .user_session {
+    display: flex;
+    align-items: center;
+  }
 
-big.title {
-  display: block;
-  font-size: 25px;
-  font-weight: 700;
-  text-align: center;
-  margin: 10px;
-  color: black;
-  font-family: "Calibre", Helvetica, Arial, sans-serif;
-}
+  big.title {
+    display: block;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px;
+    color: black;
+    font-family: "Calibre", Helvetica, Arial, sans-serif;
+  }
 
-big.subtitle {
-  display: block;
-  font-size: 15px;
-  font-weight: 300;
-  text-align: center;
-  margin: 10px;
-  color: #757575;
-  font-family: "Calibre", Helvetica, Arial, sans-serif;
-}
+  big.subtitle {
+    display: block;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    margin: 10px;
+    color: #757575;
+    font-family: "Calibre", Helvetica, Arial, sans-serif;
+    margin-bottom: 35px;
+  }
+
+  input {
+    border: 1px solid black;
+    margin: 0 auto;
+  }
+
+  input:placeholder-shown {
+    width: 80%;
+    height: 38px;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  input::placeholder {
+    color: black;
+  }
+
+  input#login_submit {
+    vertical-align: middle;
+    width: 91%;
+    height: 68px;
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+    background-color: #40d9ac;
+  }
