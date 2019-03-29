@@ -55,3 +55,7 @@
 .social_link_li {
     margin-bottom: 10px;
 }
+
+a > i {
+    font-family: sans-serif;
+}

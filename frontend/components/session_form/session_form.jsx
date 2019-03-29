@@ -63,7 +63,7 @@ class SessionForm extends React.Component {
                 <big className="title">Welcome back!</big>
                 <big className="subtitle">It's about time for another camping trip</big>
 
-                <div onClick={this.props.closeModal} className="close-x">X</div>
+                <div onClick={this.props.closeModal} className="close-x"></div>
                 {this.renderErrors()}
                     <div className="login-form">
 
@@ -105,7 +105,7 @@ class SessionForm extends React.Component {
                     <big className="title">Join Camp Away</big>
                     <big className="subtitle">Discover the best camping near me</big>
 
-                <div onClick={this.props.closeModal} className="close-x">X</div>
+                <div onClick={this.props.closeModal} className="close-x"></div>
                 {this.renderErrors()}
                 <div className="login-form">
 
@@ -155,7 +155,7 @@ class SessionForm extends React.Component {
                     <br/>
 
                     <p></p>
-                    Already have a CampAway account?&nbsp;
+                    Already a CampAwayer?&nbsp;
                     <span className="modal_signin">{this.props.otherForm}{`!`} </span>
                     </div>
                 </div>
