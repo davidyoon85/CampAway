@@ -29,6 +29,7 @@
     color: white;
     margin: 30px;
     margin-left: 100px;
+    justify-content: right;
 }
 
 .foot_social_title {
@@ -43,4 +44,9 @@
     font-size: 12px;
     text-align: left;
     line-height: 1.8;
+}
+
+.social_link {
+    color: white;
+    font-size: 17px;
 }
