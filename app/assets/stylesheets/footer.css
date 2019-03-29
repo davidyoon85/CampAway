@@ -1,0 +1,46 @@
+.foot_div {
+    display: flex;
+    justify-content: center;
+}
+
+.foot_description {
+    width: 25%;
+    margin-top: 30px;
+    margin-left: 65px;
+
+}
+
+.foot_description_title {
+    color: #70539f;
+    font-size: 15px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.foot_description_text {
+    color: white;
+    font-size: 12px;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.foot_social {
+    width: 30%;
+    color: white;
+    margin: 30px;
+    margin-left: 100px;
+}
+
+.foot_social_title {
+    color: #70539f;
+    font-size: 15px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.foot_social_text {
+    color: white;
+    font-size: 12px;
+    text-align: left;
+    line-height: 1.8;
+}

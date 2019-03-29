@@ -53,13 +53,15 @@
       padding-left: 10px;
   }
 
-  .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #4A235A;  
-  text-align: center;
-  /* max-height: 400px; */
-  /* width: 100%; */
+  .foot_div {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    height: 350px;
+    width: 100%;
+    background-color: #4A235A;  
+    background-image: url("footer_img.png");
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    z-index: -1;
 }

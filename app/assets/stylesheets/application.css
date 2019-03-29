@@ -14,6 +14,7 @@
  *= require_self
  *= require 'modal.css'
  *= require 'splash.css'
+ *= require 'footer.css'
  */
 
 html, body, div, span, applet, object, iframe,
@@ -49,6 +50,7 @@ time, mark, audio, video, button {
  body {
     font-family: "Calibre", Helvetica, Arial, sans-serif;
     width: 100%;
+    -webkit-font-smoothing: antialiased;
  }
 
 .login-form-container {
