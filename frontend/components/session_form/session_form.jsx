@@ -14,7 +14,21 @@ class SessionForm extends React.Component {
 
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.loginDemo = this.loginDemo.bind(this);
     }
+
+    loginDemo(e) {
+        e.preventDefault();
+        this.setState({
+            password: '123456',
+            first_name: 'Guest',
+            last_name: 'demo',
+            zip_code: 123456,
+            email_address: 'demo@demo.com'}, () => {
+                const demoUser = Object.assign({}, this.state);
+                this.props.processForm(demoUser).then(this.props.closeModal);
+            });
+        }
 
     handleSubmit(e) {
         e.preventDefault();
@@ -42,23 +56,19 @@ class SessionForm extends React.Component {
 
     render() {
         if (this.props.formType === 'Log in'){
+
             return (
             <div className="login-form-container">
-                <form onSubmit={this.handleSubmit} className="login-form-box">
-                {/* <form className="login-form-box">                 */}
+                <form onSubmit={this.handleSubmit} className="login-form-box">             
                 <big className="title">Welcome back!</big>
                 <big className="subtitle">It's about time for another camping trip</big>
 
                 <div onClick={this.props.closeModal} className="close-x">X</div>
                 {this.renderErrors()}
                     <div className="login-form">
-                    <button onClick={() => this.props.otherForm}></button>
-                    <input id="login_submit_demo"
-                    type="submit"
-                    value="Log in as Demo User"
-                    className="session-submit" />
-                    <br />
 
+                    <button className="demo_button" onClick={this.loginDemo}>Log in as Guest</button>
+                    &nbsp;
                     <h1>or</h1>
 
                     <br/>
@@ -142,66 +152,16 @@ class SessionForm extends React.Component {
                     className="session-submit"/>
                     <div className="modal_footer2">
                     By signing up, I agree to CampAway's<br/> terms and privacy policy.
+                    <br/>
+
+                    <p></p>
+                    Already have a CampAway account?&nbsp;
+                    <span className="modal_signin">{this.props.otherForm}{`!`} </span>
                     </div>
                 </div>
                 </form>
             </div>
-        )
-        // } else if (this.props.formType === 'Demo'){
-        //     return (
-        //     <div className="login-form-container">
-        //         <form onSubmit={this.handleSubmit} className="login-form-box">
-        //             <big className="title">Join Camp Away</big>
-        //             <big className="subtitle">Discover the best camping near me</big>
-
-        //         <div onClick={this.props.closeModal} className="close-x">X</div>
-        //         {this.renderErrors()}
-        //         <div className="login-form">
-        //         <table>
-        //             <td>
-        //                 <input type="text"
-        //             onChange={this.update('first_name')}
-        //             id="login-input-beside"
-        //             placeholder="First name..."
-        //             /></td>
-        //             <td>
-        //             <input type="text"
-        //             onChange={this.update('last_name')}
-        //             id="login-input-beside"
-        //             placeholder="Last name..."
-        //             /></td>
-        //         </table>
-        //             <br/>
-        //             <input type="text"
-        //             onChange={this.update('zip_code')}
-        //             className="login-input"
-        //             placeholder="Zip code..."
-        //             />
-        //             <br/>
-        //             <input type="text"
-        //             onChange={this.update('email_address')}
-        //             className="login-input"
-        //             placeholder="Email address..."
-        //             />
-        //             <br/>
-        //             <input type="password"
-        //             onChange={this.update('password')}
-        //             className="login-input"
-        //             placeholder="Password..."
-        //             />
-        //             <br/>
-        //             <input 
-        //             id="login_submit" 
-        //             type="submit"
-        //             className="session-submit"/>
-        //             <div className="modal_footer2">
-        //             By signing up, I agree to CampAway's<br/> terms and privacy policy.
-        //             </div>
-        //         </div>
-        //         </form>
-        //     </div>
-        // )
-        }
+        )}
     }
 }
 

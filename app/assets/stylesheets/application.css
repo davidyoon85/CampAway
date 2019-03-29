@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  *= require 'modal.css'
+ *= require 'splash.css'
  */
 
 html, body, div, span, applet, object, iframe,
@@ -56,6 +57,7 @@ time, mark, audio, video, button {
    text-align: center;
    font-size: 20px;
    box-shadow: 0px 0px 7px 0px rgb(170, 169, 169);
+   padding-bottom: 10px;
  }
 
  .login-form-box {
@@ -77,6 +79,8 @@ time, mark, audio, video, button {
    justify-content: center;
    flex-direction: column;
    font-size: 12px;
+   color: #757575;
+   font-size: 17px;
   }
   
   .login-input {
@@ -248,3 +252,13 @@ time, mark, audio, video, button {
     padding: 5px;
   }
 
+.demo_button {
+  margin: 0 auto;
+  width: 90%;
+  height: 70px;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 15px;
+  background-color: #3b5998;
+  color: white;
+}

@@ -44,11 +44,22 @@
   }
 
   .modal_table1 {
-      width: 46%;
+      width: 48%;
       padding-right: 10px;
   }
 
   .modal_table2 {
-      width: 46%;
+      width: 48%;
       padding-left: 10px;
   }
+
+  .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #4A235A;  
+  text-align: center;
+  /* max-height: 400px; */
+  /* width: 100%; */
+}
