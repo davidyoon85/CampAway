@@ -41,11 +41,12 @@ time, mark, audio, video, button {
  a {
      text-decoration: none;
      color: black;
+     outline: none !important;
  }
 
- /* a:hover {
-   color: #C6AAE2;
- } */
+ button {
+   outline: none;
+ }
 
  body {
     font-family: "Calibre", Helvetica, Arial, sans-serif;
@@ -158,6 +159,8 @@ time, mark, audio, video, button {
   }
 
   .right {
+    padding: 0px;
+    margin: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -279,4 +282,33 @@ i:hover {
 
 #login_submit:hover {
  background-color: #39C39A;
+}
+
+.tent_logo {
+  border-radius: 50%;
+  height: 40px;
+}
+
+.nav_logged_in_right {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav_logged_in_logout {
+    display: inline-block;
+    color: #333331;
+    border-bottom: 1px solid #ebebeb;
+    width: 70px;
+    height: 25px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    font-weight: 100px;
+    margin-top: 8px;
+}
+
+.tent_logo {
+  padding: 0px;
+  margin: 0px;
+  margin-left: 20px;
 }

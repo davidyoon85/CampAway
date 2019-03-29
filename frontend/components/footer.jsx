@@ -14,22 +14,19 @@ const Footer = () => {
 
         <div className="foot_social">
             <div className="foot_social_title">
-                <ul>
-                    <li className="social_link_li">
+                    <div className="foot_description_title">
+                    Social
+                    </div>
+
+                    <div className="social_link_li">
                             <a href="https://github.com/davidyoon85" className="social_link"><i className="fab fa-github"> Github</i></a>
-                    </li>
-                    <li className="social_link_li">
-                            <a href="www.linkedin.com/in/davidyoon85" className="social_link"><i className="fab fa-linkedin"> Linkedin</i></a>
-                    </li>
-                    <li className="social_link_li">
-                            <a href="https://www.instagram.com/davidyoon85/" className="social_link"><i class="fab fa-instagram"> Instagram</i></a>
-                    </li>
-
-
-
-
-                        
-                </ul>
+                    </div>
+                    <div className="social_link_li">
+                            <a href="https://www.linkedin.com/in/davidyoon85" className="social_link"><i className="fab fa-linkedin"> Linkedin</i></a>
+                    </div>
+                    <div className="social_link_li">
+                            <a href="https://www.instagram.com/davidyoon85/" className="social_link"><i className="fab fa-instagram"> Instagram</i></a>
+                    </div>
             </div>
             <div className="foot_social_text">
                     

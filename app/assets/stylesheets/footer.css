@@ -4,32 +4,32 @@
 }
 
 .foot_description {
-    width: 25%;
+    width: 40%;
     margin-top: 30px;
-    margin-left: 65px;
-
+    /* margin-left: 65px; */
 }
 
 .foot_description_title {
     color: #70539f;
     font-size: 15px;
     text-align: left;
+    font-weight: 700;
     margin-bottom: 20px;
 }
 
 .foot_description_text {
+    font-family: "Helvetica, sans-serif";
     color: white;
-    font-size: 12px;
+    font-size: 13px;
     text-align: left;
     line-height: 1.8;
 }
 
 .foot_social {
-    width: 30%;
+    width: 40%;
     color: white;
     margin: 30px;
-    margin-left: 100px;
-    justify-content: right;
+    /* margin-left: 100px; */
 }
 
 .foot_social_title {
@@ -47,6 +47,11 @@
 }
 
 .social_link {
+    font-family: "Helvetica, sans-serif";
     color: white;
-    font-size: 17px;
+    font-size: 14px;
+}
+
+.social_link_li {
+    margin-bottom: 10px;
 }

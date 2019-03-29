@@ -11,10 +11,11 @@ const Greeting = ({ currentUser, logout, openModal }) => {
     );
     
     const personalGreeting = () => (
-        <div>
-            <h2 id="greeting_text">Hi, {currentUser.first_name}!
-            &nbsp;&nbsp;
-            <button onClick={logout}>Log Out</button></h2>
+        <div className="nav_logged_in">
+            <div className="nav_logged_in_right">
+                <button className="nav_logged_in_logout" onClick={logout}>Log Out</button>
+                <img className="tent_logo" src={window.footerURL}/>
+            </div>
         </div>
     )
 
