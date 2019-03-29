@@ -45,13 +45,14 @@ class SessionForm extends React.Component {
             return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
+                {/* <form className="login-form-box">                 */}
                 <big className="title">Welcome back!</big>
                 <big className="subtitle">It's about time for another camping trip</big>
 
                 <div onClick={this.props.closeModal} className="close-x">X</div>
                 {this.renderErrors()}
                     <div className="login-form">
-                    {/* <button onClick={() => login(demoUser)}>Demo<button> */}
+                    <button onClick={() => this.props.otherForm}></button>
                     <input id="login_submit_demo"
                     type="submit"
                     value="Log in as Demo User"
@@ -97,20 +98,25 @@ class SessionForm extends React.Component {
                 <div onClick={this.props.closeModal} className="close-x">X</div>
                 {this.renderErrors()}
                 <div className="login-form">
-                <table>
-                    <td>
+
+                <div className="modal_table">
+                    <div className="modal_table1">
                         <input type="text"
-                    onChange={this.update('first_name')}
-                    id="login-input-beside"
-                    placeholder="First name..."
-                    /></td>
-                    <td>
+                        onChange={this.update('first_name')}
+                        id="login-input-beside1"
+                        placeholder="First name..."
+                        />
+                    </div>
+
+                    <div className="modal_table2">
                     <input type="text"
                     onChange={this.update('last_name')}
-                    id="login-input-beside"
+                    id="login-input-beside2"
                     placeholder="Last name..."
-                    /></td>
-                </table>
+                    />
+                    </div>
+                </div>
+
                     <br/>
                     <input type="text"
                     onChange={this.update('zip_code')}
@@ -141,7 +147,61 @@ class SessionForm extends React.Component {
                 </form>
             </div>
         )
-        } 
+        // } else if (this.props.formType === 'Demo'){
+        //     return (
+        //     <div className="login-form-container">
+        //         <form onSubmit={this.handleSubmit} className="login-form-box">
+        //             <big className="title">Join Camp Away</big>
+        //             <big className="subtitle">Discover the best camping near me</big>
+
+        //         <div onClick={this.props.closeModal} className="close-x">X</div>
+        //         {this.renderErrors()}
+        //         <div className="login-form">
+        //         <table>
+        //             <td>
+        //                 <input type="text"
+        //             onChange={this.update('first_name')}
+        //             id="login-input-beside"
+        //             placeholder="First name..."
+        //             /></td>
+        //             <td>
+        //             <input type="text"
+        //             onChange={this.update('last_name')}
+        //             id="login-input-beside"
+        //             placeholder="Last name..."
+        //             /></td>
+        //         </table>
+        //             <br/>
+        //             <input type="text"
+        //             onChange={this.update('zip_code')}
+        //             className="login-input"
+        //             placeholder="Zip code..."
+        //             />
+        //             <br/>
+        //             <input type="text"
+        //             onChange={this.update('email_address')}
+        //             className="login-input"
+        //             placeholder="Email address..."
+        //             />
+        //             <br/>
+        //             <input type="password"
+        //             onChange={this.update('password')}
+        //             className="login-input"
+        //             placeholder="Password..."
+        //             />
+        //             <br/>
+        //             <input 
+        //             id="login_submit" 
+        //             type="submit"
+        //             className="session-submit"/>
+        //             <div className="modal_footer2">
+        //             By signing up, I agree to CampAway's<br/> terms and privacy policy.
+        //             </div>
+        //         </div>
+        //         </form>
+        //     </div>
+        // )
+        }
     }
 }
 

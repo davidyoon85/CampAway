@@ -81,7 +81,7 @@ time, mark, audio, video, button {
   
   .login-input {
     margin-left: 20px;
-    font-size: 10px;
+    font-size: 15px;
     margin: 0 auto;
  }
 
@@ -189,14 +189,19 @@ time, mark, audio, video, button {
   input {
     border: 1px solid black;
     margin: 0 auto;
-  }
-
-  input#login-input-beside:placeholder-shown {
-    width: 62%;
+    width: 80%;
     height: 38px;
     font-weight: 700;
     font-size: 16px;
+    padding: 15px;
   }
+
+  input#login-input-beside2:placeholder-shown {
+    width: 100px;
+    height: 38px;
+    font-weight: 700;
+    font-size: 16px;
+  } */
 
   input:placeholder-shown {
     width: 80%;
@@ -243,12 +248,3 @@ time, mark, audio, video, button {
     padding: 5px;
   }
 
-  .modal_signin {
-    font-weight: 700;
-    border-bottom: 1px solid #ebebeb;
-  }
-
-  .modal_signin:hover {
-    border-bottom: 1px solid black;
-    cursor: pointer;
-  }

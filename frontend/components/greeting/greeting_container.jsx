@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { connect } from "react-redux";
 import { login, logout } from '../../actions/session_actions';
 import { openModal } from '../../actions/modal_actions';
@@ -14,7 +16,12 @@ const mapDispatchToProps = (dispatch) => {
     return {
         logout: () => dispatch(logout()),
         openModal: modal => dispatch(openModal(modal)),
-        login: (user) => dispatch(login(user))
+        login: (user) => dispatch(login(user)),
+        otherForm: (
+            <button onClick={() => dispatch(openModal('Login'))}>
+                Login
+            </button>
+        ),
     };
 };
 

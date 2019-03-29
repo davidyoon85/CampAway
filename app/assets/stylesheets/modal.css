@@ -24,3 +24,31 @@
     margin-bottom: 10px;
     margin: 2px;
 }
+
+.modal_signin {
+    font-weight: 700;
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  .modal_signin:hover {
+    border-bottom: 1px solid black;
+    cursor: pointer;
+  }
+
+  .modal_table {
+    display: flex;
+    flex-flow: row;
+    flex-direction: space-around;
+    width: 89%;
+    margin: 0 auto;
+  }
+
+  .modal_table1 {
+      width: 46%;
+      padding-right: 10px;
+  }
+
+  .modal_table2 {
+      width: 46%;
+      padding-left: 10px;
+  }
