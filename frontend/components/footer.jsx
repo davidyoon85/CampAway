@@ -14,10 +14,14 @@ const Footer = () => {
 
         <div className="foot_social">
             <div className="foot_social_title">
-                Social
+                <ul>
+                    <li>
+                            <a href="https://github.com/davidyoon85"><i class="fab fa-github">Github</i></a>
+                    </li>
+                </ul>
             </div>
             <div className="foot_social_text">
-                Discover unique experiences on ranches, nature preserves, farms,vineyards, and public campgrounds across the U.S. Book tent camping, treehouses, cabins, yurts, primitive backcountry sites,car camping, airstreams, tiny houses, RV camping, glamping tents and more.
+                    
             </div>
         </div>
     </div>
