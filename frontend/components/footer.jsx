@@ -2,10 +2,11 @@ import React from 'react';
 
 const Footer = () => {
     return (
+    <>
     <div className="foot_div">
         <div className="foot_description">
             <div className="foot_description_title">
-                Camp Away is everywhere you want to camp.
+                CampAway is everywhere you want to camp.
             </div>
             <div className="foot_description_text">
                 Discover unique experiences on ranches, nature preserves, farms,vineyards, and public campgrounds across the U.S. Book tent camping, treehouses, cabins, yurts, primitive backcountry sites,car camping, airstreams, tiny houses, RV camping, glamping tents and more.
@@ -33,6 +34,16 @@ const Footer = () => {
             </div>
         </div>
     </div>
+
+    {/* <div className="foot_bottom">
+        <div className="pull-left">
+              Made in California.
+            </div>
+            <div className="pull-right">
+              © 2019 Camp Away
+        </div>
+    </div> */}
+    </>
     )
 };
 

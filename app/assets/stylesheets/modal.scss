@@ -4,7 +4,8 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.9)
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1;
 }
 
 .modal-child {
@@ -16,45 +17,43 @@
 
 .modal_footer1 {
     font-size: 14px;
-    margin-bottom: 10px;
 }
 
 .modal_footer2 {
     font-size: 12px;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
     margin: 2px;
 }
 
 .modal_signin {
     font-weight: 700;
     border-bottom: 1px solid #ebebeb;
-  }
+    line-height: 3;
+}
 
-  .modal_signin:hover {
+.modal_signin:hover {
     border-bottom: 1px solid black;
     cursor: pointer;
-  }
+}
 
-  .modal_table {
+.modal_table {
     display: flex;
     flex-flow: row;
     flex-direction: space-around;
     width: 89%;
     margin: 0 auto;
-  }
+}
 
-  .modal_table1 {
+.modal_table1 {
       width: 48%;
       padding-right: 10px;
-  }
+}
 
-  .modal_table2 {
+.modal_table2 {
       width: 48%;
       padding-left: 10px;
-  }
+}
 
-  .foot_div {
+.foot_div {
     position: fixed;
     left: 0px;
     bottom: 0px;

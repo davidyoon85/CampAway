@@ -1,10 +1,25 @@
 .splash_subtitle1 {
     font-weight: 700;
-    font-size: 40px;
+    font-size: 41px;
     padding-bottom: 20px;
+    width: 45%;
+    text-align: left;
+    margin-left: 0 auto;   
 }
 
 .splash_subtitle2 {
     font-weight: 300;
-    font-size: 15px;
+    font-size: 19px;
+    width: 45%;
+    text-align: left;
+    margin-left: 0 auto; 
+    line-height: 1.4;
+}
+
+.splash_main {
+    width: 82%;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: 67px;
 }

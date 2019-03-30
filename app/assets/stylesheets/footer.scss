@@ -6,12 +6,13 @@
 .foot_description {
     width: 40%;
     margin-top: 30px;
-    /* margin-left: 65px; */
+    position: relative;
+    left: 4.5%;
 }
 
 .foot_description_title {
     color: #70539f;
-    font-size: 15px;
+    font-size: 13px;
     text-align: left;
     font-weight: 700;
     margin-bottom: 20px;
@@ -29,19 +30,19 @@
     width: 40%;
     color: white;
     margin: 30px;
-    /* margin-left: 100px; */
+    position: relative;
+    left: 7%;
 }
 
 .foot_social_title {
     color: #70539f;
-    font-size: 15px;
     text-align: left;
     margin-bottom: 20px;
 }
 
 .foot_social_text {
     color: white;
-    font-size: 12px;
+    font-size: 10px;
     text-align: left;
     line-height: 1.8;
 }
@@ -49,7 +50,7 @@
 .social_link {
     font-family: "Helvetica, sans-serif";
     color: white;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .social_link_li {
@@ -58,4 +59,26 @@
 
 a > i {
     font-family: sans-serif;
+}
+
+.foot_bottom {
+    height:30px;
+    width: 100%;
+    background-color: #3e7e96;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: white;
+}   
+
+.pull-left {
+    padding-top: 7px;
+    margin: 0 auto;
+}
+
+.pull-right {
+    padding-top: 7px;
+    margin: 0 auto;
 }

@@ -67,7 +67,7 @@ class SessionForm extends React.Component {
                 {this.renderErrors()}
                     <div className="login-form">
 
-                    <button className="demo_button" onClick={this.loginDemo}>Log in as Guest</button>
+                    <button className="demo_button" onClick={this.loginDemo}>Log in as a Guest</button>
                     &nbsp;
                     <h1>or</h1>
 
@@ -102,7 +102,7 @@ class SessionForm extends React.Component {
             return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    <big className="title">Join Camp Away</big>
+                    <big className="title">Join CampAway</big>
                     <big className="subtitle">Discover the best camping near me</big>
 
                 <div onClick={this.props.closeModal} className="close-x"></div>
