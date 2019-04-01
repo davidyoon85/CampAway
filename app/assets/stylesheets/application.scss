@@ -44,6 +44,10 @@ time, mark, audio, video, button {
      color: black;
  }
 
+ a:hover {
+   cursor: pointer;
+ }
+
  .bold {
    font-weight: 700;
    line-height: 2;

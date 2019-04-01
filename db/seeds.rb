@@ -41,6 +41,18 @@ demo = User.create(
     email_address: 'demo@demo.com'
 )
 
+    # t.boolean "campfire", null: false
+    # t.boolean "pets_allow", null: false
+    # t.boolean "tent", default: false
+    # t.integer "sites"
+    # t.boolean "parking", default: false
+    # t.boolean "toilet", default: false
+    # t.boolean "shower", default: false
+    # t.boolean "hiking", default: false
+    # t.boolean "biking", default: false
+    # t.boolean "wildlife", default: false
+    # t.boolean "paddling", default: false
+
 spot1 = Spot.create!(
     title: 'Cabin in the Woods',
     lat: 40.730610, 
@@ -52,7 +64,11 @@ spot1 = Spot.create!(
     campfire: true, 
     pets_allow: true,
     check_in: '2 PM', 
-    check_out: '11 AM'
+    check_out: '11 AM',
+    hiking: true,
+    biking: true,
+    wildlife: true,
+    paddling: true
 )
 
 spot2 = Spot.create!(
@@ -66,7 +82,11 @@ spot2 = Spot.create!(
     campfire: true, 
     pets_allow: true,
     check_in: '2 PM', 
-    check_out: '11 AM'
+    check_out: '11 AM',
+    hiking: true,
+    biking: true,
+    wildlife: true,
+    paddling: true
 )
 
 spot3 = Spot.create!(
@@ -80,7 +100,11 @@ spot3 = Spot.create!(
     campfire: true, 
     pets_allow: true,
     check_in: '2 PM', 
-    check_out: '11 AM'
+    check_out: '11 AM',
+    hiking: true,
+    biking: true,
+    wildlife: true,
+    paddling: true
 )
 
 spot4 = Spot.create!(
@@ -94,7 +118,11 @@ spot4 = Spot.create!(
     campfire: true, 
     pets_allow: true,
     check_in: '2 PM', 
-    check_out: '11 AM'
+    check_out: '11 AM',
+    hiking: true,
+    biking: true,
+    wildlife: true,
+    paddling: true
 )
 
 spot5 = Spot.create!(
@@ -108,7 +136,11 @@ spot5 = Spot.create!(
     campfire: true, 
     pets_allow: true,
     check_in: '2 PM', 
-    check_out: '11 AM'
+    check_out: '11 AM',
+    hiking: true,
+    biking: true,
+    wildlife: true,
+    paddling: true
 )
 
 spot6 = Spot.create!(
@@ -122,7 +154,11 @@ spot6 = Spot.create!(
     campfire: true, 
     pets_allow: true,
     check_in: '2 PM', 
-    check_out: '11 AM'
+    check_out: '11 AM',
+    hiking: true,
+    biking: true,
+    wildlife: true,
+    paddling: true
 )
 spot7 = Spot.create!(
     title: 'Tent in the Woods',
@@ -135,7 +171,11 @@ spot7 = Spot.create!(
     campfire: true, 
     pets_allow: true,
     check_in: '2 PM', 
-    check_out: '11 AM'
+    check_out: '11 AM',
+    hiking: true,
+    biking: true,
+    wildlife: true,
+    paddling: true
 )
 
 spot8 = Spot.create!(
@@ -149,7 +189,11 @@ spot8 = Spot.create!(
     campfire: true, 
     pets_allow: true,
     check_in: '2 PM', 
-    check_out: '11 AM'
+    check_out: '11 AM',
+    hiking: true,
+    biking: true,
+    wildlife: true,
+    paddling: true
 )
 
 spot9 = Spot.create!(
@@ -163,5 +207,9 @@ spot9 = Spot.create!(
     campfire: true, 
     pets_allow: true,
     check_in: '2 PM', 
-    check_out: '11 AM'
+    check_out: '11 AM',
+    hiking: true,
+    biking: true,
+    wildlife: true,
+    paddling: true
 )

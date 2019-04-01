@@ -70,15 +70,15 @@
     margin-right: 10px;
 }
 
-li > img {
+span > img {
     width: 24px;
     height: 24px;
 }
 
 .spot_index {
-    width: 56%;
+    width: 30%;
     margin-top: 30px;
-    margin-left: 22%;
+    // margin-left: 30%;
     margin-right: 22%;
     text-align: center;
 }
@@ -98,7 +98,7 @@ li > img {
 }
 
 .index_spots {
-    flex-basis: 332px;
+    flex-basis: 360px;
     height: 340px;
     width: 500px;
     border-bottom: 1px solid #ebebeb;

@@ -7,6 +7,7 @@ class Spot extends React.Component {
   }
 
   componentDidMount() {
+    // debugger
     this.props.fetchSpot(this.props.match.params.spotId);
   }
 
@@ -14,6 +15,7 @@ class Spot extends React.Component {
 
     const { spot } = this.props;
 
+    // debugger
     return (
       <>
       <main className="spot_main_section">
@@ -71,26 +73,51 @@ class Spot extends React.Component {
                   Campsite area
                   </p>
                   <ul className="spot_subsection">
+
                     <li>
-                      <img src="https://image.flaticon.com/icons/svg/678/678406.svg" />
-                      <p> Bring your own tents </p>
+                      {
+                        spot.tent ?
+                          <span>
+                            <img src="https://image.flaticon.com/icons/svg/1535/1535412.svg" />
+                            <p> Tent provided </p>
+                          </span>
+                          :
+                          <span>
+                            <img src="https://image.flaticon.com/icons/svg/678/678406.svg" />
+                            <p> Bring your own tents </p>
+                          </span>
+                      }
                     </li>
+
                     <li>
-                      <img src="https://image.flaticon.com/icons/svg/1535/1535442.svg" />
+                      <span>
+                        <img src="https://image.flaticon.com/icons/svg/1535/1535442.svg" />
+                      </span>
                       <p> 15 sites </p>
                     </li>
+
                     <li>
-                      <img src="https://image.flaticon.com/icons/svg/58/58038.svg" />
+                      <span>
+                        <img src="https://image.flaticon.com/icons/svg/58/58038.svg" />
+                      </span>
                       <p> Up to 30 guests per site </p>
                     </li>
+
                     <li>
-                      <img src="https://image.flaticon.com/icons/svg/8/8818.svg" />
-                      <p> Short walk </p>
+                      {
+                        spot.parking ?
+                          <span>
+                            <img src="https://image.flaticon.com/icons/svg/818/818383.svg" />
+                            <p> Parking</p>
+                          </span>
+                          :
+                          <span>
+                            <img src="https://image.flaticon.com/icons/svg/652/652339.svg" />
+                            <p> No parking</p>
+                          </span>
+                      }
                     </li>
-                    <li>
-                      <img src="https://image.flaticon.com/icons/svg/93/93191.svg" />
-                      <p> Wheelchair access </p>
-                    </li>
+
                   </ul>
                 </div>
               </div>
@@ -102,16 +129,60 @@ class Spot extends React.Component {
                   </p>
                   <ul className="spot_subsection">
                     <li>
-                      <img src="https://image.flaticon.com/icons/svg/1535/1535413.svg" />
-                      <p> Campfires allowed </p>
+                      {
+                        spot.campfire ?
+                          <span>
+                            <img src="https://image.flaticon.com/icons/svg/1535/1535413.svg" />
+                            <p> Campfires allowed</p>
+                          </span>
+                          :
+                          <span>
+                            <img src="https://image.flaticon.com/icons/svg/678/678405.svg" />
+                            <p> No campfires allowed</p>
+                          </span>
+                      }
                     </li>
                     <li>
-                      <img src="https://image.flaticon.com/icons/svg/71/71702.svg" />
-                      <p> Pets allowed </p>
+                      {
+                        spot.pets_allow ?
+                          <span>
+                            <img src="https://image.flaticon.com/icons/svg/71/71702.svg" />
+                            <p> Pets allowed</p>
+                          </span>
+                          :
+                          <span>
+                            <img src="https://image.flaticon.com/icons/svg/1596/1596681.svg" />
+                            <p> No pets allowed</p>
+                          </span>
+                      }
                     </li>
                     <li>
-                      <img src="https://image.flaticon.com/icons/svg/75/75263.svg" />
-                      <p> No toilet </p>
+                      {
+                        spot.toilet ?
+                          <span>
+                            <img src="https://image.flaticon.com/icons/svg/93/93156.svg" />
+                            <p> Toilet available</p>
+                          </span>
+                          :
+                          <span>
+                            <img src="https://image.flaticon.com/icons/svg/75/75263.svg" />
+                            <p> No toilet</p>
+                          </span>
+                      }
+                    </li>
+                    <li>
+                      {
+                        spot.shower ?
+                          <span>
+                            <img src="https://image.flaticon.com/icons/svg/1536/1536456.svg" />
+                            <p> Showers</p>
+                          </span>
+                          :
+                          <span>
+                            <img src="https://image.flaticon.com/icons/svg/274/274595.svg" />
+                            <p> No Showers</p>
+                          </span>
+                      }
                     </li>
                   </ul>
                 </div>
@@ -124,20 +195,48 @@ class Spot extends React.Component {
                   </p>
                   <ul className="spot_subsection">
                     <li>
-                      <img src="https://image.flaticon.com/icons/svg/71/71423.svg" />
-                      <p> Hiking Trails </p>
+                      {
+                        spot.hiking ?
+                          <span>
+                            <img src="https://image.flaticon.com/icons/svg/71/71423.svg" />
+                            <p> Hiking Trails</p>
+                          </span>
+                          :
+                              <h1>hi</h1>
+                      }
                     </li>
                     <li>
-                      <img src="https://image.flaticon.com/icons/svg/565/565350.svg" />
-                      <p> Bike Trails </p>
+                      {
+                        spot.biking ?
+                          <span>
+                            <img src="https://image.flaticon.com/icons/svg/565/565350.svg" />
+                            <p> Biking Trails</p>
+                          </span>
+                          :
+                          <h1>hi</h1>
+                      }
                     </li>
                     <li>
-                      <img src="https://image.flaticon.com/icons/svg/74/74797.svg" />
-                      <p> Beach Access </p>
+                      {
+                        spot.biking ?
+                          <span>
+                            <img src="https://image.flaticon.com/icons/svg/54/54127.svg" />
+                            <p> Wildlife Watching</p>
+                          </span>
+                          :
+                              <h1>hi</h1>
+                      }
                     </li>
                     <li>
-                      <img src="https://image.flaticon.com/icons/svg/38/38607.svg" />
-                      <p> Rowing </p>
+                      {
+                        spot.paddling ?
+                          <span>
+                            <img src="https://image.flaticon.com/icons/svg/38/38607.svg" />
+                            <p> Paddling</p>
+                          </span>
+                          :
+                              <h1>hi</h1>
+                      }
                     </li>
                   </ul>
                 </div>
@@ -154,3 +253,8 @@ class Spot extends React.Component {
 }
 
 export default Spot;
+
+
+
+
+

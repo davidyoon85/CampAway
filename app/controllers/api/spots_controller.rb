@@ -5,5 +5,6 @@ class Api::SpotsController < ApplicationController
 
     def show
         @spot = Spot.find(params[:id])
+        render :show
     end
 end
