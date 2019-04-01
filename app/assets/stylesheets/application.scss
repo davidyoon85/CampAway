@@ -70,7 +70,7 @@ time, mark, audio, video, button {
  }
 
  .main-class {
-  min-height: 90vh;
+  min-height: 50vh;
   background: white;
   margin-bottom: 35px;
 }
@@ -229,12 +229,19 @@ time, mark, audio, video, button {
     padding: 15px;
   }
 
-  input#login-input-beside2:placeholder-shown {
-    width: 110px;
-    height: 38px;
-    font-weight: 700;
-    font-size: 16px;
-  }
+  // input#login-input-beside1:placeholder-shown {
+  //   width: 110px;
+  //   height: 38px;
+  //   font-weight: 700;
+  //   font-size: 16px;
+  // }
+
+  // input#login-input-beside2:placeholder-shown {
+  //   width: 110px;
+  //   height: 38px;
+  //   font-weight: 700;
+  //   font-size: 16px;
+  // }
 
   input:placeholder-shown {
     width: 80%;
@@ -257,7 +264,6 @@ time, mark, audio, video, button {
     color: white;
     border: 0;
     background-color: #40d9ac;
-    margin-bottom: 18px;
   }
 
   input#login_submit_demo {
