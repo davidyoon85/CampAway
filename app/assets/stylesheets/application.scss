@@ -12,9 +12,10 @@
  *
  *= require_tree .
  *= require_self
- *= require 'modal.css'
- *= require 'splash.css'
- *= require 'footer.css'
+ *= require 'modal.scss'
+ *= require 'splash.scss'
+ *= require 'footer.scss'
+ *= require 'spot.scss'
  */
 
 html, body, div, span, applet, object, iframe,
@@ -43,6 +44,11 @@ time, mark, audio, video, button {
      color: black;
  }
 
+ .bold {
+   font-weight: 700;
+   line-height: 2;
+ }
+
  input:focus, textarea {
   outline: none !important;
  }
@@ -51,11 +57,23 @@ time, mark, audio, video, button {
    outline: none;
  }
 
+ img {
+  width: auto;
+  height: 50vh;
+ }
+
  body {
     font-family: "Calibre", Helvetica, Arial, sans-serif;
     width: 100%;
+    height:100%;
     -webkit-font-smoothing: antialiased;
  }
+
+ .main-class {
+  min-height: 90vh;
+  background: white;
+  margin-bottom: 35px;
+}
 
 .login-form-container {
    display: flex;
@@ -127,7 +145,6 @@ time, mark, audio, video, button {
   li {
     display: inline;
     color: black;
-    margin: 10px;
   }
 
   h1 {
@@ -313,3 +330,35 @@ i:hover {
   margin: 0px;
   margin-left: 20px;
 }
+
+.spot_main_section {
+  display: flex;
+  flex-direction: column;
+}
+
+.spot_photo {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  background: white;
+  height: 50vh;
+}
+
+ .slider {
+    height: 50vh;
+ }
+
+ .slick-slide {
+    padding: 7px;
+    height: 50vh;
+ }
+
+ .slick-prev:before, .slick-next:before {
+    color: gray;
+    font-size: 24px;
+    font-family: 'slick';
+ }
+
+ .slick-prev:hover:before, .slick-next:hover:before {
+    color: green;
+ }

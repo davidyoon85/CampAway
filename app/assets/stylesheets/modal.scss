@@ -52,16 +52,3 @@
       width: 48%;
       padding-left: 10px;
 }
-
-.foot_div {
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
-    height: 350px;
-    width: 100%;
-    background-color: #41305c;
-    background-image: image_url("footer_img.png");
-    background-repeat: repeat-x;
-    background-position: center bottom;
-    z-index: -1;
-}

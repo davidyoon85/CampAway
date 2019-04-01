@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 
+//testing
+import { fetchSingleSpot } from './actions/spot_actions';
+
 document.addEventListener('DOMContentLoaded', () => {
+  
     
     let store;
     if (window.currentUser) {
@@ -19,7 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
         store = configureStore();
     }
 
+    window.fetchSingleSpot = fetchSingleSpot();
     window.getState = store.getState;
+    window.setState = store.setState;
 
     const root = document.getElementById('root');
     ReactDOM.render(<Root store={store} />, root);
