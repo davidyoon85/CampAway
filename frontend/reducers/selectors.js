@@ -1,0 +1,1 @@
+export const selectSpots = state => Object.values(state.entities.spots);

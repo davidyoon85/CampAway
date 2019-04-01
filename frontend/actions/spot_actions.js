@@ -11,12 +11,12 @@ export const fetchAllSpots = () => dispatch => (
     APIUtil.fetchAllSpots().then(spots => dispatch(receiveAllSpots(spots)))
   );
 
-const receiveAllSpots = payload => ({
+const receiveAllSpots = (spots) => ({
     type: RECEIVE_ALL_SPOTS,
-    payload
+    spots
   });
 
-const receiveSingleSpot = payload => ({
+const receiveSingleSpot = spot => ({
     type: RECEIVE_SINGLE_SPOT,
-    payload
+    spot
 });

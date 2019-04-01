@@ -54,3 +54,114 @@ spot1 = Spot.create!(
     check_in: '2 PM', 
     check_out: '11 AM'
 )
+
+spot2 = Spot.create!(
+    title: 'Log Cabin in the Woods',
+    lat: 40.730610, 
+    long: -73.935242,
+    body: "Year round lodging in Catskills. For lovers of hiking, skiing, hunting, tubing, fishing, tennis, golf, sitting by the fireplace, or enjoying the great outdoors. Our cozy cabins with wood-burning fireplaces are the real deal in terms of country vacations.  Full kitchens, out-back campfire circles, and lots of other amenities. We are family and pet friendliest in Catskills. All guests have free access to our pool in the summer months (and of course the natural swimming holes in the river)!",
+    host_id: user1.id, 
+    price: 100, 
+    group_size: 4,
+    campfire: true, 
+    pets_allow: true,
+    check_in: '2 PM', 
+    check_out: '11 AM'
+)
+
+spot3 = Spot.create!(
+    title: 'Metal Cabin in the Woods',
+    lat: 40.730610, 
+    long: -73.935242,
+    body: "Year round lodging in Catskills. For lovers of hiking, skiing, hunting, tubing, fishing, tennis, golf, sitting by the fireplace, or enjoying the great outdoors. Our cozy cabins with wood-burning fireplaces are the real deal in terms of country vacations.  Full kitchens, out-back campfire circles, and lots of other amenities. We are family and pet friendliest in Catskills. All guests have free access to our pool in the summer months (and of course the natural swimming holes in the river)!",
+    host_id: user1.id, 
+    price: 100, 
+    group_size: 4,
+    campfire: true, 
+    pets_allow: true,
+    check_in: '2 PM', 
+    check_out: '11 AM'
+)
+
+spot4 = Spot.create!(
+    title: 'House in the Woods',
+    lat: 40.730610, 
+    long: -73.935242,
+    body: "Year round lodging in Catskills. For lovers of hiking, skiing, hunting, tubing, fishing, tennis, golf, sitting by the fireplace, or enjoying the great outdoors. Our cozy cabins with wood-burning fireplaces are the real deal in terms of country vacations.  Full kitchens, out-back campfire circles, and lots of other amenities. We are family and pet friendliest in Catskills. All guests have free access to our pool in the summer months (and of course the natural swimming holes in the river)!",
+    host_id: user1.id, 
+    price: 100, 
+    group_size: 4,
+    campfire: true, 
+    pets_allow: true,
+    check_in: '2 PM', 
+    check_out: '11 AM'
+)
+
+spot5 = Spot.create!(
+    title: 'Log House in the Woods',
+    lat: 40.730610, 
+    long: -73.935242,
+    body: "Year round lodging in Catskills. For lovers of hiking, skiing, hunting, tubing, fishing, tennis, golf, sitting by the fireplace, or enjoying the great outdoors. Our cozy cabins with wood-burning fireplaces are the real deal in terms of country vacations.  Full kitchens, out-back campfire circles, and lots of other amenities. We are family and pet friendliest in Catskills. All guests have free access to our pool in the summer months (and of course the natural swimming holes in the river)!",
+    host_id: user1.id, 
+    price: 100, 
+    group_size: 4,
+    campfire: true, 
+    pets_allow: true,
+    check_in: '2 PM', 
+    check_out: '11 AM'
+)
+
+spot6 = Spot.create!(
+    title: 'Metal House in the Woods',
+    lat: 40.730610, 
+    long: -73.935242,
+    body: "Year round lodging in Catskills. For lovers of hiking, skiing, hunting, tubing, fishing, tennis, golf, sitting by the fireplace, or enjoying the great outdoors. Our cozy cabins with wood-burning fireplaces are the real deal in terms of country vacations.  Full kitchens, out-back campfire circles, and lots of other amenities. We are family and pet friendliest in Catskills. All guests have free access to our pool in the summer months (and of course the natural swimming holes in the river)!",
+    host_id: user1.id, 
+    price: 100, 
+    group_size: 4,
+    campfire: true, 
+    pets_allow: true,
+    check_in: '2 PM', 
+    check_out: '11 AM'
+)
+spot7 = Spot.create!(
+    title: 'Tent in the Woods',
+    lat: 40.730610, 
+    long: -73.935242,
+    body: "Year round lodging in Catskills. For lovers of hiking, skiing, hunting, tubing, fishing, tennis, golf, sitting by the fireplace, or enjoying the great outdoors. Our cozy cabins with wood-burning fireplaces are the real deal in terms of country vacations.  Full kitchens, out-back campfire circles, and lots of other amenities. We are family and pet friendliest in Catskills. All guests have free access to our pool in the summer months (and of course the natural swimming holes in the river)!",
+    host_id: user1.id, 
+    price: 100, 
+    group_size: 4,
+    campfire: true, 
+    pets_allow: true,
+    check_in: '2 PM', 
+    check_out: '11 AM'
+)
+
+spot8 = Spot.create!(
+    title: 'Log Tent in the Woods',
+    lat: 40.730610, 
+    long: -73.935242,
+    body: "Year round lodging in Catskills. For lovers of hiking, skiing, hunting, tubing, fishing, tennis, golf, sitting by the fireplace, or enjoying the great outdoors. Our cozy cabins with wood-burning fireplaces are the real deal in terms of country vacations.  Full kitchens, out-back campfire circles, and lots of other amenities. We are family and pet friendliest in Catskills. All guests have free access to our pool in the summer months (and of course the natural swimming holes in the river)!",
+    host_id: user1.id, 
+    price: 100, 
+    group_size: 4,
+    campfire: true, 
+    pets_allow: true,
+    check_in: '2 PM', 
+    check_out: '11 AM'
+)
+
+spot9 = Spot.create!(
+    title: 'Metal Tent in the Woods',
+    lat: 40.730610, 
+    long: -73.935242,
+    body: "Year round lodging in Catskills. For lovers of hiking, skiing, hunting, tubing, fishing, tennis, golf, sitting by the fireplace, or enjoying the great outdoors. Our cozy cabins with wood-burning fireplaces are the real deal in terms of country vacations.  Full kitchens, out-back campfire circles, and lots of other amenities. We are family and pet friendliest in Catskills. All guests have free access to our pool in the summer months (and of course the natural swimming holes in the river)!",
+    host_id: user1.id, 
+    price: 100, 
+    group_size: 4,
+    campfire: true, 
+    pets_allow: true,
+    check_in: '2 PM', 
+    check_out: '11 AM'
+)

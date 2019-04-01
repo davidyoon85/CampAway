@@ -5,9 +5,9 @@ const spotsReducer = (state = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_ALL_SPOTS:
-      return action.payload.spots;
+      return action.spots;
     case RECEIVE_SINGLE_SPOT:
-      return action.payload.spots;
+      return action.spot;
     default:
       return state;
   }

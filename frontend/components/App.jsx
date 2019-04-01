@@ -4,12 +4,13 @@ import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 import Nav from './nav/nav';
 import Splash from './splash';
 import SpotContainer from './spot/spot_container';
+import SpotIndexContainer from './spot/spot_index_container';
 import Footer from './footer';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faIgloo } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faIgloo)
+library.add(faIgloo);
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <div className='main-class'>
           <Switch>
             <Route path="/spots/:spotId" component={SpotContainer} />
+            <Route path="/spots" component={SpotIndexContainer} />
             <Route path="/" component={Splash} />
           </Switch>
         </div> 
