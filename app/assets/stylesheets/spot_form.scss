@@ -1,6 +1,6 @@
 .spot_form_main {
-    height: 600px;
-    width: 40%;
+    height: 90%;
+    width: 80%;
     margin: 0 auto;
     text-align: center;
     background-color: green;
@@ -16,8 +16,40 @@
     margin-bottom: 10px;
 }
 
+.spot_form {
+    width: 50%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .form_questions {
     font-size: 15px;
     color: black;
     font-weight: 700;
+}
+
+.spot_form_input {
+    background-color: white;
+    width: 27%;
+    height: 100px;
+    border: 1px solid red;
+    border-color: red;
+}
+
+.spot_form_button {
+    background-color: white;
+    width: 27%;
+    height: 100px;
+    border: 1px solid red;
+    border-color: orange;
+}
+
+.spot_form_field {
+    width: 40%;
+}
+
+.spot_form_buttons {
+    width: 40%;
 }

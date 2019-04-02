@@ -234,21 +234,7 @@ time, mark, audio, video, button {
     padding: 15px;
   }
 
-  // input#login-input-beside1:placeholder-shown {
-  //   width: 110px;
-  //   height: 38px;
-  //   font-weight: 700;
-  //   font-size: 16px;
-  // }
-
-  // input#login-input-beside2:placeholder-shown {
-  //   width: 110px;
-  //   height: 38px;
-  //   font-weight: 700;
-  //   font-size: 16px;
-  // }
-
-  input:placeholder-shown {
+  > input:placeholder-shown {
     width: 80%;
     height: 38px;
     font-weight: 700;
