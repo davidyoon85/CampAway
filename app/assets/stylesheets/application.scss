@@ -16,6 +16,7 @@
  *= require 'splash.scss'
  *= require 'footer.scss'
  *= require 'spot.scss'
+ *= require 'spot_form.scss'
  */
 
 html, body, div, span, applet, object, iframe,
@@ -346,21 +347,25 @@ i:hover {
   flex-direction: column;
 }
 
+.photo_slider {
+  position: relative;
+}
+
 .spot_photo {
   position: relative;
   margin: 0 auto;
   width: 90%;
   background: white;
-  height: 50vh;
+  height: 480px;
 }
 
  .slider {
-    height: 50vh;
+    height: 480px;
  }
 
  .slick-slide {
     padding: 7px;
-    height: 50vh;
+    height: 480px;
  }
 
  .slick-prev:before, .slick-next:before {

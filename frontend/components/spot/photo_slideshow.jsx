@@ -36,7 +36,7 @@ class PhotoSlideshow extends React.Component {
         {
           breakpoint: 900,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 2,
             slidesToScroll: 1,
             infinite: true,
             variableWidth: false,
@@ -45,7 +45,7 @@ class PhotoSlideshow extends React.Component {
         {
           breakpoint: 500,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 2,
             slidesToScroll: 1,
             infinite: false,
             variableWidth: false,

@@ -14,9 +14,6 @@ class SpotIndexItem extends React.Component {
     render() {
         return (
             <nobr className="index_spots" onClick={this.handleClick}>
-                <div>
-                    <h1>image</h1>
-                </div>
                 <div className="spot_index_spot_title">
                     <Link to={`/spots/${this.props.spot.id}`}>
                         {this.props.spot.title}

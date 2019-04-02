@@ -1,0 +1,23 @@
+.spot_form_main {
+    height: 600px;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: green;
+    margin-top: 4%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form_header {
+    font-size: 18px;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.form_questions {
+    font-size: 15px;
+    color: black;
+    font-weight: 700;
+}

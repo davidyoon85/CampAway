@@ -5,10 +5,11 @@ import Nav from './nav/nav';
 import Splash from './splash';
 import SpotContainer from './spot/spot_container';
 import SpotIndexContainer from './spot/spot_index_container';
+import SpotFormContainer from './spot/spot_form_container';
 import Footer from './footer';
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faIgloo } from '@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faIgloo } from '@fortawesome/free-solid-svg-icons';
 
 library.add(faIgloo);
 
@@ -20,6 +21,7 @@ const App = () => {
           <Switch>
             <Route path="/spots/:spotId" component={SpotContainer} />
             <Route path="/spots" component={SpotIndexContainer} />
+            <Route path="/host" component={SpotFormContainer}/>
             <Route path="/" component={Splash} />
           </Switch>
         </div> 

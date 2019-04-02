@@ -11,3 +11,11 @@ export const fetchSingleSpot = (id) => (
       url: `/api/spots/${id}`,
     })
 );
+
+export const hostSpot = (spot) => (
+  $.ajax({
+    method: 'POST',
+    url: 'api/spots',
+    data: { spot }
+  })
+);

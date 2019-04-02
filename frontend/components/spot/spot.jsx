@@ -7,22 +7,42 @@ class Spot extends React.Component {
   }
 
   componentDidMount() {
-    // debugger
     this.props.fetchSpot(this.props.match.params.spotId);
   }
 
   render() {
-
     const { spot } = this.props;
 
-    // debugger
     return (
       <>
       <main className="spot_main_section">
       <div className="photo_slider">
-      <PhotoSlideshow />
+        <PhotoSlideshow/>
       </div>
        <div className="spot_page">
+
+        <div className="booking_widget">
+          <div className="widget_price">
+            {spot.price}
+          </div>
+
+          <div className="widget_subsection">
+            <div className="widget_checkin">
+  hi1
+            </div>
+            <div className="widget_checkout">
+  hi2
+            </div>
+            <div className="widget_guests">
+  hi3
+            </div>
+          </div>
+
+          <div className="widget_booking">
+            <button className="widget_button">Pay Me</button>
+          </div>
+        </div>
+
          <div>
            <section>
             <div className="spot_div">
@@ -93,14 +113,14 @@ class Spot extends React.Component {
                       <span>
                         <img src="https://image.flaticon.com/icons/svg/1535/1535442.svg" />
                       </span>
-                      <p> 15 sites </p>
+                      <p> {spot.sites} sites </p>
                     </li>
 
                     <li>
                       <span>
                         <img src="https://image.flaticon.com/icons/svg/58/58038.svg" />
                       </span>
-                      <p> Up to 30 guests per site </p>
+                          <p> Up to {spot.group_size} guests per site </p>
                     </li>
 
                     <li>
