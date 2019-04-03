@@ -44,7 +44,7 @@ class MasterForm extends React.Component {
         event.preventDefault();
 
         this.props.hostSpot(this.state).then((response) => {
-            this.props.history.push("/posts/`${Object.keys(response.spot)[0]`}");
+            this.props.history.push(`/posts/${Object.keys(response.spot)[0]}`);
         });
     }
 
