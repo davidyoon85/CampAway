@@ -1,13 +1,17 @@
-// import { connect } from 'react-redux';
-// import SpotForm from './spot_form';
-// import { hostSpot } from '../../actions/spot_actions';
+import { connect } from 'react-redux';
+import MasterForm from './master_form';
+import { hostSpot } from '../../actions/spot_actions';
 
-// const mapStateToProps = (state) => ({
-//     state
-// });
+const mapStateToProps = (state) => ({
+    state,
+    user: state.entities.users[state.session.id]
+});
 
-// const mapDispatchToProps = (dispatch) => ({
-//     hostSpot: () => dispatch(hostSpot())
-// });
+const mapDispatchToProps = (dispatch) => {
+    debugger
+    return {
+    hostSpot: (spot) => dispatch(hostSpot(spot))
+    };
+};
 
-// export default connect(mapStateToProps, mapDispatchToProps)(SpotForm);
+export default connect(mapStateToProps, mapDispatchToProps)(MasterForm);

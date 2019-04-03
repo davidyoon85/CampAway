@@ -6,7 +6,7 @@ class Api::SpotsController < ApplicationController
     def create
         @spot = Spot.new(spot_params)
         if @spot.save!
-            render "api/spots"
+            render :show
         else
             render json: ["Invalid inputs"], status: 401
         end
@@ -17,8 +17,15 @@ class Api::SpotsController < ApplicationController
         render :show
     end
 
+    def destroy
+        @spot = Spot.find(params[:id])
+        @spot.destory
+        render :show
+    end
+
         private
     def spot_params
-        params.require(:spot).permit(:host_id, :title, :body)
+        params.require(:spot).permit(:host_id, :title, :body, :price, :pets_allow, :group_size, :check_in, :check_out, :lat, :long, 
+        :campfire, :tent, :sites, :parking, :toilet, :shower, :hiking, :biking, :wildlife, :paddling)
     end
 end

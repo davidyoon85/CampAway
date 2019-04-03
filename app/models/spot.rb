@@ -1,6 +1,5 @@
 class Spot < ApplicationRecord
-    validates :title, :lat, :long, :body, :host_id, :price, :group_size, 
-    :campfire, :pets_allow, :check_in, :check_out, presence: true
+    validates :title, :body, :host_id, presence: true
 
   belongs_to :host,
     foreign_key: :host_id,

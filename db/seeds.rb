@@ -33,6 +33,14 @@ user3 = User.create(
     email_address: 'rachel@yoon.com'
 )
 
+user3 = User.create(
+    password: '123456',
+    first_name: 'Binjie',
+    last_name: 'Luo',
+    zip_code: 123456,
+    email_address: 'binjie@luo.com'
+)
+
 demo = User.create(
     password: '123456',
     first_name: 'Guest',

@@ -18,6 +18,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
             <div className="nav_logged_in_right">
 
                 <div className="drop_menu">
+                    <Link to={'/host'}>Host</Link>
                     <button className="nav_logged_in_logout" onClick={logout}>Log out</button>
                 </div>
 

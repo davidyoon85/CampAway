@@ -19,3 +19,10 @@ export const hostSpot = (spot) => (
     data: { spot }
   })
 );
+
+export const deleteSpot = (spotId) => (
+  $.ajax({
+    method: 'DELETE',
+    url: `/api/spots/${spotId}`
+  })
+);

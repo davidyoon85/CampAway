@@ -10,7 +10,7 @@ import Footer from './footer';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faIgloo } from '@fortawesome/free-solid-svg-icons';
-import MasterForm from './spot/master_form';
+import MasterForm from './spot/spot_form_container';
 
 library.add(faIgloo);
 

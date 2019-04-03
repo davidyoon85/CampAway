@@ -1,4 +1,4 @@
-import { RECEIVE_SINGLE_SPOT, RECEIVE_ALL_SPOTS, CREATE_SPOT } from '../actions/spot_actions';
+import { RECEIVE_SINGLE_SPOT, RECEIVE_ALL_SPOTS, CREATE_SPOT, DESTROY_SPOT } from '../actions/spot_actions';
 
 const spotsReducer = (state = {}, action) => {
   Object.freeze(state);
