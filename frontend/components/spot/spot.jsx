@@ -5,12 +5,13 @@ class Spot extends React.Component {
   constructor(props) {
     super(props);
   }
-
+  
   componentDidMount() {
     this.props.fetchSpot(this.props.match.params.spotId);
   }
-
+  
   render() {
+    // debugger
     const { spot } = this.props;
 
     return (

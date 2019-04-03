@@ -1,36 +1,45 @@
 .host_option_main {
     display: flex;
     width: 60%;
-    margin: 0 auto;
+    position: relative;
+    left: 13%;
 }
 
 .host_option_amenities {
     margin: 10px;
     display: flex;
     flex-wrap: wrap;
+    width: 60%;
 }
 
 .host_option_activities {
     margin: 10px;
     display: flex;
     flex-wrap: wrap;
+    width: 60%;
 }
 
 .host_spot_options {
     border: 1px solid black;
-    height: 160px;
-    width: 160px;
+    height: 40%;
+    width: 40%;
 }
 
 .active_button{
     border: 1px solid black;
-    height: 160px;
-    width: 160px;
+    height: 40%;
+    width: 40%;
     background: #40d9ac;
 }
 
 .host_spot_options > img {
-    height: 160px;
-    width: 160px;
+    height: 40%;
+    width: 40%;
     border: 1px solid black;
+}
+
+.form_signup_button {
+    position: relative;
+    left: 13%;
+    text-align: center;
 }

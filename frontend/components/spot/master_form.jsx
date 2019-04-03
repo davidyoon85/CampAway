@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 
 class MasterForm extends React.Component {
     constructor(props) {
+        // debugger
         super(props);
         this.state = {
             host_id: props.user.id,
@@ -40,20 +41,17 @@ class MasterForm extends React.Component {
     }
 
     handleSubmit(event) {
-        debugger
         event.preventDefault();
-        debugger
 
-        this.props.hostSpot(this.state);
-        this.props.history.push('/posts');
+        this.props.hostSpot(this.state).then((response) => {
+            this.props.history.push("/posts/`${Object.keys(response.spot)[0]`}");
+        });
     }
 
     handleClick(e) {
         e.preventDefault();
         const currentName = e.target.name;
-        debugger
         this.setState({[currentName]: !this.state[currentName]}, () => {
-            debugger
         });
     }
 
@@ -84,7 +82,7 @@ class MasterForm extends React.Component {
         if (this.state.currentStep !== 1) {
             return (
                 <button
-                    className="btn btn-primary float-right"
+                    className="previous_button"
                     type="button" onClick={this._prev.bind(this)}>
                     Previous
                 </button>
@@ -98,7 +96,7 @@ class MasterForm extends React.Component {
         if (this.state.currentStep < 3) {
             return (
                 <button
-                    className="btn btn-primary float-right"
+                    className="next_button"
                     type="button" onClick={this._next.bind(this)}>
                     Next
                 </button>
@@ -116,26 +114,24 @@ class MasterForm extends React.Component {
                 step = 
                 <div>
                     <div className="form-group">
-                        <label htmlFor="title">Name Your Spot</label>
+                        <label className="form_group_title">Name Your Spot</label>
                         <input
                             className="form-control"
                             id="title"
                             name="title"
                             type="text"
-                            placeholder="Enter a name for your spot!"
                             value={this.state.title}
                             onChange={this.handleChange}
                         />
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="body">Describe Your Spot</label>
-                        <input
-                            className="form-control"
+                        <label className="form_group_title">Describe Your Spot</label>
+                        <textarea
+                            className="form_control_description"
                             id="body"
                             name="body"
                             type="text"
-                            placeholder="Enter a description for your spot!"
                             value={this.state.body}
                             onChange={this.handleChange}
                         />
@@ -145,7 +141,7 @@ class MasterForm extends React.Component {
                 step = 
                 <div>    
                     <div className="form-group">
-                        <label>Enter Daily Price</label>
+                        <label className="form_group_title">Daily Price</label>
                         <input
                             className="form-control"
                             id="price"
@@ -157,7 +153,7 @@ class MasterForm extends React.Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="sites">Sites Available</label>
+                        <label className="form_group_title">Sites Available</label>
                         <input
                             className="form-control"
                             id="sites"
@@ -169,7 +165,7 @@ class MasterForm extends React.Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Max Group Size</label>
+                        <label className="form_group_title">Max Group Size</label>
                         <input
                             className="form-control"
                             id="group_size"
@@ -181,7 +177,7 @@ class MasterForm extends React.Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="check_in">Check In Time</label>
+                        <label className="form_group_title">Check In Time</label>
                         <input
                             className="form-control"
                             id="check_in"
@@ -193,7 +189,7 @@ class MasterForm extends React.Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="check_out">Check Out Time</label>
+                        <label className="form_group_title">Check Out Time</label>
                         <input
                             className="form-control"
                             id="check_out"
@@ -205,25 +201,23 @@ class MasterForm extends React.Component {
                         />
                     </div>
                     <div className="form-group">
-                        <label>Enter The Latitude</label>
+                        <label className="form_group_title">Latitude</label>
                         <input
                             className="form-control"
                             id="lat"
                             name="lat"
                             type="number"
-                            placeholder="Enter latitutde (ex: 100)"
                             value={this.state.lat}
                             onChange={this.handleChange}
                         />
                     </div>
                     <div className="form-group">
-                        <label>Longitude</label>
+                        <label className="form_group_title">Longitude</label>
                         <input
                             className="form-control"
                             id="long"
                             name="long"
                             type="number"
-                            placeholder="Enter longitude (ex: 100)"
                             value={this.state.long}
                             onChange={this.handleChange}
                         />
@@ -314,23 +308,24 @@ class MasterForm extends React.Component {
                         
                     </div>
                     
-                    <input type="submit" className="btn btn-success btn-block" value="Sign Up" />
+                    <input type="submit" className="form_signup_button" value="Sign Up" />
                     
                 </React.Fragment>
             }
 
         return (
-            <React.Fragment>
-                <h1>Create Your Spot!</h1>
-                <p>Step {this.state.currentStep} </p>
+            <div className="spot_form_main">
+                <React.Fragment>
+                    <form className="form" onSubmit={this.handleSubmit}>
+                    { step }
+                        <div className="prev_next_buttons">
+                            {this.previousButton()}
+                            {this.nextButton()}
+                        </div>
 
-                <form onSubmit={this.handleSubmit}>
-                { step }
-                    {this.previousButton()}
-                    {this.nextButton()}
-
-                </form>
-            </React.Fragment>
+                    </form>
+                </React.Fragment>
+            </div>
         );
     }
 }

@@ -1,14 +1,16 @@
 import { connect } from 'react-redux';
 import SpotIndex from './spot_index';
-import { fetchAllSpots } from '../../actions/spot_actions';
+import { fetchAllSpots, deleteSpot } from '../../actions/spot_actions';
 import { selectSpots } from '../../reducers/selectors';
 
 const mapStateToProps = (state) => ({
-        spots: selectSpots(state)
+    spots: selectSpots(state),
+    user: state.entities.users[state.session.id]
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    fetchAllSpots: () => dispatch(fetchAllSpots())
+    fetchAllSpots: () => dispatch(fetchAllSpots()),
+    deleteSpot: (spotId) => dispatch(deleteSpot(spotId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SpotIndex);

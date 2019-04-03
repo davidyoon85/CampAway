@@ -8,7 +8,6 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => {
-    debugger
     return {
     hostSpot: (spot) => dispatch(hostSpot(spot))
     };

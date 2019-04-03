@@ -10,6 +10,10 @@ const spotsReducer = (state = {}, action) => {
       return action.spot;
     case CREATE_SPOT:
       return action.spot;
+    case DESTROY_SPOT:
+      let newState = Object.assign({}, state);
+      delete newState[action.spotId];
+      return newState;
     default:
       return state;
   }

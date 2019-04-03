@@ -1,12 +1,23 @@
 .spot_form_main {
     height: 90%;
-    width: 80%;
+    width: 30%;
     margin: 0 auto;
-    text-align: center;
-    background-color: green;
+    background-color: white;
     margin-top: 4%;
     display: flex;
     flex-wrap: wrap;
+    border: 1px solid rgb(235, 235, 235);
+    box-shadow: rgba(0, 0, 0, .5) 0px 5px 5px;
+}
+
+.form {
+    width: 80%;
+    margin: 20px 0px 20px 40px;
+}
+
+.form-group {
+    margin: 0 auto;
+    width: 100%;
 }
 
 .form_header {
@@ -14,6 +25,10 @@
     color: black;
     font-weight: 700;
     margin-bottom: 10px;
+}
+
+.form_title {
+    margin: 0 auto;
 }
 
 .spot_form {
@@ -34,16 +49,12 @@
     background-color: white;
     width: 27%;
     height: 100px;
-    border: 1px solid red;
-    border-color: red;
 }
 
 .spot_form_button {
     background-color: white;
     width: 27%;
     height: 100px;
-    border: 1px solid red;
-    border-color: orange;
 }
 
 .spot_form_field {
@@ -52,4 +63,69 @@
 
 .spot_form_buttons {
     width: 40%;
+}
+
+.form_group_title {
+    text-align: left;
+     font-weight: 700;
+     font-size: 20px;
+}
+
+.form-control {
+    border: 1px solid rgb(235, 235, 235);
+    padding: 0px 0px 0px 10px;
+    width: 100%;
+    margin: 10px 0px 20px 0px;
+    color: rgb(117, 117, 117);
+}
+
+.form_control_description {
+    width: 100%;
+    border: 1px solid rgb(235, 235, 235);
+    margin-top: 10px;
+    padding: 0px 0px 150px 10px;
+    text-align: start;
+}
+
+::placeholder {
+    font-weight: 700;
+    font-size: 16px;
+    color: rgb(117, 117, 117);
+}
+
+:placeholder-shown {
+    font-weight: 700;
+    font-size: 16px;
+     color: rgb(117, 117, 117);
+}
+
+textarea {
+    font-weight: 700;
+    font-size: 16px;
+     color: rgb(117, 117, 117);
+}
+
+.previous_button {
+    letter-spacing: 1.1px;
+    color: rgb(117, 117, 117);
+    margin: 20px 0px 0px 0px;
+    padding-left: 20px;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 5px;
+}
+
+.next_button {
+    letter-spacing: 1.1px;
+    color: rgb(117, 117, 117);
+    margin: 20px 0px 0px 0px;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 5px;
+}
+
+.prev_next_buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 5px;
 }

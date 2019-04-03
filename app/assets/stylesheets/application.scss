@@ -63,6 +63,10 @@ time, mark, audio, video, button {
    outline: none;
  }
 
+ button:hover {
+   cursor: pointer;
+ }
+
  img {
   width: auto;
   height: 50vh;
@@ -134,7 +138,6 @@ time, mark, audio, video, button {
 
   .user_session button {
     color: #333331;
-    border-bottom: 1px solid #ebebeb;
     width: 65px;
     height: 25px;
     margin: 0px;
@@ -144,7 +147,7 @@ time, mark, audio, video, button {
   }
 
   .user_session button:hover {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(216, 216, 216);
     cursor: pointer;
   }
 
@@ -310,17 +313,45 @@ i:hover {
   justify-content: space-around;
 }
 
+.drop_menu {
+  margin: 0 auto;
+}
+
 .nav_logged_in_logout {
     display: inline-block;
     color: #333331;
-    border-bottom: 1px solid #ebebeb;
+    border: 0px;
+    width: 70px;
+    height: 25px;
+    margin: 0px;
+    padding-bottom: 12px;
+    font-size: 14px;
+    font-weight: 100px;
+    margin-top: 8px;
+    font-family: "Calibre", Helvetica, Arial, sans-serif;
+}
+
+.nav_logged_in_logout:hover {
+  border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+.nav_host {
+    display: inline-block;
+    color: #333331;
     width: 70px;
     height: 25px;
     margin: 0px;
     padding: 0px;
     font-size: 14px;
     font-weight: 100px;
-    margin-top: 8px;
+    margin-top: 4px;
+    text-align: center;
+    align-content: center;
+    font-family: "Calibre", Helvetica, Arial, sans-serif;
+}
+
+.nav_host:hover {
+  border-bottom: 1px solid rgb(216, 216, 216);
 }
 
 .tent_logo {
