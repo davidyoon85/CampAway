@@ -1,15 +1,12 @@
 import React from 'react';
-// import { Step1 } from './form_step1';
-// import { Step2 } from './form_step2';
-// import { Step3 } from './form_step3';
 
 class MasterForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             currentStep: 1,
-            email: '',
-            username: '',
+            title: '',
+            body: '',
             password: '',
         };
         this.handleChange = this.handleChange.bind(this);
@@ -24,10 +21,10 @@ class MasterForm extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        const { email, username, password } = this.state;
+        const { title, body, password } = this.state;
         alert(`Your registration detail: \n 
-           Email: ${email} \n 
-           Username: ${username} \n
+           title: ${title} \n 
+           body: ${body} \n
            Password: ${password}`);
     }
 
@@ -48,23 +45,24 @@ class MasterForm extends React.Component {
             });
         } else {
             this.setState({
-                currentStep: this.state.currentStep + 1
+                currentStep: this.state.currentStep - 1
             });
         }
     }
 
     previousButton() {
 
-    //     if (currentStep !== 1) {
-    //         return (
-    //             <button
-    //                 className="btn btn-secondary"
-    //                 type="button" onClick={this._prev}>
-    //                 Previous
-    //   </button>
-    //         )
-    //     }
-    //     return null;
+        if (this.state.currentStep !== 1) {
+            return (
+                <button
+                    className="btn btn-primary float-right"
+                    type="button" onClick={this._prev.bind(this)}>
+                    Previous
+                </button>
+            )
+        } else {
+            return null;
+        }
     }
 
     nextButton() {
@@ -87,27 +85,27 @@ class MasterForm extends React.Component {
 
             if (this.state.currentStep === 1) {
                 step = <div className="form-group">
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="title">title</label>
                     <input
                         className="form-control"
-                        id="email"
-                        name="email"
+                        id="title"
+                        name="title"
                         type="text"
-                        placeholder="Enter email"
-                        value={this.state.email}
+                        placeholder="Enter title"
+                        value={this.state.email || ''}
                         onChange={this.handleChange}
                     />
                 </div>
             } else if (this.state.currentStep === 2) {
                 step = <div className="form-group">
-                    <label htmlFor="username">Username</label>
+                    <label htmlFor="body">body</label>
                     <input
                         className="form-control"
-                        id="username"
-                        name="username"
+                        id="body"
+                        name="body"
                         type="text"
                         placeholder="gimme ur name"
-                        value={this.state.username}
+                        value={this.state.body || ''}
                         onChange={this.handleChange}
                     />
                 </div>
@@ -121,7 +119,7 @@ class MasterForm extends React.Component {
                             name="password"
                             type="password"
                             placehoder="gimme ur password"
-                            value={this.state.password}
+                            value={this.state.password || ''}
                             onChange={this.handleChange}
                         />
                     </div>
@@ -129,94 +127,13 @@ class MasterForm extends React.Component {
                 </React.Fragment>
             }
 
-        // const Step1 = (props) => {
-        //     if (props.currentStep !== 1) {
-        //         return null;
-        //     }
-
-        //     return (
-        //         <div className="form-group">
-        //             <label htmlFor="email">Email</label>
-        //             <input
-        //                 className="form-control"
-        //                 id="email"
-        //                 name="email"
-        //                 type="text"
-        //                 placeholder="Enter email"
-        //                 value={props.email}
-        //                 onChange={props.handleChange}
-        //             />
-        //         </div>
-        //     );
-        // };
-
-        // const Step2 = (props) => {
-        //     if (props.currentStep !== 2) {
-        //         return null;
-        //     }
-
-        //     return (
-        //         <div className="form-group">
-        //             <label htmlFor="username">Username</label>
-        //             <input
-        //                 className="form-control"
-        //                 id="username"
-        //                 name="username"
-        //                 type="text"
-        //                 placeholder="gimme ur name"
-        //                 value={props.username}
-        //                 onChange={props.handleChange}
-        //             />
-        //         </div>
-        //     );
-        // }
-
-        // const Step3 = (props) => {
-        //     if (props.currentStep !== 3) {
-        //         return null;
-        //     }
-
-        //     return (
-        //         <React.Fragment>
-        //             <div className="form-group">
-        //                 <label htmlFor="password">Password</label>
-        //                 <input
-        //                     className="form-control"
-        //                     id="password"
-        //                     name="password"
-        //                     type="password"
-        //                     placehoder="gimme ur password"
-        //                     value={props.password}
-        //                     onChange={props.handleChange}
-        //                 />
-        //             </div>
-        //             <button className="btn btn-success btn-block">Sign Up</button>
-        //         </React.Fragment>
-        //     );
-        // }
-
         return (
             <React.Fragment>
                 <h1>React Wizard Form 🧙‍♂️</h1>
                 <p>Step {this.state.currentStep} </p>
 
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit.bind(this)}>
                 { step }
-                    {/* <Step1
-                        currentStep={this.state.currentStep}
-                        handleChange={this.handleChange.bind(this)}
-                        email={this.state.email}
-                    />
-                    <Step2
-                        currentStep={this.state.currentStep}
-                        handleChange={this.handleChange.bind(this)}
-                        username={this.state.username}
-                    />
-                    <Step3
-                        currentStep={this.state.currentStep}
-                        handleChange={this.handleChange.bind(this)}
-                        password={this.state.password}
-                    /> */}
                     {this.previousButton()}
                     {this.nextButton()}
 

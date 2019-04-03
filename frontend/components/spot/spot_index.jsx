@@ -18,7 +18,7 @@ class SpotIndex extends React.Component {
                 <div className="spot_index_header">
                     <h1>Discover camping...</h1>
                 </div>
-
+            
                 <div className="spot_index_spot">
                     {this.props.spots.map((spot) => (
                         <SpotIndexItem className="index_spots" push={this.props.history.push} spot={spot} key={spot.id} />

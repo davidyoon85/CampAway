@@ -12,9 +12,9 @@ const Splash = () => {
         Book unique camping experiences on over <nobr className="bold">300,000</nobr> campsites, ranches, vineyards, public parks and more.
         </div>
     </div>
-    {/* <div className="spot_index_container">
+    <div className="spot_index_container">
         <SpotIndexContainer />
-    </div> */}
+    </div>
     </>
     )
 }
