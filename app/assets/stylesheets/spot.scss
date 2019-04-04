@@ -1,6 +1,16 @@
 .spot_page {
-    width: 80%;
+    width: 35%;
     padding-top: 10px;
+    margin-left: 22%;
+}
+
+// .main-class {
+//     // display: flex;
+//     // justify-content: center;
+// }
+
+.spot_div_main {
+    width: 100%;
 }
 
 .spot_div {
@@ -13,8 +23,8 @@
 .spot_section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    width: 90%;
+    justify-content: space-between;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -23,15 +33,13 @@
 }
 
 .spot_div_info {
-    flex-basis: 350px;
+    flex-basis: 180px;
     height: 340px;
-  
-    padding: 40px 40px 40px 40px;
+    width: 26%;
+    padding: 15px 15px 15px 15px;
     border-bottom: 1px solid #ebebeb;
     box-shadow: 0px 0px 3px #ebebeb;
-    margin: 20px 20px 20px 20px;
-    display: flex;
-    justify-content: flex-start;
+    margin-top: 15px;
     border: 1px solid #ebebeb;
 }
 
@@ -79,8 +87,8 @@ span > img {
 .spot_index {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    width: 80%;
+    justify-content: center;
+    width: 60%;
     text-align: center;
 }
 
@@ -146,7 +154,7 @@ span > img {
     top: 55%;
     width: 319px;
     height: 228px;
-    left: 65%;
+    left: 61%;
     z-index: 19;
     background: white;
     border: 1px solid #ebebeb;

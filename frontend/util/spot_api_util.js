@@ -12,13 +12,18 @@ export const fetchSingleSpot = (id) => (
     })
 );
 
-export const hostSpot = (spot) => (
+export const hostSpot = (formData) => {
+        return(
+
   $.ajax({
+    url: '/api/spots',
     method: 'POST',
-    url: 'api/spots',
-    data: { spot }
+    data: formData,
+    contentType: false,
+    processData: false
   })
-);
+        );
+};
 
 export const deleteSpot = (spotId) => (
   $.ajax({

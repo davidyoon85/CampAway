@@ -371,6 +371,7 @@ i:hover {
 
 .photo_slider {
   position: relative;
+  overflow: hidden;
 }
 
 .spot_photo {
@@ -379,23 +380,28 @@ i:hover {
   width: 90%;
   background: white;
   height: 480px;
+  overflow: hidden;
 }
 
  .slider {
     height: 480px;
+    overflow: hidden;
  }
 
  .slick-slide {
     padding: 7px;
     height: 480px;
+    overflow: hidden;
  }
 
  .slick-prev:before, .slick-next:before {
     color: gray;
     font-size: 24px;
     font-family: 'slick';
+    overflow: hidden;
  }
 
  .slick-prev:hover:before, .slick-next:hover:before {
     color: green;
+    overflow: hidden;
  }

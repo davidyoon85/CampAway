@@ -5,6 +5,7 @@ class Api::SpotsController < ApplicationController
 
     def create
         @spot = Spot.new(spot_params)
+        
         if @spot.save!
             render :show
         else
@@ -19,13 +20,13 @@ class Api::SpotsController < ApplicationController
 
     def destroy
         @spot = Spot.find(params[:id])
-        @spot.destory
+        @spot.destroy
         render :show
     end
 
-        private
+    private
     def spot_params
         params.require(:spot).permit(:host_id, :title, :body, :price, :pets_allow, :group_size, :check_in, :check_out, :lat, :long, 
-        :campfire, :tent, :sites, :parking, :toilet, :shower, :hiking, :biking, :wildlife, :paddling)
+        :campfire, :tent, :sites, :parking, :toilet, :shower, :hiking, :biking, :wildlife, :paddling, photos: [])
     end
 end

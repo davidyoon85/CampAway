@@ -4,7 +4,7 @@
     padding-bottom: 20px;
     width: 45%;
     text-align: left;
-    margin-left: 0 auto;   
+    margin-left: 10%;   
 }
 
 .splash_subtitle2 {
@@ -12,14 +12,14 @@
     font-size: 19px;
     width: 45%;
     text-align: left;
-    margin-left: 0 auto; 
+    margin-left: 10%; 
     line-height: 1.4;
 }
 
 .splash_main {
-    width: 82%;
+    justify-content: center;
+    width: 100%;
     text-align: center;
-    margin: 0 auto;
     position: relative;
     top: 20px;
 }

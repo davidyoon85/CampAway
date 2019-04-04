@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 
 class MasterForm extends React.Component {
     constructor(props) {
-        // debugger
+        // 
         super(props);
         this.state = {
             host_id: props.user.id,
@@ -27,10 +27,28 @@ class MasterForm extends React.Component {
             biking: false,
             wildlife: false,
             paddling: false,
+            photoFile: [],
+            photoUrl: [],
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleFile(e) {
+        debugger
+
+        const reader = new FileReader();
+        const file = e.currentTarget.files[0];
+        reader.onloadend = () => this.setState(
+            { photoUrl: this.state.photoUrl.concat([reader.result]), photoFile: this.state.photoFile.concat([file])}
+        );
+
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            this.setState({ photoUrl: [], photoFile: []});
+        }
     }
 
     handleChange(event) {
@@ -42,8 +60,33 @@ class MasterForm extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-
-        this.props.hostSpot(this.state).then((response) => {
+        
+        const formData = new FormData();
+        formData.append('spot[title]', this.state.title);
+        if (this.state.photoFile) {
+            formData.append('spot[photos]', this.state.photoFile);
+        }
+        formData.append('spot[host_id]', this.props.user.id);
+        formData.append('spot[body]', this.state.body);
+        formData.append('spot[price]', this.state.price);
+        formData.append('spot[pets_allow]', this.state.pets_allow);
+        formData.append('spot[group_size]', this.state.group_size);
+        formData.append('spot[check_in]', this.state.check_in);
+        formData.append('spot[check_out]', this.state.check_out);
+        formData.append('spot[lat]', this.state.lat);
+        formData.append('spot[long]', this.state.long);
+        formData.append('spot[campfire]', this.state.campfire);
+        formData.append('spot[tent]', this.state.tent);
+        formData.append('spot[sites]', this.state.sites);
+        formData.append('spot[parking]', this.state.parking);
+        formData.append('spot[toilet]', this.state.toilet);
+        formData.append('spot[shower]', this.state.shower);
+        formData.append('spot[hiking]', this.state.hiking);
+        formData.append('spot[biking]', this.state.biking);
+        formData.append('spot[wildlife]', this.state.wildlife);
+        formData.append('spot[paddling]', this.state.paddling);
+        
+        this.props.hostSpot(formData).then((response) => {
             this.props.history.push(`/spots/${Object.keys(response.spot)[0]}`);
         });
     }
@@ -107,6 +150,16 @@ class MasterForm extends React.Component {
     }
 
     render() {
+        if (this.state.photos) {
+            debugger
+        }
+        let preview = null;
+        if (this.state.photoUrl.length > 0) {
+            preview = this.state.photoUrl.map((photo, idx) => {
+                return <img key={idx} src={photo}/>
+            })
+        } 
+        // this.state.photoUrl ? <img src={this.state.photoUrl} /> : null;
 
         let step;
 
@@ -291,21 +344,21 @@ class MasterForm extends React.Component {
                                 className={this.state.paddling ? 'active_button' : 'host_spot_options'}
                                 name="paddling"
                                 onClick={this.handleClick}
-                            />
-                            
+                            />               
                             </div>
-                            
-                        </div>
-                        
+                        </div>                 
                     </div>
                 </>
+                    <input type="file" onChange={(e) => this.setState({ photos: e.target.files })} multiple />
                     
+                    { preview }
+                            
                     <div className="form_signup">
                         <input type="submit" className="form_signup_button" value="Create Spot" />
                     </div>
                     
                 </React.Fragment>
-            }
+}
 
         return (
             <div className="spot_form_main">
@@ -325,3 +378,15 @@ class MasterForm extends React.Component {
 }
 
 export default withRouter(MasterForm);
+
+
+
+
+
+// handleSubmit(event) {
+//     event.preventDefault();
+
+//     this.props.hostSpot(this.state).then((response) => {
+//         this.props.history.push(`/spots/${Object.keys(response.spot)[0]}`);
+//     });
+// }
