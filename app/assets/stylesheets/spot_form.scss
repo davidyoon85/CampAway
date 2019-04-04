@@ -3,7 +3,7 @@
     width: 30%;
     margin: 0 auto;
     background-color: white;
-    margin-top: 4%;
+    // margin-top: 2%;
     display: flex;
     flex-wrap: wrap;
     border: 1px solid rgb(235, 235, 235);
@@ -72,18 +72,21 @@
 }
 
 .form-control {
+    height: 45px;
     border: 1px solid rgb(235, 235, 235);
     padding: 0px 0px 0px 10px;
     width: 100%;
     margin: 10px 0px 20px 0px;
-    color: rgb(117, 117, 117);
+    font-weight: 700;
+    font-size: 16px;
+    color: #757575;
 }
 
 .form_control_description {
     width: 100%;
     border: 1px solid rgb(235, 235, 235);
-    margin-top: 10px;
-    padding: 0px 0px 150px 10px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px 0px 150px 10px;
     text-align: start;
 }
 
@@ -108,7 +111,6 @@ textarea {
 .previous_button {
     letter-spacing: 1.1px;
     color: rgb(117, 117, 117);
-    margin: 20px 0px 0px 0px;
     padding-left: 20px;
     font-weight: 600;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 5px;
@@ -117,7 +119,6 @@ textarea {
 .next_button {
     letter-spacing: 1.1px;
     color: rgb(117, 117, 117);
-    margin: 20px 0px 0px 0px;
     font-weight: 600;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 5px;
 }
@@ -128,4 +129,8 @@ textarea {
     justify-content: space-between;
     position: relative;
     left: 5px;
+}
+
+.create_spot_form {
+    display: flex;
 }

@@ -113,7 +113,7 @@ class SessionForm extends React.Component {
                     <div className="modal_table1">
                         <input type="text"
                         onChange={this.update('first_name')}
-                        id="login-input-beside1"
+                        className="login-input"
                         placeholder="First name..."
                         />
                     </div>
@@ -121,7 +121,7 @@ class SessionForm extends React.Component {
                     <div className="modal_table2">
                     <input type="text"
                     onChange={this.update('last_name')}
-                    id="login-input-beside2"
+                    className="login-input"
                     placeholder="Last name..."
                     />
                     </div>

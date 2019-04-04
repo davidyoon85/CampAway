@@ -120,7 +120,6 @@ class MasterForm extends React.Component {
                             id="title"
                             name="title"
                             type="text"
-                            value={this.state.title}
                             onChange={this.handleChange}
                         />
                     </div>
@@ -132,7 +131,6 @@ class MasterForm extends React.Component {
                             id="body"
                             name="body"
                             type="text"
-                            value={this.state.body}
                             onChange={this.handleChange}
                         />
                     </div>
@@ -148,7 +146,6 @@ class MasterForm extends React.Component {
                             name="price"
                             type="number"
                             placeholder="Enter daily price (ex: 100)"
-                            value={this.state.price}
                             onChange={this.handleChange}
                         />
                     </div>
@@ -160,7 +157,6 @@ class MasterForm extends React.Component {
                             name="sites"
                             type="number"
                             placehoder="Enter the number of sites available (ex: 4)"
-                            value={this.state.sites}
                             onChange={this.handleChange}
                         />
                     </div>
@@ -172,7 +168,6 @@ class MasterForm extends React.Component {
                             name="group_size"
                             type="number"
                             placeholder="Enter the maximum number of guests on one site (ex: 4)"
-                            value={this.state.group_size}
                             onChange={this.handleChange}
                         />
                     </div>
@@ -184,7 +179,6 @@ class MasterForm extends React.Component {
                             name="check_in"
                             type="text"
                             placeholder="Enter the time to check in by (ex: 2PM)"
-                            value={this.state.check_in}
                             onChange={this.handleChange}
                         />
                     </div>
@@ -196,7 +190,6 @@ class MasterForm extends React.Component {
                             name="check_out"
                             type="text"
                             placeholder="Enter the time to check out by (ex: 11AM)"
-                            value={this.state.check_out}
                             onChange={this.handleChange}
                         />
                     </div>
@@ -207,7 +200,6 @@ class MasterForm extends React.Component {
                             id="lat"
                             name="lat"
                             type="number"
-                            value={this.state.lat}
                             onChange={this.handleChange}
                         />
                     </div>
@@ -218,7 +210,6 @@ class MasterForm extends React.Component {
                             id="long"
                             name="long"
                             type="number"
-                            value={this.state.long}
                             onChange={this.handleChange}
                         />
                     </div>
@@ -226,77 +217,77 @@ class MasterForm extends React.Component {
             } else {
 
                 step = <React.Fragment>
-                    <div className="host_option_main">
-                        <div className="host_option_amenities">
+                    <>
+                        <div className="host_options_title">
+                            Choose Camp Features!
+                        </div>
+                    <div className="create_spot_fo</div>rm">
+                         <div className="host_option_main">
 
-                        <h1>CHOOSE YOUR AMENITIES!</h1><br />
-                            <div className="form-group">
+                            <div className="form-group-options">
                                 <input type="image" src="https://image.flaticon.com/icons/svg/71/71702.svg"
                                     className={this.state.pets_allow ? 'active_button' : 'host_spot_options'}
                                     name="pets_allow"
                                     onClick={this.handleClick}
                                 />
                             </div>
-                            <div className="form-group">
+                            <div className="form-group-options">
                                 <input type="image" src="https://image.flaticon.com/icons/svg/1535/1535413.svg"
                                     className={this.state.campfire ? 'active_button' : 'host_spot_options'}
                                     name="campfire"
                                     onClick={this.handleClick}
                                 />
                             </div>
-                            <div className="form-group">
+                            <div className="form-group-options">
                                 <input type="image" src="https://image.flaticon.com/icons/svg/1535/1535412.svg"
                                     className={this.state.tent ? 'active_button' : 'host_spot_options'}
                                     name="tent"
                                     onClick={this.handleClick}
                                 />
                             </div>
-                            <div className="form-group">
+                            <div className="form-group-options">
                                 <input type="image" src="https://image.flaticon.com/icons/svg/818/818383.svg"
                                     className={this.state.parking ? 'active_button' : 'host_spot_options'}
                                     name="parking"
                                     onClick={this.handleClick}
                                 />
                             </div>
-                            <div className="form-group">
+                            <div className="form-group-options">
                                 <input type="image" src="https://image.flaticon.com/icons/svg/93/93156.svg"
                                     className={this.state.toilet ? 'active_button' : 'host_spot_options'}
                                     name="toilet"
                                     onClick={this.handleClick}
                                 />
                             </div>
-                            <div className="form-group">
+                            <div className="form-group-options">
                                 <input type="image" src="https://image.flaticon.com/icons/svg/1536/1536456.svg"
                                     className={this.state.shower ? 'active_button' : 'host_spot_options'}
                                     name="shower"
                                     onClick={this.handleClick}
                                 />
                             </div>
-                        </div>
-                        <div className="host_option_activities">
-                            <h1>CHOOSE YOUR ACTIVITIES!</h1><br />
-                            <div className="form-group">
+                            <div className="form-group-options">
                                 <input type="image" src="https://image.flaticon.com/icons/svg/71/71423.svg"
                                     className={this.state.hiking ? 'active_button' : 'host_spot_options'}
                                     name="hiking"
                                     onClick={this.handleClick}
                                 />
                             </div>
-                            <div className="form-group">
+                            <div className="form-group-options">
                                 <input type="image" src="https://image.flaticon.com/icons/svg/565/565350.svg" 
                                     className={this.state.biking ? 'active_button' : 'host_spot_options'}
                                     name="biking"
                                     onClick={this.handleClick}
                                 />
                             </div>
-                            <div className="form-group">
+                            {/* <div className="form-group-options">
                                 <input type="image" src="https://image.flaticon.com/icons/svg/54/54127.svg"
                                     className={this.state.wildlife ? 'active_button' : 'host_spot_options'}
                                     name="wildlife"
                                     onClick={this.handleClick}
                                 />
-                            </div>
-                            <div className="form-group"><input type="image" src="https://image.flaticon.com/icons/svg/38/38607.svg"
+                            </div> */}
+                            <div className="form-group-options"><input type="image" src="https://image.flaticon.com/icons/svg/38/38607.svg"
                                 className={this.state.paddling ? 'active_button' : 'host_spot_options'}
                                 name="paddling"
                                 onClick={this.handleClick}
@@ -307,8 +298,11 @@ class MasterForm extends React.Component {
                         </div>
                         
                     </div>
+                </>
                     
-                    <input type="submit" className="form_signup_button" value="Sign Up" />
+                    <div className="form_signup">
+                        <input type="submit" className="form_signup_button" value="Create Spot" />
+                    </div>
                     
                 </React.Fragment>
             }

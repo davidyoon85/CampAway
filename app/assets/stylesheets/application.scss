@@ -131,6 +131,7 @@ time, mark, audio, video, button {
 
   .session-submit {
    text-transform: capitalize;
+   margin: 0 auto;
  }
 
   input {
@@ -229,7 +230,7 @@ time, mark, audio, video, button {
     margin-bottom: 35px;
   }
 
-  input {
+    .login-input {
     border: 1px solid black;
     margin: 0 auto;
     width: 80%;
@@ -311,24 +312,26 @@ i:hover {
 
 .nav_logged_in_right {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .drop_menu {
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav_logged_in_logout {
+  margin-top: 10px;
     display: inline-block;
     color: #333331;
     border: 0px;
     width: 70px;
     height: 25px;
-    margin: 0px;
     padding-bottom: 12px;
     font-size: 14px;
     font-weight: 100px;
-    margin-top: 8px;
     font-family: "Calibre", Helvetica, Arial, sans-serif;
 }
 
@@ -337,15 +340,15 @@ i:hover {
 }
 
 .nav_host {
-    display: inline-block;
+    display: block;
     color: #333331;
     width: 70px;
     height: 25px;
-    margin: 0px;
+    margin-top: 10px;
     padding: 0px;
     font-size: 14px;
     font-weight: 100px;
-    margin-top: 4px;
+    // margin-top: 6.1%;
     text-align: center;
     align-content: center;
     font-family: "Calibre", Helvetica, Arial, sans-serif;

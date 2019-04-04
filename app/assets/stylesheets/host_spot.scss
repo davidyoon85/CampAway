@@ -1,45 +1,65 @@
 .host_option_main {
     display: flex;
-    width: 60%;
-    position: relative;
-    left: 13%;
-}
-
-.host_option_amenities {
-    margin: 10px;
-    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    width: 60%;
-}
-
-.host_option_activities {
-    margin: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    width: 60%;
+    width: 100%;
+    margin-left: 5%;
 }
 
 .host_spot_options {
     border: 1px solid black;
-    height: 40%;
-    width: 40%;
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 3px;
+    padding: 10px;
 }
 
 .active_button{
+    display: block;
     border: 1px solid black;
-    height: 40%;
-    width: 40%;
     background: #40d9ac;
+    height: 80%;
+    width: 80%;
+    padding: 10px;
 }
 
 .host_spot_options > img {
-    height: 40%;
-    width: 40%;
     border: 1px solid black;
 }
 
 .form_signup_button {
-    position: relative;
-    left: 13%;
+    margin-top: 6%;
     text-align: center;
+    justify-content: center;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #757575;
+    font-weight: 600;
+}
+
+.host_options_title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.form-group {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.form-group-options {
+    width: 30%;
+    margin: 5px;
+    padding-bottom: 1px;
+}
+
+.form_signup {
+    display: flex;
+    justify-content: center;
+    margin-left: 8%;
 }
