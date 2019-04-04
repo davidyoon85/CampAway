@@ -1,6 +1,5 @@
 .spot_page {
-    margin-left: 12%;
-    width: 50%;
+    width: 80%;
     padding-top: 10px;
 }
 
@@ -15,7 +14,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -24,7 +23,7 @@
 }
 
 .spot_div_info {
-    flex-basis: 175px;
+    flex-basis: 350px;
     height: 340px;
   
     padding: 40px 40px 40px 40px;
@@ -78,9 +77,33 @@ span > img {
 }
 
 .spot_index {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     width: 80%;
-    margin-left: 15%;
     text-align: center;
+}
+
+.spot_index_parent {
+    flex: 0 0 33%;
+}
+
+.spot_index_spot {
+    width: 100%;
+    padding-bottom: 35px;
+}
+.spot_index_photo {
+    height: 100%;
+    width: 100%;
+}
+
+.index_photo_title {
+    margin-top: 5px;
+    padding-left: 10px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1.1px;
 }
 
 .spot_index_header {
@@ -98,6 +121,7 @@ span > img {
 
 .index_spots {
     display: flex;
+    flex-wrap: wrap;
     height: 340px;
     flex-basis: 320px;
     justify-content: center;
@@ -111,13 +135,9 @@ span > img {
     display: flex;
 }
 
-.spot_index_spot_title {
-    position: relative;
-    bottom: 0;
-}
-
 .spot_index_container {
-    margin: 80px 0px 0px 0px;
+    margin-top: 5%;
+    margin-left: 14%;
     width: 90%;
 }
 
@@ -165,7 +185,6 @@ span > img {
 .widget_booking {
     border: 1px solid #ebebeb;
     height: 72px;
-    // padding: 10px 10px 0px 10px;
 }
 
 .widget_button {
@@ -183,8 +202,6 @@ span > img {
 .widget_button:hover {
     background-color: white;
     transition: background-color 0.2s ease 0s; 
-        // border-color 0.1s ease 0s, 
-        // color 0.1s ease 0s;
     height: 51px;
     width: 289px;
     margin: 10px 0px 0px 15px;;
@@ -195,3 +212,4 @@ span > img {
     font-weight: 700;
     border: 3px solid #40d9ac;
 }
+

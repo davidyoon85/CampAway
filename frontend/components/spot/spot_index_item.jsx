@@ -14,9 +14,12 @@ class SpotIndexItem extends React.Component {
     render() {
         return (
             <nobr className="index_spots" onClick={this.handleClick}>
-                <div className="spot_index_spot_title">
+                <div className="spot_index_spot">
                     <Link to={`/spots/${this.props.spot.id}`}>
-                        {this.props.spot.title}
+                        <img className="spot_index_photo" src="https://media.glampinghub.com/CACHE/images/accommodations/lakefront-log-cabin-rental-set-in-forestry-of-adirondack-park-new-1544021446318/c5e52bb1535628282aec8e7192952620.jpg"/>
+                        <div className="index_photo_title">
+                            {this.props.spot.title}
+                        </div>
                     </Link>
                 </div>
             </nobr>

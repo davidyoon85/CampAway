@@ -20,8 +20,10 @@ class SpotIndex extends React.Component {
                 </div>
             
                 <div className="spot_index_spot">
-                    {this.props.spots.map((spot) => (
-                        <SpotIndexItem className="index_spots" push={this.props.history.push} spot={spot} key={spot.id} user={this.props.user}/>
+                    {this.props.spots.map((spot, id) => (
+                        <div className="spot_index_parent" key={id}>
+                            <SpotIndexItem className="index_spots" push={this.props.history.push} spot={spot} key={spot.id} user={this.props.user}/>
+                        </div>
                     ))
                     }
                 </div>
