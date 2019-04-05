@@ -36,13 +36,12 @@ class MasterForm extends React.Component {
     }
 
     handleFile(e) {
-        debugger
-
+        
         const reader = new FileReader();
         const file = e.currentTarget.files[0];
         reader.onloadend = () => this.setState(
             { photoUrl: this.state.photoUrl.concat([reader.result]), photoFile: this.state.photoFile.concat([file])}
-        );
+            );
 
         if (file) {
             reader.readAsDataURL(file);
@@ -61,15 +60,16 @@ class MasterForm extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
         
+        debugger
         const formData = new FormData();
         formData.append('spot[title]', this.state.title);
-        if (this.state.photoFile) {
-            formData.append('spot[photos]', this.state.photoFile);
-        }
-
-        // for (let i = 0; i < photos.length; i++) {
-        //     formData.append('post[photos][]', photos[i]);
+        // if (this.state.photoFile) {
+        //     formData.append('spot[photos]', this.state.photoFile);
         // }
+
+        for (let i = 0; i < this.state.photos.length; i++) {
+            formData.append('spot[photos][]', this.state.photos[i]);
+        }
 
         formData.append('spot[host_id]', this.props.user.id);
         formData.append('spot[body]', this.state.body);
@@ -156,7 +156,7 @@ class MasterForm extends React.Component {
 
     render() {
         if (this.state.photos) {
-            debugger
+        
         }
         let preview = null;
         if (this.state.photoUrl.length > 0) {

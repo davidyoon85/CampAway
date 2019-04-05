@@ -10,6 +10,7 @@ class Spot extends React.Component {
   }
 
   componentDidMount() {
+    debugger
     this.props.fetchSpot(this.props.match.params.spotId);
   }
 
