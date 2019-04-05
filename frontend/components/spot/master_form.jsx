@@ -63,13 +63,13 @@ class MasterForm extends React.Component {
         
         const formData = new FormData();
         formData.append('spot[title]', this.state.title);
-        // if (this.state.photoFile) {
-        //     formData.append('spot[photos]', this.state.photoFile);
-        // }
-
-        for (let i = 0; i < photos.length; i++) {
-            formData.append('post[photos][]', photos[i]);
+        if (this.state.photoFile) {
+            formData.append('spot[photos]', this.state.photoFile);
         }
+
+        // for (let i = 0; i < photos.length; i++) {
+        //     formData.append('post[photos][]', photos[i]);
+        // }
 
         formData.append('spot[host_id]', this.props.user.id);
         formData.append('spot[body]', this.state.body);
@@ -203,7 +203,7 @@ class MasterForm extends React.Component {
                             id="price"
                             name="price"
                             type="number"
-                            placeholder="Enter daily price (ex: 100)"
+                            placeholder="100"
                             onChange={this.handleChange}
                         />
                     </div>
@@ -214,7 +214,7 @@ class MasterForm extends React.Component {
                             id="sites"
                             name="sites"
                             type="number"
-                            placehoder="Enter the number of sites available (ex: 4)"
+                            placeholder="2"
                             onChange={this.handleChange}
                         />
                     </div>
@@ -224,7 +224,7 @@ class MasterForm extends React.Component {
                             className="form-control"
                             id="group_size"
                             name="group_size"
-                            type="number"
+                            placeholder="4"
                             placeholder="Enter the maximum number of guests on one site (ex: 4)"
                             onChange={this.handleChange}
                         />
@@ -236,7 +236,7 @@ class MasterForm extends React.Component {
                             id="check_in"
                             name="check_in"
                             type="text"
-                            placeholder="Enter the time to check in by (ex: 2PM)"
+                            placeholder="2 PM"
                             onChange={this.handleChange}
                         />
                     </div>
@@ -247,7 +247,7 @@ class MasterForm extends React.Component {
                             id="check_out"
                             name="check_out"
                             type="text"
-                            placeholder="Enter the time to check out by (ex: 11AM)"
+                            placeholder="11 AM"
                             onChange={this.handleChange}
                         />
                     </div>
@@ -258,6 +258,7 @@ class MasterForm extends React.Component {
                             id="lat"
                             name="lat"
                             type="number"
+                            placeholder="40.751628"
                             onChange={this.handleChange}
                         />
                     </div>
@@ -268,6 +269,7 @@ class MasterForm extends React.Component {
                             id="long"
                             name="long"
                             type="number"
+                            placeholder="-73.983933"
                             onChange={this.handleChange}
                         />
                     </div>

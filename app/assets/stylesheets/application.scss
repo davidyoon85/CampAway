@@ -380,12 +380,10 @@ i:hover {
   width: 90%;
   background: white;
   height: 480px;
-  overflow: hidden;
 }
 
  .slider {
     height: 480px;
-    overflow: hidden;
  }
 
  .slick-slide {
@@ -398,10 +396,8 @@ i:hover {
     color: gray;
     font-size: 24px;
     font-family: 'slick';
-    overflow: hidden;
  }
 
  .slick-prev:hover:before, .slick-next:hover:before {
-    color: green;
-    overflow: hidden;
+    color: #40d9ac;
  }

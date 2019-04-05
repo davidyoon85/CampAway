@@ -12,7 +12,6 @@ class SpotIndexItem extends React.Component {
     }
 
     render() {
-        debugger
 
         const defaultPhoto = ["https://media.glampinghub.com/CACHE/images/accommodations/lakefront-log-cabin-rental-set-in-forestry-of-adirondack-park-new-1544021446318/c5e52bb1535628282aec8e7192952620.jpg"];
         

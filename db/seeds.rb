@@ -309,6 +309,30 @@ spot9 = Spot.create!(
 file = open('https://s3.amazonaws.com/camp-away-dev/spot1_0.jpg')
 spot1.photos.attach(io: file, filename: "spot1_0.jpg")
 
+file = open('https://s3.amazonaws.com/camp-away-dev/spot1_1.jpg')
+spot1.photos.attach(io: file, filename: "spot1_1.jpg")
+
+file = open('https://s3.amazonaws.com/camp-away-dev/spot1_2.jpg')
+spot1.photos.attach(io: file, filename: "spot1_2.jpg")
+
+file = open('https://s3.amazonaws.com/camp-away-dev/spot1_3.jpg')
+spot1.photos.attach(io: file, filename: "spot1_3.jpg")
+
+file = open('https://s3.amazonaws.com/camp-away-dev/spot1_4.jpg')
+spot1.photos.attach(io: file, filename: "spot1_4.jpg")
+
+file = open('https://s3.amazonaws.com/camp-away-dev/spot1_5.jpg')
+spot1.photos.attach(io: file, filename: "spot1_5.jpg")
+
+file = open('https://s3.amazonaws.com/camp-away-dev/spot1_6.jpg')
+spot1.photos.attach(io: file, filename: "spot1_6.jpg")
+
+file = open('https://s3.amazonaws.com/camp-away-dev/spot1_7.jpg')
+spot1.photos.attach(io: file, filename: "spot1_7.jpg")
+
+file = open('https://s3.amazonaws.com/camp-away-dev/spot1_8.jpg')
+spot1.photos.attach(io: file, filename: "spot1_8.jpg")
+
 file = open('https://s3.amazonaws.com/camp-away-dev/spot2_0.jpg')
 spot2.photos.attach(io: file, filename: "spot2_0.jpg")
 
@@ -316,7 +340,7 @@ file = open('https://s3.amazonaws.com/camp-away-dev/spot3_0.jpg')
 spot3.photos.attach(io: file, filename: "spot3_0.jpg")
 
 file = open('https://s3.amazonaws.com/camp-away-dev/spot4_0.jpg')
-spot4.photos.attach(io: file, filename: "spot4_0.jpg")
+spot4.photos.attach(io: file, filename: "spot4_.jpg")
 
 file = open('https://s3.amazonaws.com/camp-away-dev/spot5_0.jpg')
 spot5.photos.attach(io: file, filename: "spot5_0.jpg")

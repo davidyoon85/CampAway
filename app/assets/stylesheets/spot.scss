@@ -1,13 +1,8 @@
 .spot_page {
-    width: 35%;
+    width: 50%;
     padding-top: 10px;
     margin-left: 22%;
 }
-
-// .main-class {
-//     // display: flex;
-//     // justify-content: center;
-// }
 
 .spot_div_main {
     width: 100%;
@@ -88,12 +83,15 @@ span > img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 60%;
+    width: 70%;
     text-align: center;
+    margin-left: 15%;
+    margin-top: 5%;
 }
 
 .spot_index_parent {
-    flex: 0 0 33%;
+    justify-content: center;
+    width: 28%;
 }
 
 .spot_index_spot {
@@ -143,11 +141,11 @@ span > img {
     display: flex;
 }
 
-.spot_index_container {
-    margin-top: 5%;
-    margin-left: 14%;
-    width: 90%;
-}
+// .spot_index_container {
+//     margin-top: 5%;
+//     margin-left: 14%;
+//     width: 90%;
+// }
 
 .booking_widget {
     position: absolute;
@@ -221,3 +219,15 @@ span > img {
     border: 3px solid #40d9ac;
 }
 
+.delete_spot_button {
+    margin-left: 70%;
+    padding: 0px 10px 0px 10px;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.delete_spot_button:hover {
+    background-color: #40d9ac;
+    font-weight: 600;
+}

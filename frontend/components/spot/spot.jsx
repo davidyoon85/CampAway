@@ -10,10 +10,7 @@ class Spot extends React.Component {
   }
 
   componentDidMount() {
-    
-    this.props.fetchSpot(this.props.match.params.spotId).then((response) => {
-      console.log(response);
-    });
+    this.props.fetchSpot(this.props.match.params.spotId);
   }
 
   handleDelete(e) {
@@ -31,7 +28,7 @@ class Spot extends React.Component {
       <>
         <main className="spot_main_section">
           <div className="photo_slider">
-            <PhotoSlideshow />
+            <PhotoSlideshow spot={spot} />
           </div>
           <div className="spot_page">
 
@@ -58,15 +55,16 @@ class Spot extends React.Component {
             </div> */}
 
             <div className="spot_div_main">
-              <section>
+              {/* <section> */}
                 <div className="spot_div">
                   <h1 className="spot_title">{spot.title}</h1>
 
-                  <img src={spot.photoUrl}/>
+                  {/* <img src={spot.photoUrl}/> */}
                   
                   {
                     spot.host_id === this.props.currentUserId ?
-                      <button onClick={this.handleDelete.bind(this)}>Delete Spot</button>
+                      <button className="delete_spot_button" 
+                      onClick={this.handleDelete.bind(this)}>Delete Spot</button>
                       :
                       null
                   }
@@ -287,7 +285,7 @@ class Spot extends React.Component {
                   </div>
                 </div>
 
-              </section>
+              {/* </section> */}
             </div>
           </div>
         </main >
