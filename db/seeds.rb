@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
 
 User.delete_all
 Spot.delete_all
@@ -48,18 +49,6 @@ demo = User.create(
     zip_code: 123456,
     email_address: 'demo@demo.com'
 )
-
-    # t.boolean "campfire", null: false
-    # t.boolean "pets_allow", null: false
-    # t.boolean "tent", default: false
-    # t.integer "sites"
-    # t.boolean "parking", default: false
-    # t.boolean "toilet", default: false
-    # t.boolean "shower", default: false
-    # t.boolean "hiking", default: false
-    # t.boolean "biking", default: false
-    # t.boolean "wildlife", default: false
-    # t.boolean "paddling", default: false
 
 spot1 = Spot.create!(
     "host_id": user1.id,
@@ -230,6 +219,7 @@ spot6 = Spot.create!(
     "wildlife": true,
     "paddling": false
 )
+
 spot7 = Spot.create!(
     "host_id": user1.id,
     "title": "Peaceful Flow",
@@ -315,3 +305,30 @@ spot9 = Spot.create!(
     "wildlife": true,
     "paddling": false
 )
+
+file = open('https://s3.amazonaws.com/camp-away-dev/spot1_0.jpg')
+spot1.photos.attach(io: file, filename: "spot1_0.jpg")
+
+file = open('https://s3.amazonaws.com/camp-away-dev/spot2_0.jpg')
+spot2.photos.attach(io: file, filename: "spot2_0.jpg")
+
+file = open('https://s3.amazonaws.com/camp-away-dev/spot3_0.jpg')
+spot3.photos.attach(io: file, filename: "spot3_0.jpg")
+
+file = open('https://s3.amazonaws.com/camp-away-dev/spot4_0.jpg')
+spot4.photos.attach(io: file, filename: "spot4_0.jpg")
+
+file = open('https://s3.amazonaws.com/camp-away-dev/spot5_0.jpg')
+spot5.photos.attach(io: file, filename: "spot5_0.jpg")
+
+file = open('https://s3.amazonaws.com/camp-away-dev/spot6_0.jpg')
+spot6.photos.attach(io: file, filename: "spot6_0.jpg")
+
+file = open('https://s3.amazonaws.com/camp-away-dev/spot7_0.jpg')
+spot7.photos.attach(io: file, filename: "spot7_0.jpg")
+
+file = open('https://s3.amazonaws.com/camp-away-dev/spot8_0.jpg')
+spot8.photos.attach(io: file, filename: "spot8_0.jpg")
+
+file = open('https://s3.amazonaws.com/camp-away-dev/spot9_0.jpg')
+spot9.photos.attach(io: file, filename: "spot9_0.jpg")

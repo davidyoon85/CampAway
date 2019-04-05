@@ -35,7 +35,7 @@ class Spot extends React.Component {
           </div>
           <div className="spot_page">
 
-            <div className="booking_widget">
+            {/* <div className="booking_widget">
               <div className="widget_price">
                 {spot.price}
               </div>
@@ -55,7 +55,7 @@ class Spot extends React.Component {
               <div className="widget_booking">
                 <button className="widget_button">Instant Booking</button>
               </div>
-            </div>
+            </div> */}
 
             <div className="spot_div_main">
               <section>

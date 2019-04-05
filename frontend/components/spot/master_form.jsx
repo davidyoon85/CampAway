@@ -63,9 +63,14 @@ class MasterForm extends React.Component {
         
         const formData = new FormData();
         formData.append('spot[title]', this.state.title);
-        if (this.state.photoFile) {
-            formData.append('spot[photos]', this.state.photoFile);
+        // if (this.state.photoFile) {
+        //     formData.append('spot[photos]', this.state.photoFile);
+        // }
+
+        for (let i = 0; i < photos.length; i++) {
+            formData.append('post[photos][]', photos[i]);
         }
+
         formData.append('spot[host_id]', this.props.user.id);
         formData.append('spot[body]', this.state.body);
         formData.append('spot[price]', this.state.price);
