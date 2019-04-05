@@ -11,11 +11,12 @@ class PhotoSlideshow extends React.Component {
 
   render () {
     let photos = ["https://media.glampinghub.com/CACHE/images/accommodations/lakefront-log-cabin-rental-set-in-forestry-of-adirondack-park-new-1544021446318/c5e52bb1535628282aec8e7192952620.jpg"];
-debugger
-    if (this.props.spot) {
+
+    if (this.props.spot.photoUrls) {
+
       debugger
 
-      photos = [this.props.spot.photoUrls];
+      photos = this.props.spot.photoUrls;
     }
     debugger
 
@@ -34,15 +35,14 @@ debugger
     <section className="spot_photo">
       <Slider {...settings}>
         {
-          photos ? photos.map((photo, id) => {
+          photos.map((photo, id) => {
+            debugger
             return (
               <div key={id}>
                 <img src={photo} />
               </div>
             )
           })
-          :
-          null
         }
       </Slider>
     </section>
