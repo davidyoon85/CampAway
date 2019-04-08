@@ -60,7 +60,6 @@ class MasterForm extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
         
-        debugger
         const formData = new FormData();
         formData.append('spot[title]', this.state.title);
         // if (this.state.photoFile) {

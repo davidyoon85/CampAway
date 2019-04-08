@@ -14,11 +14,8 @@ class PhotoSlideshow extends React.Component {
 
     if (this.props.spot.photoUrls) {
 
-      debugger
-
       photos = this.props.spot.photoUrls;
     }
-    debugger
 
     const settings = {
     slidesToShow: 2,
@@ -36,7 +33,6 @@ class PhotoSlideshow extends React.Component {
       <Slider {...settings}>
         {
           photos.map((photo, id) => {
-            debugger
             return (
               <div key={id}>
                 <img src={photo} />

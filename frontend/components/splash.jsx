@@ -1,5 +1,6 @@
 import React from 'react';
-import SpotIndexContainer from './spot/spot_index_container';
+// import SpotIndexContainer from './spot/spot_index_container';
+import SpotSearchContainer from './explore/spot_search_container';
 
 const Splash = () => {
     return (
@@ -12,7 +13,7 @@ const Splash = () => {
         Book unique camping experiences on over <nobr className="bold">300,000</nobr> campsites, ranches, vineyards, public parks and more.
         </div>
         <div className="spot_index_container">
-            <SpotIndexContainer />
+            <SpotSearchContainer />
         </div>
     </div>
     </>
