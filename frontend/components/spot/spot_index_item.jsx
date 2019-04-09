@@ -20,16 +20,15 @@ class SpotIndexItem extends React.Component {
         }
         
         return (
-            <nobr className="index_spots" onClick={this.handleClick}>
-                <div className="spot_index_spot">
-                    <Link to={`/spots/${this.props.spot.id}`}>
+            <div className="spot_index_item" onClick={this.handleClick}>
+                    <Link className="spot_index_item_link" to={`/spots/${this.props.spot.id}`}>
                         <img className="spot_index_photo" src={this.props.spot.photoUrls[0]}/>
-                        <div className="index_photo_title">
+                        <div className="spot_details">
                             {this.props.spot.title}
+                            {this.props.spot.body}
                         </div>
                     </Link>
-                </div>
-            </nobr>
+            </div>
         )    
     }
 };

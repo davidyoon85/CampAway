@@ -16,7 +16,7 @@ class SpotSearch extends React.Component {
 
     render () {
         return (
-        <div className="spot_search_main">
+        <div className="spot_search_container">
             <SpotIndex 
                 spots={this.props.spots}
                 // user={state.entities.users[state.session.id]}

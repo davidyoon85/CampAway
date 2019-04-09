@@ -1,0 +1,48 @@
+.spot_search_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    padding-top: 70px;
+    padding-bottom: 10px;
+    height: 92vh;
+}
+
+.spot_index {
+    padding-top: 15px;
+    width: 50%;
+    background-color: white;
+    height: 100%;
+    overflow: scroll;
+    box-sizing: border-box;
+}
+
+.spot_index_item {
+    padding: 15px;
+}
+
+.spot_index_item_link {
+    display: flex;
+}
+
+.spot_index_photo {
+    width: 250px;
+    height: 250px;
+}
+
+.spot_details {
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.map-container {
+    width: 50%;
+    height: 100%;
+}
+  
+.map {
+    height: 100%;
+}
