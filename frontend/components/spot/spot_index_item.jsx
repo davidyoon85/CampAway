@@ -24,8 +24,15 @@ class SpotIndexItem extends React.Component {
                     <Link className="spot_index_item_link" to={`/spots/${this.props.spot.id}`}>
                         <img className="spot_index_photo" src={this.props.spot.photoUrls[0]}/>
                         <div className="spot_details">
-                            {this.props.spot.title}
-                            {this.props.spot.body}
+                            <div className="spot_details_title">
+                                {this.props.spot.title}
+                            </div>
+                            <div className="spot_details_body">
+                                {this.props.spot.body}
+                            </div>
+                            <div className="spot_details_price">
+                                ${this.props.spot.price}/night
+                            </div>
                         </div>
                     </Link>
             </div>

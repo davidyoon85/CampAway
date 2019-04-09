@@ -4,7 +4,7 @@ import { fetchAllSpots } from '../../actions/spot_actions';
     
 class SpotMap extends React.Component {
     constructor(props) {
-        debugger
+
         super(props);
     }
 
@@ -16,17 +16,17 @@ class SpotMap extends React.Component {
         };
 
         this.map = new google.maps.Map(this.mapNode, mapOptions);
-        debugger
+
         this.MarkerManager = new MarkerManager(this.map);    
     }
 
     componentDidUpdate() {
-        debugger
+
         this.MarkerManager.updateMarkers(this.props.spots);
     }
 
     render () {
-        debugger
+
         return (
         <div id='map-container'>
             <div className="map" ref={ map => this.mapNode = map }>
