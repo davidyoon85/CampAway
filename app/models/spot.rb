@@ -1,5 +1,12 @@
 class Spot < ApplicationRecord
   validates :title, :body, :host_id, presence: true
+  # geocoded_by :address, latitude :lat, longitude :long
+  # after_validation :geocode
+
+  def address
+    [street, city, state].compact.join(', ')
+  end
+
 
   belongs_to :host,
     foreign_key: :host_id,

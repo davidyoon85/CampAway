@@ -1,16 +1,31 @@
 export default class MarkerManager {
     constructor(map) {
+        // super(map);
+        debugger
         this.map = map;
-        this.markets = {};
+        debugger
+
+        this.markers = {};
     }
 
     updateMarkers(spots) {
+        debugger
         spots.map(spot => {
-            this.createMarker(spot)
+            if (!this.markers.hasOwnProperty(`${spot.id}`)) {
+                this.createMarker(spot)
+            }
         })    
     }
 
-    createMarker(spot) {
-        const coords = new google.maps.LatLng(spot.lat, spot.long);
+    createMarker({ lat, long }) {
+        const lng = long;
+        const myLatLng = {lat, lng};
+        debugger
+        
+        const marker = new google.maps.Marker({
+            position: myLatLng,
+            map: this.map,
+            title: 'Hello World!'
+        })
     }
 }   
