@@ -1,8 +1,19 @@
 import React from 'react';
-// import SpotIndexContainer from './spot/spot_index_container';
-import SpotSearchContainer from './explore/spot_search_container';
+import { connect } from 'react-redux';
+import { Link, withRouter } from 'react-router-dom';
 
-const Splash = () => {
+class Splash extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit() {
+        this.props.history.push('/spots');
+    }
+
+    render() {
     return (
     <>
     <div className="splash_main">
@@ -16,7 +27,7 @@ const Splash = () => {
         <div className="search_bar_main">
             <i className="fas fa-search fa-lg search_icon"></i>
             <input className="search_bar" type="search" placeholder="Try New York, Camping, cabin..." />
-            <input type="submit" className="search_button" value="Search" />
+            <input onClick={this.handleSubmit} type="submit" className="search_button" value="Search" />
         </div>
 
         <div className="splash_subtitle3">
@@ -140,5 +151,13 @@ const Splash = () => {
     </>
     )
 }
+}
 
-export default Splash;
+const mapStateToProps = (state, ownProps) => {
+    debugger
+    return {
+        state
+    }
+}
+
+export default connect(mapStateToProps, null)(Splash);
