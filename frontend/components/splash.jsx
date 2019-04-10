@@ -7,13 +7,20 @@ const Splash = () => {
     <>
     <div className="splash_main">
         <div className="splash_subtitle1">
-        Find yourself outside.
+            Find yourself outside.
         </div>
         <div className="splash_subtitle2">
-        Book unique camping experiences on over <nobr className="bold">300,000</nobr> campsites, ranches, vineyards, public parks and more.
+            Book unique camping experiences on over <nobr className="bold">300,000</nobr> campsites, ranches, vineyards, public parks and more.
         </div>
+
+        <div className="search_bar_main">
+            <i className="fas fa-search fa-lg search_icon"></i>
+            <input className="search_bar" type="search" placeholder="Try New York, Camping, cabin..." />
+            <input type="submit" className="search_button" value="Search" />
+        </div>
+
         <div className="splash_subtitle3">
-        Discover camping...
+            Discover camping...
         </div>
 
         <div className="splash_main_section">
