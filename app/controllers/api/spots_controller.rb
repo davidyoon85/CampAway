@@ -6,7 +6,7 @@ class Api::SpotsController < ApplicationController
     def create
         @spot = Spot.new(spot_params)
         
-        if @spot.save!
+        if @spot.save
             render :show
         else
             render json: ["Invalid inputs"], status: 401

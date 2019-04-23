@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_04_142422) do
+ActiveRecord::Schema.define(version: 2019_04_05_015414) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 2019_04_04_142422) do
     t.boolean "biking", default: false
     t.boolean "wildlife", default: false
     t.boolean "paddling", default: false
+    t.string "image_url"
     t.index ["host_id"], name: "index_spots_on_host_id"
   end
 

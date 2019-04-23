@@ -154,7 +154,7 @@ class Splash extends React.Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    debugger
+    
     return {
         state
     }

@@ -3,9 +3,9 @@ class Spot < ApplicationRecord
   # geocoded_by :address, latitude :lat, longitude :long
   # after_validation :geocode
 
-  def address
-    [street, city, state].compact.join(', ')
-  end
+  # def address
+  #   [street, city, state].compact.join(', ')
+  # end
 
 
   belongs_to :host,

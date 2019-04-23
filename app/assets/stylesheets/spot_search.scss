@@ -1,5 +1,6 @@
 .spot_search_container {
     display: flex;
+    justify-content: start;
     width: 100%;
     background-color: white;
     position: relative;
@@ -9,29 +10,38 @@
 }
 
 .spot_index {
-    padding: 15px 0px 0px 10px;
-    width: 44%;
+    left:0;
+    top:0;
+    height:90%;
+    width:45%;
+    position:absolute;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    width: 88vh;
     background-color: white;
     height: 100%;
     overflow: scroll;
     box-sizing: border-box;
+    justify-content: center;
 }
 
 .spot_index_item {
-    padding: 15px;
-    width: 380px;
+    padding: 0px 15px 25px 25px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .spot_index_item_link {
-    width: 380px;
+    width: 480px;
     display: flex;
     flex-wrap: wrap;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .spot_index_photo {
-    width: 380px;
-    height: 185px;
+    width: 480px;
+    height: 260px;
 }
 
 .spot_details {
@@ -39,12 +49,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 380px;
+    width: 480px;
 }
-  
+
 .map {
-    height: 85vh;
-    width: 117vh;
+    right:0;
+    top:0;
+    height:90%;
+    width:55%;
+    position:absolute;
 }
 
 .spot_details_title {

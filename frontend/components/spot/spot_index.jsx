@@ -7,7 +7,12 @@ class SpotIndex extends React.Component {
         super(props);
     }
 
+    componentDidMount() {
+        this.props.fetchAllSpots();
+      }
+
     render() {
+       
         return (
             <div className="spot_index">
                     {this.props.spots.map((spot) => (
@@ -23,5 +28,6 @@ class SpotIndex extends React.Component {
         )
     }
 }
+
 
 export default withRouter(SpotIndex);
