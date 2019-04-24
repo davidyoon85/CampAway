@@ -5,7 +5,6 @@ import SpotIndex from '../spot/spot_index_container';
 
 class SpotSearch extends React.Component {
     constructor(props) {
- 
         super(props);
     }
 

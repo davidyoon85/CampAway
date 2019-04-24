@@ -18,9 +18,8 @@ class SpotIndexItem extends React.Component {
         if (!this.props.spot.photoUrls) {
             this.props.spot.photoUrls = defaultPhoto;
         }
-        
         return (
-            <div className="spot_index_item" onClick={this.handleClick}>
+            <div className="spot_index_item" id={`spot-${this.props.spot.id}`} onClick={this.handleClick}>
                     <Link className="spot_index_item_link" to={`/spots/${this.props.spot.id}`}>
                         <img className="spot_index_photo" src={this.props.spot.photoUrls[0]}/>
                         <div className="spot_details">

@@ -27,7 +27,7 @@ const App = () => {
             <Route path="/" component={Splash} />
           </Switch>
         </div> 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 };

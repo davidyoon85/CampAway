@@ -36,6 +36,18 @@
     font-size: 15px;
 }
 
+.search_button:hover {
+    border: 3px solid #40d9ac;
+    background-color: white;
+    color: #40d9ac;
+    height: 10vh;
+    width: 25%;
+    padding: 0.5rem;
+    font-weight: 700;
+    font-size: 15px;
+    transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
+}
+
 .search_icon {
     position: relative;
     top: 25%;

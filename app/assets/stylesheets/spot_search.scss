@@ -6,21 +6,19 @@
     position: relative;
     padding-top: 40px;
     padding-bottom: 10px;
-    height: 92vh;
+    height: 70vh;
 }
 
 .spot_index {
     left:0;
     top:0;
-    height:90%;
+    height:88vh;
     width:45%;
     position:absolute;
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 10px;
-    width: 88vh;
     background-color: white;
-    height: 100%;
     overflow: scroll;
     box-sizing: border-box;
     justify-content: center;
@@ -55,9 +53,9 @@
 .map {
     right:0;
     top:0;
-    height:90%;
+    height:88vh;
     width:55%;
-    position:absolute;
+    position: absolute;
 }
 
 .spot_details_title {

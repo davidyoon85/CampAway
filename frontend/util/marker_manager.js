@@ -30,7 +30,7 @@ class MarkerManager {
             `<div class="infowindow">
               <a href="/#/spots/${spot.id}" style="display: flex;">
                 <div>
-                  <h2 class="infowindow-title"> ${spot.title} </h2>
+                  <h2 class="infowindow-title">${spot.title}</h2>
                   <p>$${spot.price}/night</p>
                 </div>
               </a>
@@ -53,30 +53,14 @@ class MarkerManager {
             spotId: spot.id,
             clicked: false,
             icon: icon,
-            infoWindow: infoWindow
+            infoWindow: markerInfoWindow
         })
 
-        // marker.addListener('click', () => {
-        //     this.props.history.push(`/spots/${spot.id}`);
-        //   marker.clicked = !marker.clicked;
-        //   if (marker.clicked) {
-        //     infoWindow.open(this.map, marker);
-        //   } else {
-        //     marker.infoWindow.close(this.map, marker)
-        //   }
-        // });
-
-        // marker.addListener('click', () => {
-        //     marker.clicked = !marker.clicked;
-        //     if (marker.clicked) {
-        //       this.hideAllInfoWindows();
-        //       marker.infoWindow.open(this.map, marker);
-        //       const targetSpot = document.getElementById(`spot-${spot.id}`);
-        //       targetSpot.scrollIntoView({behavior: "smooth", block: "center"});
-        //     } else {
-        //       marker.infoWindow.close(this.map, marker);
-        //     }
-        // });
+        marker.addListener('click', () => {
+            const targetSpot = document.getElementById(`spot-${spot.id}`);
+            targetSpot.scrollIntoView({behavior: "smooth", block: "center"});
+            this.map.setCenter(marker.getPosition());
+        });
 
         marker.addListener('mouseover', () => {
             marker.infoWindow.open(this.map, marker);
