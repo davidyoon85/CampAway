@@ -29,7 +29,6 @@ class Splash extends React.Component {
 
     render() {
             let indexSpots = this.props.state.entities.spots || [];
-        debugger
     return (
     <>
     <div className="splash_main">
