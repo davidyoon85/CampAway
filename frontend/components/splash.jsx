@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchAllSpots } from '../actions/spot_actions';
+import { selectSpots } from '../reducers/selectors';
 import { Link, withRouter } from 'react-router-dom';
 
 class Splash extends React.Component {
@@ -8,6 +9,7 @@ class Splash extends React.Component {
         super(props);
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
     componentDidMount() {
@@ -18,8 +20,16 @@ class Splash extends React.Component {
         this.props.history.push('/spots');
     }
 
+    handleClick(num) {
+        return (e) => {
+            let spotIndex = Object.values(this.props.state.entities.spots)[num]
+            this.props.history.push(`/spots/${spotIndex.id}`);
+        }
+    }
+
     render() {
-        const splashSpots = this.props.state.entities.spots || null;
+            let indexSpots = this.props.state.entities.spots || [];
+        debugger
     return (
     <>
     <div className="splash_main">
@@ -43,119 +53,115 @@ class Splash extends React.Component {
         <div className="splash_main_section">
 
             <div className="splash_section">
-                <div className="index_section">
-                    {/* <Link to={`/spots/${splashSpots[0].id}`}> */}
-                        <img src="https://img.hipcamp.com/image/upload/q_auto,f_auto/v1544737872/best2018hipcamps_v6pluc.jpg" />
-                    {/* </Link> */}
+                <div className="index_section" onClick={this.handleClick(0)}>
+
+                        <img src="https://s3.amazonaws.com/camp-away-dev/spot1_0.jpg" />
                         <div className="index_section_container">    
-                            {/* <div className="index_section_header"> */}
-                            <h3 className="index_section_header">See the nominess</h3>
-                            {/* </div> */}
+                            <h3 className="index_section_header">Cabin in the Woods</h3>
                             <div className="index_section_subheader">
-                            2018 Hipcamps of the year
+                            New York
                             </div>
                         </div>
                 </div>
 
-                <div className="index_section">
-                    <img src="https://img.hipcamp.com/image/upload/f_auto,q_auto/v1528746350/01-book_arxtej.jpg" />
+                <div className="index_section" onClick={this.handleClick(1)}>
+                    <img src="https://s3.amazonaws.com/camp-away-dev/spot2_0.jpg" />
                         <div className="index_section_container">   
                             {/* <div className="index_section_header"> */}
-                            <h3 className="index_section_header">See the nominess</h3>
+                            <h3 className="index_section_header">Oh! Pear Orchards</h3>
                             {/* </div> */}
                             <div className="index_section_subheader">
-                            2018 Hipcamps of the year
+                            New York
                             </div>
                         </div>    
                 </div>
 
-                <div className="index_section">
-                    <img src="https://img.hipcamp.com/image/upload/f_auto,q_auto/v1528746350/02-this_vkgeye.jpg" />
+                <div className="index_section" onClick={this.handleClick(2)}>
+                    <img src="https://s3.amazonaws.com/camp-away-dev/spot3_0.jpg" />
                         <div className="index_section_container">   
                             {/* <div className="index_section_header"> */}
-                            <h3 className="index_section_header">See the nominess</h3>
+                            <h3 className="index_section_header">Blue Mountain Camping</h3>
                             {/* </div> */}
                             <div className="index_section_subheader">
-                            2018 Hipcamps of the year
+                            New York
                             </div>
                         </div>
                 </div>
 
-                <div className="index_section">
-                    <img src="https://img.hipcamp.com/image/upload/q_auto,f_auto/v1544737872/best2018hipcamps_v6pluc.jpg" />
+                <div className="index_section" onClick={this.handleClick(3)}>
+                    <img src="https://s3.amazonaws.com/camp-away-dev/spot4_0.jpg" />
                         <div className="index_section_container">  
                             {/* <div className="index_section_header"> */}
-                            <h3 className="index_section_header">See the nominess</h3>
+                            <h3 className="index_section_header">Enveloped in Woods</h3>
                             {/* </div> */}
                             <div className="index_section_subheader">
-                            2018 Hipcamps of the year
+                            New York
                             </div>
                         </div>
                 </div>
 
-                <div className="index_section">
-                    <img src="https://img.hipcamp.com/image/upload/f_auto,q_auto/v1528746350/01-book_arxtej.jpg" />
+                <div className="index_section" onClick={this.handleClick(4)}>
+                    <img src="https://s3.amazonaws.com/camp-away-dev/spot5_0.jpg" />
                         <div className="index_section_container"> 
                             {/* <div className="index_section_header"> */}
-                            <h3 className="index_section_header">See the nominess</h3>
+                            <h3 className="index_section_header">Lakeside Forest</h3>
                             {/* </div> */}
                             <div className="index_section_subheader">
-                            2018 Hipcamps of the year
+                            New York
                             </div>
                         </div>
                 </div>
 
-                <div className="index_section">
-                    <img src="https://img.hipcamp.com/image/upload/f_auto,q_auto/v1528746350/02-this_vkgeye.jpg" />
+                <div className="index_section" onClick={this.handleClick(5)}>
+                    <img src="https://s3.amazonaws.com/camp-away-dev/spot6_0.jpg" />
                         <div className="index_section_container">    
                             {/* <div className="index_section_header"> */}
-                            <h3 className="index_section_header">See the nominess</h3>
+                            <h3 className="index_section_header">Mountain Top Campsite</h3>
                             {/* </div> */}
                             <div className="index_section_subheader">
-                            2018 Hipcamps of the year
+                            New York
                             </div>
                         </div>
                 </div>
                 
-                <div className="index_section">
-                    <img src="https://img.hipcamp.com/image/upload/q_auto,f_auto/v1544737872/best2018hipcamps_v6pluc.jpg" />
+                <div className="index_section" onClick={this.handleClick(6)}>
+                    <img src="https://s3.amazonaws.com/camp-away-dev/spot7_0.jpg" />
                         <div className="index_section_container">
                             {/* <div className="index_section_header"> */}
-                            <h3 className="index_section_header">See the nominess</h3>
+                            <h3 className="index_section_header">Peaceful Flow</h3>
                             {/* </div> */}
                             <div className="index_section_subheader">
-                            2018 Hipcamps of the year
+                            New York
                             </div>
                         </div>
                 </div>
 
-                <div className="index_section">
-                    <img src="https://img.hipcamp.com/image/upload/f_auto,q_auto/v1528746350/01-book_arxtej.jpg" /> 
+                <div className="index_section" onClick={this.handleClick(7)}>
+                    <img src="https://s3.amazonaws.com/camp-away-dev/spot8_0.jpg" /> 
                         <div className="index_section_container">    
                             {/* <div className="index_section_header"> */}
-                            <h3 className="index_section_header">See the nominess</h3>
+                            <h3 className="index_section_header">Cedar Creek</h3>
                             {/* </div> */}
                             <div className="index_section_subheader">
-                            2018 Hipcamps of the year
+                            New York
                             </div>
                         </div>
                 </div>
 
-                <div className="index_section">
-                    <img src="https://img.hipcamp.com/image/upload/f_auto,q_auto/v1528746350/02-this_vkgeye.jpg" />
+                <div className="index_section" onClick={this.handleClick(8)}>
+                    <img src="https://s3.amazonaws.com/camp-away-dev/spot9_0.jpg" />
                         <div className="index_section_container">
                             {/* <div className="index_section_header"> */}
-                            <h3 className="index_section_header">See the nominess</h3>
+                            <h3 className="index_section_header">Rustic, Enchanted Cabin</h3>
                             {/* </div> */}
                             <div className="index_section_subheader">
-                            2018 Hipcamps of the year
+                            New York
                             </div>
                         </div>
                 </div>
 
             </div>
         </div>
-    </div>
 
     <footer>
         <div className="foot_div">
@@ -192,13 +198,13 @@ class Splash extends React.Component {
             </div>
         </div>
         </footer>
+    </div>
     </>
     )
 }
 }
 
 const mapStateToProps = (state, ownProps) => {
-    
     return {
         state
     }

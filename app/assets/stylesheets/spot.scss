@@ -12,7 +12,7 @@
     padding: 20px;
     border-bottom: 1px solid #ebebeb;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 .spot_section {
@@ -28,9 +28,9 @@
 }
 
 .spot_div_info {
-    flex-basis: 180px;
+    flex-basis: 240px;
     height: 340px;
-    width: 26%;
+    width: 33%;
     padding: 15px 15px 15px 15px;
     border-bottom: 1px solid #ebebeb;
     box-shadow: 0px 0px 3px #ebebeb;
@@ -78,16 +78,6 @@ span > img {
     width: 24px;
     height: 24px;
 }
-
-// .spot_index {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: center;
-//     width: 70%;
-//     text-align: center;
-//     margin-left: 15%;
-//     margin-top: 5%;
-// }
 
 .spot_index_parent {
     justify-content: center;
@@ -140,12 +130,6 @@ span > img {
 .spot_index_spots_img {
     display: flex;
 }
-
-// .spot_index_container {
-//     margin-top: 5%;
-//     margin-left: 14%;
-//     width: 90%;
-// }
 
 .booking_widget {
     position: absolute;
@@ -220,7 +204,6 @@ span > img {
 }
 
 .delete_spot_button {
-    margin-left: 70%;
     padding: 0px 10px 0px 10px;
     border: 1px solid #ebebeb;
     border-radius: 5px;
@@ -230,4 +213,6 @@ span > img {
 .delete_spot_button:hover {
     background-color: #40d9ac;
     font-weight: 600;
+    color: white;
+    border: white;
 }

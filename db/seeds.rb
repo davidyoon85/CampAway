@@ -99,7 +99,7 @@ spot2 = Spot.create!(
 
 spot3 = Spot.create!(
     "host_id": user1.id,
-    "title": "Blue Mountain Private Camping",
+    "title": "Blue Mountain Camping",
     "body": "Secluded but still close to everything. Ideal for large groups with ample space for parking.",
     "price": 98,
     "pets_allow": true,
@@ -145,7 +145,7 @@ spot4 = Spot.create!(
 
 spot5 = Spot.create!(
     "host_id": user1.id,
-    "title": "Lakeside Forest with Sauna",
+    "title": "Lakeside Forest",
     "body": "Enjoy a camp fire with friends by beautiful Beach Pond. Traditional wood-fired sauna available to all guests.",
     "price": 50,
     "pets_allow": true,
@@ -307,7 +307,7 @@ file = open('https://s3.amazonaws.com/camp-away-dev/spot3_0.jpg')
 spot3.photos.attach(io: file, filename: "spot3_0.jpg")
 
 file = open('https://s3.amazonaws.com/camp-away-dev/spot4_0.jpg')
-spot4.photos.attach(io: file, filename: "spot4_.jpg")
+spot4.photos.attach(io: file, filename: "spot4_0.jpg")
 
 file = open('https://s3.amazonaws.com/camp-away-dev/spot5_0.jpg')
 spot5.photos.attach(io: file, filename: "spot5_0.jpg")

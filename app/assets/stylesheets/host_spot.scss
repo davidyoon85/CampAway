@@ -36,8 +36,19 @@
     padding: 10px 30px 10px 30px;
     border-radius: 5px;
     font-size: 16px;
-    color: #757575;
+    color: white;
+    background-color: #40d9ac;
+    border: 2px solid white;
     font-weight: 600;
+}
+
+.form_signup_button:hover {
+cursor: pointer;
+    border: 2px solid #40d9ac;
+    // border-radius: 2px;
+    background-color: white;
+    color: #40d9ac;
+    transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
 }
 
 .host_options_title {
