@@ -224,7 +224,7 @@ class MasterForm extends React.Component {
                             id="group_size"
                             name="group_size"
                             placeholder="4"
-                            placeholder="Enter the maximum number of guests on one site (ex: 4)"
+                            placeholder="4"
                             onChange={this.handleChange}
                         />
                     </div>
@@ -356,6 +356,7 @@ class MasterForm extends React.Component {
                     </div>
                 </>
                     <input type="file" onChange={(e) => this.setState({ photos: e.target.files })} multiple />
+                            <p id="submitPhotoReminder">Must attach at least one photo!</p>
                     
                     { preview }
                             

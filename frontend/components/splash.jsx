@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { fetchAllSpots } from '../actions/spot_actions';
 import { Link, withRouter } from 'react-router-dom';
 
 class Splash extends React.Component {
@@ -9,11 +10,16 @@ class Splash extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentDidMount() {
+        this.props.fetchAllSpots();
+      }
+
     handleSubmit() {
         this.props.history.push('/spots');
     }
 
     render() {
+        const splashSpots = this.props.state.entities.spots || null;
     return (
     <>
     <div className="splash_main">
@@ -38,7 +44,9 @@ class Splash extends React.Component {
 
             <div className="splash_section">
                 <div className="index_section">
-                    <img src="https://img.hipcamp.com/image/upload/q_auto,f_auto/v1544737872/best2018hipcamps_v6pluc.jpg" />
+                    {/* <Link to={`/spots/${splashSpots[0].id}`}> */}
+                        <img src="https://img.hipcamp.com/image/upload/q_auto,f_auto/v1544737872/best2018hipcamps_v6pluc.jpg" />
+                    {/* </Link> */}
                         <div className="index_section_container">    
                             {/* <div className="index_section_header"> */}
                             <h3 className="index_section_header">See the nominess</h3>
@@ -196,4 +204,10 @@ const mapStateToProps = (state, ownProps) => {
     }
 }
 
-export default connect(mapStateToProps, null)(Splash);
+const mapDispatchToProps = (dispatch) => {
+    
+    return {
+    fetchAllSpots: () => dispatch(fetchAllSpots()),
+}};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Splash);
