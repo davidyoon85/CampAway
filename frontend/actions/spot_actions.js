@@ -16,8 +16,7 @@ export const fetchAllSpots = () => dispatch => (
 );
 
 export const hostSpot = (spot) => dispatch => (
-  APIUtil.hostSpot(spot).then(spot => dispatch(createSpot(spot))), 
-  err => dispatch(receiveErrors(err.responseJSON))
+  APIUtil.hostSpot(spot).then(spot => dispatch(createSpot(spot)))
 );
 
 export const deleteSpot = (spotId) => dispatch => (

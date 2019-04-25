@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 
 class MasterForm extends React.Component {
     constructor(props) {
-        // 
+       
         super(props);
         this.state = {
             host_id: props.user.id,
@@ -59,12 +59,13 @@ class MasterForm extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        
+        debugger
         const formData = new FormData();
         formData.append('spot[title]', this.state.title);
         // if (this.state.photoFile) {
         //     formData.append('spot[photos]', this.state.photoFile);
         // }
+        
 
         for (let i = 0; i < this.state.photos.length; i++) {
             formData.append('spot[photos][]', this.state.photos[i]);
@@ -89,8 +90,9 @@ class MasterForm extends React.Component {
         formData.append('spot[biking]', this.state.biking);
         formData.append('spot[wildlife]', this.state.wildlife);
         formData.append('spot[paddling]', this.state.paddling);
-        
+debugger
         this.props.hostSpot(formData).then((response) => {
+            debugger
             this.props.history.push(`/spots/${Object.keys(response.spot)[0]}`);
         });
     }
