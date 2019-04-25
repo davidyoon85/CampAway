@@ -1,5 +1,5 @@
 # CampAway
-CampAway is a clone of Hipcamp, which is a site to browse and book camping grounds.
+CampAway is a full-stack clone of Hipcamp, which is a site to browse and book camping grounds.
 
 ![Splash](app/assets/images/campaway.png)
 
