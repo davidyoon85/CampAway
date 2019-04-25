@@ -17,7 +17,5 @@ Users are able to create their own camping ground by filling out a form. The for
 
 ![Host a Spot](app/assets/images/campaway_host.png)
 
-Code snippets to highlight your best code (markdown code snippets, NOT screenshots)
-
 ## Future Plans
 In the future, I hope to add more features, including: bookings and filtering. I also have plans to improve the google map API implementation so that clicking on an infowindow will lead to that camp site's location on the index page.
