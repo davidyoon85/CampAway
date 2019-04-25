@@ -348,7 +348,6 @@ i:hover {
     padding: 0px;
     font-size: 14px;
     font-weight: 100px;
-    // margin-top: 6.1%;
     text-align: center;
     align-content: center;
     font-family: "Calibre", Helvetica, Arial, sans-serif;
@@ -406,4 +405,14 @@ i:hover {
  #map-container {
    width: 500px;
    height: 500px;
+ }
+
+ .infowindow {
+   display: flex;
+ }
+
+ #infoWindowImage {
+   padding-right: 10px;
+   height: 36px;
+   width: 36px;
  }

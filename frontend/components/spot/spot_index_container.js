@@ -16,7 +16,3 @@ const mapDispatchToProps = (dispatch) => {
 }};
 
 export default connect(mapStateToProps, mapDispatchToProps)(SpotIndex);
-
-
-
-//remove to create spot_search_container instead

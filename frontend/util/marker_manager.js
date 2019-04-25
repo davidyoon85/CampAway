@@ -28,10 +28,11 @@ class MarkerManager {
         const markerInfoWindow = new google.maps.InfoWindow({
             content:
             `<div class="infowindow">
+              <img id="infoWindowImage" src=${spot.photoUrls[0]}>
               <a href="/#/spots/${spot.id}" style="display: flex;">
                 <div>
                   <h2 class="infowindow-title">${spot.title}</h2>
-                  <p>$${spot.price}/night</p>
+                  <p class="infowindow-price">$${spot.price}/night</p>
                 </div>
               </a>
             </div>`,

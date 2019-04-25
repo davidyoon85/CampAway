@@ -9,7 +9,7 @@
 }
 
 .spot_div {
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
     border-bottom: 1px solid #ebebeb;
     display: flex;
     justify-content: space-between;
@@ -66,6 +66,10 @@
 #spot_details {
     display: flex;
     justify-content: space-between;
+}
+
+.spot_detail_header {
+    padding-top: 5px;
 }
 
 #spot_details_subsection {
@@ -129,78 +133,6 @@ span > img {
 
 .spot_index_spots_img {
     display: flex;
-}
-
-.booking_widget {
-    position: absolute;
-    top: 55%;
-    width: 319px;
-    height: 228px;
-    left: 61%;
-    z-index: 19;
-    background: white;
-    border: 1px solid #ebebeb;
-}
-
-.widget_subsection {
-    display: flex;
-    justify-content: center;
-    height: 69px;
-}
-
-.widget_price {
-    border: 1px solid #ebebeb;
-    height: 73px;
-    padding: 10px 0px 0px 10px;
-}
-
-.widget_checkin {
-    border: 1px solid #ebebeb;
-    width: 100%;
-    padding: 10px 0px 0px 10px;
-}
-
-.widget_checkout {
-    border: 1px solid #ebebeb;
-    width: 100%;
-    padding: 10px 0px 0px 10px;
-}
-
-.widget_guests {
-    border: 1px solid #ebebeb;
-    width: 100%;
-    padding: 10px 0px 0px 10px;
-}
-      
-.widget_booking {
-    border: 1px solid #ebebeb;
-    height: 72px;
-}
-
-.widget_button {
-    background-color: #40d9ac;
-    height: 51px;
-    width: 289px;
-    margin: 10px 0px 0px 15px;;
-    text-align: center;
-    touch-action: manipulation;
-    cursor: pointer;
-    color: white;
-    font-weight: 700;
-}
-
-.widget_button:hover {
-    background-color: white;
-    transition: background-color 0.2s ease 0s; 
-    height: 51px;
-    width: 289px;
-    margin: 10px 0px 0px 15px;;
-    text-align: center;
-    touch-action: manipulation;
-    cursor: pointer;
-    color: #40d9ac;
-    font-weight: 700;
-    border: 3px solid #40d9ac;
 }
 
 .delete_spot_button {
