@@ -409,10 +409,28 @@ i:hover {
 
  .infowindow {
    display: flex;
+   align-content: center;
+ }
+
+ .infowindow-title {
+  // padding-top: 13%;
+   font-size: 14px;
+   font-weight: 700;
+ }
+
+ #infoWindowDetails {
+   display: flex;
+   flex-direction: column;
+   align-content: center;
+   justify-content: center;
+ }
+
+ .infowindow-price {
+   font-size: 11px;
  }
 
  #infoWindowImage {
    padding-right: 10px;
-   height: 36px;
-   width: 36px;
+   height: 62px;
+   width: 62px;
  }

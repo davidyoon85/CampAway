@@ -30,7 +30,7 @@ class MarkerManager {
             `<div class="infowindow">
               <img id="infoWindowImage" src=${spot.photoUrls[0]}>
               <a href="/#/spots/${spot.id}" style="display: flex;">
-                <div>
+                <div id="infoWindowDetails">
                   <h2 class="infowindow-title">${spot.title}</h2>
                   <p class="infowindow-price">$${spot.price}/night</p>
                 </div>
