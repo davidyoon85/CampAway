@@ -18,7 +18,6 @@ class SpotSearch extends React.Component {
         <div className="spot_search_container">
             <SpotIndex 
                 spots={this.props.spots}
-                // user={state.entities.users[state.session.id]}
                 />
             <SpotMap 
                 spots={this.props.spots}

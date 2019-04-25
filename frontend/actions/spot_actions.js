@@ -5,6 +5,8 @@ export const RECEIVE_ALL_SPOTS = 'RECEIVE_ALL_SPOTS';
 export const CREATE_SPOT = 'CREATE_SPOT';
 export const DESTROY_SPOT = 'DESTROY_SPOT';
 
+export const RECEIVE_SPOTS_ERRORS = 'RECEIVE_SPOTS_ERRORS';
+
 export const fetchSingleSpot = (id) => dispatch => (
   APIUtil.fetchSingleSpot(id).then(spot => dispatch(receiveSingleSpot(spot)))
 );
@@ -14,12 +16,18 @@ export const fetchAllSpots = () => dispatch => (
 );
 
 export const hostSpot = (spot) => dispatch => (
-  APIUtil.hostSpot(spot).then(spot => dispatch(createSpot(spot)))
+  APIUtil.hostSpot(spot).then(spot => dispatch(createSpot(spot))), 
+  err => dispatch(receiveErrors(err.responseJSON))
 );
 
 export const deleteSpot = (spotId) => dispatch => (
   APIUtil.deleteSpot(spotId).then(spotId => dispatch(destroySpot(spotId)))
 );
+
+export const receiveErrors = errors => ({
+  type: RECEIVE_SPOTS_ERRORS,
+  errors
+});
 
 const receiveSingleSpot = spot => ({
   type: RECEIVE_SINGLE_SPOT,
@@ -40,3 +48,4 @@ const destroySpot = (spotId) => ({
   type: DESTROY_SPOT,
   spotId
 });
+

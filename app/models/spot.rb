@@ -1,6 +1,6 @@
 class Spot < ApplicationRecord
   validates :title, :body, :host_id, presence: true
-  # geocoded_by :address, latitude :lat, longitude :long
+  # geocoded_by :address
   # after_validation :geocode
 
   # def address

@@ -38,10 +38,6 @@ class MarkerManager {
             </div>`,
             maxWidth: 300,
           });
-        
-        const infoWindow = new google.maps.InfoWindow({
-          content: spot.title + "<br/>" + "$" + spot.price + "/day"
-        })
 
         const icon = {
           url: "https://djqvcbmmgpti5.cloudfront.net/assets/map/hipcamp-pin-acd5fbe15a2cc72f5919e5e86a32872fb43c7dbf03ebee8f3f1868c80123f002.png",
