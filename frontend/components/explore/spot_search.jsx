@@ -9,7 +9,6 @@ class SpotSearch extends React.Component {
     }
 
     componentDidMount() {
-
         this.props.fetchAllSpots();
     }
 
@@ -21,6 +20,8 @@ class SpotSearch extends React.Component {
                 />
             <SpotMap 
                 spots={this.props.spots}
+                geoLocation={this.props.geoLocation}
+                receiveGeolocation={this.props.receiveGeolocation}
             />
         </div>
         )

@@ -1,11 +1,13 @@
 import React from 'react';
 import MarkerManager from '../../util/marker_manager';
 import { fetchAllSpots } from '../../actions/spot_actions';
+import { receiveGeolocation } from '../../actions/location_filter_actions';
     
 class SpotMap extends React.Component {
     constructor(props) {
-
         super(props);
+
+        this.geoCoder = new google.maps.Geocoder();
     }
 
     componentDidMount() {
@@ -20,9 +22,26 @@ class SpotMap extends React.Component {
         this.MarkerManager = new MarkerManager(this.map);    
     }
 
-    componentDidUpdate() {
+    centerMapOnSearch() {
+        const geolocation = this.props.geoLocation
+        this.geoCoder.geocode({ 'address': geolocation}, (results, status) => {
+          if (status === "OK") {
+            if (results[0]) {
+              this.map.setZoom(12);
+              let center = results[0].geometry.location;
+              this.map.setCenter(center);
+              const newBounds = this.map.getBounds();
+              this.map.fitBounds(newBounds);
+              this.props.receiveGeolocation("");
+            } else {
+              return { lat: 40.751626, lng: -73.983926 };
+           }}
+        });
+      }
 
+    componentDidUpdate() {
         this.MarkerManager.updateMarkers(this.props.spots);
+        if (this.props.geoLocation.length > 0) this.centerMapOnSearch();
     }
 
     render () {

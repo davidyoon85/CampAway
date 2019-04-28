@@ -31,3 +31,11 @@ export const deleteSpot = (spotId) => (
     url: `/api/spots/${spotId}`
   })
 );
+
+export const fetchSearchListings = searchParams => (
+  $.ajax({
+    method: "GET",
+    url: "api/listings",
+    data: { searchParams }
+  })
+);
