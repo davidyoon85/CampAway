@@ -34,7 +34,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video, button {
+time, mark, audio, video, button, link {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -195,12 +195,11 @@ time, mark, audio, video, button {
 
   .right {
     padding: 0px;
-    margin: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 10px 10px 0px 0px;
     width: 20%;
     font-size: 12px;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .user_session {
@@ -310,16 +309,36 @@ i:hover {
   height: 40px;
 }
 
-.nav_logged_in_right {
-  display: flex;
-  justify-content: center;
+#drop_menu_container {
+  left: 200px;
+    top: 0px;
+    position: fixed;
+    width: 300px;
+    height: 300px;
 }
 
-.drop_menu {
+#drop_menu {
+  display: none;
+
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+}
+
+.show {
+  position: absolute;
+  display: block !important;
+}
+
+#menu_section {
+  position: absolute;
+  min-width: 100px;
+  overflow: auto;
+  box-shadow: 0px 4px 4px 2px #888888;
+  // top: 50px;
+  right: -65px;
+  background-color: white;
+  margin-right: 5px;
+  z-index: 1;
 }
 
 .nav_logged_in_logout {
@@ -345,16 +364,15 @@ i:hover {
     width: 70px;
     height: 25px;
     margin-top: 10px;
-    padding: 0px;
+    padding-left: 10px;
     font-size: 14px;
     font-weight: 100px;
-    text-align: center;
     align-content: center;
     font-family: "Calibre", Helvetica, Arial, sans-serif;
 }
 
 .nav_host:hover {
-  border-bottom: 1px solid rgb(216, 216, 216);
+  font-weight: 700;
 }
 
 .tent_logo {
