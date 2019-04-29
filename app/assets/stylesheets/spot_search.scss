@@ -14,14 +14,14 @@
     top:0;
     height:87vh;
     width: 55%;
-    position:absolute;
+    position: absolute;
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 10px;
     background-color: white;
     overflow: scroll;
     box-sizing: border-box;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .spot_index_item {

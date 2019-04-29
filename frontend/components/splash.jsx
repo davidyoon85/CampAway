@@ -56,13 +56,10 @@ class Splash extends React.Component {
             <i className="fas fa-search fa-lg search_bar_icon"></i>
             <form className="search_form" onSubmit={this.handleSubmit}>
                 <input placeholder="Try New York, Camping, cabin..." className="search_bar" onChange={this.update('searchParams')}
-                value={this.state['searchParams']}
-                />
+                value={this.state['searchParams']}/>
+                <input onClick={() => this.handleSubmit} type="submit" className="search_button" value="Search" /> 
             </form>
 
-            {/* <i className="fas fa-search fa-lg search_bar_icon"></i>
-            <input className="search_bar" type="search" placeholder="Try New York, Camping, cabin..." />
-            <input onClick={this.handleSubmit} type="submit" className="search_button" value="Search" /> */}
         </div>
 
         <div className="splash_subtitle3">
