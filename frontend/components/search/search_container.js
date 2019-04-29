@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import Search from './search';
-import { updateFilter } from '../../actions/location_filter_actions';
 import { receiveGeolocation } from '../../actions/location_filter_actions'
 
 

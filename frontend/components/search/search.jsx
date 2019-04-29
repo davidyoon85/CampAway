@@ -20,15 +20,15 @@ class Search extends React.Component {
   handleSubmit (e) {
     e.preventDefault();
     this.props.receiveGeolocation(e.target.children[0].value)
-    debugger
     this.props.history.push("/spots")
   }
 
   render() {
       return (
-        <div className="search-bar-container">
-          <form onSubmit={this.handleSubmit}>
-            <input placeholder="Search..." className="nav-search" onChange={this.update('searchParams')}
+        <div className="search_container">
+          <i className="fas fa-search fa-xs search_icon"></i>
+          <form className="search_form" onSubmit={this.handleSubmit}>
+            <input placeholder="Search..." className="search_nav_bar" onChange={this.update('searchParams')}
               value={this.state['searchParams']}
             />
           </form>

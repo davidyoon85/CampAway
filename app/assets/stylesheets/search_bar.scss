@@ -13,7 +13,7 @@
     border: 0;
     padding: 0.5rem 0.5rem 0.5rem 0;
     flex: 1;
-    color: gray;
+    color: black;
     font-weight: 400;
     font-size: 18px;
     letter-spacing: 1.1;
@@ -49,10 +49,12 @@
     transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
 }
 
-.search_icon {
+.search_bar_icon {
     position: relative;
-    top: 25%;
     color: black;
     float: left;
-    padding: 15px;
+    padding: 0px 15px 0px 15px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
 }

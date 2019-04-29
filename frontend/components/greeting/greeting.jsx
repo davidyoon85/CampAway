@@ -34,10 +34,8 @@ class Greeting extends React.Component {
                     <img className="tent_logo" src={window.footerURL} />
         
                     <div id="drop_menu">
-                        {/* <ul className="menu_section"> */}
                             <li><Link className="nav_host" to={'/host'}>Host</Link></li>
                             <li><a className="nav_host" onClick={this.props.logout}>Log out</a></li>
-                        {/* </ul> */}
                     </div>
                 </div>
 

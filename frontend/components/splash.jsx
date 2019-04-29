@@ -1,12 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchAllSpots } from '../actions/spot_actions';
+import { receiveGeolocation } from '../actions/location_filter_actions';
 import { selectSpots } from '../reducers/selectors';
 import { Link, withRouter } from 'react-router-dom';
 
 class Splash extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            searchParams: '',
+          };
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleClick = this.handleClick.bind(this);
@@ -16,7 +21,9 @@ class Splash extends React.Component {
         this.props.fetchAllSpots();
       }
 
-    handleSubmit() {
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.receiveGeolocation(e.target.children[0].value)
         this.props.history.push('/spots');
     }
 
@@ -25,6 +32,12 @@ class Splash extends React.Component {
             let spotIndex = Object.values(this.props.state.entities.spots)[num]
             this.props.history.push(`/spots/${spotIndex.id}`);
         }
+    }
+
+    update(field) {
+        return e => this.setState({
+          [field]: e.currentTarget.value
+        });
     }
 
     render() {
@@ -40,9 +53,16 @@ class Splash extends React.Component {
         </div>
 
         <div className="search_bar_main">
-            <i className="fas fa-search fa-lg search_icon"></i>
+            <i className="fas fa-search fa-lg search_bar_icon"></i>
+            <form className="search_form" onSubmit={this.handleSubmit}>
+                <input placeholder="Try New York, Camping, cabin..." className="search_bar" onChange={this.update('searchParams')}
+                value={this.state['searchParams']}
+                />
+            </form>
+
+            {/* <i className="fas fa-search fa-lg search_bar_icon"></i>
             <input className="search_bar" type="search" placeholder="Try New York, Camping, cabin..." />
-            <input onClick={this.handleSubmit} type="submit" className="search_button" value="Search" />
+            <input onClick={this.handleSubmit} type="submit" className="search_button" value="Search" /> */}
         </div>
 
         <div className="splash_subtitle3">
@@ -213,6 +233,7 @@ const mapDispatchToProps = (dispatch) => {
     
     return {
     fetchAllSpots: () => dispatch(fetchAllSpots()),
+    receiveGeolocation: (loc) => dispatch(receiveGeolocation(loc))
 }};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Splash);

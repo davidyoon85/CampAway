@@ -20,6 +20,7 @@
  *= require 'host_spot.scss'
  *= require 'spot_search.scss'
  *= require 'search_bar.scss'
+ *= require 'search.scss'
  */
 
 html, body, div, span, applet, object, iframe,
@@ -182,6 +183,7 @@ time, mark, audio, video, button, link {
   .left {
     font-family: 'Viga', sans-serif;
     letter-spacing: 3px;
+    min-width: 500px;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -307,14 +309,6 @@ i:hover {
 .tent_logo {
   border-radius: 50%;
   height: 40px;
-}
-
-#drop_menu_container {
-  left: 200px;
-  top: 0px;
-  position: fixed;
-  width: 300px;
-  height: 300px;
 }
 
 .dropdown {
