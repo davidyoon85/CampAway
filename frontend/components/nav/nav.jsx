@@ -8,7 +8,7 @@ const Nav = () => (
         <Modal />
         <div className="left">
             <a href="/">CAMPAWAY</a>
-            <SearchBar />
+                <SearchBar />
         </div>
         <div className="right">
             <GreetingContainer />

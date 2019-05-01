@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 
 class MasterForm extends React.Component {
     constructor(props) {
-       
+       debugger
         super(props);
         this.state = {
             host_id: props.user.id,
