@@ -1,6 +1,5 @@
 .spot_page {
     width: 50%;
-    padding-top: 10px;
     margin-left: 22%;
 }
 
@@ -9,18 +8,19 @@
 }
 
 .spot_div {
-    padding: 0px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
     border-bottom: 1px solid #ebebeb;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
 }
 
 .spot_section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
     margin: 0 auto;
+    padding: 20px 20px 20px 20px;
+    border-bottom: 1px solid #ebebeb;
 }
 
 .spot_body {
@@ -28,9 +28,9 @@
 }
 
 .spot_div_info {
-    flex-basis: 26%;
     height: 340px;
-    min-width: 180px;
+    width: 26%;
+    min-width: 170px;
     padding: 15px 15px 15px 15px;
     border-bottom: 1px solid #ebebeb;
     box-shadow: 0px 0px 3px #ebebeb;
@@ -81,6 +81,10 @@
 span > img {
     width: 24px;
     height: 24px;
+}
+
+span > p {
+    padding-bottom: 10px;
 }
 
 .spot_index_parent {

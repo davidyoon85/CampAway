@@ -7,7 +7,8 @@ import SpotContainer from './spot/spot_container';
 // import SpotIndexContainer from './spot/spot_index_container';
 import SpotFormContainer from './spot/spot_form_container';
 import Footer from './footer';
-import SpotSearchContainer from './explore/spot_search_container'
+import SpotSearchContainer from './explore/spot_search_container';
+import CreateReviewContainer from './reviews/create_review_container';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faIgloo } from '@fortawesome/free-solid-svg-icons';
@@ -21,10 +22,11 @@ const App = () => {
       <Route path="/" component={Nav} />
         <div className='main-class'>
           <Switch>
-            <Route path="/spots/:spotId" component={SpotContainer} />
-            <Route path="/spots" component={SpotSearchContainer} />
+            <Route exact path="/spots/:spotId" component={SpotContainer} />
+            <Route exact path="/spots" component={SpotSearchContainer} />
+            <ProtectedRoute path="/spots/:spotId/review/new" component={CreateReviewContainer}/>
             <ProtectedRoute path="/host" component={SpotFormContainer}/>
-            <Route path="/" component={Splash} />
+            <Route exact path="/" component={Splash} />
           </Switch>
         </div> 
     </div>
