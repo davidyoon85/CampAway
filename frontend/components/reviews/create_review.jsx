@@ -41,7 +41,7 @@ class CreateReview extends React.Component {
               rows='20'
               value={this.state.description}
               onChange={this.update('description')}
-              placeholder='Share your experience here!'/>
+              placeholder='Leave a review about your experience here!'/>
             <input className='create_review_submit' type='submit' value='Submit Review'/>
           </form>
       </div>

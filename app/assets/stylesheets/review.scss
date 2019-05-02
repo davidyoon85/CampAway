@@ -110,20 +110,14 @@
 }
 
 .delete-review-button {
-    border: 3px solid red;
     text-align: center;
-    width: 60px;
-    height: 30px;
+    width: 55px;
+    height: 20px;
     margin-right: 20px;
-    background-color: red;
-    color: white;
-    font-weight: 700;
+    background-color: white;
+    color: black;
 }
 
 .delete-review-button:hover {
-    border: 3px solid red;
-    text-align: center;
-    background-color: white;
-    color: red;
-    transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
+    font-weight: 700;
 }
