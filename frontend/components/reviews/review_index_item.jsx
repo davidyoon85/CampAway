@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ReviewIndexItem = ({ review, deleteReview, currentUser }) => {
-  debugger
   if (review.user.id === currentUser) {
     return (
       <div className='review-index-item'>

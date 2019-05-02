@@ -6,7 +6,6 @@ import ReviewIndex from './review_index';
 import { fetchReviews, fetchReview, deleteReview } from '../../actions/review_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   return{
     reviews: state.entities.reviews,
     currentUser: state.session.id
