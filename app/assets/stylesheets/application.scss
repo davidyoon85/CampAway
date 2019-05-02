@@ -310,6 +310,7 @@ i {
 .tent_logo {
   border-radius: 50%;
   height: 40px;
+  position: relative;
 }
 
 .tent_logo:hover {
@@ -319,7 +320,6 @@ i {
 .dropdown {
   display: flex;
   justify-content: flex-end;
-  position: relative;
 }
 
 #drop_menu {
