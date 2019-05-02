@@ -158,8 +158,10 @@ class SessionForm extends React.Component {
                     <br/>
 
                     <p></p>
-                    Already a CampAwayer?&nbsp;
-                    <span className="modal_signin">{this.props.otherForm}{`!`} </span>
+                        <div className="modal_footer2_sub">
+                        Already a CampAwayer?&nbsp;
+                        <span className="modal_signin">{this.props.otherForm}{`!`} </span>
+                        </div>
                     </div>
                 </div>
                 </form>
