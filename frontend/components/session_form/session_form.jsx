@@ -117,6 +117,7 @@ class SessionForm extends React.Component {
                         onChange={this.update('first_name')}
                         className="login-input"
                         placeholder="First name..."
+                        required
                         />
                     </div>
 
@@ -125,6 +126,7 @@ class SessionForm extends React.Component {
                     onChange={this.update('last_name')}
                     className="login-input"
                     placeholder="Last name..."
+                    required
                     />
                     </div>
                 </div>
@@ -134,6 +136,7 @@ class SessionForm extends React.Component {
                     onChange={this.update('zip_code')}
                     className="login-input"
                     placeholder="Zip code..."
+                    required
                     />
                     <br/>
                     <input type="email"
@@ -152,7 +155,8 @@ class SessionForm extends React.Component {
                     <input 
                     id="login_submit" 
                     type="submit"
-                    className="session-submit"/>
+                    className="session-submit"
+                    required/>
                     <div className="modal_footer2">
                     By signing up, I agree to CampAway's<br/> terms and privacy policy.
                     <br/>

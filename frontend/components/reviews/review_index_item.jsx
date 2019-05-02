@@ -21,7 +21,9 @@ const ReviewIndexItem = ({ review, deleteReview, currentUser }) => {
       <div className='review-index-item'>
 
         <div className='review-item-values'>
-          <li className='review-user-name'>{review.user.first_name}</li>
+          <li className='review-user-name'>
+          {review.user.first_name}
+          </li>
 
           <li className='review-user-description'>{review.description}</li>
         </div>

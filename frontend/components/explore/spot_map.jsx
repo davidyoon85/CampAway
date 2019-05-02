@@ -6,8 +6,8 @@ import { receiveGeolocation } from '../../actions/location_filter_actions';
 class SpotMap extends React.Component {
     constructor(props) {
         super(props);
-
         this.geoCoder = new google.maps.Geocoder();
+        this.retrieveBounds = this.retrieveBounds.bind(this);
     }
 
     componentDidMount() {
@@ -18,8 +18,8 @@ class SpotMap extends React.Component {
         };
 
         this.map = new google.maps.Map(this.mapNode, mapOptions);
-
         this.MarkerManager = new MarkerManager(this.map);    
+        this.retrieveBounds();
     }
 
     centerMapOnSearch() {
@@ -37,6 +37,17 @@ class SpotMap extends React.Component {
               return { lat: 40.751626, lng: -73.983926 };
            }}
         });
+      }
+
+      retrieveBounds() {
+          google.maps.event.addListener(this.map, 'idle', () => {
+              const { north, south, east, west } = this.map.getBounds().toJSON();
+            const bounds = {
+              northEast: {lat: north, long: east},
+              southWest: {lat: south, long: west}
+            };
+            // this.props.updateFilter('location', bounds);
+          });
       }
 
     componentDidUpdate() {
