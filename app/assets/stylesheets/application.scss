@@ -319,12 +319,13 @@ i {
 .dropdown {
   display: flex;
   justify-content: flex-end;
+  position: relative;
 }
 
 #drop_menu {
   display: none;
   position: absolute;
-  top: 60px;
+  top: 45px;
   min-width: 150px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
