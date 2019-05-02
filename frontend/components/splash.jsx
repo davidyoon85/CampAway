@@ -83,9 +83,9 @@ class Splash extends React.Component {
                 <div className="index_section" onClick={this.handleClick(1)}>
                     <img src="https://s3.amazonaws.com/camp-away-dev/spot2_0.jpg" />
                         <div className="index_section_container">   
-                            {/* <div className="index_section_header"> */}
+                            
                             <h3 className="index_section_header">Oh! Pear Orchards</h3>
-                            {/* </div> */}
+                            
                             <div className="index_section_subheader">
                             New York
                             </div>
@@ -95,9 +95,9 @@ class Splash extends React.Component {
                 <div className="index_section" onClick={this.handleClick(2)}>
                     <img src="https://s3.amazonaws.com/camp-away-dev/spot3_0.jpg" />
                         <div className="index_section_container">   
-                            {/* <div className="index_section_header"> */}
+                            
                             <h3 className="index_section_header">Blue Mountain Camping</h3>
-                            {/* </div> */}
+                            
                             <div className="index_section_subheader">
                             New York
                             </div>
@@ -107,9 +107,9 @@ class Splash extends React.Component {
                 <div className="index_section" onClick={this.handleClick(3)}>
                     <img src="https://s3.amazonaws.com/camp-away-dev/spot4_0.jpg" />
                         <div className="index_section_container">  
-                            {/* <div className="index_section_header"> */}
+                            
                             <h3 className="index_section_header">Enveloped in Woods</h3>
-                            {/* </div> */}
+                            
                             <div className="index_section_subheader">
                             New York
                             </div>
@@ -119,57 +119,57 @@ class Splash extends React.Component {
                 <div className="index_section" onClick={this.handleClick(4)}>
                     <img src="https://s3.amazonaws.com/camp-away-dev/spot5_0.jpg" />
                         <div className="index_section_container"> 
-                            {/* <div className="index_section_header"> */}
+                            
                             <h3 className="index_section_header">Lakeside Forest</h3>
-                            {/* </div> */}
+                            
                             <div className="index_section_subheader">
                             New York
                             </div>
                         </div>
                 </div>
 
-                <div className="index_section" onClick={this.handleClick(5)}>
+                {/* <div className="index_section" onClick={this.handleClick(5)}>
                     <img src="https://s3.amazonaws.com/camp-away-dev/spot6_0.jpg" />
                         <div className="index_section_container">    
-                            {/* <div className="index_section_header"> */}
+                            
                             <h3 className="index_section_header">Mountain Top Campsite</h3>
-                            {/* </div> */}
+                            
                             <div className="index_section_subheader">
                             New York
                             </div>
                         </div>
-                </div>
+                </div> */}
                 
-                <div className="index_section" onClick={this.handleClick(6)}>
+                {/* <div className="index_section" onClick={this.handleClick(6)}>
                     <img src="https://s3.amazonaws.com/camp-away-dev/spot7_0.jpg" />
                         <div className="index_section_container">
-                            {/* <div className="index_section_header"> */}
+                            
                             <h3 className="index_section_header">Peaceful Flow</h3>
-                            {/* </div> */}
+                            
                             <div className="index_section_subheader">
                             New York
                             </div>
                         </div>
-                </div>
+                </div> */}
 
-                <div className="index_section" onClick={this.handleClick(7)}>
+                {/* <div className="index_section" onClick={this.handleClick(7)}>
                     <img src="https://s3.amazonaws.com/camp-away-dev/spot8_0.jpg" /> 
                         <div className="index_section_container">    
-                            {/* <div className="index_section_header"> */}
+                            
                             <h3 className="index_section_header">Cedar Creek</h3>
-                            {/* </div> */}
+                            
                             <div className="index_section_subheader">
                             New York
                             </div>
                         </div>
-                </div>
+                </div> */}
 
                 <div className="index_section" onClick={this.handleClick(8)}>
                     <img src="https://s3.amazonaws.com/camp-away-dev/spot9_0.jpg" />
                         <div className="index_section_container">
-                            {/* <div className="index_section_header"> */}
+                            
                             <h3 className="index_section_header">Rustic, Enchanted Cabin</h3>
-                            {/* </div> */}
+                            
                             <div className="index_section_subheader">
                             New York
                             </div>
