@@ -16,5 +16,18 @@ const Nav = () => (
     </div>
 );
 
+// const Nav = () => (
+//     <div className="main_nav">
+//         <Modal />
+//         <div className="left">
+//             <a href="/">CAMPAWAY</a>
+//                 <SearchBar />
+//         </div>
+//         <div className="right">
+//             <GreetingContainer />
+//         </div>
+//     </div>
+// );
+
 export default Nav;
 

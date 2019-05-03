@@ -1,6 +1,7 @@
 .spot_page {
     width: 50%;
     margin-left: 22%;
+    display: flex;
 }
 
 .spot_div_main {
@@ -151,4 +152,9 @@ span > p {
     font-weight: 600;
     color: white;
     border: white;
+}
+
+.booking_widget {
+    border: 1px solid black;
+    height: 100%;
 }

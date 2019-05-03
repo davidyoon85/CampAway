@@ -14,7 +14,6 @@
 #
 
 class User < ApplicationRecord
-
   attr_reader :password
 
   validates :password_digest, :session_token, presence: true
@@ -31,6 +30,11 @@ class User < ApplicationRecord
     primary_key: :id,
     foreign_key: :author,
     class_name: :Review
+  
+  has_many :bookings,
+    primary_key: :id,
+    foreign_key: :guest_id,
+    class_name: :Booking
 
   def self.find_by_credentials(email_address, password)
     user = User.find_by(email_address: email_address)

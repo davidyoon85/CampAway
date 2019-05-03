@@ -4,15 +4,21 @@ import { withRouter } from 'react-router-dom';
 import PhotoSlideshow from './photo_slideshow';
 import ReviewIndexContainer from '../reviews/review_index_container';
 
-
 class Spot extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      guest_id: this.props.currentUserId,
+      spot_id: this.props.match.params.spotId,
+      check_in: new Date(),
+      check_out: new Date()
+    }
   }
 
   componentDidMount() {
     this.props.fetchSpot(this.props.match.params.spotId);
     this.handleClick = this.handleClick.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleDelete(e) {
@@ -24,9 +30,15 @@ class Spot extends React.Component {
   }
 
   handleClick(e) {
+    e.preventDefault();
     this.props.history.push(`/spots/${this.props.spot.id}/review/new`);
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    debugger
+    this.props.makeBooking(this.state);
+ }
   render() {
     const { spot } = this.props;
 
@@ -38,28 +50,6 @@ class Spot extends React.Component {
             <PhotoSlideshow spot={spot} />
           </div>
           <div className="spot_page">
-
-            {/* <div className="booking_widget">
-              <div className="widget_price">
-                {spot.price}
-              </div>
-
-              <div className="widget_subsection">
-                <div className="widget_checkin">
-
-                </div>
-                <div className="widget_checkout">
-
-                </div>
-                <div className="widget_guests">
-
-                </div>
-              </div>
-
-              <div className="widget_booking">
-                <button className="widget_button">Instant Booking</button>
-              </div>
-            </div> */}
 
             <div className="spot_div_main">
                 <div className="spot_div">
@@ -306,7 +296,19 @@ class Spot extends React.Component {
           }
             </div>
 
-          </div>
+          {/* spot page ends here */}
+          <form onSubmit={this.handleSubmit}>
+            <div className="booking_widget">
+              <div className="widget_price">
+                {spot.price}
+              </div>
+              <div className="widget_booking">
+                <input className="widget_button" type="submit" value="Instant Book"/>
+              </div>
+            </div>
+            </form>
+            </div>
+
         </main >
       </>
     )} else {
@@ -317,6 +319,7 @@ class Spot extends React.Component {
             <PhotoSlideshow spot={spot} />
           </div>
           <div className="spot_page">
+
             <div className="spot_div_main">
                 <div className="spot_div">
                   <h1 className="spot_title">{spot.title}</h1>

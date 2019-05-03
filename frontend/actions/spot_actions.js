@@ -15,6 +15,11 @@ export const fetchAllSpots = () => dispatch => (
   APIUtil.fetchAllSpots().then(spots => dispatch(receiveAllSpots(spots)))
 );
 
+export const requestAllSpots = (bounds) => dispatch => {
+  APIUtil.fetchSearchSpots(bounds)
+  .then(spots => dispatch(receiveAllSpots(spots)))
+}
+
 export const hostSpot = (spot) => dispatch => (
   APIUtil.hostSpot(spot).then(spot => dispatch(createSpot(spot)))
 );

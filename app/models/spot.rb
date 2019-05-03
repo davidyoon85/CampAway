@@ -30,12 +30,6 @@
 
 class Spot < ApplicationRecord
   validates :title, :body, :host_id, presence: true
-  # geocoded_by :address
-  # after_validation :geocode
-
-  # def address
-  #   [street, city, state].compact.join(', ')
-  # end
 
   belongs_to :host,
     foreign_key: :host_id,
@@ -45,6 +39,11 @@ class Spot < ApplicationRecord
     primary_key: :id,
     foreign_key: :spot_id,
     class_name: :Review
+
+  has_many :bookings,
+    primary_key: :id,
+    foreign_key: :spot_id,
+    class_name: :Booking
 
   has_many_attached :photos
 end

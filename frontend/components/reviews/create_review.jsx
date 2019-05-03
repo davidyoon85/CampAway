@@ -23,7 +23,8 @@ class CreateReview extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createReview(this.props.match.params.spotId, this.state).then(() => this.props.history.push(`/spots/${this.props.match.params.spotId}`))
+    this.props.createReview(this.props.match.params.spotId, this.state).then(
+      () => this.props.history.push(`/spots/${this.props.match.params.spotId}`))
   }
 
   render(){

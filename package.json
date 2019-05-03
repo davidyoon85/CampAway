@@ -12,6 +12,7 @@
     "i": "^0.3.6",
     "npm": "^6.9.0",
     "react": "^16.8.5",
+    "react-day-picker": "^7.3.0",
     "react-dom": "^16.8.5",
     "react-redux": "^6.0.1",
     "react-router-dom": "^5.0.0",
