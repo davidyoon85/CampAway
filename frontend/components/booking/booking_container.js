@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
-import { createBooking, deleteBooking, clearErrors, requestAllBookings} from '../../actions/bookings_actions';
-import { requestListing } from '../../actions/listings_actions';
+import { makeBooking, deleteBooking, fetchAllBookings} from '../../actions/booking_actions';
+import { fetchSingleSpot } from '../../actions/spot_actions';
 import { openModal } from '../../actions/modal_actions';
 import Booking from './booking';
 
@@ -14,11 +14,11 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    createBooking: booking => dispatch(createBooking(booking)),
+    makeBooking: booking => dispatch(makeBooking(booking)),
     deleteBooking: id => dispatch(deleteBooking(id)),
     openModal: modalType => dispatch(openModal(modalType)),
-    requestListing: id => dispatch(requestListing(id)),
-    requestAllBookings: () => dispatch(requestAllBookings())
+    fetchSingleSpot: id => dispatch(fetchSingleSpot(id)),
+    fetchAllBookings: () => dispatch(fetchAllBookings())
   };
 };
 

@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => {
   const currentUserId = state.session.id;
   return {
     spot,
-    currentUserId
+    currentUserId,
   };
 };
   

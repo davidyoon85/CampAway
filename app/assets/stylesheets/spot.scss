@@ -1,6 +1,6 @@
 .spot_page {
-    width: 50%;
-    margin-left: 22%;
+    width: 75%;
+    margin-left: 12.5%;
     display: flex;
 }
 
@@ -154,7 +154,114 @@ span > p {
     border: white;
 }
 
+.widget_container {
+    position: relative;
+    height: 295px;
+    width: 319px;
+    z-index: 1;
+    background-color: white;
+    top: -70px;
+}
+
 .booking_widget {
-    border: 1px solid black;
-    height: 100%;
+    position: relative;
+    width: 319px;
+}
+
+.booking_banner {
+    min-height: 50px;
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    line-height: 0.9;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #333333;
+}
+
+.booking_well {
+    z-index: 1;
+    padding: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: 0;
+    transition: top 0.3s ease 0s;
+    min-height: 20px;
+}
+
+.well_dates_guests {
+    min-height: 50px;
+    background-color: white;
+    border: 1px solid #ebebeb;
+    font-weight: 400;
+    line-height: 1.42;
+    color: #333333;
+    display: flex;
+}
+
+.label {
+    display: block;
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+    font-size: .9rem;
+    color: #333333;
+    font-weight: 700;
+}
+
+.value {
+    white-space: nowrap;
+    font-size: .9rem;
+}
+
+.booking_checkin {
+    width: 36%;
+    cursor: pointer;
+    border-right: 1px solid #ebebeb;
+    padding: 10px;
+    transition: background-color 0.3s ease 0s;
+}
+
+.booking_checkout {
+    width: 36%;
+    cursor: pointer;
+    border-right: 1px solid #ebebeb;
+    padding: 10px;
+    transition: background-color 0.3s ease 0s;
+}
+
+.booking_guests {
+    width: 28%;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s ease 0s;
+}
+
+.booking_submit {
+    background-color: white;
+    border: 1px solid #ebebeb;
+    padding: 10px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+.widget_button {
+    width: 100%;
+    padding: 10px 15px;
+    position: relative;
+    font-size: 1em;
+    font-weight: 700;
+    border: 3px solid #40d9ac;
+    background-color: #40d9ac;
+    color: white;
+}
+
+.widget_button:hover {
+    cursor: pointer;
+    border: 2px solid #40d9ac;
+    background-color: white;
+    color: #40d9ac;
+    transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
 }

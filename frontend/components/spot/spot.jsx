@@ -13,17 +13,17 @@ class Spot extends React.Component {
       check_in: new Date(),
       check_out: new Date()
     }
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchSpot(this.props.match.params.spotId);
     this.handleClick = this.handleClick.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    
   }
 
   handleDelete(e) {
     e.preventDefault();
-    
     this.props.deleteSpot(this.props.match.params.spotId).then(response => {
       this.props.history.push('/spots');
     });
@@ -36,8 +36,10 @@ class Spot extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
-    this.props.makeBooking(this.state);
+    this.props.makeBooking(this.state).then(response => {
+      this.props.history.push(`/bookings/${Object.keys(response.booking)[0]}`);
+    }  
+    )
  }
   render() {
     const { spot } = this.props;
@@ -297,17 +299,37 @@ class Spot extends React.Component {
             </div>
 
           {/* spot page ends here */}
-          <form onSubmit={this.handleSubmit}>
-            <div className="booking_widget">
-              <div className="widget_price">
-                {spot.price}
+            <div className="widget_container">
+            <form onSubmit={this.handleSubmit}>
+              <div className="booking_widget">
+                <div className="booking_banner">
+                  ${spot.price} per night
+                </div>
+                <div className="booking_well">
+                  <div className="well_dates_guests">
+                    <div className="booking_checkin">
+                      <div className="label">Check in</div>
+                      <span className="value">Select date</span>
+                    </div>
+                    <div className="booking_checkout">
+                      <div className="label">Check out</div>
+                      <span className="value">Select date</span>
+                    </div>
+                    <div className="booking_guests">
+                      <div className="label">Guests</div>
+                      <span className="value">4</span>
+                    </div>
+                  </div>
+                  <div className="datepickers">
+                  </div>
+                  <div className="booking_submit">
+                    <input className="widget_button" type="submit" value="Instant Book"/>
+                  </div>
+                </div>
               </div>
-              <div className="widget_booking">
-                <input className="widget_button" type="submit" value="Instant Book"/>
+              </form>
               </div>
-            </div>
-            </form>
-            </div>
+          </div>
 
         </main >
       </>
@@ -559,6 +581,37 @@ class Spot extends React.Component {
           </div>
 
             </div>
+
+            <div className="widget_container">
+            <form onSubmit={this.handleSubmit}>
+              <div className="booking_widget">
+                <div className="booking_banner">
+                  ${spot.price} per night
+                </div>
+                <div className="booking_well">
+                  <div className="well_dates_guests">
+                    <div className="booking_checkin">
+                      <div className="label">Check in</div>
+                      <span className="value">Select date</span>
+                    </div>
+                    <div className="booking_checkout">
+                      <div className="label">Check out</div>
+                      <span className="value">Select date</span>
+                    </div>
+                    <div className="booking_guests">
+                      <div className="label">Guests</div>
+                      <span className="value">4</span>
+                    </div>
+                  </div>
+                  <div className="datepickers">
+                  </div>
+                  <div className="booking_submit">
+                    <input className="widget_login_button" type="submit" value="Instant Book"/>
+                  </div>
+                </div>
+              </div>
+              </form>
+              </div>
 
           </div>
         </main >

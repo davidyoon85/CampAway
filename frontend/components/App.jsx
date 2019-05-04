@@ -4,11 +4,10 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Nav from './nav/nav';
 import Splash from './splash';
 import SpotContainer from './spot/spot_container';
-// import SpotIndexContainer from './spot/spot_index_container';
 import SpotFormContainer from './spot/spot_form_container';
-import Footer from './footer';
 import SpotSearchContainer from './explore/spot_search_container';
 import CreateReviewContainer from './reviews/create_review_container';
+import BookingContainer from './booking/booking_container';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faIgloo } from '@fortawesome/free-solid-svg-icons';
@@ -26,6 +25,7 @@ const App = () => {
             <Route exact path="/spots" component={SpotSearchContainer} />
             <ProtectedRoute path="/spots/:spotId/review/new" component={CreateReviewContainer}/>
             <ProtectedRoute path="/host" component={SpotFormContainer}/>
+            <ProtectedRoute path="/bookings/:bookingId" component={BookingContainer}/>
             <Route exact path="/" component={Splash} />
           </Switch>
         </div> 

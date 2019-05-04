@@ -7,19 +7,25 @@ export const REMOVE_BOOKING = 'REMOVE_BOOKING';
 
 export const fetchAllBookings = () => dispatch => (
     APIUtil.fetchBookings().then(
-        bookings => {dispatch(receiveAllBookings(bookings))}
+        bookings => {
+          return dispatch(receiveAllBookings(bookings))
+        }
     )
 )
 
 export const makeBooking = (booking) => dispatch => (
-    APIUtil.createBooking(booking).then(
-      booking => {dispatch(receiveBooking(booking))}
+  APIUtil.createBooking(booking).then(
+      booking => {
+        return dispatch(receiveBooking(booking))
+      }
     )
 )
 
 export const deleteBooking = (bookingId) => dispatch => (
     APIUtil.deleteBooking(bookingId).then(
-        booking => {dispatch(removeBooking(booking))}
+        booking => {
+          dispatch(removeBooking(booking))
+        }
     )
 )
 
