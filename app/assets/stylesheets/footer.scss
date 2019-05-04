@@ -1,13 +1,14 @@
 .foot_div {
+    background-image: image_url("footer_img.png");
     display: flex;
     right: 0;
-    bottom:0;
-    left:0;
+    bottom: 0;
+    left: 0;
     position: relative;
     width: 100%;
     min-height: 350px;
     background-color: #41305c;
-    background-image: image_url("footer_img.png");
+    // background-image: url(/assets/footer_img-411ad28….png);
     background-repeat: repeat-x;
     background-position: bottom center;
     background-position-y: 100%, 100%;

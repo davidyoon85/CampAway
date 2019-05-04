@@ -3,15 +3,8 @@ import { Router } from 'react-router-dom';
 class MarkerManager {
     constructor(map) {
         this.map = map;
-        // this.geocoder = new google.maps.Geocoder();
         this.markers = {};
-
-        // this.handleClick = this.handleClick.bind(this);
     }
-
-    // handleClick() {
-    //     this.props.history.push(`/spots/${spot.id}`);
-    // }
 
     updateMarkers(spots) {
         spots.map(spot => {

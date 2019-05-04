@@ -1,32 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import DropDown from '../nav/drop_down';
 
 class Greeting extends React.Component {
     constructor(props) {   
         super(props);
-        // this.onclick = this.onclick.bind(this);
-        // this.mouseOut = this.mouseOut.bind(this);
     }
 
-    // onclick() {
-    //     return e => {
-    //         if (e.target === e.currentTarget) {
-    //         $("#drop_menu").addClass("show");
-    //         }
-    //     };
-    // }
-
-    // mouseOut() {
-    //     return e => {
-    //         if (e.target === e.currentTarget) {
-    //         $("#drop_menu").removeClass("show");
-    //         }
-    //     };
-    // }
-
     render() {
-       
         return (
             <div>
             {this.props.currentUser ? (

@@ -6,10 +6,13 @@ import { openModal } from '../../actions/modal_actions';
 import Booking from './booking';
 
 const mapStateToProps = (state, ownProps) => {
+  debugger
+  const spot = state.entities.spots[ownProps.spotId] || {};
   return {
   bookings: state.entities.bookings,
   currentUserId: state.session.id,
-  listings: state.entities.listings
+  listings: state.entities.listings,
+  spot
 }};
 
 const mapDispatchToProps = dispatch => {

@@ -173,13 +173,19 @@ span > p {
     background-color: #fff;
     border: 1px solid #ebebeb;
     box-shadow: 0 1px 5px rgba(0,0,0,0.05);
-    padding: 10px;
+    padding: 15px 10px 10px 10px;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
-    line-height: 0.9;
     font-size: 1.3em;
     font-weight: 700;
     color: #333333;
+}
+
+#widget_per_night {
+    font-size: .6em;
+    font-weight: 400;
+    color: gray;
 }
 
 .booking_well {
