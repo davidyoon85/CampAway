@@ -76,6 +76,7 @@ class SessionForm extends React.Component {
                     onChange={this.update('email_address')}
                     className="login-input"
                     placeholder="Email address"
+                    required
                     />
                     <br/>
                     <input type="password"
@@ -108,7 +109,7 @@ class SessionForm extends React.Component {
                     <big className="subtitle">Discover the best camping near me</big>
 
                 <div onClick={this.props.closeModal} className="close-x"></div>
-                {this.renderErrors()}
+                {/* {this.renderErrors()} */}
                 <div className="login-form">
 
                 <div className="modal_table">
@@ -143,6 +144,7 @@ class SessionForm extends React.Component {
                     onChange={this.update('email_address')}
                     className="login-input"
                     placeholder="Email address..."
+                    required
                     />
                     <br/>
                     <input type="password"
@@ -152,6 +154,7 @@ class SessionForm extends React.Component {
                     placeholder="Password..."
                     />
                     <br/>
+                    <div className="session_error_message">{this.renderErrors()}</div>
                     <input 
                     id="login_submit" 
                     type="submit"
