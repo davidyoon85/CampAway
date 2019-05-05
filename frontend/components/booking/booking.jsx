@@ -1,5 +1,8 @@
 import React from 'react';
+import DayPickerInput from 'react-day-picker/DayPickerInput';
+import moment from 'moment';
 import { withRouter } from 'react-router-dom';
+
 
 class Booking extends React.Component {
   constructor(props) {
@@ -16,16 +19,6 @@ class Booking extends React.Component {
     this.props.fetchAllBookings();
   }
 
-  componentDidUpdate() {
-
-  }
-
-  update(field) {
-    return e => this.setState({
-      [field]: e.currentTarget.value
-    });
-  }
-
   handleSubmit(e) {
     e.preventDefault();
     if (!this.props.currentUserId) {
@@ -40,9 +33,13 @@ class Booking extends React.Component {
       }  
     }
 
-  handleDateChange (type) {
-    this.setState({[type]: [e.currentTarget.value]})
-  }
+    handleDateChange(type) {
+      return day => {
+        let currentDay = moment(day).format("YYYY-MM-DD");
+        this.setState({ [type]: currentDay });
+        console.log(day)
+      };
+    }
 
   render() {
     const { spot } = this.props;
@@ -63,11 +60,23 @@ class Booking extends React.Component {
             <div className="well_dates_guests">
               <div className="booking_checkin">
                 <div className="label">Check in</div>
-                  <span className="value">Select date</span>
+                    <DayPickerInput
+                      value={moment(this.state.check_in).format("ddd, MMM Do")}
+                      selected={this.state.check_in}
+                      onDayChange={this.handleDateChange('check_in')}
+                      selected={this.state.check_in}
+                    />
                 </div>
                 <div className="booking_checkout">
                   <div className="label">Check out</div>
-                    <span className="value">Select date</span>
+
+                    <DayPickerInput
+                      value={moment(this.state.check_out).format("ddd, MMM Do")}
+                      selected={this.state.check_in}
+                      onDayChange={this.handleDateChange('check_out')}
+                      selected={this.state.check_out}
+                    />
+                    
                   </div>
                   <div className="booking_guests">
                   <div className="label">Guests</div>

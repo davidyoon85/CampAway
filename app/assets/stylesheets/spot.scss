@@ -215,7 +215,7 @@ span > p {
     padding-left: 0;
     font-size: .9rem;
     color: #333333;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .value {
@@ -225,7 +225,6 @@ span > p {
 
 .booking_checkin {
     width: 36%;
-    cursor: pointer;
     border-right: 1px solid #ebebeb;
     padding: 10px;
     transition: background-color 0.3s ease 0s;
@@ -233,7 +232,6 @@ span > p {
 
 .booking_checkout {
     width: 36%;
-    cursor: pointer;
     border-right: 1px solid #ebebeb;
     padding: 10px;
     transition: background-color 0.3s ease 0s;
