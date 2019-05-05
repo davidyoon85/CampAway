@@ -5,7 +5,6 @@ import { makeBooking } from '../../actions/booking_actions';
 import  { openModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   const spot = state.entities.spots[ownProps.match.params.spotId] || {};
   const currentUserId = state.session.id;
   return {

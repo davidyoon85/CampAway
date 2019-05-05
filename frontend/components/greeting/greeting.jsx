@@ -15,7 +15,8 @@ class Greeting extends React.Component {
         
                     <div id="drop_menu">
                             <li><Link className="nav_host" to={'/host'}>Host</Link></li>
-                            <li><a className="nav_host" onClick={this.props.logout}>Log out</a></li>
+                            <li><Link className="nav_host" to={`/users/${this.props.currentUser.id}`}>Bookings</Link></li>
+                            <li><a className="nav_host" id="nav_host_logout" onClick={this.props.logout}>Log out</a></li>
                     </div>
                 </div>
 

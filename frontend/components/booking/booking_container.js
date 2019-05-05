@@ -6,7 +6,6 @@ import { openModal } from '../../actions/modal_actions';
 import Booking from './booking';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   const spot = state.entities.spots[ownProps.spotId] || {};
   return {
   bookings: state.entities.bookings,

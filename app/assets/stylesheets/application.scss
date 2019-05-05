@@ -21,6 +21,7 @@
  *= require 'spot_search.scss'
  *= require 'search_bar.scss'
  *= require 'search.scss'
+ *= require 'booking.scss'
  */
 
 html, body, div, span, applet, object, iframe,
@@ -345,9 +346,10 @@ i {
 
 #drop_menu a {
   color: black;
-  padding: 12px 16px;
+  padding: 12px 1px;
   text-decoration: none;
   display: block;
+  margin-left: 20px;
 }
 
 .dropdown:hover #drop_menu {display: block;}
@@ -384,7 +386,7 @@ i {
 .nav_host {
     display: block;
     color: #333331;
-    width: 70px;
+    width: 105px;
     height: 25px;
     margin-top: 10px;
     padding-left: 10px;
@@ -392,10 +394,15 @@ i {
     font-weight: 100px;
     align-content: center;
     font-family: "Calibre", Helvetica, Arial, sans-serif;
+    border-bottom: 1px solid rgb(216, 216, 216);
 }
 
 .nav_host:hover {
   font-weight: 700;
+}
+
+#nav_host_logout {
+  border: none;
 }
 
 .tent_logo {

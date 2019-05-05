@@ -1,0 +1,29 @@
+.user_profile_container {
+    margin: 50px;
+}
+
+.user_profile_greeting {
+    font-weight: 700;
+}
+
+.user_bookings_header {
+    padding: 10px;
+    font-weight: 700;
+}
+
+.booked_spots_list {
+    display: flex;
+    flex-direction: column;
+}
+
+.booked_spot_items {
+    padding: 10px;
+}
+
+.booking_delete_button {
+    padding-left: 50px;
+}
+
+.booking_delete_button:hover {
+    font-weight: 700;
+}

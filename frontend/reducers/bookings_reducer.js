@@ -8,7 +8,7 @@ const bookingsReducer = (state = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_BOOKING:
-            return action.booking
+        return action.booking
         case RECEIVE_ALL_BOOKINGS:
             return action.bookings || {};
         case CREATE_BOOKING:

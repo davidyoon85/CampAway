@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class UserProfile extends React.Component {
     constructor(props) {
+   
         super(props)
 
-        this.handleDelete = this.handleDelete.bind(this);
+        // this.handleDelete = this.handleDelete.bind(this);
     }
 
     componentDidMount() {
@@ -12,14 +14,16 @@ class UserProfile extends React.Component {
         this.props.fetchAllSpots();
     }
 
-    handleDelete(spotId) {
-        this.props.deleteBookings(spotId).then(() => this.props.fetchAllBookings());
-    }
+    // handleDelete(bookingId) {
+    //     () => this.props.deleteBooking(bookingId);
+    //     () => this.props.fetchAllBookings();
+    // }
 
     render() {
-        if (Object.values(this.props.bookings).length <= 1) {
+        const bookingPhotos = {}
+        if (Object.values(this.props.bookings).length === 0) {
             return (
-            <div className="user_profile_booking_status">
+                <div className="user_profile_booking_status">
                 <h1>You currently have no bookings</h1>
             </div>
         )} else {
@@ -32,14 +36,20 @@ class UserProfile extends React.Component {
                         <h1>Here are your booked spots:</h1>
                     </div>
                     <div className="user_booking_spot">
-                        {Object.values(this.props.bookings).map(booking => (
-                            booking.spot.title
-                        ))}
+                    <ul className="booked_spots_list">
+                        {Object.values(this.props.bookings).map(booking=> {
+                            return <li className="booked_spot_items" key={booking.id}>
+                            <Link to={`/spots/${booking.spot.id}`}>{booking.spot.title}</Link>
+                            <button className="booking_delete_button" onClick={() => this.props.deleteBooking(booking.id)}>Delete Booking</button>
+                            </li>
+                        }
+                        )
+                    }
+                    </ul>
                     </div>
                 </div>
             )
         }
-
     }
 }
 

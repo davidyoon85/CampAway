@@ -24,7 +24,7 @@ export const makeBooking = (booking) => dispatch => (
 export const deleteBooking = (bookingId) => dispatch => (
     APIUtil.deleteBooking(bookingId).then(
         booking => {
-          dispatch(removeBooking(booking))
+          dispatch(removeBooking(bookingId))
         }
     )
 )
