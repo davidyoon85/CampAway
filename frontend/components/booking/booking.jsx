@@ -1,6 +1,7 @@
 import React from 'react';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import moment from 'moment';
+import { formatDate, parseDate } from 'react-day-picker/moment';
 import { withRouter } from 'react-router-dom';
 
 
@@ -36,8 +37,8 @@ class Booking extends React.Component {
     handleDateChange(type) {
       return day => {
         let currentDay = moment(day).format("YYYY-MM-DD");
+        // let currentDay = moment(day).format("MM-DD-YYYY");
         this.setState({ [type]: currentDay });
-        console.log(day)
       };
     }
 
@@ -61,20 +62,20 @@ class Booking extends React.Component {
               <div className="booking_checkin">
                 <div className="label">Check in</div>
                     <DayPickerInput
-                      value={moment(this.state.check_in).format("ddd, MMM Do")}
-                      selected={this.state.check_in}
+                      // value={moment(this.state.check_in).format("ddd, MMM Do")}
+                      formatDate={formatDate}
+                      parseDate={parseDate}       
                       onDayChange={this.handleDateChange('check_in')}
-                      selected={this.state.check_in}
+                      placeholder="Select Date"
                     />
                 </div>
                 <div className="booking_checkout">
                   <div className="label">Check out</div>
 
                     <DayPickerInput
-                      value={moment(this.state.check_out).format("ddd, MMM Do")}
-                      selected={this.state.check_in}
+                      // value={moment(this.state.check_out).format("ddd, MMM Do")}
                       onDayChange={this.handleDateChange('check_out')}
-                      selected={this.state.check_out}
+                      placeholder="Select Date"
                     />
                     
                   </div>

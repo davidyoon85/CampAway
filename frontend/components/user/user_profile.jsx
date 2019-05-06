@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import moment from 'moment';
 
 class UserProfile extends React.Component {
     constructor(props) {
@@ -40,8 +41,8 @@ class UserProfile extends React.Component {
                         {Object.values(this.props.bookings).map(booking=> {
                             return <li className="booked_spot_items" key={booking.id}>
                             <Link to={`/spots/${booking.spot.id}`}>{booking.spot.title}</Link>
-                            <br/>Check in: {booking.check_in}
-                            <br/>Check out: {booking.check_out}
+                            <br/>Check in: {moment(booking.check_in).format("ddd, MMM Do")}
+                            <br/>Check out: {moment(booking.check_out).format("ddd, MMM Do")}
                             <button className="booking_delete_button" onClick={() => this.props.deleteBooking(booking.id)}>Delete Booking</button>
                             </li>
                         }
