@@ -22,7 +22,7 @@ class Booking extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    if (!this.props.currentUserId) {
+    if (!this.props.currentUserId) {''
       this.props.openModal('login')
     } else {
       const booking = Object.assign({}, this.state);
@@ -37,7 +37,6 @@ class Booking extends React.Component {
     handleDateChange(type) {
       return day => {
         let currentDay = moment(day).format("YYYY-MM-DD");
-        // let currentDay = moment(day).format("MM-DD-YYYY");
         this.setState({ [type]: currentDay });
       };
     }
@@ -46,6 +45,16 @@ class Booking extends React.Component {
       const nextDay = new Date(day)
       nextDay.setDate(day.getDate()+2)
       return nextDay
+    }
+
+    handleStep(stepParam) {
+      return e => {
+        if (stepParam === '+') {
+          this.setState({ num_guest: (this.state.num_guest + 1) });
+        } else if (stepParam === '-' ) {
+          this.setState({ num_guest: (this.state.num_guest - 1) });
+        }
+      }
     }
 
   render() {
@@ -69,7 +78,6 @@ class Booking extends React.Component {
               <div className="booking_checkin">
                 <div className="label">Check in</div>
                     <DayPickerInput
-                      // value={moment(this.state.check_in).format("ddd, MMM Do")}
                       formatDate={formatDate}
                       parseDate={parseDate}       
                       onDayChange={this.handleDateChange('check_in')}
@@ -85,7 +93,6 @@ class Booking extends React.Component {
                   <div className="label">Check out</div>
 
                     <DayPickerInput
-                      // value={moment(this.state.check_out).format("ddd, MMM Do")}
                       formatDate={formatDate}
                       parseDate={parseDate}  
                       onDayChange={this.handleDateChange('check_out')}

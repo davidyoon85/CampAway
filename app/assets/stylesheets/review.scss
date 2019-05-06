@@ -60,6 +60,7 @@
     font-weight: 700;
     display: flex;
     align-items: center;
+    font-family: "Calibre", Helvetica, Arial, sans-serif;
 }
 
 .review_submit_button {
@@ -100,27 +101,50 @@
     border-bottom: 1px solid #ebebeb;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 .review-item-values {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .review-user-name {
-    font-weight: 700;
     padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.delete-edit-review {
+    padding-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .delete-review-button {
-    text-align: center;
+    text-align: end;
     width: 55px;
-    height: 20px;
-    margin-right: 20px;
-    background-color: white;
-    color: black;
+    height: 100%;
+    margin-left: 10px;
+    font-weight: 400;
+    color: #757575;
+    font-size: 14px;
 }
 
 .delete-review-button:hover {
     font-weight: 700;
+}
+
+.review_name {
+    font-weight: 600;
+}
+
+.review_date {
+    font-weight: 400;
+    color: #757575;
+    font-size: 14px;
 }

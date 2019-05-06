@@ -4,7 +4,7 @@ import { receiveGeolocation } from '../../actions/location_filter_actions'
 
 
 const mapStateToProps = state => ({
-    listings: state.entities.listings,
+    spots: state.entities.spots,
     filters: state.ui.filters
 });
 

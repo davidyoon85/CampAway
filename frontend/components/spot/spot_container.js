@@ -7,9 +7,11 @@ import  { openModal } from '../../actions/modal_actions';
 const mapStateToProps = (state, ownProps) => {
   const spot = state.entities.spots[ownProps.match.params.spotId] || {};
   const currentUserId = state.session.id;
+  const numReviews = Object.values(state.entities.reviews).length;
   return {
     spot,
     currentUserId,
+    numReviews
   };
 };
   

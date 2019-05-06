@@ -14,6 +14,7 @@ class ReviewIndex extends React.Component {
     if (!this.props.reviews) {
       return null;
     }
+    const spotId = this.props.match.params.spotId
 
     const reviews = Object.values(this.props.reviews).map(review => {
       return (
@@ -22,6 +23,7 @@ class ReviewIndex extends React.Component {
           review={review}
           deleteReview={this.props.deleteReview}
           currentUser={this.props.currentUser}
+
           />
       )
     })

@@ -20,6 +20,14 @@ export const createReview = (spotId, review) => (
   })
 );
 
+export const updateReview = (spotId, review) => (
+  $.ajax({
+    method: 'PATCH',
+    url: `api/spots/${spotId}/reviews/${review.id}`,
+    data: {review}
+  })
+);
+
 export const deleteReview = review => (
   $.ajax({
     method: 'DELETE',

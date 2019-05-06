@@ -46,7 +46,14 @@ class Spot extends React.Component {
 
   render() {
     const { spot } = this.props;
-    return (
+    if (Object.values(spot).length === 0) {
+      return (
+        null
+        )
+      } else {
+        
+        const { firstname } = this.props.spot.user;
+        return (
       <>
         <main className="spot_main_section">
           <div className="photo_slider">
@@ -69,6 +76,10 @@ class Spot extends React.Component {
                 </div>
 
                 <div className="spot_div">
+                  <div className="hosted_container">
+                    <nobr className="hosted_by_title">Hosted By</nobr><br/>
+                    <nobr className="host_name">{spot.user.first_name + " " + spot.user.last_name[0] + "."}</nobr>
+                  </div>
                   <p className="spot_body">{spot.body}</p>
                 </div>
 
@@ -286,7 +297,7 @@ class Spot extends React.Component {
           <>
           <div className='spot_review_container'>
             <div className='review_header'>
-              <p className="review_title">Reviews</p>
+              <p className="review_title">{this.props.numReviews} Written reviews</p>
               <button onClick={this.handleClick} className="review_submit_button">Submit Review</button>
             </div>
           </div>
@@ -303,6 +314,9 @@ class Spot extends React.Component {
         </main >
       </>
     )
+
+        }
+
   }
 }
 

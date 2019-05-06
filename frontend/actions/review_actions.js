@@ -33,16 +33,21 @@ export const receiveReviews = reviews => ({
     APIUtil.fetchReview(reviewId).then(review => dispatch(receiveReview(review)))
   );
   
-  export const deleteReview = review => dispatch => (
-    APIUtil.deleteReview(review).then(review => dispatch(removeReview(review)))
-  );
-  
   export const createReview = (spotId, review) => dispatch => (
     APIUtil.createReview(spotId, review).then(review => (
       dispatch(receiveReview(review))
     )
-    // , err => (
-    //   dispatch(receiveErrors(err.responseJSON))
-    // )
     )
+  );
+
+  export const updateReview = (listingId, review) => dispatch => (
+    APIUtil.updateReview(listingId, review).then(review => (
+      dispatch(receiveReview(review))
+    ), err => (
+      dispatch(receiveErrors(err.responseJSON))
+    ))
+  );
+
+  export const deleteReview = review => dispatch => (
+    APIUtil.deleteReview(review).then(review => dispatch(removeReview(review)))
   );

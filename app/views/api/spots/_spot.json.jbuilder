@@ -6,6 +6,10 @@
       :lat, :long, :campfire, :tent, :sites, :parking, :toilet, :shower, 
       :hiking, :biking, :wildlife, :paddling
 
+    json.set! "user" do
+      json.partial! '/api/users/user', user: spot.host
+    end
+
     if spot.photos.attached? 
       json.photoUrls spot.photos.map { |photo| url_for(photo) }
     end
