@@ -39,6 +39,7 @@ class UserProfile extends React.Component {
                     <div className="user_booking_spot">
                     <ul className="booked_spots_list">
                         {Object.values(this.props.bookings).map(booking=> {
+                            
                             return <li className="booked_spot_items" key={booking.id}>
                             <Link to={`/spots/${booking.spot.id}`}>{booking.spot.title}</Link>
                             <br/>Check in: {moment(booking.check_in).format("ddd, MMM Do")}

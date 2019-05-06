@@ -45,7 +45,6 @@
 
 .DayPicker-NavButton:hover {
   opacity: 0.8;
-
 }
 
 .DayPicker-NavButton--prev {
@@ -214,6 +213,7 @@
     width: 100%;
     font-size: .9rem;
     font-weight: 400;
+    cursor: pointer;
 }
 
 .DayPickerInput-OverlayWrapper {

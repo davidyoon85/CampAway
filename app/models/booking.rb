@@ -15,10 +15,12 @@ class Booking < ApplicationRecord
     validates :guest_id, :spot_id, :check_in, :check_out, presence: true
   
     belongs_to :user,
+      primary_key: :id,
       foreign_key: :guest_id,
       class_name: :User
     
     belongs_to :spot,
+      primary_key: :id,
       foreign_key: :spot_id,
       class_name: :Spot
 

@@ -42,9 +42,16 @@ class Booking extends React.Component {
       };
     }
 
+    nextDay(day) {
+      const nextDay = new Date(day)
+      nextDay.setDate(day.getDate()+2)
+      return nextDay
+    }
+
   render() {
     const { spot } = this.props;
-
+    const today = new Date();
+    const checkIn = this.state.check_in ? this.nextDay(new Date(this.state.check_in)) : this.nextDay(today)
     // if (Object.values(this.props.bookings).length > 0) {
     //   Object.values(this.props.bookings).map(booking => {
     //     if (booking.guest_id === this.props.currentUserId) {
@@ -67,6 +74,11 @@ class Booking extends React.Component {
                       parseDate={parseDate}       
                       onDayChange={this.handleDateChange('check_in')}
                       placeholder="Select Date"
+                      dayPickerProps={{
+                        disabledDays: { 
+                          before: today
+                        }
+                      }}
                     />
                 </div>
                 <div className="booking_checkout">
@@ -74,8 +86,16 @@ class Booking extends React.Component {
 
                     <DayPickerInput
                       // value={moment(this.state.check_out).format("ddd, MMM Do")}
+                      formatDate={formatDate}
+                      parseDate={parseDate}  
                       onDayChange={this.handleDateChange('check_out')}
                       placeholder="Select Date"
+                      dayPickerProps={{
+                        month: checkIn,
+                        disabledDays: {
+                          before: checkIn
+                        }
+                      }}
                     />
                     
                   </div>
