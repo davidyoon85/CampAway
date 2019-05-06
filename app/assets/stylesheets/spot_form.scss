@@ -78,9 +78,17 @@
     padding: 0px 0px 0px 10px;
     width: 100%;
     margin: 10px 0px 20px 0px;
-    font-weight: 700;
-    font-size: 16px;
-    color: #757575;
+    font-weight: 400;
+    letter-spacing: 1.1;
+    font-size: 14px;
+    color: black;
+}
+
+.form-control::placeholder {
+    color: gray;
+    font-weight: 500;
+    letter-spacing: 1.1;
+    font-size: 14px;
 }
 
 .form_control_description {
@@ -91,22 +99,24 @@
     text-align: start;
 }
 
-::placeholder {
+.form_control_description > input::placeholder {
+    color: gray;
+    font-weight: 500;
+    letter-spacing: 1.1;
+    font-size: 14px;
+}
+
+.form_control_description >:placeholder-shown {
     font-weight: 700;
     font-size: 16px;
     color: rgb(117, 117, 117);
 }
 
-:placeholder-shown {
-    font-weight: 700;
-    font-size: 16px;
-     color: rgb(117, 117, 117);
-}
-
 textarea {
-    font-weight: 700;
-    font-size: 16px;
-     color: rgb(117, 117, 117);
+     color: black;
+     font-weight: 500;
+     letter-spacing: 1.1;
+     font-size: 14px;
 }
 
 .previous_button {

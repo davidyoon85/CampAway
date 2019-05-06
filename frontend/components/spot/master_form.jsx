@@ -1,5 +1,11 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import PlacesAutocomplete from 'react-places-autocomplete';
+import {
+    geocodeByAddress,
+    geocodeByPlaceId,
+    getLatLng,
+  } from 'react-places-autocomplete';
 
 class MasterForm extends React.Component {
     constructor(props) {
@@ -28,11 +34,13 @@ class MasterForm extends React.Component {
             paddling: false,
             photoFile: [],
             photoUrl: [],
+            address: ''
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+
 
     handleFile(e) {
         
@@ -51,20 +59,33 @@ class MasterForm extends React.Component {
 
     handleChange(event) {
         const { name, value } = event.target;
-        this.setState({
-            [name]: value
-        });
+        if (name === "address") {
+            this.setState({
+                [name]: value
+            });
+                geocodeByAddress(value)
+                    .then(results => getLatLng(results[0]))
+                    .then(({ lat, lng }) =>
+                        this.setState({lat: lat, long: lng})
+                        
+                );
+        } else {
+            this.setState({
+                [name]: value
+            });
+        }
     }
 
     handleSubmit(event) {
         event.preventDefault();
+
         const formData = new FormData();
+
         formData.append('spot[title]', this.state.title);
         // if (this.state.photoFile) {
         //     formData.append('spot[photos]', this.state.photoFile);
         // }
         
-
         for (let i = 0; i < this.state.photos.length; i++) {
             formData.append('spot[photos][]', this.state.photos[i]);
         }
@@ -90,7 +111,6 @@ class MasterForm extends React.Component {
         formData.append('spot[paddling]', this.state.paddling);
         
         this.props.hostSpot(formData).then((response) => {
-
             this.props.history.push(`/spots/${Object.keys(response.spot)[0]}`);
         });
     }
@@ -152,6 +172,28 @@ class MasterForm extends React.Component {
             return null;
         }
     }
+
+    // handleChangeAddress (address) {
+    //     this.setState({ 
+    //       spot: {
+    //         ...this.state.spot,
+    //         address
+    //       } 
+    //     });
+    //   };
+
+    // handleSelectAddress (address) {
+    //     geocodeByAddress(address)
+    //       .then(results => getLatLng(results[0]))
+    //       .then(latLng => this.setState({
+    //         spot: {
+    //           ...this.state.spot,
+    //           long:parseFloat(latLng.lng),
+    //           lat:parseFloat(latLng.lat),
+    //           address
+    //         },
+    //       }))
+    //   };
 
     render() {
         if (this.state.photos) {
@@ -223,7 +265,7 @@ class MasterForm extends React.Component {
                             className="form-control"
                             id="group_size"
                             name="group_size"
-                            placeholder="4"
+                            type="number"
                             placeholder="4"
                             onChange={this.handleChange}
                         />
@@ -232,6 +274,7 @@ class MasterForm extends React.Component {
                         <label className="form_group_title">Check In Time</label>
                         <input
                             className="form-control"
+                            list="check_in"
                             id="check_in"
                             name="check_in"
                             type="text"
@@ -251,6 +294,17 @@ class MasterForm extends React.Component {
                         />
                     </div>
                     <div className="form-group">
+                        <label className="form_group_title">Address</label>
+                        <input
+                            className="form-control"
+                            id="address"
+                            name="address"
+                            type="text"
+                            placeholder="New York"
+                            onChange={this.handleChange}
+                        />
+                    </div>
+                    {/* <div className="form-group">
                         <label className="form_group_title">Latitude</label>
                         <input
                             className="form-control"
@@ -271,7 +325,7 @@ class MasterForm extends React.Component {
                             placeholder="-73.983933"
                             onChange={this.handleChange}
                         />
-                    </div>
+                    </div> */}
                 </div>
             } else {
 
