@@ -21,7 +21,8 @@ export const requestAllSpots = (bounds) => dispatch => {
 }
 
 export const hostSpot = (spot) => dispatch => (
-  APIUtil.hostSpot(spot).then(spot => dispatch(createSpot(spot)))
+  APIUtil.hostSpot(spot).then(spot => dispatch(createSpot(spot))
+  )
 );
 
 export const deleteSpot = (spotId) => dispatch => (

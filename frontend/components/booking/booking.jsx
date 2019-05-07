@@ -22,7 +22,7 @@ class Booking extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    if (!this.props.currentUserId) {''
+    if (!this.props.currentUserId) {
       this.props.openModal('login')
     } else {
       const booking = Object.assign({}, this.state);

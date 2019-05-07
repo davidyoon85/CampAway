@@ -2,28 +2,97 @@
     margin: 50px;
 }
 
+.user_profile_booking_status {
+    margin: 50px;
+}
+
 .user_profile_greeting {
     font-weight: 700;
+    font-size: 1.3em;
 }
 
 .user_bookings_header {
-    padding: 10px;
+    padding: 20px 0px 0px 20px;
     font-weight: 700;
+    font-size: 1.2em;
 }
 
 .booked_spots_list {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .booked_spot_items {
-    padding: 10px;
+    width: 30%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid lightgray;
 }
 
 .booking_delete_button {
-    padding-left: 50px;
+    margin-left: auto;
 }
 
 .booking_delete_button:hover {
     font-weight: 700;
+}
+
+.user_link_index {
+    border-bottom: 1px solid #ebebeb;
+}
+
+.user_link_index:hover {
+    border-bottom: 1px solid black;
+}
+
+.user_status_header {
+    padding: 10px;
+}
+
+//user bookings display
+.user_booking_spot_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0% 15% 8% 15%;
+}
+
+.user_booking_spot_section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.user_booking_spot_item {
+    display: flex;
+    flex-direction: column;
+    width: 29%;
+    margin: 2% 1% 2% 1%;
+    min-width: 270px;
+    min-height: 300px;
+    height: 300px;
+}
+
+.user_booking_spot_item_info {
+    display: block;
+    position: relatve;
+    width: 100%;
+    height: 80px;
+    border: 1px solid #ebebeb;
+    padding: 5%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user_booking_title {
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.user_booking_dates {
+    padding-left: 20px;
 }

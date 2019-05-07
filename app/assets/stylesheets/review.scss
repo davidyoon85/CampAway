@@ -10,13 +10,19 @@
 
 .create_review_form {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .review_form {
     display: flex;
     flex-direction: column;
     width: 50%;
+}
+
+.review_spot_title {
+    font-weight: 700;
+    font-size: 1.5em;
 }
 
 .review_description {

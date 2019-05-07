@@ -23,6 +23,4 @@ class Booking < ApplicationRecord
       primary_key: :id,
       foreign_key: :spot_id,
       class_name: :Spot
-
-    has_one :photos, through: :spot
   end

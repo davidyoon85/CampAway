@@ -36,28 +36,25 @@ class EditReview extends React.Component {
   }
 
   render(){
-debugger
     if (!this.props.review) {
-        debugger
       return null
     }
 
     if (!this.props.spot) {
-        debugger
       return null
     }
     return(
-      <div className='edit-review-form'>
-
-        <div className='edit-review-listing-name'>{this.props.spot.title}</div>
-        <form className='edit-form-submission'onSubmit={this.handleSubmit}>
-              <textarea className='edit-review-description'
-                cols='50'
-                rows='3'
-                value={this.state.description}
-                onChange={this.update('description')}  />
-            <input className='edit-review-submit' type='submit' value='Submit Review'/>
-          </form>
+      <div className='create_review_form'>
+        <div className='review_spot_title'>{this.props.spot.title}</div>
+        <form className='review_form'onSubmit={this.handleSubmit}>
+          <textarea className='review_description'
+            cols='50'
+            rows='20'
+            value={this.state.description}
+            onChange={this.update('description')}
+          />
+          <input className='create_review_submit' type='submit' value='Submit Review'/>
+        </form>
       </div>
     );
   }

@@ -5,8 +5,6 @@ import moment from 'moment';
 class UserProfile extends React.Component {
     constructor(props) {
         super(props)
-
-        // this.handleDelete = this.handleDelete.bind(this);
     }
 
     componentDidMount() {
@@ -14,35 +12,38 @@ class UserProfile extends React.Component {
         this.props.fetchAllSpots();
     }
 
-    // handleDelete(bookingId) {
-    //     () => this.props.deleteBooking(bookingId);
-    //     () => this.props.fetchAllBookings();
-    // }
-
     render() {
-        const bookingPhotos = {}
+
         if (Object.values(this.props.bookings).length === 0) {
             return (
                 <div className="user_profile_booking_status">
-                <h1>You currently have no bookings</h1>
-            </div>
+                    <div className="user_profile_greeting">
+                        <h1>Hi, {this.props.currentUser.first_name}!</h1>
+                    </div>
+                    <div className="user_status_header">No current trips. Let's <Link className="user_link_index" to={'/spots'}> get you outside!</Link></div>
+                </div>
         )} else {
+
             return (
                 <div className="user_profile_container">
                     <div className="user_profile_greeting">
                         <h1>Hi, {this.props.currentUser.first_name}!</h1>
                     </div>
                     <div className="user_bookings_header">
-                        <h1>Here are your booked spots:</h1>
+                        <h1>Here are your booked trips:</h1>
                     </div>
                     <div className="user_booking_spot">
                     <ul className="booked_spots_list">
                         {Object.values(this.props.bookings).map(booking=> {
+                            debugger
                             return <li className="booked_spot_items" key={booking.id}>
-                            <Link to={`/spots/${booking.spot.id}`}>{booking.spot.title}</Link>
-                            <br/>Check in: {moment(booking.check_in).format("ddd, MMM Do")}
-                            <br/>Check out: {moment(booking.check_out).format("ddd, MMM Do")}
-                            <button className="booking_delete_button" onClick={() => this.props.deleteBooking(booking.id)}>Delete Booking</button>
+                                <Link className="user_booking_title" to={`/spots/${booking.spot.id}`}>{booking.spot.title}</Link>
+                                <div className="user_booking_dates">
+                                    <br/><p>Check in: {moment(booking.check_in).format("ddd, MMM Do")}</p>
+                                    <br/><p>Check out: {moment(booking.check_out).format("ddd, MMM Do")}</p>
+                                    {/* <br/><p>Check out: {moment.duration(moment((booking.check_in).diff(moment(booking.check_out))))}</p> */}
+                                </div>
+                                <button className="booking_delete_button" onClick={() => this.props.deleteBooking(booking.id)}>Delete</button>
                             </li>
                         }
                         )
@@ -50,6 +51,7 @@ class UserProfile extends React.Component {
                     </ul>
                     </div>
                 </div>
+               
             )
         }
     }

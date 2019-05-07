@@ -1,9 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import PlacesAutocomplete from 'react-places-autocomplete';
 import {
     geocodeByAddress,
-    geocodeByPlaceId,
     getLatLng,
   } from 'react-places-autocomplete';
 
@@ -173,27 +172,17 @@ class MasterForm extends React.Component {
         }
     }
 
-    // handleChangeAddress (address) {
-    //     this.setState({ 
-    //       spot: {
-    //         ...this.state.spot,
-    //         address
-    //       } 
-    //     });
-    //   };
-
-    // handleSelectAddress (address) {
-    //     geocodeByAddress(address)
-    //       .then(results => getLatLng(results[0]))
-    //       .then(latLng => this.setState({
-    //         spot: {
-    //           ...this.state.spot,
-    //           long:parseFloat(latLng.lng),
-    //           lat:parseFloat(latLng.lat),
-    //           address
-    //         },
-    //       }))
-    //   };
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`errors-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
 
     render() {
         if (this.state.photos) {
@@ -220,6 +209,7 @@ class MasterForm extends React.Component {
                             name="title"
                             type="text"
                             onChange={this.handleChange}
+                            required
                         />
                     </div>
 
@@ -231,6 +221,7 @@ class MasterForm extends React.Component {
                             name="body"
                             type="text"
                             onChange={this.handleChange}
+                            required
                         />
                     </div>
                 </div>
@@ -246,6 +237,7 @@ class MasterForm extends React.Component {
                             type="number"
                             placeholder="100"
                             onChange={this.handleChange}
+                            required
                         />
                     </div>
                     <div className="form-group">
@@ -257,6 +249,7 @@ class MasterForm extends React.Component {
                             type="number"
                             placeholder="2"
                             onChange={this.handleChange}
+                            required
                         />
                     </div>
                     <div className="form-group">
@@ -268,6 +261,7 @@ class MasterForm extends React.Component {
                             type="number"
                             placeholder="4"
                             onChange={this.handleChange}
+                            required
                         />
                     </div>
                     <div className="form-group">
@@ -280,6 +274,7 @@ class MasterForm extends React.Component {
                             type="text"
                             placeholder="2 PM"
                             onChange={this.handleChange}
+                            required
                         />
                     </div>
                     <div className="form-group">
@@ -291,6 +286,7 @@ class MasterForm extends React.Component {
                             type="text"
                             placeholder="11 AM"
                             onChange={this.handleChange}
+                            required
                         />
                     </div>
                     <div className="form-group">
@@ -302,6 +298,7 @@ class MasterForm extends React.Component {
                             type="text"
                             placeholder="New York"
                             onChange={this.handleChange}
+                            required
                         />
                     </div>
                     {/* <div className="form-group">
@@ -409,8 +406,7 @@ class MasterForm extends React.Component {
                         </div>                 
                     </div>
                 </>
-                    <input type="file" onChange={(e) => this.setState({ photos: e.target.files })} multiple />
-                            <p id="submitPhotoReminder">Must attach at least one photo!</p>
+                    <input type="file" onChange={(e) => this.setState({ photos: e.target.files })} multiple required/>
                     
                     { preview }
                             
@@ -438,16 +434,10 @@ class MasterForm extends React.Component {
     }
 }
 
-export default withRouter(MasterForm);
+const mapStateToProps = ({ errors }) => {
+    return {
+      errors: errors.session,
+    };
+  };
 
-
-
-
-
-// handleSubmit(event) {
-//     event.preventDefault();
-
-//     this.props.hostSpot(this.state).then((response) => {
-//         this.props.history.push(`/spots/${Object.keys(response.spot)[0]}`);
-//     });
-// }
+export default connect(mapStateToProps, null)(withRouter(MasterForm));

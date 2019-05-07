@@ -26,7 +26,12 @@ class Spot extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-    this.props.history.push(`/spots/${this.props.spot.id}/review/new`);
+    debugger
+    if (!this.props.currentUserId) {
+      this.props.openModal('login')
+    } else {
+      this.props.history.push(`/spots/${this.props.spot.id}/review/new`);
+    }
   }
 
   // handleSubmit(e) {
