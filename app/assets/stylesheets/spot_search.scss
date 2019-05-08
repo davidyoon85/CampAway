@@ -30,6 +30,7 @@
     flex-wrap: wrap;
     width: 48%;
     min-width: 300px;
+    flex-grow: 1;
 }
 
 .spot_index_item_link {
@@ -49,7 +50,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 480px;
+    width: 100%;
+    overflow: auto;
 }
 
 .map {
@@ -64,11 +66,16 @@
     font-weight: 700;
     font-size: 18px;
     padding: 5px;
+    width: 98%;
 }
 
 .spot_details_body {
     color: #757575;
     padding: 5px;
+    width: 98%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .spot_details_price {
@@ -76,6 +83,7 @@
     font-size: 16px;
     text-align: right;
     padding: 5px;
+    width: 98%;
 }
 
 .infowindow-title {

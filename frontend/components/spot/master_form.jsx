@@ -221,6 +221,7 @@ class MasterForm extends React.Component {
                             name="body"
                             type="text"
                             onChange={this.handleChange}
+                            maxLength="300"
                             required
                         />
                     </div>

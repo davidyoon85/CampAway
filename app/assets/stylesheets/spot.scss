@@ -5,7 +5,7 @@
 }
 
 .spot_div_main {
-    width: 100%;
+    width: 70%;
 }
 
 .spot_div {
@@ -26,7 +26,10 @@
 
 .spot_body {
     line-height: 2;
-    padding-left: 20px;
+    overflow-wrap: break-word;
+    width: 70%;
+    min-width: 250px;
+    margin: 0 auto;
 }
 
 .spot_div_info {
@@ -158,11 +161,11 @@ span > p {
 
 .widget_container {
     position: relative;
-    height: 295px;
+    height: 200px;
     width: 319px;
     z-index: 1;
     background-color: white;
-    top: -70px;
+    top: -60px;
 }
 
 .booking_widget {

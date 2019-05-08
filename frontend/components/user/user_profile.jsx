@@ -35,14 +35,17 @@ class UserProfile extends React.Component {
                     <div className="user_booking_spot">
                     <ul className="booked_spots_list">
                         {Object.values(this.props.bookings).map(booking=> {
+                            debugger
                             return <li className="booked_spot_items" key={booking.id}>
                                 <Link className="user_booking_title" to={`/spots/${booking.spot.id}`}>{booking.spot.title}</Link>
                                 <div className="user_booking_dates">
-                                    <img className="booking-img" src={booking.spot.spotImg}></img>
-                                    <br/><p>Check in: {moment(booking.check_in).format("ddd, MMM Do")}</p>
-                                    <br/><p>Check out: {moment(booking.check_out).format("ddd, MMM Do")}</p>
-                                    <br/><p>Total Price: ${booking.total_price}</p>
-                                    {/* <br/><p>Check out: {moment.duration(moment((booking.check_in).diff(moment(booking.check_out))))}</p> */}
+                                    <img className="booking_img" src={booking.spot.spotImg}></img>
+                                        <div className="user_booking_details">
+                                            <p><nobr className="user_booking_subheader">Check In:</nobr> {moment(booking.check_in).format("ddd, MMM Do")}</p>
+                                            <p><nobr className="user_booking_subheader">Check Out:</nobr> {moment(booking.check_out).format("ddd, MMM Do")}</p>
+                                            <p><nobr className="user_booking_subheader">Number of Guests:</nobr> {booking.num_guests}</p>
+                                            <p><nobr className="user_booking_subheader">Total Price:</nobr> ${booking.total_price}</p>
+                                        </div>
                                 </div>
                                 <button className="booking_delete_button" onClick={() => this.props.deleteBooking(booking.id)}>Delete</button>
                             </li>
