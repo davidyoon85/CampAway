@@ -4,6 +4,7 @@ export const RECEIVE_BOOKING = 'RECEIVE_BOOKING';
 export const RECEIVE_ALL_BOOKINGS = 'RECEIVE_ALL_BOOKINGS';
 export const CREATE_BOOKING = 'CREATE_BOOKING';
 export const REMOVE_BOOKING = 'REMOVE_BOOKING';
+export const RECEIVE_BOOKING_ERRORS = 'RECEIVE_BOOKING_ERRORS';
 
 export const fetchAllBookings = () => dispatch => (
     APIUtil.fetchBookings().then(
@@ -42,4 +43,9 @@ export const receiveAllBookings = (bookings) => ({
 export const removeBooking = (bookingId) => ({
   type: REMOVE_BOOKING,
   bookingId
+})
+
+export const receiveBookingErrors = (errors) => ({
+  type: RECEIVE_BOOKING_ERRORS,
+  errors
 })

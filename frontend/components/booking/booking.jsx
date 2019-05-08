@@ -16,6 +16,7 @@ class Booking extends React.Component {
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDateChange = this.handleDateChange.bind(this);
+    this.renderErrors = this.renderErrors.bind(this);
   }
 
   componentDidMount() {
@@ -64,6 +65,18 @@ class Booking extends React.Component {
       }
     }
 
+    renderErrors() {
+      return (
+        <ul className="booking-errors">
+        {this.props.errors.map((error, idx) => (
+          <li key={`error-${idx}`} className="signin-error">
+            {error}
+          </li>
+        ))}
+      </ul>
+      )
+    }
+
   render() {
     const { spot } = this.props;
     const today = new Date();
@@ -75,6 +88,7 @@ class Booking extends React.Component {
       return (
       <div className="widget_container">
         <form onSubmit={this.handleSubmit}>
+        {/* <h1>{this.renderErrors()}</h1> */}
           <div className="booking_widget">
           <div className="booking_banner">
             <h2>${spot.price}</h2>

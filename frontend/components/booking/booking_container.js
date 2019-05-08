@@ -11,7 +11,8 @@ const mapStateToProps = (state, ownProps) => {
   bookings: state.entities.bookings,
   currentUserId: state.session.id,
   spots: state.entities.spots,
-  spot
+  spot,
+  errors: state.errors.bookings
 }};
 
 const mapDispatchToProps = dispatch => {

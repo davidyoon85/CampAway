@@ -38,6 +38,7 @@ class UserProfile extends React.Component {
                             return <li className="booked_spot_items" key={booking.id}>
                                 <Link className="user_booking_title" to={`/spots/${booking.spot.id}`}>{booking.spot.title}</Link>
                                 <div className="user_booking_dates">
+                                    <img className="booking-img" src={booking.spot.spotImg}></img>
                                     <br/><p>Check in: {moment(booking.check_in).format("ddd, MMM Do")}</p>
                                     <br/><p>Check out: {moment(booking.check_out).format("ddd, MMM Do")}</p>
                                     <br/><p>Total Price: ${booking.total_price}</p>
