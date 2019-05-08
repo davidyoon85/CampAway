@@ -12,7 +12,7 @@
 #
 
 class Booking < ApplicationRecord
-    validates :guest_id, :spot_id, :check_in, :check_out, presence: true
+    validates :guest_id, :spot_id, :check_in, :check_out, :num_guests, presence: true
   
     belongs_to :user,
       primary_key: :id,

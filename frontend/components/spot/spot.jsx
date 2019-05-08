@@ -26,7 +26,6 @@ class Spot extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-    debugger
     if (!this.props.currentUserId) {
       this.props.openModal('login')
     } else {

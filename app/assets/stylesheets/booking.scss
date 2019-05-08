@@ -96,3 +96,16 @@
 .user_booking_dates {
     padding-left: 20px;
 }
+
+.widget_guests {
+    display: flex;
+} 
+
+.widget_guests > a {
+    font-weight: 700;
+}
+
+.booking_num_guests {
+    width: 55%;
+    text-align: center;
+}

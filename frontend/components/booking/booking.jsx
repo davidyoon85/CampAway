@@ -10,7 +10,9 @@ class Booking extends React.Component {
     super(props);
     this.state = {
       check_in: new Date(),
-      check_out: new Date()
+      check_out: new Date(),
+      num_guests: 1,
+      total_price: this.props.spot.price
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDateChange = this.handleDateChange.bind(this);
@@ -25,6 +27,11 @@ class Booking extends React.Component {
     if (!this.props.currentUserId) {
       this.props.openModal('login')
     } else {
+      const checkInDate = this.state.check_in;
+      const checkOutDate = this.state.check_out;
+
+      const num_days = moment(checkOutDate).diff(checkInDate, 'days');
+        this.state.total_price *= num_days
       const booking = Object.assign({}, this.state);
         booking.guest_id = this.props.currentUserId;
         booking.spot_id = this.props.match.params.spotId;
@@ -47,12 +54,12 @@ class Booking extends React.Component {
       return nextDay
     }
 
-    handleStep(stepParam) {
+    handleNumGuests(change) {
       return e => {
-        if (stepParam === '+') {
-          this.setState({ num_guest: (this.state.num_guest + 1) });
-        } else if (stepParam === '-' ) {
-          this.setState({ num_guest: (this.state.num_guest - 1) });
+        if (change === '+' && (this.state.num_guests + 1 <= this.props.spot.group_size)) {
+          this.setState({ num_guests: (this.state.num_guests += 1) });
+        } else if (change === '-' && (this.state.num_guests - 1 >= 1)) {
+          this.setState({ num_guests: (this.state.num_guests -= 1) });
         }
       }
     }
@@ -108,7 +115,13 @@ class Booking extends React.Component {
                   </div>
                   <div className="booking_guests">
                   <div className="label">Guests</div>
-                    <span className="value">4</span>
+
+                    <div className="widget_guests">
+                      <a onClick={this.handleNumGuests('-')}>-</a>
+                      <p className="booking_num_guests">{this.state.num_guests}</p>
+                      <a onClick={this.handleNumGuests('+')}>+</a>
+                    </div>
+
                   </div>
                 </div>
                 <div className="datepickers">
