@@ -53,8 +53,9 @@ demo = User.create(
 spot1 = Spot.create!(
     "host_id": user1.id,
     "title": "Cabin in the Woods",
-    "body": "Our cozy cabins with wood-burning fireplaces are the real deal in terms 
-    of country vacations!",
+    "body": "Our cozy cabins with wood-burning fireplaces are the real deal in terms of country vacations.  Full kitchens, 
+        out-back campfire circles, a game room for kids of all ages and lots of other amenities. We are family and pet friendliest 
+        in Catskills!",
     "price": 100,
     "pets_allow": true,
     "group_size": 4,
@@ -77,7 +78,9 @@ spot1 = Spot.create!(
 spot2 = Spot.create!(
     "host_id": user1.id,
     "title": "Oh! Pear Orchards",
-    "body": "Oh! Pear Orchards is nestled in the Endless Mountain Region in Northeastern PA.",
+    "body": "Oh! Pear Orchards is nestled in the Endless Mountain Region in Northeastern PA. Located on the fertile ground between 
+        two rivers, the orchard has several varieties of pears, including, but not limited to, Olympic Giants, Hosui, Bartlett and 21st 
+        Century. In addition to selling Asian pears, Oh! Pear offers a look at a close to zero energy and negative carbon footprint.",
     "price": 25,
     "pets_allow": true,
     "group_size": 30,
@@ -100,7 +103,10 @@ spot2 = Spot.create!(
 spot3 = Spot.create!(
     "host_id": user1.id,
     "title": "Blue Mountain Camping",
-    "body": "Secluded but still close to everything. Ideal for large groups with ample space for parking.",
+    "body": "Private Camping, only one group at a time. Secluded but still close to everything. Ideal for large groups with ample 
+        space for parking. 20+ acres of a 46 acre property are set aside for guest campers. 2 miles from the town of Palmerton, 2 miles 
+        to Blue Mountain Ski Resort, close to Beltzville State Park and Lehigh Gap (Appalachian Trail). Hiking trails, rock climbing and 
+        a nice stream are features of the site.",
     "price": 98,
     "pets_allow": true,
     "group_size": 56,
@@ -123,7 +129,10 @@ spot3 = Spot.create!(
 spot4 = Spot.create!(
     "host_id": user1.id,
     "title": "Enveloped in Woods",
-    "body": "Pitch your tent on a beautiful horse farm. You can ride horses and have beautiful trails to walk on.",
+    "body": "Pitch your tent in the woods on a beautiful horse farm. You can ride horses, live amongst goats, see other animals 
+        and have beautiful trails to walk on. Two areas for bathroom facilities. 5 minute walk from campsite to new bathroom area with 
+        outdoor shower, 3 stalls and two urinals. We have over a mile of a sanded woods trail, and 130 acres of woods to enjoy. 
+        Campsites are near the scenic Manalapan Brook where animals are often spotted.",
     "price": 70,
     "pets_allow": true,
     "group_size": 10,
@@ -146,7 +155,8 @@ spot4 = Spot.create!(
 spot5 = Spot.create!(
     "host_id": user1.id,
     "title": "Lakeside Forest",
-    "body": "Enjoy a camp fire with friends by beautiful Beach Pond. Traditional wood-fired sauna available to all guests.",
+    "body": "Pitch your tent in the forest at North Shore Woods. Enjoy a camp fire with friends by beautiful Beach Pond. Traditional 
+        wood-fired sauna available to all guests. Not a secluded location but one that will not disappoint! No RV's please.",
     "price": 50,
     "pets_allow": true,
     "group_size": 4,
@@ -169,7 +179,10 @@ spot5 = Spot.create!(
 spot6 = Spot.create!(
     "host_id": user1.id,
     "title": "Mountain Top Campsite",
-    "body": "A beautiful, secluded site to bring friends to enjoy this beautiful location.",
+    "body": "Pitch your tent in the middle of our 450 acre farm, in our peach and apple orchard. You have access to a fire pit, 
+        applewood, and a picnic table. A beautiful, secluded site to bring friends to enjoy this beautiful location. As we are a working 
+        farm, you can see us driving through with our tractors or maintaining the orchard around your campsite on occasion. You are welcome 
+        to ride your bikes, hike or jog where you will pass ponds and a working farm landscape.",
     "price": 75,
     "pets_allow": true,
     "group_size": 11,
@@ -192,7 +205,10 @@ spot6 = Spot.create!(
 spot7 = Spot.create!(
     "host_id": user1.id,
     "title": "Peaceful Flow",
-    "body": "Pitch your tent across the bridge from the main house in a half acre of serenity on our private deck along Peters River.",
+    "body": "Pitch your tent across the bridge from the main house in a half acre of serenity on our private deck along Peters 
+        River. Enjoy the peace the changing trees provide, let the orchestra of birds transport you....forget you're 5 minutes from 
+        Cumbies! Enjoy a fire, use the grill, chill in the hammock or do nothing but forest bathe. We are a small farmette with 
+        chickens, ducks, fruits, veggies, herbs and dogs and dogs, did I say we have dogs.",
     "price": 35,
     "pets_allow": true,
     "group_size": 4,
@@ -238,7 +254,8 @@ spot8 = Spot.create!(
 spot9 = Spot.create!(
     "host_id": user1.id,
     "title": "Rustic, Enchanted Cabin",
-    "body": "Wake up to gorgeous views after you have a very restful sleep in this solar powered cabin.",
+    "body": "Wake up to gorgeous views after you have a very restful sleep in this solar powered 12 x 12 cabin located in a private area on a 52 acre farm Bed & Breakfast. Only 6 miles from Bethel Woods Center for the Arts.
+        Cabin includes...all linens, blankets, pillows, picnic table, chairs, fire ring and wood, gas BBQ stove, hammock, horse shoe pit, compost toilet, water pump and water. Cooler, plates and silverware and other items are also included.",
     "price": 160,
     "pets_allow": true,
     "group_size": 6,

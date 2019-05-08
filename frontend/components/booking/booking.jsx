@@ -36,6 +36,7 @@ class Booking extends React.Component {
       const booking = Object.assign({}, this.state);
         booking.guest_id = this.props.currentUserId;
         booking.spot_id = this.props.match.params.spotId;
+
       this.props.makeBooking(booking)
         .then(() => this.props.fetchAllBookings())
         .then(() => this.props.history.push(`/users/${this.props.currentUserId}`));
@@ -81,9 +82,6 @@ class Booking extends React.Component {
     const { spot } = this.props;
     const today = new Date();
     const checkIn = this.state.check_in ? this.nextDay(new Date(this.state.check_in)) : this.nextDay(today)
-    // if (Object.values(this.props.bookings).length > 0) {
-    //   Object.values(this.props.bookings).map(booking => {
-    //     if (booking.guest_id === this.props.currentUserId) {
 
       return (
       <div className="widget_container">

@@ -8,13 +8,15 @@
 
 .user_profile_greeting {
     font-weight: 700;
-    font-size: 1.3em;
+    font-size: 1.7em;
 }
 
 .user_bookings_header {
     padding: 20px 0px 0px 20px;
     font-weight: 700;
-    font-size: 1.2em;
+    font-size: 1.7em;
+    display: flex;
+    justify-content: center;
 }
 
 .booked_spots_list {
@@ -55,7 +57,7 @@
 }
 
 .user_status_header {
-    padding: 10px;
+    padding: 20px;
 }
 
 //user bookings display

@@ -35,7 +35,6 @@ class UserProfile extends React.Component {
                     <div className="user_booking_spot">
                     <ul className="booked_spots_list">
                         {Object.values(this.props.bookings).map(booking=> {
-                            debugger
                             return <li className="booked_spot_items" key={booking.id}>
                                 <Link className="user_booking_title" to={`/spots/${booking.spot.id}`}>{booking.spot.title}</Link>
                                 <div className="user_booking_dates">
