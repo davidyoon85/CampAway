@@ -22,20 +22,20 @@
 .booked_spots_list {
     display: flex;
     height: 100%;
-    width: 80%;
-    min-width: 650px;
+    width: 95%;
+    min-width: 580px;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
 }
 
 .booked_spot_items {
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid lightgray;
     width: 40%;
-    min-width: 650px;
+    min-width: 580px;
     margin: 20px 0px 20px 0px;
 }
 

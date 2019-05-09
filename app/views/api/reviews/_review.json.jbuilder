@@ -1,6 +1,7 @@
 json.extract! review,
   :id,
   :spot_id,
+  :created_at,
   :description
   json.spot_title review.spot.title
   json.created_at

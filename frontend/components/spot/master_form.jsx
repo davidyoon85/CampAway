@@ -38,13 +38,14 @@ class MasterForm extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleFile = this.handleFile.bind(this);
     }
 
 
-    handleFile(e) {
+    handleFile(event) {
         
         const reader = new FileReader();
-        const file = e.currentTarget.files[0];
+        const file = event.currentTarget.files[0];
         reader.onloadend = () => this.setState(
             { photoUrl: this.state.photoUrl.concat([reader.result]), photoFile: this.state.photoFile.concat([file])}
             );
@@ -81,9 +82,6 @@ class MasterForm extends React.Component {
         const formData = new FormData();
 
         formData.append('spot[title]', this.state.title);
-        // if (this.state.photoFile) {
-        //     formData.append('spot[photos]', this.state.photoFile);
-        // }
         
         for (let i = 0; i < this.state.photos.length; i++) {
             formData.append('spot[photos][]', this.state.photos[i]);
@@ -114,9 +112,9 @@ class MasterForm extends React.Component {
         });
     }
 
-    handleClick(e) {
-        e.preventDefault();
-        const currentName = e.target.name;
+    handleClick(event) {
+        event.preventDefault();
+        const currentName = event.target.name;
         this.setState({[currentName]: !this.state[currentName]}, () => {
         });
     }
@@ -194,7 +192,6 @@ class MasterForm extends React.Component {
                 return <img key={idx} src={photo}/>
             })
         } 
-        // this.state.photoUrl ? <img src={this.state.photoUrl} /> : null;
 
         let step;
 
@@ -250,7 +247,7 @@ class MasterForm extends React.Component {
                             id="sites"
                             name="sites"
                             type="number"
-                            placeholder="2"
+                            placeholder="1"
                             onChange={this.handleChange}
                             required
                         />
@@ -274,7 +271,7 @@ class MasterForm extends React.Component {
                             list="check_in"
                             id="check_in"
                             name="check_in"
-                            type="text"
+                            type="time"
                             placeholder="2 PM"
                             onChange={this.handleChange}
                             required
@@ -286,7 +283,7 @@ class MasterForm extends React.Component {
                             className="form-control"
                             id="check_out"
                             name="check_out"
-                            type="text"
+                            type="time"
                             placeholder="11 AM"
                             onChange={this.handleChange}
                             required
@@ -304,28 +301,6 @@ class MasterForm extends React.Component {
                             required
                         />
                     </div>
-                    {/* <div className="form-group">
-                        <label className="form_group_title">Latitude</label>
-                        <input
-                            className="form-control"
-                            id="lat"
-                            name="lat"
-                            type="number"
-                            placeholder="40.751628"
-                            onChange={this.handleChange}
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label className="form_group_title">Longitude</label>
-                        <input
-                            className="form-control"
-                            id="long"
-                            name="long"
-                            type="number"
-                            placeholder="-73.983933"
-                            onChange={this.handleChange}
-                        />
-                    </div> */}
                 </div>
             } else {
 
@@ -393,13 +368,6 @@ class MasterForm extends React.Component {
                                     onClick={this.handleClick}
                                 />
                             </div>
-                            {/* <div className="form-group-options">
-                                <input type="image" src="https://image.flaticon.com/icons/svg/54/54127.svg"
-                                    className={this.state.wildlife ? 'active_button' : 'host_spot_options'}
-                                    name="wildlife"
-                                    onClick={this.handleClick}
-                                />
-                            </div> */}
                             <div className="form-group-options"><input type="image" src="https://image.flaticon.com/icons/svg/38/38607.svg"
                                 className={this.state.paddling ? 'active_button' : 'host_spot_options'}
                                 name="paddling"
@@ -439,7 +407,7 @@ class MasterForm extends React.Component {
 
 const mapStateToProps = ({ errors }) => {
     return {
-      errors: errors.session,
+      errors: errors.spots,
     };
   };
 
