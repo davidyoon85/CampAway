@@ -47,19 +47,14 @@ class SpotIndex extends React.Component {
 
         if (spots.length === 0) {
           return (
-            <div></div>
+            <div className="spot_index"></div>
           )
         }
 
         const filteredSpots = this.applyFilters();
         if (filteredSpots.length === 0) {
           return (
-            <div className="spots-index">
-              <p>
-                <strong>
-                  0 spots
-                </strong>
-              </p>
+            <div className="spot_index">
               <div className='no-results'>
                 <h2> No spots match your current search. </h2>
               </div>

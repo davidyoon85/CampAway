@@ -369,11 +369,12 @@ class MasterForm extends React.Component {
                                     onClick={this.handleClick}
                                 />
                             </div>
-                            <div className="form-group-options"><input type="image" src="https://image.flaticon.com/icons/svg/38/38607.svg"
-                                className={this.state.paddling ? 'active_button' : 'host_spot_options'}
-                                name="paddling"
-                                onClick={this.handleClick}
-                            />               
+                            <div className="form-group-options">
+                                <input type="image" src="https://image.flaticon.com/icons/svg/38/38607.svg"
+                                    className={this.state.paddling ? 'active_button' : 'host_spot_options'}
+                                    name="paddling"
+                                    onClick={this.handleClick}
+                                />               
                             </div>
                         </div>                 
                     </div>

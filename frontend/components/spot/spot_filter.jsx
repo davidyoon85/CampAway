@@ -192,15 +192,27 @@ class SpotFilter extends React.Component {
                 <button 
                   className={this.state.tent ? 'active_filter_button' : ''} 
                   name="tent" 
-                  onClick={this.toggle('tent')}>Tent</button>
+                  onClick={this.toggle('tent')}>
+                  <img src="https://image.flaticon.com/icons/svg/1535/1535412.svg"/>
+                  Tent</button>
                 <button 
                   className={this.state.campfire ? 'active_filter_button' : ''} 
                   name="campfire" 
-                  onClick={this.toggle('campfire')}>Campfire</button>
+                  onClick={this.toggle('campfire')}>
+                  <img src="https://image.flaticon.com/icons/svg/1535/1535413.svg"/>
+                  Campfire</button>
                 <button 
                   className={this.state.pets_allow ? 'active_filter_button' : ''} 
                   name="pets_allow" 
-                  onClick={this.toggle('pets_allow')}>Allow Pets</button>
+                  onClick={this.toggle('pets_allow')}>
+                  <img src="https://image.flaticon.com/icons/svg/71/71702.svg"/>
+                  Pets Allowed</button>
+                  <button 
+                  className={this.state.parking ? 'active_filter_button' : ''} 
+                  name="parking" 
+                  onClick={this.toggle('parking')}>
+                  <img src="https://image.flaticon.com/icons/svg/818/818383.svg"/>
+                  Parking</button>
               </div>)
               : (
                 null
@@ -224,15 +236,21 @@ class SpotFilter extends React.Component {
                 <button 
                   className={this.state.biking ? 'active_filter_button' : ''} 
                   name="biking"
-                  onClick={this.toggle('biking')}>Biking</button>
+                  onClick={this.toggle('biking')}>
+                  <img src="https://image.flaticon.com/icons/svg/565/565350.svg"/>
+                  Biking</button>
                 <button 
                   className={this.state.hiking ? 'active_filter_button' : ''} 
                   name="hiking"
-                  onClick={this.toggle('hiking')}>Hiking</button>
+                  onClick={this.toggle('hiking')}>
+                  <img src="https://image.flaticon.com/icons/svg/71/71423.svg"/>
+                  Hiking</button>
                 <button 
                   className={this.state.paddling ? 'active_filter_button' : ''} 
                   name="paddling"
-                  onClick={this.toggle('paddling')}>Paddling</button>
+                  onClick={this.toggle('paddling')}>
+                  <img src="https://image.flaticon.com/icons/svg/38/38607.svg"/>
+                  Paddling</button>
               </div>)
               : (
                 null

@@ -168,10 +168,19 @@
     border: 1px solid #ebebeb;
     margin: 5px 0px 5px 0px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .spot_filter_item > button:hover {
     border: 1px solid black;
+}
+
+.spot_filter_item > button > img {
+    width: 32px;
+    height: 32px;
+    padding-right: 10px;
 }
 
 .active_filter_button {
