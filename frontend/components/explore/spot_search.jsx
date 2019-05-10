@@ -2,6 +2,7 @@ import React from 'react';
 
 import SpotMap from './spot_map';
 import SpotIndex from '../spot/spot_index_container';
+import SpotFilterContainer from '../spot/spot_filter_container';
 
 class SpotSearch extends React.Component {
     constructor(props) {
@@ -15,12 +16,15 @@ class SpotSearch extends React.Component {
     render () {
         return (
         <div className="spot_search_container">
+            <SpotFilterContainer />
             <SpotIndex 
                 spots={this.props.spots}
+                filters={this.props.filters}
                 />
             <SpotMap 
                 spots={this.props.spots}
                 geoLocation={this.props.geoLocation}
+                filters={this.props.filters}
                 receiveGeolocation={this.props.receiveGeolocation}
             />
         </div>

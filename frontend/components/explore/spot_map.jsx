@@ -3,6 +3,11 @@ import MarkerManager from '../../util/marker_manager';
 import { fetchAllSpots } from '../../actions/spot_actions';
 import { receiveGeolocation } from '../../actions/location_filter_actions';
     
+const mapOptions = {
+  center : { lat: 40.751626, lng: -73.983926 },
+  zoom: 11
+};
+
 class SpotMap extends React.Component {
     constructor(props) {
         super(props);
@@ -12,14 +17,11 @@ class SpotMap extends React.Component {
 
     componentDidMount() {
         fetchAllSpots();
-        const mapOptions = {
-            center : { lat: 40.751626, lng: -73.983926 },
-            zoom: 11
-        };
 
         this.map = new google.maps.Map(this.mapNode, mapOptions);
         this.MarkerManager = new MarkerManager(this.map);    
         this.retrieveBounds();
+
     }
 
     centerMapOnSearch() {
@@ -39,6 +41,35 @@ class SpotMap extends React.Component {
         });
       }
 
+      // centerMapOnSearch() {
+      //   const { geolocation } = this.props;
+      //   if (geolocation.length > 0) {
+      //     const results = JSON.parse(window.localStorage.getItem(geolocation));
+      //     if (!results) {
+      //       this.geocoder.geocode({ 'address': geolocation},  (results, status) => {
+      //         if (status === 'OK') {
+    
+      //           if (results[0]) {
+      //             window.localStorage.setItem(geolocation, JSON.stringify(results));
+      //             this.map.setZoom(8.5);
+      //             this.map.setCenter(results[0].geometry.location);
+    
+      //             /* get current map bounds, fit to those bounds,
+      //             then feed in mapBounds to UI object for mapBounds for Listing
+      //             Index to filter through */
+      //             const currentMapBounds = this.map.getBounds();
+      //             this.map.fitBounds(currentMapBounds);
+      //             this.props.receiveMapBounds(this.map.getBounds());
+    
+      //           } else {
+      //             window.alert('No results found');
+      //           }
+      //         }
+      //       })
+      //     }
+      //   }
+      // }
+
       retrieveBounds() {
           google.maps.event.addListener(this.map, 'idle', () => {
               const { north, south, east, west } = this.map.getBounds().toJSON();
@@ -50,19 +81,52 @@ class SpotMap extends React.Component {
           });
       }
 
+      applyFilters() {
+        const { spots, filters } = this.props;
+
+        if (filters === undefined) {
+          return spots;
+        }
+
+        const filteredSpots = spots.filter(spot => {
+            if (filters['campfire'] && !spot.campfire) return;
+            if (filters['pets_allow'] && !spot.pets_allow) return;
+            if (filters['tent'] && !spot.tent) return;
+            if (filters['parking'] && !spot.parking) return;
+            if (filters['toilet'] && !spot.toilet) return;
+            if (filters['shower'] && !spot.shower) return;
+            if (filters['hiking'] && !spot.hiking) return;
+            if (filters['biking'] && !spot.biking) return;
+            if (filters['paddling'] && !spot.paddling) return;
+            if (filters.pricing < spot.price) return;
+
+            return spots
+        });
+
+        return filteredSpots;
+    }
+
+
     componentDidUpdate() {
-        this.MarkerManager.updateMarkers(this.props.spots);
-        if (this.props.geoLocation.length > 0) this.centerMapOnSearch();
+      this.filteredSpots = this.applyFilters();
+      this.MarkerManager.updateMarkers(this.filteredSpots);
+      if (this.props.geoLocation.length > 0) this.centerMapOnSearch();
+
     }
 
     render () {
+      const { spots } = this.props;
 
-        return (
-        <div id='map-container'>
-            <div className="map" ref={ map => this.mapNode = map }>
-            </div>
-        </div>
-        )
+      if (Object.keys(spots) === 0 ) {
+        return ( <div> </div> );
+      }
+
+      return (
+      <div id='map-container'>
+          <div className="map" ref={ map => this.mapNode = map }>
+          </div>
+      </div>
+      )
     }
 }
 

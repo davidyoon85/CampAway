@@ -4,14 +4,31 @@ class MarkerManager {
     constructor(map) {
         this.map = map;
         this.markers = {};
+        this.geocoder = new google.maps.Geocoder();
+    }
+
+    clearMarkers() {
+      Object.keys(this.markers)
+        .forEach((spotId) => this.removeMarker(this.markers[spotId]))
+    }
+
+    removeMarker(marker) {
+      this.markers[marker.spotId].setMap(null);
+      delete this.markers[marker.spotId];
     }
 
     updateMarkers(spots) {
-        spots.map(spot => {
-            if (!this.markers.hasOwnProperty(`${spot.id}`)) {
-                this.createMarker(spot)
-            }
-        })    
+        this.clearMarkers();
+
+        spots.forEach(spot => {
+          this.createMarker(spot);
+        });
+
+        // spots.map(spot => {
+        //     if (!this.markers.hasOwnProperty(`${spot.id}`)) {
+        //         this.createMarker(spot)
+        //     }
+        // })    
     }
 
     createMarker(spot) {

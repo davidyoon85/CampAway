@@ -7,6 +7,7 @@ import { receiveGeolocation } from '../../actions/location_filter_actions';
 const mapStateToProps = (state) => ({
     spots: selectSpots(state),
     geoLocation: state.ui.geoLocation["address"],
+    filters: state.ui.filters
 });
 
 const mapDispatchToProps = (dispatch) => ({

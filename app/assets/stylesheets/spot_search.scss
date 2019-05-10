@@ -11,7 +11,7 @@
 
 .spot_index {
     left:0;
-    top:0;
+    top: 200px;
     height:87vh;
     width: 55%;
     position: absolute;
@@ -91,4 +91,34 @@
 
 .infowindow-price {
     text-align: center;
+}
+
+.spot_filters_container {
+    display: flex;
+}
+
+.spot_filter_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 45px;
+    padding: 9px 7px;
+    font-size: 1.8rem;
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.spot_filter_item {
+    width: 130px;
+    position: absolute;
+    top: 105px;
+    z-index: 3;
+    padding: 20px;
+    border: 1px solid #ebebeb;
+    background-color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
 }

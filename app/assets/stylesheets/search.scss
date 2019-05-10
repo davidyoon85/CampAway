@@ -43,3 +43,12 @@
     display: flex;
     align-items: center;
 }
+
+.spot_filters_list {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.spot_filter_button {
+    border: 1px solid lightgray;
+}
