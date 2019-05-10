@@ -6,7 +6,9 @@ import {
   removeSingleFilter,
   clearAllFilters,
   receivePricingFilter,
-  removePricingFilter
+  removePricingFilter,
+  receiveGroupFilter,
+  removeGroupFilter
   } from '../../actions/filter_actions';
 
 
@@ -20,6 +22,8 @@ const mapDispatchToProps = dispatch => ({
   removeSingleFilter: filter => dispatch(removeSingleFilter(filter)),
   receivePricingFilter: amount => dispatch(receivePricingFilter(amount)),
   removePricingFilter: amount => dispatch(removePricingFilter(amount)),
+  receiveGroupFilter: amount => dispatch(receiveGroupFilter(amount)),
+  removeGroupFilter: amount => dispatch(removeGroupFilter(amount)),
   clearAllFilters: () => dispatch(clearAllFilters()),
 
 })

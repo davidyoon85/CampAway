@@ -88,8 +88,10 @@ time, mark, audio, video, button, link {
  }
 
  .main-class {
+  width: 100%;
   min-height: 50vh;
   background: white;
+  margin: 0 auto;
 }
 
 .login-form-container {
@@ -453,10 +455,9 @@ i {
     color: #40d9ac;
  }
 
- #map-container {
-   width: 500px;
-   height: 500px;
- }
+//  #map-container {
+
+//  }
 
  .infowindow {
    display: flex;

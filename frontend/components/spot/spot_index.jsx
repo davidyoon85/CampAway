@@ -25,6 +25,7 @@ class SpotIndex extends React.Component {
             if (filters['biking'] && !spot.biking) return;
             if (filters['paddling'] && !spot.paddling) return;
             if (filters.pricing < spot.price) return;
+            if (filters.group_size > spot.group_size) return;
 
             return spots
         });

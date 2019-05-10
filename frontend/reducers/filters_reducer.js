@@ -4,20 +4,23 @@ import {
   REMOVE_SINGLE_FILTER,
   CLEAR_ALL_FILTERS,
   RECEIVE_PRICING_FILTER,
-  REMOVE_PRICING_FILTER
+  REMOVE_PRICING_FILTER,
+  RECEIVE_GROUP_FILTER,
+  REMOVE_GROUP_FILTER,
 } from '../actions/filter_actions';
 
 const defaultFilters = {
-    campfire: false,
-    pets_allow: false,
-    tent: false,
-    parking: false,
-    toilet: false,
-    shower: false,
-    hiking: false,
-    biking: false,
-    paddling: false,
-    price: 1000
+  group_size: 1,
+  campfire: false,
+  pets_allow: false,
+  tent: false,
+  parking: false,
+  toilet: false,
+  shower: false,
+  hiking: false,
+  biking: false,
+  paddling: false,
+  price: 1000
 }
 
 
@@ -36,7 +39,13 @@ const filtersReducer = (state = defaultFilters, action) => {
       newState = merge({}, state, { pricing: action.amount })
       return newState;
     case REMOVE_PRICING_FILTER:
-      newState = merge({}, state, { pricing: 10000 })
+      newState = merge({}, state, { pricing: 1000 })
+      return newState;
+      case RECEIVE_GROUP_FILTER:
+      newState = merge({}, state, { group_size: action.amount })
+      return newState;
+    case REMOVE_GROUP_FILTER:
+      newState = merge({}, state, { group_size: 1 })
       return newState;
     case CLEAR_ALL_FILTERS:
       return defaultFilters;

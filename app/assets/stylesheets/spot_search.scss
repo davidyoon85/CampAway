@@ -1,20 +1,21 @@
 .spot_search_container {
     display: flex;
-    justify-content: start;
-    width: 100%;
+    justify-content: center;
+    width: 90%;
+    min-width: 1300px;
     background-color: white;
     position: relative;
-    padding-top: 40px;
     padding-bottom: 10px;
-    height: 70vh;
+    margin: 0 auto;
+    flex-direction: column;
 }
 
 .spot_index {
-    left:0;
-    top: 200px;
-    height:87vh;
+    left: 0;
+    top: 13.5%;
+    height: 73vh;
     width: 55%;
-    position: absolute;
+    min-width: 700px;
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 10px;
@@ -22,14 +23,16 @@
     overflow: scroll;
     box-sizing: border-box;
     justify-content: flex-start;
+    margin-top: 10px;
 }
 
 .spot_index_item {
-    padding: 0px 5px 25px 5px;
+    padding: 0px 5px 25px 0px;
     display: flex;
     flex-wrap: wrap;
     width: 48%;
     min-width: 300px;
+    height: 360px;
 }
 
 .spot_index_item_link {
@@ -53,12 +56,17 @@
     overflow: auto;
 }
 
+#map_container {
+    position: relative;
+}
+
 .map {
-    right:0;
-    top:0;
-    height:85vh;
-    width:45%;
+    right: 0;
+    top: 13%;
+    height: 81vh;
+    width: 45%;
     position: absolute;
+    height: 73vh;
 }
 
 .spot_details_title {
@@ -93,32 +101,86 @@
     text-align: center;
 }
 
+.spot_filters_header {
+    width: 100%;
+    margin: 0 auto;
+
+}
+
 .spot_filters_container {
     display: flex;
+    border: 1px solid #ebebeb;
+    width: 100%;
+    background-color: #FDFDFD;
 }
 
 .spot_filter_section {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     height: 45px;
-    padding: 9px 7px;
-    font-size: 1.8rem;
+    margin: 10px 0px 10px 10px;
+    font-size: 1rem;
+    font-weight: 500;
     background-color: #fff;
     border: 1px solid #ebebeb;
     border-radius: 2px;
     cursor: pointer;
 }
 
+.spot_filter_section > button > img {
+    height: 36px;
+    width: 36px;
+}
+
+.spot_filter_section:hover {
+    border: 1px solid black;
+}
+
+.spot_filter_section:last-child {
+    margin-right: 10px;
+}
+
+.spot_filter_section > button {
+    padding: 10px;
+    height: 100%;
+}
+
 .spot_filter_item {
     width: 130px;
     position: absolute;
-    top: 105px;
+    top: 57px;
     z-index: 3;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #ebebeb;
     background-color: #fff;
     font-size: 1.5rem;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+}
+
+.spot_filter_item > button {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px;
+    border: 1px solid #ebebeb;
+    margin: 5px 0px 5px 0px;
+    position: relative;
+}
+
+.spot_filter_item > button:hover {
+    border: 1px solid black;
+}
+
+.active_filter_button {
+    display: block;
+    border: 1px solid #40d9ac;
+    background: #40d9ac;
+    height: 80%;
+    width: 80%;
+    padding: 10px;
+    color: white;
+    transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
 }

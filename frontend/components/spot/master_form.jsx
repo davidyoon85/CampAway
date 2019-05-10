@@ -114,6 +114,7 @@ class MasterForm extends React.Component {
 
     handleClick(event) {
         event.preventDefault();
+        debugger
         const currentName = event.target.name;
         this.setState({[currentName]: !this.state[currentName]}, () => {
         });
