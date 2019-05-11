@@ -50,7 +50,8 @@ class SpotFilter extends React.Component {
   hideAmenities() {
 
     if ((event.target === 'Amenities')) {
-
+      return null;
+    } else if (this.dropdownMenu === null) {
       return null;
     } else if (!this.dropdownMenu.contains(event.target)) {
 
@@ -72,6 +73,8 @@ class SpotFilter extends React.Component {
     event.preventDefault();
     if ((event.target === 'Pricing')) {
       return null;
+    } else if (this.dropdownMenu === null) {
+     return null;
     } else if (!this.dropdownMenu.contains(event.target)) {
       this.setState({ showPricing: false }, () => {
         document.removeEventListener('click', this.hidePricing);
@@ -90,6 +93,8 @@ class SpotFilter extends React.Component {
   hideGroup() {
     if ((event.target === 'Group Size')) {
       return null;
+    } else if (this.dropdownMenu === null) {
+      return null;
     } else if (!this.dropdownMenu.contains(event.target)) {
       this.setState({ showGroup: false }, () => {
         document.removeEventListener('click', this.hideGroup);
@@ -107,6 +112,8 @@ class SpotFilter extends React.Component {
 
   hideActivities() {
     if ((event.target === 'Activities')) {
+      return null;
+    } else if (this.dropdownMenu === null) {
       return null;
     } else if (!this.dropdownMenu.contains(event.target)) {
       this.setState({ showActivities: false }, () => {
