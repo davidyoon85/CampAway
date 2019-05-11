@@ -60,6 +60,7 @@ class MasterForm extends React.Component {
     handleChange(event) {
         const { name, value } = event.target;
         if (name === "address") {
+            debugger
             this.setState({
                 [name]: value
             });
@@ -281,6 +282,7 @@ class MasterForm extends React.Component {
                         <label className="form_group_title">Check Out Time</label>
                         <input
                             className="form-control"
+                            list="check_out"
                             id="check_out"
                             name="check_out"
                             type="time"

@@ -47,6 +47,7 @@ class MarkerManager {
               </a>
             </div>`,
             maxWidth: 300,
+            disableAutoPan : true
           });
 
         const icon = {
