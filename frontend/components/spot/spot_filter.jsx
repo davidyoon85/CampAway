@@ -35,6 +35,7 @@ class SpotFilter extends React.Component {
     this.hideActivities = this.hideActivities.bind(this);
     this.showGroup = this.showGroup.bind(this);
     this.hideGroup = this.hideGroup.bind(this);
+    this.clearFilters = this.clearFilters.bind(this);
  
   }
 
@@ -131,8 +132,28 @@ class SpotFilter extends React.Component {
 
     return e => {
       const currentName = e.target.name;
-        this.setState({[currentName]: !this.state[currentName]}, () => {
-      });
+      
+      if (e.target.name === 'price25') {
+        this.setState({
+          ['price25']: this.state['price25'],
+          ['price50']: false,
+          ['price100']: false
+        })
+      } else if (e.target.name === 'price50') {
+        this.setState({
+          ['price25']: false,
+          ['price50']: this.state['price50'],
+          ['price100']: false
+        })
+      } else {
+        this.setState({
+          ['price25']: false,
+          ['price50']: false,
+          ['price100']: this.state['price100']
+        })
+      }
+
+      this.setState({[currentName]: !this.state[currentName]})
 
       if (filters['pricing'] === amount) {
         removePricingFilter(amount);
@@ -151,8 +172,28 @@ class SpotFilter extends React.Component {
 
     return e => {
       const currentName = e.target.name;
-        this.setState({[currentName]: !this.state[currentName]}, () => {
-      });
+      
+      if (e.target.name === 'group5') {
+        this.setState({
+          ['group5']: this.state['group5'],
+          ['group10']: false,
+          ['group20']: false
+        })
+      } else if (e.target.name === 'group10') {
+        this.setState({
+          ['group5']: false,
+          ['group10']: this.state['group10'],
+          ['group20']: false
+        })
+      } else {
+        this.setState({
+          ['group5']: false,
+          ['group10']: false,
+          ['group20']: this.state['group20']
+        })
+      }
+
+      this.setState({[currentName]: !this.state[currentName]})
 
       if (filters['group'] === amount) {
         removeGroupFilter(amount);
@@ -163,9 +204,11 @@ class SpotFilter extends React.Component {
   }
 
   clearFilters() {
-    debugger
+
     Object.keys(this.state).map(item => 
-      this.setState({ [item]: false }))
+      this.setState({ [item]: false })
+      )
+      this.props.clearAllFilters();
   }
 
   render() {
@@ -324,7 +367,7 @@ class SpotFilter extends React.Component {
           </div>
 
           <div className="spot_filter_section">
-            <button onClick={() => this.props.clearAllFilters().then(this.clearFilters())}>Clear Filters</button>
+            <button onClick={this.clearFilters}>Clear Filters</button>
           </div>
        </div>
       </div>
