@@ -48,7 +48,12 @@ class SpotFilter extends React.Component {
   };
 
   hideAmenities() {
-    if (!this.dropdownMenu.contains(event.target)) {
+
+    if ((event.target === 'Amenities')) {
+
+      return null;
+    } else if (!this.dropdownMenu.contains(event.target)) {
+
       this.setState({ showAmenities: false }, () => {
         document.removeEventListener('click', this.hideAmenities);
       })
@@ -64,7 +69,10 @@ class SpotFilter extends React.Component {
   };
 
   hidePricing() {
-    if (!this.dropdownMenu.contains(event.target)) {
+    event.preventDefault();
+    if ((event.target === 'Pricing')) {
+      return null;
+    } else if (!this.dropdownMenu.contains(event.target)) {
       this.setState({ showPricing: false }, () => {
         document.removeEventListener('click', this.hidePricing);
       })
@@ -80,11 +88,13 @@ class SpotFilter extends React.Component {
   };
 
   hideGroup() {
-    if (!this.dropdownMenu.contains(event.target)) {
+    if ((event.target === 'Group Size')) {
+      return null;
+    } else if (!this.dropdownMenu.contains(event.target)) {
       this.setState({ showGroup: false }, () => {
         document.removeEventListener('click', this.hideGroup);
       })
-    }
+    } 
   };
 
   showActivities(event) {
@@ -96,7 +106,9 @@ class SpotFilter extends React.Component {
   };
 
   hideActivities() {
-    if (!this.dropdownMenu.contains(event.target)) {
+    if ((event.target === 'Activities')) {
+      return null;
+    } else if (!this.dropdownMenu.contains(event.target)) {
       this.setState({ showActivities: false }, () => {
         document.removeEventListener('click', this.hideActivities);
       })
@@ -111,6 +123,7 @@ class SpotFilter extends React.Component {
     } = this.props;
 
     return e => {
+
       const currentName = e.target.name;
         this.setState({[currentName]: !this.state[currentName]}, () => {
       });
@@ -175,21 +188,21 @@ class SpotFilter extends React.Component {
       
       if (e.target.name === 'group5') {
         this.setState({
-          ['group5']: this.state['group5'],
+          // ['group5']: this.state['group5'],
           ['group10']: false,
           ['group20']: false
         })
       } else if (e.target.name === 'group10') {
         this.setState({
           ['group5']: false,
-          ['group10']: this.state['group10'],
+          // ['group10']: this.state['group10'],
           ['group20']: false
         })
       } else {
         this.setState({
           ['group5']: false,
           ['group10']: false,
-          ['group20']: this.state['group20']
+          // ['group20']: this.state['group20']
         })
       }
 
@@ -204,7 +217,6 @@ class SpotFilter extends React.Component {
   }
 
   clearFilters() {
-
     Object.keys(this.state).map(item => 
       this.setState({ [item]: false })
       )
@@ -234,27 +246,27 @@ class SpotFilter extends React.Component {
               >
                 <button 
                   className={this.state.tent ? 'active_filter_button' : ''} 
-                  name="tent" 
+                  name='tent'
                   onClick={this.toggle('tent')}>
-                  <img src="https://image.flaticon.com/icons/svg/1535/1535412.svg"/>
+                  <img name='tent' src="https://image.flaticon.com/icons/svg/1535/1535412.svg"/>
                   Tent</button>
                 <button 
                   className={this.state.campfire ? 'active_filter_button' : ''} 
-                  name="campfire" 
+                  name='campfire'
                   onClick={this.toggle('campfire')}>
-                  <img src="https://image.flaticon.com/icons/svg/1535/1535413.svg"/>
+                  <img name='campfire' src="https://image.flaticon.com/icons/svg/1535/1535413.svg"/>
                   Campfire</button>
                 <button 
                   className={this.state.pets_allow ? 'active_filter_button' : ''} 
-                  name="pets_allow" 
+                  name='pets_allow'
                   onClick={this.toggle('pets_allow')}>
-                  <img src="https://image.flaticon.com/icons/svg/71/71702.svg"/>
+                  <img name='pets_allow' src="https://image.flaticon.com/icons/svg/71/71702.svg"/>
                   Pets Allowed</button>
                   <button 
                   className={this.state.parking ? 'active_filter_button' : ''} 
                   name="parking" 
                   onClick={this.toggle('parking')}>
-                  <img src="https://image.flaticon.com/icons/svg/818/818383.svg"/>
+                  <img name='parking'src="https://image.flaticon.com/icons/svg/818/818383.svg"/>
                   Parking</button>
               </div>)
               : (
@@ -280,19 +292,19 @@ class SpotFilter extends React.Component {
                   className={this.state.biking ? 'active_filter_button' : ''} 
                   name="biking"
                   onClick={this.toggle('biking')}>
-                  <img src="https://image.flaticon.com/icons/svg/565/565350.svg"/>
+                  <img name='biking' src="https://image.flaticon.com/icons/svg/565/565350.svg"/>
                   Biking</button>
                 <button 
                   className={this.state.hiking ? 'active_filter_button' : ''} 
                   name="hiking"
                   onClick={this.toggle('hiking')}>
-                  <img src="https://image.flaticon.com/icons/svg/71/71423.svg"/>
+                  <img name='hiking' src="https://image.flaticon.com/icons/svg/71/71423.svg"/>
                   Hiking</button>
                 <button 
                   className={this.state.paddling ? 'active_filter_button' : ''} 
                   name="paddling"
                   onClick={this.toggle('paddling')}>
-                  <img src="https://image.flaticon.com/icons/svg/38/38607.svg"/>
+                  <img name='paddling' src="https://image.flaticon.com/icons/svg/38/38607.svg"/>
                   Paddling</button>
               </div>)
               : (
@@ -303,7 +315,7 @@ class SpotFilter extends React.Component {
 
           <div className="spot_filter_section">
             <button onClick={this.showGroup}>
-            Group
+            Group Size
             </button> 
             { 
               this.state.showGroup 
