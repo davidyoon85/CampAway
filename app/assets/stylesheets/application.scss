@@ -333,44 +333,6 @@ i {
   cursor: pointer;
 }
 
-.dropdown {
-  display: flex;
-  justify-content: flex-end;
-}
-
-#drop_menu {
-  display: none;
-  position: absolute;
-  top: 60px;
-  min-width: 150px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 2;
-  background-color: white;
-  margin: 0 auto;
-}
-
-#drop_menu a {
-  color: black;
-  padding: 12px 1px;
-  text-decoration: none;
-  display: block;
-  margin-left: 20px;
-}
-
-.dropdown:hover #drop_menu {display: block;}
-
-#menu_section {
-  position: absolute;
-  min-width: 100px;
-  overflow: auto;
-  box-shadow: 0px 4px 4px 2px #888888;
-  // top: 50px;
-  right: -65px;
-  background-color: white;
-  margin-right: 5px;
-  z-index: 1;
-}
-
 .nav_logged_in_logout {
   margin-top: 10px;
     display: inline-block;

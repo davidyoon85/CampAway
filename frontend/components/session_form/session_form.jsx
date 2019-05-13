@@ -27,8 +27,8 @@ class SessionForm extends React.Component {
             email_address: 'demo@demo.com'}, () => {
                 const demoUser = Object.assign({}, this.state);
                 this.props.processForm(demoUser).then(this.props.closeModal);
-            });
-        }
+        });
+    }
 
     handleSubmit(e) {
         e.preventDefault();
@@ -101,7 +101,17 @@ class SessionForm extends React.Component {
                 </form>
             </div>
         )
-        } else if (this.props.formType === 'Sign up'){
+        } 
+        else if (this.props.formType === 'Drop down') {
+            return (
+            <div id="drop_menu">
+                <li><Link className="nav_host" to={'/host'}>Host</Link></li>
+                <li><a className="nav_host" onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}`)}>Bookings</a></li>                
+                <li><a className="nav_host" id="nav_host_logout" onClick={this.props.logout}>Log out</a></li>
+            </div>  
+            )      
+        } 
+        else if (this.props.formType === 'Sign up'){
             return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">

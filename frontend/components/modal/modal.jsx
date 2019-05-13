@@ -1,9 +1,9 @@
 import React from 'react';
-import { closeModal } from '../../actions/modal_actions';
-import { openModal } from '../../actions/modal_actions';
+import { openModal, closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
+import DropDownContainer from '../session_form/drop_down_container';
 
 function Modal ({modal, closeModal}) {
   if (!modal) {
@@ -17,16 +17,30 @@ function Modal ({modal, closeModal}) {
     case 'signup':
       component = <SignupFormContainer />;
       break;
+    case 'dropdown':
+      component = <DropDownContainer />;
+      break;
     default:
       return null;
   }
-  return (
-    <div className="modal-background" onClick={closeModal}>
-      <div className="modal-child" onClick={e => e.stopPropagation()}>
+ 
+  //add condition if login or signup else if dropdown menu then mouseover to close Modal
+  if (modal === ('login' || 'signup')) {
+    return (
+      <div className="modal-background" onClick={closeModal}>
+        <div className="modal-child" onClick={e => e.stopPropagation()}>
+          { component }
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <div className="dropdown_modal-background">
+      <div className="dropdown_modal-child" onMouseLeave={() => closeModal()}>
         { component }
       </div>
     </div>
-  );
+  )}
 }
 
 const mapStateToProps = state => {

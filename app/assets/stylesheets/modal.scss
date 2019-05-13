@@ -4,8 +4,27 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.6);
     z-index: 2;
+}
+
+.dropdown_modal-background {
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: 2;
+}
+
+.dropdown_modal-child {
+    position: absolute;
+    top: -20px;
+    right: 70px;
+    background-color: orange;
+    height: 100px;
+    width: 100px;
 }
 
 .modal-child {
@@ -13,6 +32,44 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.dropdown {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+#drop_menu {
+    position: absolute;
+    height: 100%;
+    min-height: 180px;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    background-color: white;
+    margin: 0 auto;
+}
+
+#drop_menu a {
+    color: black;
+    padding: 12px 1px;
+    text-decoration: none;
+    display: block;
+    margin-left: 20px;
+}
+  
+.dropdown:hover #drop_menu {display: block;}
+  
+#menu_section {
+    position: absolute;
+    min-width: 100px;
+    overflow: auto;
+    box-shadow: 0px 4px 4px 2px #888888;
+    // top: 50px;
+    right: -65px;
+    background-color: white;
+    margin-right: 5px;
+    z-index: 1;
 }
 
 .modal_footer1 {

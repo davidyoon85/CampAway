@@ -60,7 +60,6 @@ class MasterForm extends React.Component {
     handleChange(event) {
         const { name, value } = event.target;
         if (name === "address") {
-            debugger
             this.setState({
                 [name]: value
             });
