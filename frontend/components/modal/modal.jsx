@@ -35,8 +35,8 @@ function Modal ({modal, closeModal}) {
     );
   } else {
     return (
-      <div className="dropdown_modal-background">
-      <div className="dropdown_modal-child" onMouseLeave={() => closeModal()}>
+      <div className="dropdown_modal-background" onClick={closeModal}>
+      <div className="dropdown_modal-child" onClick={e => e.stopPropagation()}>
         { component }
       </div>
     </div>

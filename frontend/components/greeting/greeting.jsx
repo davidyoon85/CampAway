@@ -18,7 +18,7 @@ class Greeting extends React.Component {
                 <div className="dropdown">
                     <img className="tent_logo" 
                         src={window.footerURL} 
-                        onMouseOver={() => this.props.openModal('dropdown')} 
+                        onClick={() => this.props.openModal('dropdown')} 
                        
                         />
                 </div>

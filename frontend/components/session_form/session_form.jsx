@@ -104,7 +104,7 @@ class SessionForm extends React.Component {
         } 
         else if (this.props.formType === 'Drop down') {
             return (
-            <div id="drop_menu">
+            <div id="drop_menu" onClick={() => this.props.closeModal()}>
                 <li><Link className="nav_host" to={'/host'}>Host</Link></li>
                 <li><a className="nav_host" onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}`)}>Bookings</a></li>                
                 <li><a className="nav_host" id="nav_host_logout" onClick={this.props.logout}>Log out</a></li>
