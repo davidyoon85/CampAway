@@ -10,7 +10,8 @@ You can visit CampAway [here](https://camp-away.herokuapp.com/#/)!
 ### User Auth
 Users are able to create accounts, login and logout using the authentication system, which was created using BCrypty on a rails backend. Users can also login as a demo user so that they can easily browse the site.
 
-![User Auth](./app/assets/images/user_auth.png =100x20)
+
+<img src="./app/assets/images/user_auth.png" width="200" height="200" />
 
 ### Host a Spot
 Users are able to create their own camping ground by filling out a form. The form was rendered using React and gives the impression of being 3 pages, where it is actually one component. This effect was achieved by using React fragment. Users can choose from various camp features to illustrate what their spot offers. Once a user has created a spot, they are then able to delete it as well.
