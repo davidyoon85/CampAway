@@ -18,7 +18,7 @@ Users are able to create accounts, login and logout using the authentication sys
  
 Code snippet:
 <p align="center">
-<img src="./app/assets/images/user_auth_code.png" width="700" height="400" align="middle"/>
+<img src="./app/assets/images/user_auth_code.png" width="800" height="400" align="middle"/>
 </p>
 
 ### Host a Spot
