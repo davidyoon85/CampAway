@@ -1,9 +1,9 @@
 # CampAway
 CampAway is a full-stack clone of Hipcamp, which is a site to browse and book camping grounds.
 
-<p style="text-align:center;">
+<p align="center">
 <img src="./app/assets/images/campaway.png" width="700" height="400" align="middle"/>
-  </p>
+ </p>
 
 You can visit CampAway [here](https://camp-away.herokuapp.com/#/)!
 
