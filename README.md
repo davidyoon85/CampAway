@@ -14,20 +14,35 @@ Users are able to create accounts, login and logout using the authentication sys
 
 <p align="center">
 <img src="./app/assets/images/user_auth.png" width="300" height="400" align="middle"/>
- </p>
+</p>
+ 
+Code snippet:
+<p align="center">
+<img src="./app/assets/images/user_auth_code.png" width="400" height="400" align="middle"/>
+</p>
 
 ### Host a Spot
 Users are able to create their own camping ground by filling out a form. The form was rendered using React and gives the impression of being 3 pages, where it is actually one component. This effect was achieved by using React fragment. Users can choose from various camp features to illustrate what their spot offers. Once a user has created a spot, they are then able to delete it as well.
 
 <p align="center">
 <img src="./app/assets/images/campaway_host.png" width="300" height="400" align="middle"/>
- </p>
+</p>
+
+Code snippet:
+<p align="center">
+<img src="./app/assets/images/host_spot_code.png" width="400" height="400" align="middle"/>
+</p>
  
 ### Filter Spots
 Users can filter through the spot locations by selecting from a list of categories, including: price, group size and amenities. Once a user has made a selection, they can make more selections. After each choice is made, the spot index is automatically updated to reflected the selected filters. Users may also clear all filters.
 
 <p align="center">
 <img src="./app/assets/images/spot_filter.png" width="600" height="400" align="middle"/>
+</p>
+
+Code snippet:
+<p align="center">
+<img src="./app/assets/images/spot_filter_code.png" width="400" height="400" align="middle"/>
 </p>
 
 ## Future Plans
