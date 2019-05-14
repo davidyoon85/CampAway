@@ -26,7 +26,9 @@ Users are able to create their own camping ground by filling out a form. The for
 ### Filter Spots
 Users can filter through the spot locations by selecting from a list of categories, including: price, group size and amenities. Once a user has made a selection, they can make more selections. After each choice is made, the spot index is automatically updated to reflected the selected filters. Users may also clear all filters.
 
-
+<p align="center">
+<img src="./app/assets/images/spot_filter.png" width="600" height="400" align="middle"/>
+</p>
 
 ## Future Plans
 In the future, I hope to add more features, including: user profile, search bar filtering. I also have plans to improve the review section, by allowing users to post photos along with their comments.
