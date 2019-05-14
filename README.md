@@ -30,7 +30,7 @@ Users are able to create their own camping ground by filling out a form. The for
 
 Code snippet:
 <p align="center">
-<img src="./app/assets/images/host_spot_code.png" width="400" height="400" align="middle"/>
+<img src="./app/assets/images/host_spot_code.png" width="600" height="600" align="middle"/>
 </p>
  
 ### Filter Spots
@@ -42,7 +42,7 @@ Users can filter through the spot locations by selecting from a list of categori
 
 Code snippet:
 <p align="center">
-<img src="./app/assets/images/spot_filter_code.png" width="400" height="400" align="middle"/>
+<img src="./app/assets/images/spot_filter_code.png" width="600" height="600" align="middle"/>
 </p>
 
 ## Future Plans
