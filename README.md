@@ -22,10 +22,12 @@ Users are able to create their own camping ground by filling out a form. The for
 <p align="center">
 <img src="./app/assets/images/campaway_host.png" width="300" height="400" align="middle"/>
  </p>
+ 
+### Filter Spots
+Users can filter through the spot locations by selecting from a list of categories, including: price, group size and amenities. Once a user has made a selection, they can make more selections. After each choice is made, the spot index is automatically updated to reflected the selected filters. Users may also clear all filters.
+
+
 
 ## Future Plans
-In the future, I hope to add more features, including: bookings and filtering. I also have plans to improve the google map API implementation so that clicking on an infowindow will lead to that camp site's location on the index page.
+In the future, I hope to add more features, including: user profile, search bar filtering. I also have plans to improve the review section, by allowing users to post photos along with their comments.
 
-![User Auth](./app/assets/images/user_auth.png =100x20)
-![Splash](./app/assets/images/campaway.png =100x20)
-![Host a Spot](./app/assets/images/campaway_host.png =100x20)
