@@ -5,9 +5,7 @@ CampAway is a full-stack clone of Hipcamp, which is a site to browse and book ca
 <img src="./app/assets/images/campaway.png" width="700" height="400" align="middle"/>
 </p>
 
-You can visit CampAway [here](https://camp-away.herokuapp.com)!
-
-Or visit my portfolio site [here](https://davidyoon85.github.io)!
+You can visit CampAway [here](https://camp-away.herokuapp.com)! Or visit my portfolio site [here](https://davidyoon85.github.io)!
 
 ## Features
 
