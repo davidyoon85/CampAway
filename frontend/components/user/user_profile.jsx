@@ -34,13 +34,18 @@ class UserProfile extends React.Component {
                     <div className="user_booking_spot">
                     <div className="user_profile_sidebar">
                         <div className="bio_panel">
-                        <h3>{this.props.currentUser.first_name}!</h3>
-                        <br />
-                        <h3>CampAwayer since {moment(this.props.currentUser.created_at).format("MMMM YYYY")}</h3>
-                        <br />
-                        <h3>From {this.props.currentUser.zip_code}</h3>
-                        <br />
-                        <h3>Intro: Introduce yourself to the community! Add a short bio...</h3>
+                            <h3 id="bio_panel_name">{this.props.currentUser.first_name}!</h3>
+                            <br />
+                            <h3>CampAwayer since {moment(this.props.currentUser.created_at).format("MMMM YYYY")}</h3>
+                            <br />
+                            <h3>From {this.props.currentUser.zip_code}</h3>
+                        </div> 
+                        <div className="panel_body">
+                            <h3 id="panel_body_header">Trusted CampAwayer</h3>
+                            <br />
+                            <h3>Email address</h3>
+                            <br />
+                            <h3>Facebook</h3>
                         </div>
                     </div>
                     <ul className="booked_spots_list">
