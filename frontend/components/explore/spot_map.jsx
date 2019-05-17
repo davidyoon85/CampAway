@@ -11,6 +11,7 @@ const mapOptions = {
 class SpotMap extends React.Component {
     constructor(props) {
         super(props);
+
         this.geoCoder = new google.maps.Geocoder();
         this.retrieveBounds = this.retrieveBounds.bind(this);
     }
@@ -40,35 +41,6 @@ class SpotMap extends React.Component {
            }}
         });
       }
-
-      // centerMapOnSearch() {
-      //   const { geolocation } = this.props;
-      //   if (geolocation.length > 0) {
-      //     const results = JSON.parse(window.localStorage.getItem(geolocation));
-      //     if (!results) {
-      //       this.geocoder.geocode({ 'address': geolocation},  (results, status) => {
-      //         if (status === 'OK') {
-    
-      //           if (results[0]) {
-      //             window.localStorage.setItem(geolocation, JSON.stringify(results));
-      //             this.map.setZoom(8.5);
-      //             this.map.setCenter(results[0].geometry.location);
-    
-      //             /* get current map bounds, fit to those bounds,
-      //             then feed in mapBounds to UI object for mapBounds for Listing
-      //             Index to filter through */
-      //             const currentMapBounds = this.map.getBounds();
-      //             this.map.fitBounds(currentMapBounds);
-      //             this.props.receiveMapBounds(this.map.getBounds());
-    
-      //           } else {
-      //             window.alert('No results found');
-      //           }
-      //         }
-      //       })
-      //     }
-      //   }
-      // }
 
       retrieveBounds() {
           google.maps.event.addListener(this.map, 'idle', () => {
@@ -110,11 +82,13 @@ class SpotMap extends React.Component {
     componentDidUpdate() {
       this.filteredSpots = this.applyFilters();
       this.MarkerManager.updateMarkers(this.filteredSpots);
+
       if (this.props.geoLocation.length > 0) this.centerMapOnSearch();
 
     }
 
     render () {
+
       const { spots } = this.props;
 
       if (Object.keys(spots) === 0 ) {

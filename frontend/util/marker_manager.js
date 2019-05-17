@@ -8,27 +8,22 @@ class MarkerManager {
     }
 
     clearMarkers() {
+
       Object.keys(this.markers)
         .forEach((spotId) => this.removeMarker(this.markers[spotId]))
     }
 
     removeMarker(marker) {
+
       this.markers[marker.spotId].setMap(null);
       delete this.markers[marker.spotId];
     }
 
     updateMarkers(spots) {
-        this.clearMarkers();
-
-        spots.forEach(spot => {
-          this.createMarker(spot);
-        });
-
-        // spots.map(spot => {
-        //     if (!this.markers.hasOwnProperty(`${spot.id}`)) {
-        //         this.createMarker(spot)
-        //     }
-        // })    
+      const spotsList = {};
+      spots.forEach(spot => spotsList[spot.id] = spot);
+      spots.filter(spot => !this.markers[spot.id]).forEach(filteredSpot => this.createMarker(filteredSpot, this.handleClick))
+      Object.keys(this.markers).filter(spotId => !spotsList[spotId]).forEach((spotId) => this.removeMarker(this.markers[spotId]))
     }
 
     createMarker(spot) {
@@ -63,6 +58,8 @@ class MarkerManager {
             icon: icon,
             infoWindow: markerInfoWindow
         })
+
+        this.markers[marker.spotId] = marker;
 
         marker.addListener('click', () => {
             const targetSpot = document.getElementById(`spot-${spot.id}`);
