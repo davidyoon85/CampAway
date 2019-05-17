@@ -92,6 +92,14 @@
     text-align: right;
     padding: 5px;
     width: 98%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.spot_details_reviews {
+    color: #757575;
+    font-weight: 400;
+    font-size: .9em;
 }
 
 .infowindow-title {

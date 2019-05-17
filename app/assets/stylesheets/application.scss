@@ -394,18 +394,23 @@ i {
   margin: 0 auto;
   width: 90%;
   background: white;
-  height: 420px;
+  height: 400px;
 }
 
  .slider {
-    height: 480px;
+    height: 420px;
  }
 
  .slick-slide {
     padding: 7px;
-    height: 480px;
+    height: 400px;
     overflow: hidden;
  }
+
+ .slick-slide img {
+  height: 400px;
+}
+
 
  .slick-prev:before, .slick-next:before {
     color: gray;

@@ -17,22 +17,32 @@ class UserProfile extends React.Component {
         if (Object.values(this.props.bookings).length === 0) {
             return (
                 <div className="user_profile_booking_status">
-                    <div className="user_profile_greeting">
+                    {/* <div className="user_profile_greeting">
                         <h1>Hi, {this.props.currentUser.first_name}!</h1>
-                    </div>
+                    </div> */}
                     <div className="user_status_header">No current trips. Let's <Link className="user_link_index" to={'/spots'}> get you outside!</Link></div>
                 </div>
         )} else {
-
             return (
                 <div className="user_profile_container">
-                    <div className="user_profile_greeting">
+                    {/* <div className="user_profile_greeting">
                         <h1>Hi, {this.props.currentUser.first_name}!</h1>
-                    </div>
-                    <div className="user_bookings_header">
+                    </div> */}
+                    {/* <div className="user_bookings_header">
                         <h1>Here are your booked trips:</h1>
-                    </div>
+                    </div> */}
                     <div className="user_booking_spot">
+                    <div className="user_profile_sidebar">
+                        <div className="bio_panel">
+                        <h3>{this.props.currentUser.first_name}!</h3>
+                        <br />
+                        <h3>CampAwayer since {moment(this.props.currentUser.created_at).format("MMMM YYYY")}</h3>
+                        <br />
+                        <h3>From {this.props.currentUser.zip_code}</h3>
+                        <br />
+                        <h3>Intro: Introduce yourself to the community! Add a short bio...</h3>
+                        </div>
+                    </div>
                     <ul className="booked_spots_list">
                         {Object.values(this.props.bookings).map(booking=> {
                             return <li className="booked_spot_items" key={booking.id}>

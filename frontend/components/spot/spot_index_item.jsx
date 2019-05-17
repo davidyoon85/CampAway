@@ -17,7 +17,7 @@ class SpotIndexItem extends React.Component {
         if (!this.props.spot.photoUrls) {
             this.props.spot.photoUrls = defaultPhoto;
         }
-
+debugger
         return (
             <div className="spot_index_item" id={`spot-${this.props.spot.id}`} onClick={this.handleClick}>
                     <Link className="spot_index_item_link" to={`/spots/${this.props.spot.id}`}>
@@ -30,7 +30,8 @@ class SpotIndexItem extends React.Component {
                                 {this.props.spot.body}
                             </div>
                             <div className="spot_details_price">
-                                ${this.props.spot.price}/night
+                                <div className="spot_details_reviews">{this.props.spot.reviews.length} reviews</div>
+                                <div>${this.props.spot.price}/night</div>
                             </div>
                         </div>
                     </Link>

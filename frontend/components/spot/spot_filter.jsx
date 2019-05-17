@@ -190,26 +190,27 @@ class SpotFilter extends React.Component {
       filters
     } = this.props;
 
+
     return e => {
       const currentName = e.target.name;
       
       if (e.target.name === 'group5') {
         this.setState({
-          // ['group5']: this.state['group5'],
+          ['group_size']: 5,
           ['group10']: false,
           ['group20']: false
         })
       } else if (e.target.name === 'group10') {
         this.setState({
           ['group5']: false,
-          // ['group10']: this.state['group10'],
+          ['group_size']: 10,
           ['group20']: false
         })
       } else {
         this.setState({
           ['group5']: false,
           ['group10']: false,
-          // ['group20']: this.state['group20']
+          ['group_size']: 20
         })
       }
 

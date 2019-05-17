@@ -23,6 +23,7 @@ class MarkerManager {
       const spotsList = {};
       spots.forEach(spot => spotsList[spot.id] = spot);
       spots.filter(spot => !this.markers[spot.id]).forEach(filteredSpot => this.createMarker(filteredSpot, this.handleClick))
+
       Object.keys(this.markers).filter(spotId => !spotsList[spotId]).forEach((spotId) => this.removeMarker(this.markers[spotId]))
     }
 
