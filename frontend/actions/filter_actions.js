@@ -37,3 +37,9 @@ export const removeGroupFilter = () => ({
 export const clearAllFilters = () => ({
   type: CLEAR_ALL_FILTERS
 })
+
+export const changeFilter = (filter, value) => ({
+  type: UPDATE_FILTER,
+  filter,
+  value
+});
