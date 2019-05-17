@@ -36,16 +36,20 @@ class UserProfile extends React.Component {
                         <div className="bio_panel">
                             <h3 id="bio_panel_name">{this.props.currentUser.first_name}!</h3>
                             <br />
-                            <h3>CampAwayer since {moment(this.props.currentUser.created_at).format("MMMM YYYY")}</h3>
-                            <br />
-                            <h3>From {this.props.currentUser.zip_code}</h3>
+                            <span id="heart_icon" className="fas fa-heart"></span>
+                            CampAwayer since {moment(this.props.currentUser.created_at).format("MMMM YYYY")}
+                           <br/>
+                            <span className="fas fa-map-marker-alt"></span>
+                           From {this.props.currentUser.zip_code}
                         </div> 
                         <div className="panel_body">
-                            <h3 id="panel_body_header">Trusted CampAwayer</h3>
+                            <h3 id="panel_body_header">Trusted Campawayer</h3>
                             <br />
-                            <h3>Email address</h3>
+                            <span className="far fa-check-circle"></span>
+                            Email address
                             <br />
-                            <h3>Facebook</h3>
+                            <span className="far fa-check-circle"></span>
+                            Facebook
                         </div>
                     </div>
                     <ul className="booked_spots_list">
