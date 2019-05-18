@@ -23,7 +23,7 @@ class SessionForm extends React.Component {
             password: '123456',
             first_name: 'Guest',
             last_name: 'demo',
-            zip_code: 123456,
+            zip_code: 10001,
             email_address: 'demo@demo.com'}, () => {
                 const demoUser = Object.assign({}, this.state);
                 this.props.processForm(demoUser).then(this.props.closeModal);

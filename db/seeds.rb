@@ -14,7 +14,7 @@ user1 = User.create(
     password: '123456',
     first_name: 'David',
     last_name: 'Yoon',
-    zip_code: 123456,
+    zip_code: 11363,
     email_address: 'david@yoon.com'
 )
 
@@ -22,7 +22,7 @@ user2 = User.create(
     password: '123456',
     first_name: 'Aleom',
     last_name: 'Kim',
-    zip_code: 123456,
+    zip_code: 11363,
     email_address: 'aleom@kim.com'
 )
 
@@ -30,7 +30,7 @@ user3 = User.create(
     password: '123456',
     first_name: 'Rachel',
     last_name: 'Yoon',
-    zip_code: 123456,
+    zip_code: 11363,
     email_address: 'rachel@yoon.com'
 )
 
@@ -38,7 +38,7 @@ user3 = User.create(
     password: '123456',
     first_name: 'Binjie',
     last_name: 'Luo',
-    zip_code: 123456,
+    zip_code: 07101,
     email_address: 'binjie@luo.com'
 )
 
@@ -46,7 +46,7 @@ demo = User.create(
     password: '123456',
     first_name: 'Guest',
     last_name: 'User',
-    zip_code: 123456,
+    zip_code: 10001,
     email_address: 'demo@demo.com'
 )
 

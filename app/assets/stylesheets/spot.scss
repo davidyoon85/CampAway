@@ -290,3 +290,40 @@ span > p {
     color: #757575;
     font-weight: 400;
 }
+
+.booked_spots_header {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.booked_spots_number {
+    font-weight: 500;
+    font-size: 1.3em;
+    padding: 10px 0px 20px 30px;
+}
+
+.booked_spots_trips {
+    line-height: 2;
+    border-bottom: 3px solid #ebebeb;
+}
+
+.booked_spots_trips:hover {
+    cursor: pointer;
+    border-bottom: 3px solid #40d9ac;
+}
+
+.booked_user_reviews {
+    font-weight: 500;
+    font-size: 1.3em;
+    padding: 10px 0px 20px 30px;
+}
+
+.booked_reviews_number {
+    line-height: 2;
+    border-bottom: 3px solid #ebebeb;
+}
+
+.booked_reviews_number:hover {
+    cursor: pointer;
+    border-bottom: 3px solid #40d9ac;
+}

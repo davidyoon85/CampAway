@@ -11,6 +11,10 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def show
+    @user.includes(:reviews)
+  end
+
   private
 
   def user_params

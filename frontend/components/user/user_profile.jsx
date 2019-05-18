@@ -1,36 +1,68 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { geocodeByAddress } from 'react-places-autocomplete';
 import moment from 'moment';
 
 class UserProfile extends React.Component {
     constructor(props) {
         super(props)
+
+        this.state = {
+            city: '',
+            state: '',
+            zipCode: this.props.currentUser.zip_code
+        }
     }
 
     componentDidMount() {
         this.props.fetchAllBookings();
         this.props.fetchAllSpots();
+        this.getAddressInfoByZip(this.state.zipCode.toString());
+    }
+
+    getAddressInfoByZip(zip){
+        geocodeByAddress(zip)
+        .then(results => {
+            return (
+                this.setState({city: results[0].address_components[1].long_name, state: results[0].address_components[2].short_name })
+        )})
     }
 
     render() {
-
         if (Object.values(this.props.bookings).length === 0) {
             return (
-                <div className="user_profile_booking_status">
-                    {/* <div className="user_profile_greeting">
-                        <h1>Hi, {this.props.currentUser.first_name}!</h1>
-                    </div> */}
-                    <div className="user_status_header">No current trips. Let's <Link className="user_link_index" to={'/spots'}> get you outside!</Link></div>
+                <div className="user_profile_container">
+                <div className="user_booking_spot">
+                 <div className="user_profile_sidebar">
+                        <div className="bio_panel">
+                            <h3 id="bio_panel_name">{this.props.currentUser.first_name}!</h3>
+                            <br />
+                            <span id="heart_icon" className="fas fa-heart"></span>
+                            CampAwayer since {moment(this.props.currentUser.created_at).format("MMMM YYYY")}
+                           <br/>
+                            <span id="marker_icon" className="fas fa-map-pin"></span>
+                           From {this.state.city + ', ' + this.state.state}
+                    
+                        </div> 
+                        <div className="panel_body">
+                            <h3 id="panel_body_header">Trusted Campawayer</h3>
+                            <br />
+                            <span id="email_icon" className="far fa-check-circle"></span>
+                            Email address
+                            <br />
+                            <span id="facebook_icon" className="far fa-check-circle"></span>
+                            Facebook
+                        </div>
+                    </div>
+                    <div className="user_profile_booking_status">
+                        <div className="user_status_header">No current trips. Let's <Link className="user_link_index" to={'/spots'}> get you outside!</Link></div>
+                    </div>
+                    </div>
                 </div>
         )} else {
             return (
                 <div className="user_profile_container">
-                    {/* <div className="user_profile_greeting">
-                        <h1>Hi, {this.props.currentUser.first_name}!</h1>
-                    </div> */}
-                    {/* <div className="user_bookings_header">
-                        <h1>Here are your booked trips:</h1>
-                    </div> */}
+ 
                     <div className="user_booking_spot">
                     <div className="user_profile_sidebar">
                         <div className="bio_panel">
@@ -39,20 +71,32 @@ class UserProfile extends React.Component {
                             <span id="heart_icon" className="fas fa-heart"></span>
                             CampAwayer since {moment(this.props.currentUser.created_at).format("MMMM YYYY")}
                            <br/>
-                            <span className="fas fa-map-marker-alt"></span>
-                           From {this.props.currentUser.zip_code}
+                            <span id="marker_icon" className="fas fa-map-pin"></span>
+                           {/* {this.getAddressInfoByZip(zipCode.toString())} */}
+                           From {this.state.city + ', ' + this.state.state}
+                    
                         </div> 
                         <div className="panel_body">
                             <h3 id="panel_body_header">Trusted Campawayer</h3>
                             <br />
-                            <span className="far fa-check-circle"></span>
+                            <span id="email_icon" className="far fa-check-circle"></span>
                             Email address
                             <br />
-                            <span className="far fa-check-circle"></span>
+                            <span id="facebook_icon" className="far fa-check-circle"></span>
                             Facebook
                         </div>
                     </div>
                     <ul className="booked_spots_list">
+                        <div className="booked_spots_header">
+                            <div className="booked_spots_number">
+                                {Object.keys(this.props.bookings).length}
+                                <p className="booked_spots_trips">Trips</p>
+                            </div>
+                            <div className="booked_user_reviews">
+                                {this.props.currentUser.reviews.length}
+                                <p className="booked_reviews_number">Reviews</p>
+                            </div>            
+                        </div>
                         {Object.values(this.props.bookings).map(booking=> {
                             return <li className="booked_spot_items" key={booking.id}>
                                 <Link className="user_booking_title" to={`/spots/${booking.spot.id}`}>{booking.spot.title}</Link>

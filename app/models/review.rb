@@ -13,7 +13,7 @@
 class Review < ApplicationRecord
     validates :spot_id, :description, presence: true
 
-    belongs_to :author,
+    belongs_to :review_author,
         primary_key: :id,
         foreign_key: :author,
         class_name: :User

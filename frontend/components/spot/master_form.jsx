@@ -235,7 +235,7 @@ class MasterForm extends React.Component {
                             id="price"
                             name="price"
                             type="number"
-                            placeholder="100"
+                            // placeholder="100"
                             onChange={this.handleChange}
                             required
                         />
@@ -247,7 +247,7 @@ class MasterForm extends React.Component {
                             id="sites"
                             name="sites"
                             type="number"
-                            placeholder="1"
+                            // placeholder="1"
                             onChange={this.handleChange}
                             required
                         />
@@ -259,7 +259,7 @@ class MasterForm extends React.Component {
                             id="group_size"
                             name="group_size"
                             type="number"
-                            placeholder="4"
+                            // placeholder="4"
                             onChange={this.handleChange}
                             required
                         />
@@ -272,7 +272,7 @@ class MasterForm extends React.Component {
                             id="check_in"
                             name="check_in"
                             type="time"
-                            placeholder="2 PM"
+                            // placeholder="2 PM"
                             onChange={this.handleChange}
                             required
                         />
@@ -285,7 +285,7 @@ class MasterForm extends React.Component {
                             id="check_out"
                             name="check_out"
                             type="time"
-                            placeholder="11 AM"
+                            // placeholder="11 AM"
                             onChange={this.handleChange}
                             required
                         />
@@ -297,7 +297,7 @@ class MasterForm extends React.Component {
                             id="address"
                             name="address"
                             type="text"
-                            placeholder="New York"
+                            // placeholder="New York"
                             onChange={this.handleChange}
                             required
                         />
