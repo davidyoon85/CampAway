@@ -47,6 +47,10 @@ time, mark, audio, video, button, link {
 	vertical-align: baseline;
 }
 
+html {
+  overflow-y: scroll;
+}
+
  a {
      text-decoration: none;
      color: black;

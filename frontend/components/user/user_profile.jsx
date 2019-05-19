@@ -118,7 +118,9 @@ class UserProfile extends React.Component {
                                         <p name="trips" className="booked_spots_trips" onClick={(e) => this.tripsButton(e)}>Trips</p>
                                     </div>
                                     <div className="booked_user_reviews">
-                                        {this.props.currentUser.reviews.length}
+                                        {/* {this.props.currentUser.reviews.length} */}
+                                        {this.props.reviews.length}
+
                                         <p name="reviews" className="booked_reviews_number" onClick={(e) => this.reviewsButton(e)}>Reviews</p>
                                     </div>            
                                 </div>
@@ -158,7 +160,6 @@ class UserProfile extends React.Component {
                             CampAwayer since {moment(this.props.currentUser.created_at).format("MMMM YYYY")}
                            <br/>
                             <span id="marker_icon" className="fas fa-map-pin"></span>
-                           {/* {this.getAddressInfoByZip(zipCode.toString())} */}
                            From {this.state.city + ', ' + this.state.state}
                     
                         </div> 
@@ -186,14 +187,11 @@ class UserProfile extends React.Component {
                                 </div>
                                 {Object.values(this.props.currentUser.reviews).map(review=> {
                                     return <li className="booked_spot_items" key={review.id}>
-                                        <Link className="user_booking_title" to={`/spots/${review.spot.id}`}>{review.spot.title}</Link>
-                                        <div className="user_booking_dates">
-                                            {/* <img className="booking_img" src={booking.spot.spotImg}></img> */}
                                                 <div className="user_booking_details">
-                                                    <p><nobr className="user_booking_subheader">Total Price:</nobr> {review}</p>
+                                                    <p><nobr className="user_booking_subheader">Reviews:</nobr> {review.description}</p>
                                                 </div>
-                                        </div>
-                                        {/* <button className="booking_delete_button" onClick={() => this.props.deleteBooking(booking.id)}>Delete</button> */}
+
+                                    
                                     </li>
                                 }
                                 )
