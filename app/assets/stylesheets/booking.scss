@@ -10,7 +10,7 @@
 .bio_panel {
     // width: 280px;
     margin-top: 10px;
-    min-width: 200px;
+    min-width: 220px;
     padding: 20px;
     border: 1px solid #ebebeb;
     font-weight: 400;
@@ -76,11 +76,11 @@
 .booked_spots_list {
     display: flex;
     height: 100%;
-    width: 70%;
+    min-width: 600px;
+    width: 80%;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
-    padding-left: 50px;
 }
 
 .booked_spot_items {

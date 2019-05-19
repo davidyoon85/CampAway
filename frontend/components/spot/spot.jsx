@@ -8,8 +8,7 @@ import BookingContainer from '../booking/booking_container';
 class Spot extends React.Component {
   constructor(props) {
     super(props);
-   
-    // this.handleSubmit = this.handleSubmit.bind(this);
+
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -32,21 +31,6 @@ class Spot extends React.Component {
       this.props.history.push(`/spots/${this.props.spot.id}/review/new`);
     }
   }
-
-  // handleSubmit(e) {
-  //   e.preventDefault();
-  //   if (!this.props.currentUserId) {
-  //     this.props.openModal('login')
-  //   } else {
-  //     const booking = Object.assign({}, this.state);
-  //       booking.guest_id = this.props.currentUserId;
-  //       booking.spot_id = this.props.match.params.spotId;
-  //     this.props.makeBooking(booking).then(response => {
-  //       this.props.history.push(`/users/${this.props.currentUserId}`);
-  //     }  
-  //     )
-  //   }
-  // }
 
   render() {
     const { spot } = this.props;

@@ -7,5 +7,5 @@ json.extract! review,
   json.created_at
 
 json.set! "user" do
-  json.partial! '/api/users/user', user: review.author
+  json.partial! '/api/users/user', user: review.review_author
 end

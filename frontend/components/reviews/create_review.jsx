@@ -36,7 +36,7 @@ class CreateReview extends React.Component {
     return(
       <div className='create_review_form'>
         <div className='review_spot_title'>{this.props.spot.title}</div>
-        <form className='review_form'onSubmit={this.handleSubmit}>
+        <form className='review_form' onSubmit={this.handleSubmit}>
             <textarea className='review_description'
               cols='50'
               rows='20'
