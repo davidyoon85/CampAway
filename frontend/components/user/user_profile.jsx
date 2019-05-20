@@ -110,7 +110,6 @@ class UserProfile extends React.Component {
                             Facebook
                         </div>
                     </div>
-                        <div>
                             <ul className="booked_spots_list">
                                 <div className="booked_spots_header">
                                     <div className="booked_spots_number">
@@ -142,14 +141,14 @@ class UserProfile extends React.Component {
                                 )
                             }
                             </ul>
-                        </div>
                     </div>
                 </div>
                
             )
                 } else {
                     return (
-                        <div className="user_profile_container">
+                        
+                    <div className="user_profile_container">
  
                     <div className="user_booking_spot">
                     <div className="user_profile_sidebar">
@@ -173,7 +172,6 @@ class UserProfile extends React.Component {
                             Facebook
                         </div>
                     </div>
-                        <div>
                             <ul className="booked_spots_list">
                                 <div className="booked_spots_header">
                                     <div className="booked_spots_number">
@@ -188,7 +186,10 @@ class UserProfile extends React.Component {
                                 {Object.values(this.props.currentUser.reviews).map(review=> {
                                     return <li className="booked_spot_items" key={review.id}>
                                                 <div className="user_booking_details">
-                                                    <p><nobr className="user_booking_subheader">Reviews:</nobr> {review.description}</p>
+                                                    <p><nobr className="user_booking_subheader">{review.description}</nobr></p>
+                                                    <Link className='delete-review-button' to={`/spots/${review.spot_id}/reviews/${review.id}`}>Edit</Link>
+                                                    <button className='delete-review-button' onClick={() => this.props.deleteReview(review)}>Delete</button>
+                                                    
                                                 </div>
 
                                     
@@ -197,7 +198,6 @@ class UserProfile extends React.Component {
                                 )
                             }
                             </ul>
-                        </div>
                     </div>
                 </div>
                     )

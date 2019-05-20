@@ -3,16 +3,14 @@ import UserProfile from './user_profile';
 import { fetchAllBookings, deleteBooking } from '../../actions/booking_actions';
 import { fetchAllSpots } from '../../actions/spot_actions';
 import { selectSpots } from '../../reducers/selectors';
-import { fetchReviews } from '../../actions/review_actions';
+import { fetchReviews, deleteReview } from '../../actions/review_actions';
 
 const mapStateToProps = (state, ownProps) => {
-    debugger
     return {
         bookings: state.entities.bookings,
         currentUser: state.entities.users[ownProps.match.params.userId],
         spots: selectSpots(state),
         reviews: Object.values(state.entities.users)[0].reviews
-        // ownProps.match.params.userId
     }
 }
 
@@ -21,7 +19,8 @@ const mapDispatchToProps = (dispatch) => {
         fetchAllBookings: () => dispatch(fetchAllBookings()),
         deleteBooking: (id) => dispatch(deleteBooking(id)),
         fetchAllSpots: () => dispatch(fetchAllSpots()),
-        fetchReviews: (id) => dispatch(fetchReviews(id))
+        fetchReviews: (id) => dispatch(fetchReviews(id)),
+        deleteReview: (review) => dispatch(deleteReview(review))
     }
 }
 
