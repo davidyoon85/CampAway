@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { geocodeByAddress } from 'react-places-autocomplete';
 import moment from 'moment';
+import ReviewIndexItem from '../reviews/review_index_item';
 
 class UserProfile extends React.Component {
     constructor(props) {
@@ -12,7 +13,8 @@ class UserProfile extends React.Component {
             state: '',
             zipCode: this.props.currentUser.zip_code,
             trips: true,
-            reviews: false
+            reviews: false,
+            numReviews: this.props.currentUser.reviews
         }
 
         this.tripsButton = this.tripsButton.bind(this);
@@ -25,22 +27,19 @@ class UserProfile extends React.Component {
         this.getAddressInfoByZip(this.state.zipCode.toString());
     }
 
+
     tripsButton(e) {
         e.preventDefault();
         if (this.state.trips === false) {
             this.setState({trips: true, reviews: false})
-        } else {
-            this.setState({trips: false, reviews: true})
-        }
+        } 
     }
 
     reviewsButton(e) {
         e.preventDefault();
         if (this.state.reviews === false) {
             this.setState({trips: !this.state.trips, reviews: !this.state.reviews})
-        } else {
-            this.setState({trips: true, reviews: false})
-        }
+        } 
     }
 
     getAddressInfoByZip(zip){
@@ -147,7 +146,6 @@ class UserProfile extends React.Component {
             )
                 } else {
                     return (
-                        
                     <div className="user_profile_container">
  
                     <div className="user_booking_spot">
@@ -186,10 +184,14 @@ class UserProfile extends React.Component {
                                 {Object.values(this.props.currentUser.reviews).map(review=> {
                                     return <li className="booked_spot_items" key={review.id}>
                                                 <div className="user_booking_details">
-                                                    <p><nobr className="user_booking_subheader">{review.description}</nobr></p>
-                                                    <Link className='delete-review-button' to={`/spots/${review.spot_id}/reviews/${review.id}`}>Edit</Link>
-                                                    <button className='delete-review-button' onClick={() => this.props.deleteReview(review)}>Delete</button>
-                                                    
+                                                    <div><nobr className="user_booking_subheader">{moment(review.created_at).format("MMMM Do, YYYY")}</nobr></div>
+                                                    <div className="user_booking_review">{review.description}</div>
+                                                    <div className="user_booking_review_buttons">
+                                                        <Link className='delete-review-button' to={`/spots/${review.spot_id}/reviews/${review.id}`}>Edit</Link>
+                                                        <button className='delete-review-button' onClick={() => this.props.deleteReview(review)
+                                                         .then(() => this.forceUpdate())
+                                                        }>Delete</button>
+                                                    </div>
                                                 </div>
 
                                     

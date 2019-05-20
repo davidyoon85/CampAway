@@ -6,6 +6,7 @@ class EditReview extends React.Component {
     super(props)
     this.state = this.props.review
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.goBack = this.goBack.bind(this);
   }
 
   componentDidMount() {
@@ -27,12 +28,17 @@ class EditReview extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.updateReview(this.props.match.params.spotId, this.state).then(() => this.props.history.push(`/spots/${this.props.match.params.spotId}`))
+    // this.props.updateReview(this.props.match.params.spotId, this.state).then(() => this.props.history.push(`/spots/${this.props.match.params.spotId}`))
+    this.props.updateReview(this.props.match.params.spotId, this.state).then(() => this.goBack())  
   }
 
   toDateInputValue () {
     let date = new Date();
     return date.toJSON().slice(0, 10);
+  }
+
+  goBack() {
+    this.props.history.goBack();
   }
 
   render(){
@@ -49,7 +55,8 @@ class EditReview extends React.Component {
         <form className='review_form'onSubmit={this.handleSubmit}>
           <textarea className='review_description'
             cols='50'
-            rows='20'
+            rows='10'
+            maxLength="500"
             value={this.state.description}
             onChange={this.update('description')}
           />

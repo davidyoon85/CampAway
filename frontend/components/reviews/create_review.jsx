@@ -39,7 +39,8 @@ class CreateReview extends React.Component {
         <form className='review_form' onSubmit={this.handleSubmit}>
             <textarea className='review_description'
               cols='50'
-              rows='20'
+              rows='10'
+              maxLength="500"
               value={this.state.description}
               onChange={this.update('description')}
               placeholder='Leave a review about your experience here!'/>

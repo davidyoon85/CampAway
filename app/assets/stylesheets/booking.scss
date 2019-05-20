@@ -89,7 +89,7 @@
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid lightgray;
-    width: 100%;
+    width: 80%;;
     // min-width: 540px;
     margin: 0px 0px 20px 0px;
 }
@@ -209,4 +209,17 @@
 .user_booking_subheader {
     font-weight: 600;
     line-height: 2;
+}
+
+.user_booking_review_buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.review-user-description {
+    overflow-wrap: break-word;
+}
+
+.user_booking_review {
+    overflow-wrap: break-word;
 }
