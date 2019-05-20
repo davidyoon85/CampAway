@@ -14,6 +14,7 @@ class Spot extends React.Component {
 
   componentDidMount() {
     this.props.fetchSpot(this.props.match.params.spotId);
+    this.props.fetchAllBookings();
   }
 
   handleDelete(e) {
@@ -39,7 +40,6 @@ class Spot extends React.Component {
         null
         )
       } else {
-        
         const { firstname } = this.props.spot.user;
         return (
       <>
@@ -286,7 +286,9 @@ class Spot extends React.Component {
           <div className='spot_review_container'>
             <div className='review_header'>
               <p className="review_title">{this.props.numReviews} Written reviews</p>
+              {/* {  */}
               <button onClick={this.handleClick} className="review_submit_button">Submit Review</button>
+              {/* } */}
             </div>
           </div>
 

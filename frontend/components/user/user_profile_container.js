@@ -20,7 +20,7 @@ const mapDispatchToProps = (dispatch) => {
         deleteBooking: (id) => dispatch(deleteBooking(id)),
         fetchAllSpots: () => dispatch(fetchAllSpots()),
         fetchReviews: (id) => dispatch(fetchReviews(id)),
-        deleteReview: (review) => dispatch(deleteReview(review))
+        deleteReview: (id) => dispatch(deleteReview(id))
     }
 }
 

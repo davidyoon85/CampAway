@@ -18,7 +18,7 @@ const ReviewIndexItem = ({ review, deleteReview, currentUser }) => {
 
         <div className='delete-edit-review'>
           <Link className='delete-review-button' to={`/spots/${review.spot_id}/reviews/${review.id}`}>Edit</Link>
-          <li><button className='delete-review-button' onClick={() => deleteReview(review)}>Delete</button></li>
+          <li><button className='delete-review-button' onClick={() => deleteReview(review.id)}>Delete</button></li>
         </div>
 
       </div>

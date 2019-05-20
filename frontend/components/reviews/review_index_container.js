@@ -15,7 +15,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => ({
   fetchReviews: spotId => dispatch(fetchReviews(spotId)),
   fetchReview: reviewId => dispatch(fetchReview(reviewId)),
-  deleteReview: review => dispatch(deleteReview(review)),
+  deleteReview: reviewId => dispatch(deleteReview(reviewId)),
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ReviewIndex));

@@ -5,6 +5,13 @@ export const fetchReviews = spotId => (
   })
 );
 
+export const fetchAllReviews = () => (
+  $.ajax({
+    method: "GET",
+    url: "api/reviews"
+  })
+)
+
 export const fetchReview = reviewId => (
   $.ajax({
     method: 'GET',
@@ -28,10 +35,10 @@ export const updateReview = (spotId, review) => (
   })
 );
 
-export const deleteReview = review => (
+export const deleteReview = reviewId => (
   $.ajax({
     method: 'DELETE',
-    url: `api/reviews/${review.id}`
+    url: `api/reviews/${reviewId}`
   })
 );
 

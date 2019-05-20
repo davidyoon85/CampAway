@@ -14,7 +14,6 @@ class UserProfile extends React.Component {
             zipCode: this.props.currentUser.zip_code,
             trips: true,
             reviews: false,
-            numReviews: this.props.currentUser.reviews
         }
 
         this.tripsButton = this.tripsButton.bind(this);
@@ -51,6 +50,8 @@ class UserProfile extends React.Component {
     }
 
     render() {
+        const userReviews = this.props.reviews.filter(review => review.author === this.props.currentUser.id)
+
         if (Object.values(this.props.bookings).length === 0) {
             return (
                 <div className="user_profile_container">
@@ -76,6 +77,16 @@ class UserProfile extends React.Component {
                             Facebook
                         </div>
                     </div>
+                    {/* <div className="booked_spots_header">
+                        <div className="booked_spots_number">
+                            0
+                            <p name="trips" className="booked_spots_trips" onClick={(e) => this.tripsButton(e)}>Trips</p>
+                        </div>
+                        <div className="booked_user_reviews">
+                            {userReviews.length}
+                            <p name="reviews" className="booked_reviews_number" onClick={(e) => this.reviewsButton(e)}>Reviews</p>
+                        </div>            
+                    </div> */}
                     <div className="user_profile_booking_status">
                         <div className="user_status_header">No current trips. Let's <Link className="user_link_index" to={'/spots'}> get you outside!</Link></div>
                     </div>
@@ -117,7 +128,7 @@ class UserProfile extends React.Component {
                                     </div>
                                     <div className="booked_user_reviews">
                                         {/* {this.props.currentUser.reviews.length} */}
-                                        {this.props.reviews.length}
+                                        {userReviews.length}
 
                                         <p name="reviews" className="booked_reviews_number" onClick={(e) => this.reviewsButton(e)}>Reviews</p>
                                     </div>            
@@ -177,20 +188,20 @@ class UserProfile extends React.Component {
                                         <p name="trips" className="booked_spots_trips" onClick={(e) => this.tripsButton(e)}>Trips</p>
                                     </div>
                                     <div className="booked_user_reviews">
-                                        {this.props.currentUser.reviews.length}
+                                        {userReviews.length}
                                         <p name="reviews" className="booked_reviews_number" onClick={(e) => this.reviewsButton(e)}>Reviews</p>
                                     </div>            
                                 </div>
-                                {Object.values(this.props.currentUser.reviews).map(review=> {
+                                {/* {Object.values(this.props.currentUser.reviews).map(review=> { */}
+                                    {userReviews.map(review => {
+                                        
                                     return <li className="booked_spot_items" key={review.id}>
                                                 <div className="user_booking_details">
                                                     <div><nobr className="user_booking_subheader">{moment(review.created_at).format("MMMM Do, YYYY")}</nobr></div>
                                                     <div className="user_booking_review">{review.description}</div>
                                                     <div className="user_booking_review_buttons">
                                                         <Link className='delete-review-button' to={`/spots/${review.spot_id}/reviews/${review.id}`}>Edit</Link>
-                                                        <button className='delete-review-button' onClick={() => this.props.deleteReview(review)
-                                                         .then(() => this.forceUpdate())
-                                                        }>Delete</button>
+                                                        <button className='delete-review-button' onClick={() => this.props.deleteReview(review.id)}>Delete</button>
                                                     </div>
                                                 </div>
 
