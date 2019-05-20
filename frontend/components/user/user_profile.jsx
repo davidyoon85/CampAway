@@ -194,7 +194,6 @@ class UserProfile extends React.Component {
                                 </div>
                                 {/* {Object.values(this.props.currentUser.reviews).map(review=> { */}
                                     {userReviews.map(review => {
-                                        
                                     return <li className="booked_spot_items" key={review.id}>
                                                 <div className="user_booking_details">
                                                     <div><nobr className="user_booking_subheader">{moment(review.created_at).format("MMMM Do, YYYY")}</nobr></div>
