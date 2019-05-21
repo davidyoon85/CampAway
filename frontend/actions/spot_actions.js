@@ -11,14 +11,9 @@ export const fetchSingleSpot = (id) => dispatch => (
   APIUtil.fetchSingleSpot(id).then(spot => dispatch(receiveSingleSpot(spot)))
 );
 
-export const fetchAllSpots = () => dispatch => (
-  APIUtil.fetchAllSpots().then(spots => dispatch(receiveAllSpots(spots)))
+export const fetchAllSpots = (bounds) => dispatch => (
+  APIUtil.fetchSearchSpots(bounds).then(spots => dispatch(receiveAllSpots(spots)))
 );
-
-export const requestAllSpots = (bounds) => dispatch => {
-  APIUtil.fetchSearchSpots(bounds)
-  .then(spots => dispatch(receiveAllSpots(spots)))
-}
 
 export const hostSpot = (spot) => dispatch => (
   APIUtil.hostSpot(spot).then(spot => dispatch(createSpot(spot))
@@ -28,6 +23,10 @@ export const hostSpot = (spot) => dispatch => (
 export const deleteSpot = (spotId) => dispatch => (
   APIUtil.deleteSpot(spotId).then(spotId => dispatch(destroySpot(spotId)))
 );
+
+export const updateFilteredSpots = (filteredSpots) => dispatch => {
+  dispatch(receiveAllSpots(filteredSpots));
+}
 
 export const receiveErrors = errors => ({
   type: RECEIVE_SPOTS_ERRORS,

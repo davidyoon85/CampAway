@@ -1,7 +1,7 @@
 import React from 'react';
 import MarkerManager from '../../util/marker_manager';
 import { fetchAllSpots } from '../../actions/spot_actions';
-import { receiveGeolocation } from '../../actions/location_filter_actions';
+import { applyFilters } from '../../util/filter_util';
     
 const mapOptions = {
   center : { lat: 40.751626, lng: -73.983926 },
@@ -13,16 +13,27 @@ class SpotMap extends React.Component {
         super(props);
 
         this.geoCoder = new google.maps.Geocoder();
-        this.retrieveBounds = this.retrieveBounds.bind(this);
+        this.centerMapOnSearch = this.centerMapOnSearch.bind(this);
     }
 
     componentDidMount() {
         fetchAllSpots();
-
         this.map = new google.maps.Map(this.mapNode, mapOptions);
-        this.MarkerManager = new MarkerManager(this.map);    
-        this.retrieveBounds();
+        this.MarkerManager = new MarkerManager(this.map);   
+        this.MarkerManager.updateMarkers(this.props.spots); 
+        this.registerListeners();
+    }
 
+    registerListeners() {
+      google.maps.event.addListener(this.map, 'idle', () => {
+        const { north, south, east, west } = this.map.getBounds().toJSON();
+        const bounds = {
+          northEast: { lat: north, long: east },
+          southWest: { lat: south, long: west }
+        };
+        
+        this.props.updateFilter('location', bounds);
+      });
     }
 
     centerMapOnSearch() {
@@ -42,49 +53,12 @@ class SpotMap extends React.Component {
         });
       }
 
-      retrieveBounds() {
-          google.maps.event.addListener(this.map, 'idle', () => {
-              const { north, south, east, west } = this.map.getBounds().toJSON();
-            const bounds = {
-              northEast: {lat: north, long: east},
-              southWest: {lat: south, long: west}
-            };
-            // this.props.updateFilter('location', bounds);
-          });
-      }
-
-      applyFilters() {
-        const { spots, filters } = this.props;
-
-        if (filters === undefined) {
-          return spots;
-        }
-
-        const filteredSpots = spots.filter(spot => {
-            if (filters['campfire'] && !spot.campfire) return;
-            if (filters['pets_allow'] && !spot.pets_allow) return;
-            if (filters['tent'] && !spot.tent) return;
-            if (filters['parking'] && !spot.parking) return;
-            if (filters['toilet'] && !spot.toilet) return;
-            if (filters['shower'] && !spot.shower) return;
-            if (filters['hiking'] && !spot.hiking) return;
-            if (filters['biking'] && !spot.biking) return;
-            if (filters['paddling'] && !spot.paddling) return;
-            if (filters.pricing < spot.price) return;
-
-            return spots
-        });
-
-        return filteredSpots;
-    }
-
-
     componentDidUpdate() {
-      this.filteredSpots = this.applyFilters();
+
+      this.filteredSpots = applyFilters(this.props.filters, this.props.spots);
       this.MarkerManager.updateMarkers(this.filteredSpots);
 
       if (this.props.geoLocation.length > 0) this.centerMapOnSearch();
-
     }
 
     render () {

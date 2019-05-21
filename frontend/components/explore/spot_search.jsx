@@ -20,11 +20,13 @@ class SpotSearch extends React.Component {
             <SpotIndex 
                 spots={this.props.spots}
                 filters={this.props.filters}
+                updateFilteredSpots={this.props.updateFilteredSpots}
                 />
             <SpotMap 
                 spots={this.props.spots}
                 geoLocation={this.props.geoLocation}
                 filters={this.props.filters}
+                updateFilter={this.props.updateFilter}
                 receiveGeolocation={this.props.receiveGeolocation}
             />
         </div>

@@ -7,6 +7,7 @@ import {
   REMOVE_PRICING_FILTER,
   RECEIVE_GROUP_FILTER,
   REMOVE_GROUP_FILTER,
+  UPDATE_FILTER
 } from '../actions/filter_actions';
 
 const defaultFilters = {
@@ -22,7 +23,6 @@ const defaultFilters = {
   paddling: false,
   price: 1000
 }
-
 
 const filtersReducer = (state = defaultFilters, action) => {
   Object.freeze(state);
@@ -41,12 +41,15 @@ const filtersReducer = (state = defaultFilters, action) => {
     case REMOVE_PRICING_FILTER:
       newState = merge({}, state, { pricing: 1000 })
       return newState;
-      case RECEIVE_GROUP_FILTER:
+    case RECEIVE_GROUP_FILTER:
       newState = merge({}, state, { group_size: action.amount })
       return newState;
     case REMOVE_GROUP_FILTER:
       newState = merge({}, state, { group_size: 1 })
       return newState;
+    case UPDATE_FILTER:
+      const newFilter = { [action.filter]: action.value }
+      return merge({}, state, newFilter)
     case CLEAR_ALL_FILTERS:
       return defaultFilters;
     default:

@@ -2,18 +2,19 @@ import { RECEIVE_SINGLE_SPOT, RECEIVE_ALL_SPOTS, CREATE_SPOT, DESTROY_SPOT } fro
 
 const spotsReducer = (state = {}, action) => {
   Object.freeze(state);
+  const newState = {};
 
   switch (action.type) {
     case RECEIVE_ALL_SPOTS:
-      return action.spots;
+      return Object.assign(newState, action.spots)
     case RECEIVE_SINGLE_SPOT:
       return action.spot;
     case CREATE_SPOT:
       return action.spot;
     case DESTROY_SPOT:
-      let newState = Object.assign({}, state);
-      delete newState[action.spotId];
-      return newState;
+      let updatedState = Object.assign({}, state);
+      delete updatedState[action.spotId];
+      return updatedState;
     default:
       return state;
   }

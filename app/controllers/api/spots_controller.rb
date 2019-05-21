@@ -1,6 +1,6 @@
 class Api::SpotsController < ApplicationController
     def index
-        @spots = Spot.all
+        @spots = bounds ? Spot.in_bounds(bounds) : Spot.all
     end
 
     def create
@@ -29,4 +29,8 @@ class Api::SpotsController < ApplicationController
         params.require(:spot).permit(:host_id, :title, :body, :price, :pets_allow, :group_size, :check_in, :check_out, :lat, :long, 
         :campfire, :tent, :sites, :parking, :toilet, :shower, :hiking, :biking, :wildlife, :paddling, photos: [])
     end
+
+    def bounds
+        params[:searchParams]
+      end
 end
