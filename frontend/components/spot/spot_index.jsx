@@ -18,7 +18,6 @@ class SpotIndex extends React.Component {
         const filteredSpots = applyFilters(filters, spots);
 
         if (spots.length === 0) {
-          debugger
           return (
             <div className="spot_index">
               <div className='spot_index_empty'>
