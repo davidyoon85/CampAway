@@ -5,13 +5,13 @@
 .user_profile_sidebar {
     background-color: white;
     width: 30%;
-    padding-right: 50px;
+    min-width: 260px;
 }
 
 .bio_panel {
     // width: 280px;
     margin-top: 10px;
-    min-width: 220px;
+    width: 100%;
     padding: 20px;
     border: 1px solid #ebebeb;
     font-weight: 400;
@@ -19,13 +19,13 @@
 }
 
 .bio_panel span {
-    padding-right: 10px;
+    margin-right: 10px;
     width: 14px;
 }
 
 .panel_body {
     margin-top: 20px;
-    min-width: 200px;
+    width: 100%;
     padding: 20px;
     border: 1px solid #ebebeb;
     padding-right: 10px;
@@ -35,6 +35,14 @@
 .panel_body span {
     padding-right: 10px;
     width: 14px;
+}
+
+#email_icon {
+    margin-right: 10px;
+}
+
+#facebook_icon {
+    margin-right: 10px;
 }
 
 .bio_panel h3 {
@@ -77,11 +85,12 @@
 .booked_spots_list {
     display: flex;
     height: 100%;
-    min-width: 600px;
-    width: 80%;
+    min-width: 700px;
+    width: 70%;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 auto;
+    padding-left: 5%;
 }
 
 .booked_spot_items {
@@ -121,7 +130,8 @@
     width: 70%;
     min-width: 870px;
     margin: 0 auto;
-    margin-top: 5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 .user_booking_spot_container {

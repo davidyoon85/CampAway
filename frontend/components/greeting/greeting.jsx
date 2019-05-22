@@ -13,7 +13,7 @@ class Greeting extends React.Component {
 
     render() {
         return (
-            <div>
+            <>
             {this.props.currentUser ? (
                 <div className="dropdown">
                     <img className="tent_logo" 
@@ -34,7 +34,7 @@ class Greeting extends React.Component {
                     </ul>
                     </nav>
                 )}
-            </div>
+            </>
         )
     }
 }

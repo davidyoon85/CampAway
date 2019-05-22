@@ -27,24 +27,29 @@
 }
 
 .spot_index_item {
-    padding: 0px 5px 25px 0px;
+    padding-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
-    width: 48%;
-    // min-width: 300px;
+    width: 50%;
     height: 360px;
 }
 
 .spot_index_item_link {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+.spot_index_item:nth-child(odd) {
+    padding-right: 10px;
+}
+
 .spot_index_photo {
     width: 100%;
-    height: 260px;
+    // height: 260px;
+    height: 60%;
 }
 
 .spot_details {

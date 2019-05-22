@@ -1,6 +1,6 @@
 .splash_subtitle1 {
     font-weight: 700;
-    font-size: 41px;
+    font-size: 2.5em;
     padding-bottom: 20px;
     width: 80%;
     text-align: left;
@@ -10,7 +10,7 @@
 
 .splash_subtitle2 {
     font-weight: 300;
-    font-size: 19px;
+    font-size: 1.1em;
     width: 80%;
     text-align: left;
     margin-left: 10%; 
@@ -19,7 +19,7 @@
 
 .splash_subtitle3 {
     font-weight: 700;
-    font-size: 26px;
+    font-size: 1.8em;
     text-align: center;
     margin-bottom: 2%;
 }
@@ -27,7 +27,6 @@
 .splash_main {
     width: 100%;
     text-align: center;
-    // position: relative;
     top: 20px;
 }
 
@@ -50,10 +49,10 @@
     display: flex;
     flex-direction: column;
     width: 29%;
-    margin: 2% 1% 2% 1%;
+    margin: 2% 1% 0 1%;
     min-width: 270px;
-    min-height: 300px;
-    height: 300px;
+    min-height: 320px;
+    height: 320px;
 }
 
 .index_section:hover {
@@ -63,14 +62,14 @@
 .index_section > img {
     display: flex;
     width: 100%;
-    height: 80%;
+    height: 75%;
 }
 
 .index_section_container {
     display: block;
     position: relatve;
     width: 100%;
-    height: 80px;
+    height: 25%;
     border: 1px solid #ebebeb;
     padding: 5%;
     box-sizing: border-box;
@@ -83,7 +82,7 @@ div > h3 {
     margin: 0;
     letter-spacing: 1.1px;
     font-family: Calibre, Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 1.1em;
     font-weight: 700;
     box-sizing: border-box;
     width: 100%;
@@ -94,9 +93,30 @@ div > h3 {
     text-align: left;
     display: block;
     color: #757575;
-    font-size: 16px;
+    font-size: 1em;
     font-weight: 400;
     margin-top: 7px;
     box-sizing: border-box;
     width: 100%;
+}
+
+@media (max-width:629px) {
+
+    .index_section {
+        margin: 2% 1% 5% 1%;
+    }
+    
+    .splash_subtitle1 {
+        font-size: 1.4em;
+        margin: 0 auto;
+    }
+
+    .splash_subtitle2 {
+        font-size: .9em;
+        margin: 0 auto;
+    }
+
+    .splash_subtitle3 {
+        font-size: 1.3em;
+    }
 }
