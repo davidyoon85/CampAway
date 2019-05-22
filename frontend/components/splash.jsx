@@ -41,7 +41,7 @@ class Splash extends React.Component {
     }
 
     render() {
-            let indexSpots = this.props.state.entities.spots || [];
+            // let indexSpots = this.props.state.entities.spots || [];
     return (
     <>
     <div className="splash_main">
@@ -128,42 +128,6 @@ class Splash extends React.Component {
                         </div>
                 </div>
 
-                {/* <div className="index_section" onClick={this.handleClick(5)}>
-                    <img src="https://s3.amazonaws.com/camp-away-dev/spot6_0.jpg" />
-                        <div className="index_section_container">    
-                            
-                            <h3 className="index_section_header">Mountain Top Campsite</h3>
-                            
-                            <div className="index_section_subheader">
-                            New York
-                            </div>
-                        </div>
-                </div> */}
-                
-                {/* <div className="index_section" onClick={this.handleClick(6)}>
-                    <img src="https://s3.amazonaws.com/camp-away-dev/spot7_0.jpg" />
-                        <div className="index_section_container">
-                            
-                            <h3 className="index_section_header">Peaceful Flow</h3>
-                            
-                            <div className="index_section_subheader">
-                            New York
-                            </div>
-                        </div>
-                </div> */}
-
-                {/* <div className="index_section" onClick={this.handleClick(7)}>
-                    <img src="https://s3.amazonaws.com/camp-away-dev/spot8_0.jpg" /> 
-                        <div className="index_section_container">    
-                            
-                            <h3 className="index_section_header">Cedar Creek</h3>
-                            
-                            <div className="index_section_subheader">
-                            New York
-                            </div>
-                        </div>
-                </div> */}
-
                 <div className="index_section" onClick={this.handleClick(8)}>
                     <img src="https://s3.amazonaws.com/camp-away-dev/spot9_0.jpg" />
                         <div className="index_section_container">
@@ -178,6 +142,7 @@ class Splash extends React.Component {
 
             </div>
         </div>
+    </div>
 
     <footer>
         <div className="foot_div">
@@ -214,13 +179,13 @@ class Splash extends React.Component {
             </div>
         </div>
         </footer>
-    </div>
+    
     </>
     )
 }
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
     return {
         state
     }
