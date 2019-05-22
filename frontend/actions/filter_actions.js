@@ -47,7 +47,11 @@ export const changeFilter = (filter, value) => ({
   value
 });
 
-export const updateFilter = (filter, value) => (dispatch, getState) => {
-  dispatch(changeFilter(filter, value))
-  return fetchAllSpots(getState().ui.mapBounds)(dispatch);
+// export const updateFilter = (filter, value) => (dispatch, getState) => {
+//   dispatch(changeFilter(filter, value))
+//   return fetchAllSpots(getState().ui.mapBounds)(dispatch);
+// }
+
+export const updateFilterValue = filter => dispatch => {
+  dispatch(changeSiteFilter(filter))
 }

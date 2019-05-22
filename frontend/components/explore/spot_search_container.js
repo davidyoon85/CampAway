@@ -3,7 +3,7 @@ import SpotSearch from './spot_search';
 import { fetchAllSpots, updateFilteredSpots } from '../../actions/spot_actions';
 import { selectSpots } from '../../reducers/selectors';
 import { receiveGeolocation } from '../../actions/location_filter_actions';
-import { updateFilter } from './../../actions/filter_actions';
+import { updateFilter } from './../../actions/location_filter_actions';
 
 const mapStateToProps = (state) => ({
     spots: selectSpots(state),
@@ -19,6 +19,3 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SpotSearch);
-
-
-

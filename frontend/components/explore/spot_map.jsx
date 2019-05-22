@@ -13,11 +13,15 @@ class SpotMap extends React.Component {
         super(props);
 
         this.geoCoder = new google.maps.Geocoder();
+        // this.retrieveBounds = this.retrieveBounds.bind(this);
         this.centerMapOnSearch = this.centerMapOnSearch.bind(this);
+        this.getCenter = this.getCenter.bind(this);
     }
 
     componentDidMount() {
-        fetchAllSpots();
+        // fetchAllSpots();
+
+        let geoLocation = this.props.geoLocation;
         this.map = new google.maps.Map(this.mapNode, mapOptions);
         this.MarkerManager = new MarkerManager(this.map);   
         this.MarkerManager.updateMarkers(this.props.spots); 
@@ -27,11 +31,11 @@ class SpotMap extends React.Component {
     registerListeners() {
       google.maps.event.addListener(this.map, 'idle', () => {
         const { north, south, east, west } = this.map.getBounds().toJSON();
-        const bounds = {
+        let bounds = {
           northEast: { lat: north, long: east },
           southWest: { lat: south, long: west }
         };
-        
+
         this.props.updateFilter('location', bounds);
       });
     }
@@ -50,6 +54,24 @@ class SpotMap extends React.Component {
             } else {
               return { lat: 40.751626, lng: -73.983926 };
            }}
+        });
+      }
+
+      getCenter (callBack) {
+        const geolocation = this.props.geoLocation;
+        let centerCoords;
+        this.geoCoder.geocode({ 'address': geolocation }, function (results, status) {
+          if (status === "OK") {
+            if (results[0]) {
+              let lat = results[0].geometry.location.lat();
+              let lng = results[0].geometry.location.lng();
+              centerCoords = { lat, lng }
+              callBack(centerCoords);
+            } else {
+              centerCoords = { lat: 37.865101, lng: -119.538329 };
+              callBack(centerCoords);
+            }
+          }
         });
       }
 

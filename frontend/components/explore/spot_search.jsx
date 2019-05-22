@@ -1,16 +1,12 @@
 import React from 'react';
 
 import SpotMap from './spot_map';
-import SpotIndex from '../spot/spot_index_container';
+import SpotIndex from '../spot/spot_index';
 import SpotFilterContainer from '../spot/spot_filter_container';
 
 class SpotSearch extends React.Component {
     constructor(props) {
         super(props);
-    }
-
-    componentDidMount() {
-        this.props.fetchAllSpots();
     }
 
     render () {
@@ -19,7 +15,9 @@ class SpotSearch extends React.Component {
             <SpotFilterContainer />
             <SpotIndex 
                 spots={this.props.spots}
+                fetchAllSpots={this.props.fetchAllSpots}
                 filters={this.props.filters}
+                updateFilter={this.props.updateFilter}
                 updateFilteredSpots={this.props.updateFilteredSpots}
                 />
             <SpotMap 
