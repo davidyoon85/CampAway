@@ -194,7 +194,7 @@
 /* DayPickerInput */
 
 .DayPickerInput {
-    display: inline-block;
+  display: inline-block;
 }
 
 .DayPickerInput > input {
@@ -217,11 +217,17 @@
 }
 
 .DayPickerInput-OverlayWrapper {
-  position: relative;
+  position: absolute;
+  left: 0;
+  width: 100%;
 }
 
 .DayPickerInput-Overlay {
-  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  transform: scale(1.1, 1);
+  bottom: 0;
   z-index: 1;
   position: absolute;
   background: white;
