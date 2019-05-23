@@ -159,7 +159,6 @@ html {
     height: 25px;
     margin: 0px;
     padding: 0px;
-    font-size: 15px;
     font-weight: 100px;
   }
 
@@ -419,13 +418,22 @@ i {
   #map-container {
     position: relative;
     bottom: 0;
+    height: 45vh;
+    width: 99%;
+    margin: 0 auto;
+    margin-top: 4%;
   }
 
   .right {
-    padding-right: 5px;
+    padding-right: 10px;
+    font-size: .8em;
   }
 
   .left {
     font-size: 1.7em;
+  }
+
+  .user_session button {
+    width: 55px;
   }
 }
