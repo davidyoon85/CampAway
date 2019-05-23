@@ -245,8 +245,10 @@
   .DayPickerInput-Overlay {
     display: flex;
     justify-content: center;
-    width: 100%;
-    transform: scale(1.1, 1);
+    margin-left: 13%;
+    margin-right: 13%;
+    width: 74%;
+    transform: scale(1, 1);
     bottom: 0;
     position: absolute;
   }
