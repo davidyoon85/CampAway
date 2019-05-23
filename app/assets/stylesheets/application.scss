@@ -340,51 +340,7 @@ i {
 .spot_main_section {
   display: flex;
   flex-direction: column;
-  margin-bottom: 100px;
 }
-
-.photo_slider {
-  position: relative;
-  overflow: hidden;
-}
-
-.spot_photo {
-  position: relative;
-  margin: 0 auto;
-  width: 90%;
-  background: white;
-  height: 400px;
-}
-
- .slider {
-    height: 420px;
- }
-
- .slick-slide {
-    padding: 7px;
-    height: 400px;
-    overflow: hidden;
- }
-
- .slick-slide img {
-  height: 400px;
-}
-
-
- .slick-prev:before, .slick-next:before {
-    color: gray;
-    font-size: 24px;
-    font-family: 'slick';
- }
-
- .slick-prev:hover:before, .slick-next:hover:before {
-    color: #40d9ac;
- }
-
-//  #map-container {
-
-//  }
-
 
 .infowindow {
   display: flex;
@@ -392,7 +348,6 @@ i {
 }
 
 .infowindow-title {
-  // padding-top: 13%;
   font-size: 14px;
   font-weight: 700;
 }

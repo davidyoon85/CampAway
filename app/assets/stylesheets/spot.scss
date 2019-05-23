@@ -56,7 +56,7 @@
 
 .spot_section_title {
     font-size: 21px;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 12px;
 }
 
@@ -165,7 +165,6 @@ span > p {
     width: 319px;
     z-index: 1;
     background-color: white;
-    top: -60px;
 }
 
 .booking_widget {
@@ -326,4 +325,122 @@ span > p {
 .booked_reviews_number:hover {
     cursor: pointer;
     border-bottom: 3px solid #40d9ac;
+}
+
+
+.photo_slider {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .spot_photo {
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    background: white;
+    height: 400px;
+  }
+  
+   .slider {
+      height: 420px;
+   }
+  
+   .slick-slide {
+      padding: 7px;
+      height: 400px;
+      overflow: hidden;
+   }
+  
+   .slick-slide img {
+    height: 400px;
+  }
+  
+  
+   .slick-prev:before, .slick-next:before {
+      color: gray;
+      font-size: 24px;
+      font-family: 'slick';
+   }
+  
+   .slick-prev:hover:before, .slick-next:hover:before {
+      color: #40d9ac;
+   }
+
+@media (max-width:629px) {
+    .spot_title {
+        font-size: 2em;
+    }
+
+    .spot_body {
+        min-width: 0px;
+    }
+
+    .spot_photo {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .spot_main_section {
+        margin-bottom: 200px;
+    }
+
+    .widget_container {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .booking_widget {
+        width: 100%;
+    }
+
+    .spot_page {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .spot_div_main {
+        width: 100%;
+    }
+
+    .spot_detail_header {
+        width: 30%;
+    }
+
+    #spot_details_subsection {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .spot_div_info {
+        width: 90%;
+    }
+
+    .spot_div_details {
+        padding: 0px;
+    }
+
+    .slick-slider > button {
+        display: none
+    }
+
+    .slick-arrow {
+        display: none;
+    }
+}
+
+@media (min-width:900px) {
+    .spot_div_main {
+        padding: 0 3%;
+    }
+
+    .spot_main_section {
+        margin-bottom: 100px;
+    }
+
+    .widget_container {
+        top: -60px;
+    }
 }

@@ -25,6 +25,26 @@ class PhotoSlideshow extends React.Component {
     infinite: true,
     variableWidth: true,
     className: 'slider',
+    responsive: [
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            variableWidth: false,
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            variableWidth: false,
+          }
+        },
+      ]
     };
 
     
