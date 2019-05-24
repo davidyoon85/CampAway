@@ -21,6 +21,7 @@ class UserProfile extends React.Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0, 0);
         this.props.fetchAllBookings();
         this.props.fetchAllSpots();
         this.getAddressInfoByZip(this.state.zipCode.toString());

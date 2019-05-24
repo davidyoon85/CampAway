@@ -156,3 +156,18 @@
     color: #757575;
     font-size: 14px;
 }
+
+@media (max-width:629px) {
+    .create_review_form {
+    margin-top: 10%;
+    }
+
+    .review_form {
+        width: 100%;
+        margin-top: 3%;
+    }
+
+    .create_review_submit {
+        width: 87%;
+    }
+}

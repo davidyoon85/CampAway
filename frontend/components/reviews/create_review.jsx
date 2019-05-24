@@ -12,6 +12,7 @@ class CreateReview extends React.Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.fetchSingleSpot(this.props.match.params.spotId)
   }
 

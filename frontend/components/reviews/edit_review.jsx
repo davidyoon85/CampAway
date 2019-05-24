@@ -10,6 +10,7 @@ class EditReview extends React.Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.fetchReview(this.props.match.params.reviewId)
     this.props.fetchSingleSpot(this.props.match.params.spotId)
   }
