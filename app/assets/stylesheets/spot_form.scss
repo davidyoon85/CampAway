@@ -13,7 +13,9 @@
 
 .form {
     width: 80%;
-    margin: 20px 0px 20px 40px;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .form-group {
@@ -69,7 +71,7 @@
 .form_group_title {
     text-align: left;
      font-weight: 700;
-     font-size: 20px;
+     font-size: 1.25em;
 }
 
 .form-control {
@@ -117,7 +119,7 @@ textarea {
      color: black;
      font-weight: 500;
      letter-spacing: 1.1;
-     font-size: 14px;
+     font-size: 1em;
      resize: none
 }
 
@@ -125,7 +127,7 @@ textarea {
     width: 100px;
     border: 2px solid #40d9ac;
     letter-spacing: 1.1px;
-    font-size: 15px;
+    font-size: 1em;
     padding-left: 20px;
     font-weight: 600;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 5px;
@@ -136,10 +138,9 @@ textarea {
 
 .next_button {
     width: 100px;
-
     border: 2px solid #40d9ac;
     letter-spacing: 1.1px;
-    font-size: 15px;
+    font-size: 1em;
     font-weight: 600;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 5px;
     background: #40d9ac;
@@ -152,12 +153,10 @@ textarea {
     display: flex;
     justify-content: space-between;
     position: relative;
-    left: 5px;
 }
 
 .next_button:hover {
     width: 100px;
-
     border: 2px solid #40d9ac;
     background-color: white;
     color: #40d9ac;
@@ -186,4 +185,23 @@ textarea {
     margin-top: 2px;
     font-size: 10px;
     font-weight: 600;
+}
+
+@media (max-width:629px) {
+    .spot_form_main {
+        width: 80%;
+        margin-top: 5%;
+    }
+
+    .form_group_title {
+        font-size: 1em;
+    }
+
+    .next_button {
+        font-size: .8em;
+    }
+
+    .previous_button {
+        font-size: .8em;
+    }
 }

@@ -3,7 +3,6 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    margin-left: 5%;
 }
 
 .host_spot_options {
@@ -13,7 +12,8 @@
     display: flex;
     flex-wrap: wrap;
     border-radius: 3px;
-    padding: 10px;
+    margin: 10%;
+    padding: 10%;
 }
 
 .active_button{
@@ -22,7 +22,8 @@
     background: #40d9ac;
     height: 80%;
     width: 80%;
-    padding: 10px;
+    margin: 10%;
+    padding: 10%;
 }
 
 .host_spot_options > img {
@@ -30,12 +31,12 @@
 }
 
 .form_signup_button {
-    margin-top: 6%;
+    margin: 6%;
     text-align: center;
     justify-content: center;
     padding: 10px 30px 10px 30px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 1.1em;
     color: white;
     background-color: #40d9ac;
     border: 2px solid white;
@@ -54,7 +55,8 @@
     font-weight: 700;
     margin-bottom: 15px;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 1.2em;
+    text-align: center;
 }
 
 .form-group {
@@ -63,15 +65,12 @@
 }
 
 .form-group-options {
-    width: 30%;
-    margin: 5px;
-    padding-bottom: 1px;
+    width: 33%;
 }
 
 .form_signup {
     display: flex;
     justify-content: center;
-    margin-left: 8%;
 }
 
 #check_in {
@@ -81,3 +80,14 @@
 #check_out {
     font-family: "Calibre", Helvetica, Arial, sans-serif;
 }
+
+@media (max-width:629px) {
+    .form-group-options {
+        width: 33%;
+    }
+
+    .form_signup_button {
+        font-size: .8em;
+    }
+}
+

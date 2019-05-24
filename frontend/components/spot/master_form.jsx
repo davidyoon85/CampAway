@@ -197,7 +197,7 @@ class MasterForm extends React.Component {
 
             if (this.state.currentStep === 1) {
                 step = 
-                <div>
+                <>
                     <div className="form-group">
                         <label className="form_group_title">Name Your Spot</label>
                         <input
@@ -224,10 +224,10 @@ class MasterForm extends React.Component {
                             required
                         />
                     </div>
-                </div>
+                </>
             } else if (this.state.currentStep === 2) {
                 step = 
-                <div>    
+                <>    
                     <div className="form-group">
                         <label className="form_group_title">Daily Price</label>
                         <input
@@ -302,15 +302,15 @@ class MasterForm extends React.Component {
                             required
                         />
                     </div>
-                </div>
+                </>
             } else {
 
                 step = <React.Fragment>
                     <>
-                        <div className="host_options_title">
-                            Choose Camp Features!
-                        </div>
-                    <div className="create_spot_fo</div>rm">
+                    <div className="host_options_title">
+                        Choose Camp Features!
+                    </div>
+                    <div className="create_spot_form">
                          <div className="host_option_main">
 
                             <div className="form-group-options">
