@@ -234,6 +234,14 @@
     .spot_index_item:nth-child(odd) {
         padding-right: 5px;
     }
+
+    .spot_index_photo {
+        height: 70%;
+    }
+
+    .spot_details {
+        height: 30%;
+    }
 }
 
 @media (max-width:629px) {
