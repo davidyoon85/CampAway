@@ -13,7 +13,7 @@ class Spot extends React.Component {
   }
 
   componentDidMount() {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
     this.props.fetchSpot(this.props.match.params.spotId);
     this.props.fetchAllBookings();
   }
