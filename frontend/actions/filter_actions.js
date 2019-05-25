@@ -1,5 +1,3 @@
-import { fetchAllSpots } from './spot_actions';
-
 export const RECEIVE_SINGLE_FILTER = 'RECEIVE_SINGLE_FILTER';
 export const RECEIVE_PRICING_FILTER = 'RECEIVE_PRICING_FILTER';
 export const REMOVE_PRICING_FILTER = 'REMOVE_PRICING_FILTER';
@@ -46,11 +44,6 @@ export const changeFilter = (filter, value) => ({
   filter,
   value
 });
-
-// export const updateFilter = (filter, value) => (dispatch, getState) => {
-//   dispatch(changeFilter(filter, value))
-//   return fetchAllSpots(getState().ui.mapBounds)(dispatch);
-// }
 
 export const updateFilterValue = filter => dispatch => {
   dispatch(changeSiteFilter(filter))

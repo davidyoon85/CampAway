@@ -4,7 +4,6 @@ import moment from 'moment';
 import { formatDate, parseDate } from 'react-day-picker/moment';
 import { withRouter } from 'react-router-dom';
 
-
 class Booking extends React.Component {
   constructor(props) {
     super(props);
@@ -14,6 +13,7 @@ class Booking extends React.Component {
       num_guests: 1,
       total_price: this.props.spot.price
     }
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDateChange = this.handleDateChange.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
@@ -25,12 +25,12 @@ class Booking extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+
     if (!this.props.currentUserId) {
       this.props.openModal('login')
     } else {
       const checkInDate = this.state.check_in;
       const checkOutDate = this.state.check_out;
-
       const num_days = moment(checkOutDate).diff(checkInDate, 'days');
         this.state.total_price *= num_days
       const booking = Object.assign({}, this.state);
@@ -83,70 +83,66 @@ class Booking extends React.Component {
     const today = new Date();
     const checkIn = this.state.check_in ? this.nextDay(new Date(this.state.check_in)) : this.nextDay(today)
 
-      return (
+    return (
       <div className="widget_container">
         <form onSubmit={this.handleSubmit}>
-        {/* <h1>{this.renderErrors()}</h1> */}
           <div className="booking_widget">
-          <div className="booking_banner">
-            <h2>${spot.price}</h2>
-            <p id="widget_per_night">per night</p>
-          </div>
-          <div className="booking_well">
-            <div className="well_dates_guests">
-              <div className="booking_checkin">
-                <div className="label">Check in</div>
-                    <DayPickerInput
-                      formatDate={formatDate}
-                      parseDate={parseDate}       
-                      onDayChange={this.handleDateChange('check_in')}
-                      placeholder="Select Date"
-                      dayPickerProps={{
-                        disabledDays: { 
-                          before: today
-                        }
-                      }}
-                    />
+            <div className="booking_banner">
+              <h2>${spot.price}</h2>
+              <p id="widget_per_night">per night</p>
+            </div>
+            <div className="booking_well">
+              <div className="well_dates_guests">
+                <div className="booking_checkin">
+                  <div className="label">Check in</div>
+                  <DayPickerInput
+                    formatDate={formatDate}
+                    parseDate={parseDate}       
+                    onDayChange={this.handleDateChange('check_in')}
+                    placeholder="Select Date"
+                    dayPickerProps={{
+                      disabledDays: { 
+                        before: today
+                      }
+                    }}
+                  />
                 </div>
                 <div className="booking_checkout">
-                  <div className="label">Check out</div>
+                <div className="label">Check out</div>
 
-                    <DayPickerInput
-                      formatDate={formatDate}
-                      parseDate={parseDate}  
-                      onDayChange={this.handleDateChange('check_out')}
-                      placeholder="Select Date"
-                      dayPickerProps={{
-                        month: checkIn,
-                        disabledDays: {
-                          before: checkIn
-                        }
-                      }}
-                    />
-                    
-                  </div>
-                  <div className="booking_guests">
+                <DayPickerInput
+                  formatDate={formatDate}
+                  parseDate={parseDate}  
+                  onDayChange={this.handleDateChange('check_out')}
+                  placeholder="Select Date"
+                  dayPickerProps={{
+                    month: checkIn,
+                      disabledDays: {
+                        before: checkIn
+                      }
+                  }}
+                />
+                </div>
+
+                <div className="booking_guests">
                   <div className="label">Guests</div>
-
-                    <div className="widget_guests">
-                      <a onClick={this.handleNumGuests('-')}>-</a>
-                      <p className="booking_num_guests">{this.state.num_guests}</p>
-                      <a onClick={this.handleNumGuests('+')}>+</a>
-                    </div>
-
+                  <div className="widget_guests">
+                    <a onClick={this.handleNumGuests('-')}>-</a>
+                    <p className="booking_num_guests">{this.state.num_guests}</p>
+                    <a onClick={this.handleNumGuests('+')}>+</a>
                   </div>
                 </div>
-                <div className="datepickers">
-                </div>
+              </div>
+
               <div className="booking_submit">
                 <input className="widget_button" type="submit" value="Request to book"/>
               </div>
             </div>
           </div>
         </form>
-        </div>
+      </div>
     )
-      }
+  }
 }
 
 

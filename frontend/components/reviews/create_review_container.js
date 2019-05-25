@@ -1,8 +1,6 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-
 import CreateReview from './create_review';
-
 import { fetchReviews, fetchReview, createReview, deleteReview} from '../../actions/review_actions';
 import { fetchSingleSpot } from '../../actions/spot_actions';
 

@@ -10,9 +10,9 @@ class SessionForm extends React.Component {
             last_name: "",
             zip_code: "",
             email_address: "",
-            password: "",
-
+            password: ""
         };
+
         this.handleSubmit = this.handleSubmit.bind(this);
         this.loginDemo = this.loginDemo.bind(this);
     }
@@ -73,24 +73,25 @@ class SessionForm extends React.Component {
 
                     <br/>
                     <input type="email"
-                    onChange={this.update('email_address')}
-                    className="login-input"
-                    placeholder="Email address"
-                    required
+                        onChange={this.update('email_address')}
+                        className="login-input"
+                        placeholder="Email address"
+                        required
                     />
                     <br/>
                     <input type="password"
-                    minLength="6"
-                    onChange={this.update('password')}
-                    className="login-input"
-                    placeholder="Password"
+                        minLength="6"
+                        onChange={this.update('password')}
+                        className="login-input"
+                        placeholder="Password"
                     />
                     <br/>
                     <div className="session_error_message">{this.renderErrors()}</div>
                     <input id="login_submit" 
-                    type="submit" 
-                    value={this.props.formType} 
-                    className="session-submit"/>
+                        type="submit" 
+                        value={this.props.formType} 
+                        className="session-submit"
+                    />
                     <br/>
                     <div className="modal_footer1">
                         Don't have a CampAway account? 
@@ -125,51 +126,52 @@ class SessionForm extends React.Component {
                 <div className="modal_table">
                     <div className="modal_table1">
                         <input type="text"
-                        onChange={this.update('first_name')}
-                        className="login-input"
-                        placeholder="First name..."
-                        required
+                            onChange={this.update('first_name')}
+                            className="login-input"
+                            placeholder="First name..."
+                            required
                         />
                     </div>
 
                     <div className="modal_table2">
                     <input type="text"
-                    onChange={this.update('last_name')}
-                    className="login-input"
-                    placeholder="Last name..."
-                    required
+                        onChange={this.update('last_name')}
+                        className="login-input"
+                        placeholder="Last name..."
+                        required
                     />
                     </div>
                 </div>
 
                     <br/>
                     <input type="text"
-                    onChange={this.update('zip_code')}
-                    className="login-input"
-                    placeholder="Zip code..."
-                    required
+                        onChange={this.update('zip_code')}
+                        className="login-input"
+                        placeholder="Zip code..."
+                        required
                     />
                     <br/>
                     <input type="email"
-                    onChange={this.update('email_address')}
-                    className="login-input"
-                    placeholder="Email address..."
-                    required
+                        onChange={this.update('email_address')}
+                        className="login-input"
+                        placeholder="Email address..."
+                        required
                     />
                     <br/>
                     <input type="password"
-                    minLength="6"
-                    onChange={this.update('password')}
-                    className="login-input"
-                    placeholder="Password..."
+                        minLength="6"
+                        onChange={this.update('password')}
+                        className="login-input"
+                        placeholder="Password..."
                     />
                     <br/>
                     <div className="session_error_message">{this.renderErrors()}</div>
                     <input 
-                    id="login_submit" 
-                    type="submit"
-                    className="session-submit"
-                    required/>
+                        id="login_submit" 
+                        type="submit"
+                        className="session-submit"
+                        required
+                    />
                     <div className="modal_footer2">
                     By signing up, I agree to CampAway's<br/> terms and privacy policy.
                     <br/>

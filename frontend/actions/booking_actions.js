@@ -7,32 +7,32 @@ export const REMOVE_BOOKING = 'REMOVE_BOOKING';
 export const RECEIVE_BOOKING_ERRORS = 'RECEIVE_BOOKING_ERRORS';
 
 export const fetchAllBookings = () => dispatch => (
-    APIUtil.fetchBookings().then(
-        bookings => {
-          return dispatch(receiveAllBookings(bookings))
-        }
-    )
+  APIUtil.fetchBookings().then(
+    bookings => {
+      return dispatch(receiveAllBookings(bookings))
+    }
+  )
 )
 
 export const makeBooking = (booking) => dispatch => (
   APIUtil.createBooking(booking).then(
-      booking => {
-        return dispatch(receiveBooking(booking))
-      }
-    )
+    booking => {
+      return dispatch(receiveBooking(booking))
+    }
+  )
 )
 
 export const deleteBooking = (bookingId) => dispatch => (
-    APIUtil.deleteBooking(bookingId).then(
-        booking => {
-          dispatch(removeBooking(bookingId))
-        }
-    )
+  APIUtil.deleteBooking(bookingId).then(
+    booking => {
+      dispatch(removeBooking(bookingId))
+    }
+  )
 )
 
 export const receiveBooking = (booking) => ({
-    type: RECEIVE_BOOKING,
-    booking
+  type: RECEIVE_BOOKING,
+  booking
 })
 
 export const receiveAllBookings = (bookings) => ({

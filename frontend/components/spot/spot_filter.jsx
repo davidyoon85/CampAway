@@ -36,7 +36,6 @@ class SpotFilter extends React.Component {
     this.showGroup = this.showGroup.bind(this);
     this.hideGroup = this.hideGroup.bind(this);
     this.clearFilters = this.clearFilters.bind(this);
- 
   }
 
   showAmenities(event) {
@@ -48,13 +47,11 @@ class SpotFilter extends React.Component {
   };
 
   hideAmenities() {
-
     if ((event.target === 'Amenities')) {
       return null;
     } else if (this.dropdownMenu === null) {
       return null;
     } else if (!this.dropdownMenu.contains(event.target)) {
-
       this.setState({ showAmenities: false }, () => {
         document.removeEventListener('click', this.hideAmenities);
       })
@@ -74,7 +71,7 @@ class SpotFilter extends React.Component {
     if ((event.target === 'Pricing')) {
       return null;
     } else if (this.dropdownMenu === null) {
-     return null;
+      return null;
     } else if (!this.dropdownMenu.contains(event.target)) {
       this.setState({ showPricing: false }, () => {
         document.removeEventListener('click', this.hidePricing);
@@ -130,7 +127,6 @@ class SpotFilter extends React.Component {
     } = this.props;
 
     return e => {
-
       const currentName = e.target.name;
         this.setState({[currentName]: !this.state[currentName]}, () => {
       });
@@ -190,7 +186,6 @@ class SpotFilter extends React.Component {
       filters
     } = this.props;
 
-
     return e => {
       const currentName = e.target.name;
       
@@ -225,16 +220,12 @@ class SpotFilter extends React.Component {
   }
 
   clearFilters() {
-    Object.keys(this.state).map(item => 
-      this.setState({ [item]: false })
-      )
-      this.props.clearAllFilters();
+    Object.keys(this.state).map(item => this.setState({ [item]: false }))
+    this.props.clearAllFilters();
   }
 
   render() {
     const { filters } = this.props;
-
-    //campsite area, essentials, amenities, price, activites
 
     return (
       <div className="spot_filters_header">

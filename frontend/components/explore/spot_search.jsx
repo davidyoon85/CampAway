@@ -13,6 +13,7 @@ class SpotSearch extends React.Component {
         return (
         <div className="spot_search_container">
             <SpotFilterContainer />
+
             <SpotIndex 
                 spots={this.props.spots}
                 fetchAllSpots={this.props.fetchAllSpots}
@@ -20,6 +21,7 @@ class SpotSearch extends React.Component {
                 updateFilter={this.props.updateFilter}
                 updateFilteredSpots={this.props.updateFilteredSpots}
                 />
+
             <SpotMap 
                 spots={this.props.spots}
                 geoLocation={this.props.geoLocation}

@@ -1,12 +1,10 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-
 import ReviewIndex from './review_index';
-
 import { fetchReviews, fetchReview, deleteReview } from '../../actions/review_actions';
 
-const mapStateToProps = (state, ownProps) => {
-  return{
+const mapStateToProps = (state) => {
+  return {
     reviews: state.entities.reviews,
     currentUser: state.session.id
   };

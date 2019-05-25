@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import Search from './search';
 import { receiveGeolocation } from '../../actions/location_filter_actions'
 
-
 const mapStateToProps = state => ({
     spots: state.entities.spots,
     filters: state.ui.filters

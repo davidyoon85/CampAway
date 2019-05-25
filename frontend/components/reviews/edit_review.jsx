@@ -1,7 +1,6 @@
 import React from 'react';
 
 class EditReview extends React.Component {
-
   constructor(props) {
     super(props)
     this.state = this.props.review
@@ -29,7 +28,7 @@ class EditReview extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // this.props.updateReview(this.props.match.params.spotId, this.state).then(() => this.props.history.push(`/spots/${this.props.match.params.spotId}`))
+
     this.props.updateReview(this.props.match.params.spotId, this.state).then(() => this.goBack())  
   }
 

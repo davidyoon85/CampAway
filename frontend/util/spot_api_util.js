@@ -6,15 +6,13 @@ export const fetchAllSpots = () => (
 );
 
 export const fetchSingleSpot = (id) => (
-    $.ajax({
-      method: 'GET',
-      url: `/api/spots/${id}`,
-    })
+  $.ajax({
+    method: 'GET',
+    url: `/api/spots/${id}`,
+  })
 );
 
-export const hostSpot = (formData) => {
-        return(
-
+export const hostSpot = (formData) => (
   $.ajax({
     url: '/api/spots',
     method: 'POST',
@@ -22,8 +20,7 @@ export const hostSpot = (formData) => {
     contentType: false,
     processData: false
   })
-        );
-};
+);
 
 export const deleteSpot = (spotId) => (
   $.ajax({

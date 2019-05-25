@@ -1,5 +1,3 @@
-import { Router } from 'react-router-dom';
-
 class MarkerManager {
     constructor(map) {
         this.map = map;
@@ -8,13 +6,11 @@ class MarkerManager {
     }
 
     clearMarkers() {
-
       Object.keys(this.markers)
         .forEach((spotId) => this.removeMarker(this.markers[spotId]))
     }
 
     removeMarker(marker) {
-
       this.markers[marker.spotId].setMap(null);
       delete this.markers[marker.spotId];
     }
@@ -23,7 +19,6 @@ class MarkerManager {
       const spotsList = {};
       spots.forEach(spot => spotsList[spot.id] = spot);
       spots.filter(spot => !this.markers[spot.id]).forEach(filteredSpot => this.createMarker(filteredSpot, this.handleClick))
-
       Object.keys(this.markers).filter(spotId => !spotsList[spotId]).forEach((spotId) => this.removeMarker(this.markers[spotId]))
     }
 
@@ -32,7 +27,7 @@ class MarkerManager {
         const lng = spot.long;
         const myLatLng = {lat, lng};
         const markerInfoWindow = new google.maps.InfoWindow({
-            content:
+          content:
             `<div class="infowindow">
               <img id="infoWindowImage" src=${spot.photoUrls[0]}>
               <a href="/#/spots/${spot.id}" style="display: flex;">
@@ -42,9 +37,9 @@ class MarkerManager {
                 </div>
               </a>
             </div>`,
-            maxWidth: 300,
-            disableAutoPan : true
-          });
+          maxWidth: 300,
+          disableAutoPan : true
+        });
 
         const icon = {
           url: "https://djqvcbmmgpti5.cloudfront.net/assets/map/hipcamp-pin-acd5fbe15a2cc72f5919e5e86a32872fb43c7dbf03ebee8f3f1868c80123f002.png",
@@ -52,30 +47,29 @@ class MarkerManager {
         }
 
         const marker = new google.maps.Marker({
-            position: myLatLng,
-            map: this.map,
-            spotId: spot.id,
-            clicked: false,
-            icon: icon,
-            infoWindow: markerInfoWindow
+          position: myLatLng,
+          map: this.map,
+          spotId: spot.id,
+          clicked: false,
+          icon: icon,
+          infoWindow: markerInfoWindow
         })
 
         this.markers[marker.spotId] = marker;
 
         marker.addListener('click', () => {
-            const targetSpot = document.getElementById(`spot-${spot.id}`);
-            targetSpot.scrollIntoView({behavior: "smooth", block: "center"});
-            this.map.setCenter(marker.getPosition());
+          const targetSpot = document.getElementById(`spot-${spot.id}`);
+          targetSpot.scrollIntoView({behavior: "smooth", block: "center"});
+          this.map.setCenter(marker.getPosition());
         });
 
         marker.addListener('mouseover', () => {
-            marker.infoWindow.open(this.map, marker);
+          marker.infoWindow.open(this.map, marker);
         });
       
           marker.addListener('mouseout', () => {
-            if (!marker.clicked) marker.infoWindow.close(this.map, marker);
+          if (!marker.clicked) marker.infoWindow.close(this.map, marker);
         });
-      
     }
 }   
 

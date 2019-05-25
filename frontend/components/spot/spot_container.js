@@ -9,6 +9,7 @@ const mapStateToProps = (state, ownProps) => {
   const currentUserId = state.session.id;
   const numReviews = Object.values(state.entities.reviews).length;
   const bookings = Object.values(state.entities.bookings)
+  
   return {
     spot,
     currentUserId,
@@ -17,13 +18,13 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
   
-  const mapDispatchToProps = (dispatch) => ({
-    fetchSpot: id => dispatch(fetchSingleSpot(id)),
-    deleteSpot: (spotId) => dispatch(deleteSpot(spotId)),
-    makeBooking: (booking) => dispatch(makeBooking(booking)),
-    fetchAllBookings: () => dispatch(fetchAllBookings()),
-    openModal: modal => dispatch(openModal(modal))
-  });
+const mapDispatchToProps = (dispatch) => ({
+  fetchSpot: id => dispatch(fetchSingleSpot(id)),
+  deleteSpot: (spotId) => dispatch(deleteSpot(spotId)),
+  makeBooking: (booking) => dispatch(makeBooking(booking)),
+  fetchAllBookings: () => dispatch(fetchAllBookings()),
+  openModal: modal => dispatch(openModal(modal))
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Spot);
 

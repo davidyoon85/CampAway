@@ -36,8 +36,7 @@ export const receiveReviews = reviews => ({
   export const createReview = (spotId, review) => dispatch => (
     APIUtil.createReview(spotId, review).then(review => (
       dispatch(receiveReview(review))
-    )
-    )
+    ))
   );
 
   export const updateReview = (listingId, review) => dispatch => (

@@ -7,6 +7,7 @@ class Search extends React.Component {
     this.state = {
       searchParams: '',
     };
+    
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
   }

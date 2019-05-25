@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-
 import { makeBooking, deleteBooking, fetchAllBookings} from '../../actions/booking_actions';
 import { fetchSingleSpot } from '../../actions/spot_actions';
 import { openModal } from '../../actions/modal_actions';
@@ -7,13 +6,15 @@ import Booking from './booking';
 
 const mapStateToProps = (state, ownProps) => {
   const spot = state.entities.spots[ownProps.spotId] || {};
+  
   return {
-  bookings: state.entities.bookings,
-  currentUserId: state.session.id,
-  spots: state.entities.spots,
-  spot,
-  errors: state.errors.bookings
-}};
+    bookings: state.entities.bookings,
+    currentUserId: state.session.id,
+    spots: state.entities.spots,
+    spot,
+    errors: state.errors.bookings
+  }
+};
 
 const mapDispatchToProps = dispatch => {
   return {

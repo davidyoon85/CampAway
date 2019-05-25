@@ -23,15 +23,14 @@ class ReviewIndex extends React.Component {
           review={review}
           deleteReview={this.props.deleteReview}
           currentUser={this.props.currentUser}
-
-          />
+        />
       )
     })
 
     return (
-        <ul className="reviews_container">
-          {reviews}
-        </ul>
+      <ul className="reviews_container">
+        {reviews}
+      </ul>
     );
   }
 }

@@ -1,10 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import {
-    geocodeByAddress,
-    getLatLng,
-  } from 'react-places-autocomplete';
+import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 
 class MasterForm extends React.Component {
     constructor(props) {
@@ -35,21 +32,19 @@ class MasterForm extends React.Component {
             photoUrl: [],
             address: ''
         };
+
         this.handleChange = this.handleChange.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
     }
 
-
     handleFile(event) {
-        
         const reader = new FileReader();
         const file = event.currentTarget.files[0];
         reader.onloadend = () => this.setState(
-            { photoUrl: this.state.photoUrl.concat([reader.result]), photoFile: this.state.photoFile.concat([file])}
+            { photoUrl: this.state.photoUrl.concat([reader.result]), photoFile: this.state.photoFile.concat([file]) }
             );
-
         if (file) {
             reader.readAsDataURL(file);
         } else {
@@ -63,11 +58,10 @@ class MasterForm extends React.Component {
             this.setState({
                 [name]: value
             });
-                geocodeByAddress(value)
-                    .then(results => getLatLng(results[0]))
-                    .then(({ lat, lng }) =>
-                        this.setState({lat: lat, long: lng})
-                        
+            geocodeByAddress(value)
+                .then(results => getLatLng(results[0]))
+                .then(({ lat, lng }) =>
+                    this.setState({lat: lat, long: lng})   
                 );
         } else {
             this.setState({
@@ -78,15 +72,12 @@ class MasterForm extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-
         const formData = new FormData();
 
-        formData.append('spot[title]', this.state.title);
-        
         for (let i = 0; i < this.state.photos.length; i++) {
             formData.append('spot[photos][]', this.state.photos[i]);
         }
-
+        formData.append('spot[title]', this.state.title);
         formData.append('spot[host_id]', this.props.user.id);
         formData.append('spot[body]', this.state.body);
         formData.append('spot[price]', this.state.price);
@@ -115,8 +106,7 @@ class MasterForm extends React.Component {
     handleClick(event) {
         event.preventDefault();
         const currentName = event.target.name;
-        this.setState({[currentName]: !this.state[currentName]}, () => {
-        });
+        this.setState({[currentName]: !this.state[currentName]});
     }
 
     _next() {
@@ -142,7 +132,6 @@ class MasterForm extends React.Component {
     }
 
     previousButton() {
-
         if (this.state.currentStep !== 1) {
             return (
                 <button
@@ -183,9 +172,6 @@ class MasterForm extends React.Component {
     }
 
     render() {
-        if (this.state.photos) {
-        
-        }
         let preview = null;
         if (this.state.photoUrl.length > 0) {
             preview = this.state.photoUrl.map((photo, idx) => {
@@ -195,200 +181,193 @@ class MasterForm extends React.Component {
 
         let step;
 
-            if (this.state.currentStep === 1) {
-                step = 
+        if (this.state.currentStep === 1) {
+            step = 
+            <>
+                <div className="form-group">
+                    <label className="form_group_title">Name Your Spot</label>
+                    <input
+                        className="form-control"
+                        id="title"
+                        name="title"
+                        type="text"
+                        onChange={this.handleChange}
+                        required
+                    />
+                </div>
+
+                <div className="form-group">
+                    <label className="form_group_title">Describe Your Spot</label>
+                    <textarea
+                        className="form_control_description"
+                        id="body"
+                        name="body"
+                        type="text"
+                        onChange={this.handleChange}
+                        maxLength="500"
+                        cols='20'
+                        rows='10'
+                        required
+                    />
+                </div>
+            </>
+        } else if (this.state.currentStep === 2) {
+            step = 
+            <>    
+                <div className="form-group">
+                    <label className="form_group_title">Daily Price</label>
+                    <input
+                        className="form-control"
+                        id="price"
+                        name="price"
+                        type="number"
+                        onChange={this.handleChange}
+                        required
+                    />
+                </div>
+                <div className="form-group">
+                    <label className="form_group_title">Sites Available</label>
+                    <input
+                        className="form-control"
+                        id="sites"
+                        name="sites"
+                        type="number"
+                        onChange={this.handleChange}
+                        required
+                    />
+                </div>
+                <div className="form-group">
+                    <label className="form_group_title">Max Group Size</label>
+                    <input
+                        className="form-control"
+                        id="group_size"
+                        name="group_size"
+                        type="number"
+                        onChange={this.handleChange}
+                        required
+                    />
+                </div>
+                <div className="form-group">
+                    <label className="form_group_title">Check In Time</label>
+                    <input
+                        className="form-control"
+                        list="check_in"
+                        id="check_in"
+                        name="check_in"
+                        type="time"
+                        onChange={this.handleChange}
+                        required
+                    />
+                </div>
+                <div className="form-group">
+                    <label className="form_group_title">Check Out Time</label>
+                    <input
+                        className="form-control"
+                        list="check_out"
+                        id="check_out"
+                        name="check_out"
+                        type="time"
+                        onChange={this.handleChange}
+                        required
+                    />
+                </div>
+                <div className="form-group">
+                    <label className="form_group_title">Address</label>
+                    <input
+                        className="form-control"
+                        id="address"
+                        name="address"
+                        type="text"
+                        onChange={this.handleChange}
+                        required
+                    />
+                </div>
+            </>
+        } else {
+            step = <React.Fragment>
                 <>
-                    <div className="form-group">
-                        <label className="form_group_title">Name Your Spot</label>
-                        <input
-                            className="form-control"
-                            id="title"
-                            name="title"
-                            type="text"
-                            onChange={this.handleChange}
-                            required
-                        />
-                    </div>
+                <div className="host_options_title">
+                    Choose Camp Features!
+                </div>
+                <div className="create_spot_form">
+                        <div className="host_option_main">
 
-                    <div className="form-group">
-                        <label className="form_group_title">Describe Your Spot</label>
-                        <textarea
-                            className="form_control_description"
-                            id="body"
-                            name="body"
-                            type="text"
-                            onChange={this.handleChange}
-                            maxLength="500"
-                            cols='20'
-                            rows='10'
-                            required
-                        />
-                    </div>
-                </>
-            } else if (this.state.currentStep === 2) {
-                step = 
-                <>    
-                    <div className="form-group">
-                        <label className="form_group_title">Daily Price</label>
-                        <input
-                            className="form-control"
-                            id="price"
-                            name="price"
-                            type="number"
-                            // placeholder="100"
-                            onChange={this.handleChange}
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label className="form_group_title">Sites Available</label>
-                        <input
-                            className="form-control"
-                            id="sites"
-                            name="sites"
-                            type="number"
-                            // placeholder="1"
-                            onChange={this.handleChange}
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label className="form_group_title">Max Group Size</label>
-                        <input
-                            className="form-control"
-                            id="group_size"
-                            name="group_size"
-                            type="number"
-                            // placeholder="4"
-                            onChange={this.handleChange}
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label className="form_group_title">Check In Time</label>
-                        <input
-                            className="form-control"
-                            list="check_in"
-                            id="check_in"
-                            name="check_in"
-                            type="time"
-                            // placeholder="2 PM"
-                            onChange={this.handleChange}
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label className="form_group_title">Check Out Time</label>
-                        <input
-                            className="form-control"
-                            list="check_out"
-                            id="check_out"
-                            name="check_out"
-                            type="time"
-                            // placeholder="11 AM"
-                            onChange={this.handleChange}
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label className="form_group_title">Address</label>
-                        <input
-                            className="form-control"
-                            id="address"
-                            name="address"
-                            type="text"
-                            // placeholder="New York"
-                            onChange={this.handleChange}
-                            required
-                        />
-                    </div>
-                </>
-            } else {
-
-                step = <React.Fragment>
-                    <>
-                    <div className="host_options_title">
-                        Choose Camp Features!
-                    </div>
-                    <div className="create_spot_form">
-                         <div className="host_option_main">
-
-                            <div className="form-group-options">
-                                <input type="image" src="https://image.flaticon.com/icons/svg/71/71702.svg"
-                                    className={this.state.pets_allow ? 'active_button' : 'host_spot_options'}
-                                    name="pets_allow"
-                                    onClick={this.handleClick}
-                                />
-                            </div>
-                            <div className="form-group-options">
-                                <input type="image" src="https://image.flaticon.com/icons/svg/1535/1535413.svg"
-                                    className={this.state.campfire ? 'active_button' : 'host_spot_options'}
-                                    name="campfire"
-                                    onClick={this.handleClick}
-                                />
-                            </div>
-                            <div className="form-group-options">
-                                <input type="image" src="https://image.flaticon.com/icons/svg/1535/1535412.svg"
-                                    className={this.state.tent ? 'active_button' : 'host_spot_options'}
-                                    name="tent"
-                                    onClick={this.handleClick}
-                                />
-                            </div>
-                            <div className="form-group-options">
-                                <input type="image" src="https://image.flaticon.com/icons/svg/818/818383.svg"
-                                    className={this.state.parking ? 'active_button' : 'host_spot_options'}
-                                    name="parking"
-                                    onClick={this.handleClick}
-                                />
-                            </div>
-                            <div className="form-group-options">
-                                <input type="image" src="https://image.flaticon.com/icons/svg/93/93156.svg"
-                                    className={this.state.toilet ? 'active_button' : 'host_spot_options'}
-                                    name="toilet"
-                                    onClick={this.handleClick}
-                                />
-                            </div>
-                            <div className="form-group-options">
-                                <input type="image" src="https://image.flaticon.com/icons/svg/1536/1536456.svg"
-                                    className={this.state.shower ? 'active_button' : 'host_spot_options'}
-                                    name="shower"
-                                    onClick={this.handleClick}
-                                />
-                            </div>
-                            <div className="form-group-options">
-                                <input type="image" src="https://image.flaticon.com/icons/svg/71/71423.svg"
-                                    className={this.state.hiking ? 'active_button' : 'host_spot_options'}
-                                    name="hiking"
-                                    onClick={this.handleClick}
-                                />
-                            </div>
-                            <div className="form-group-options">
-                                <input type="image" src="https://image.flaticon.com/icons/svg/565/565350.svg" 
-                                    className={this.state.biking ? 'active_button' : 'host_spot_options'}
-                                    name="biking"
-                                    onClick={this.handleClick}
-                                />
-                            </div>
-                            <div className="form-group-options">
-                                <input type="image" src="https://image.flaticon.com/icons/svg/38/38607.svg"
-                                    className={this.state.paddling ? 'active_button' : 'host_spot_options'}
-                                    name="paddling"
-                                    onClick={this.handleClick}
-                                />               
-                            </div>
-                        </div>                 
-                    </div>
-                </>
-                    <input type="file" onChange={(e) => this.setState({ photos: e.target.files })} multiple required/>
-                    
-                    { preview }
-                            
-                    <div className="form_signup">
-                        <input type="submit" className="form_signup_button" value="Create Spot" />
-                    </div>
-                    
-                </React.Fragment>
-}
+                        <div className="form-group-options">
+                            <input type="image" src="https://image.flaticon.com/icons/svg/71/71702.svg"
+                                className={this.state.pets_allow ? 'active_button' : 'host_spot_options'}
+                                name="pets_allow"
+                                onClick={this.handleClick}
+                            />
+                        </div>
+                        <div className="form-group-options">
+                            <input type="image" src="https://image.flaticon.com/icons/svg/1535/1535413.svg"
+                                className={this.state.campfire ? 'active_button' : 'host_spot_options'}
+                                name="campfire"
+                                onClick={this.handleClick}
+                            />
+                        </div>
+                        <div className="form-group-options">
+                            <input type="image" src="https://image.flaticon.com/icons/svg/1535/1535412.svg"
+                                className={this.state.tent ? 'active_button' : 'host_spot_options'}
+                                name="tent"
+                                onClick={this.handleClick}
+                            />
+                        </div>
+                        <div className="form-group-options">
+                            <input type="image" src="https://image.flaticon.com/icons/svg/818/818383.svg"
+                                className={this.state.parking ? 'active_button' : 'host_spot_options'}
+                                name="parking"
+                                onClick={this.handleClick}
+                            />
+                        </div>
+                        <div className="form-group-options">
+                            <input type="image" src="https://image.flaticon.com/icons/svg/93/93156.svg"
+                                className={this.state.toilet ? 'active_button' : 'host_spot_options'}
+                                name="toilet"
+                                onClick={this.handleClick}
+                            />
+                        </div>
+                        <div className="form-group-options">
+                            <input type="image" src="https://image.flaticon.com/icons/svg/1536/1536456.svg"
+                                className={this.state.shower ? 'active_button' : 'host_spot_options'}
+                                name="shower"
+                                onClick={this.handleClick}
+                            />
+                        </div>
+                        <div className="form-group-options">
+                            <input type="image" src="https://image.flaticon.com/icons/svg/71/71423.svg"
+                                className={this.state.hiking ? 'active_button' : 'host_spot_options'}
+                                name="hiking"
+                                onClick={this.handleClick}
+                            />
+                        </div>
+                        <div className="form-group-options">
+                            <input type="image" src="https://image.flaticon.com/icons/svg/565/565350.svg" 
+                                className={this.state.biking ? 'active_button' : 'host_spot_options'}
+                                name="biking"
+                                onClick={this.handleClick}
+                            />
+                        </div>
+                        <div className="form-group-options">
+                            <input type="image" src="https://image.flaticon.com/icons/svg/38/38607.svg"
+                                className={this.state.paddling ? 'active_button' : 'host_spot_options'}
+                                name="paddling"
+                                onClick={this.handleClick}
+                            />               
+                        </div>
+                    </div>                 
+                </div>
+            </>
+                <input type="file" onChange={(e) => this.setState({ photos: e.target.files })} multiple required/>
+                
+                { preview }
+                        
+                <div className="form_signup">
+                    <input type="submit" className="form_signup_button" value="Create Spot" />
+                </div>
+                
+            </React.Fragment>
+        }
 
         return (
             <div className="spot_form_main">
@@ -399,7 +378,6 @@ class MasterForm extends React.Component {
                             {this.previousButton()}
                             {this.nextButton()}
                         </div>
-
                     </form>
                 </React.Fragment>
             </div>

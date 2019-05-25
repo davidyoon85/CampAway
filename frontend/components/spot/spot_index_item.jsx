@@ -17,27 +17,27 @@ class SpotIndexItem extends React.Component {
         if (!this.props.spot.photoUrls) {
             this.props.spot.photoUrls = defaultPhoto;
         }
+
         return (
             <div className="spot_index_item" id={`spot-${this.props.spot.id}`} onClick={this.handleClick}>
-                    <Link className="spot_index_item_link" to={`/spots/${this.props.spot.id}`}>
-                        <img className="spot_index_photo" src={this.props.spot.photoUrls[0]}/>
-                        <div className="spot_details">
-                            <div className="spot_details_title">
-                                {this.props.spot.title}
-                            </div>
-                            <div className="spot_details_body">
-                                {this.props.spot.body}
-                            </div>
-                            <div className="spot_details_price">
-                                <div className="spot_details_reviews">{this.props.spot.reviews.length} reviews</div>
-                                <div>${this.props.spot.price}/night</div>
-                            </div>
+                <Link className="spot_index_item_link" to={`/spots/${this.props.spot.id}`}>
+                    <img className="spot_index_photo" src={this.props.spot.photoUrls[0]}/>
+                    <div className="spot_details">
+                        <div className="spot_details_title">
+                            {this.props.spot.title}
                         </div>
-                    </Link>
+                        <div className="spot_details_body">
+                            {this.props.spot.body}
+                        </div>
+                        <div className="spot_details_price">
+                            <div className="spot_details_reviews">{this.props.spot.reviews.length} reviews</div>
+                            <div>${this.props.spot.price}/night</div>
+                        </div>
+                    </div>
+                </Link>
             </div>
         )    
     }
 };
-
 
 export default SpotIndexItem;

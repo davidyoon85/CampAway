@@ -1,4 +1,3 @@
-import * as APIUtil from '../actions/spot_actions';
 import { fetchAllSpots } from './spot_actions';
 
 export const UPDATE_FILTER = 'UPDATE_FILTER';

@@ -9,7 +9,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
     return {
-    hostSpot: (spot) => dispatch(hostSpot(spot))
+        hostSpot: (spot) => dispatch(hostSpot(spot))
     };
 };
 

@@ -24,9 +24,7 @@ function Modal ({modal, closeModal}) {
       return null;
   }
  
-  //add condition if login or signup else if dropdown menu then mouseover to close Modal
   if (modal === ('login')) {
-
     return (
       <div className="modal-background" onClick={closeModal}>
         <div className="modal-child" onClick={e => e.stopPropagation()}>
@@ -35,7 +33,6 @@ function Modal ({modal, closeModal}) {
       </div>
     );
   } else if (modal === ('signup')) {
-
     return (
       <div className="modal-background" onClick={closeModal}>
         <div className="modal-child" onClick={e => e.stopPropagation()}>
@@ -44,13 +41,12 @@ function Modal ({modal, closeModal}) {
       </div>
     );
   } else {
-
     return (
       <div className="dropdown_modal-background" onClick={closeModal}>
-      <div className="dropdown_modal-child" onClick={e => e.stopPropagation()}>
-        { component }
+        <div className="dropdown_modal-child" onClick={e => e.stopPropagation()}>
+          { component }
+        </div>
       </div>
-    </div>
   )}
 }
 

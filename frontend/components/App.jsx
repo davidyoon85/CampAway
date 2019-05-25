@@ -9,11 +9,8 @@ import SpotSearchContainer from './explore/spot_search_container';
 import CreateReviewContainer from './reviews/create_review_container';
 import EditReviewContainer from './reviews/edit_review_container';
 import UserProfileContainer from './user/user_profile_container';
-// import BookingContainer from './booking/booking_container';
-
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faIgloo } from '@fortawesome/free-solid-svg-icons';
-// import MasterForm from './spot/spot_form_container';
 
 library.add(faIgloo);
 

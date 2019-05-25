@@ -4,7 +4,6 @@ export const RECEIVE_SINGLE_SPOT = 'RECEIVE_SINGLE_SPOT';
 export const RECEIVE_ALL_SPOTS = 'RECEIVE_ALL_SPOTS';
 export const CREATE_SPOT = 'CREATE_SPOT';
 export const DESTROY_SPOT = 'DESTROY_SPOT';
-
 export const RECEIVE_SPOTS_ERRORS = 'RECEIVE_SPOTS_ERRORS';
 
 export const fetchSingleSpot = (id) => dispatch => (

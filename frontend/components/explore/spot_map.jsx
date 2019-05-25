@@ -13,14 +13,11 @@ class SpotMap extends React.Component {
         super(props);
 
         this.geoCoder = new google.maps.Geocoder();
-        // this.retrieveBounds = this.retrieveBounds.bind(this);
         this.centerMapOnSearch = this.centerMapOnSearch.bind(this);
         this.getCenter = this.getCenter.bind(this);
     }
 
     componentDidMount() {
-        // fetchAllSpots();
-
         let geoLocation = this.props.geoLocation;
         this.map = new google.maps.Map(this.mapNode, mapOptions);
         this.MarkerManager = new MarkerManager(this.map);   
@@ -57,47 +54,44 @@ class SpotMap extends React.Component {
         });
       }
 
-      getCenter (callBack) {
-        const geolocation = this.props.geoLocation;
-        let centerCoords;
-        this.geoCoder.geocode({ 'address': geolocation }, function (results, status) {
-          if (status === "OK") {
-            if (results[0]) {
-              let lat = results[0].geometry.location.lat();
-              let lng = results[0].geometry.location.lng();
-              centerCoords = { lat, lng }
-              callBack(centerCoords);
-            } else {
-              centerCoords = { lat: 37.865101, lng: -119.538329 };
-              callBack(centerCoords);
-            }
+    getCenter (callBack) {
+      const geolocation = this.props.geoLocation;
+      let centerCoords;
+      this.geoCoder.geocode({ 'address': geolocation }, function (results, status) {
+        if (status === "OK") {
+          if (results[0]) {
+            let lat = results[0].geometry.location.lat();
+            let lng = results[0].geometry.location.lng();
+            centerCoords = { lat, lng }
+            callBack(centerCoords);
+          } else {
+            centerCoords = { lat: 37.865101, lng: -119.538329 };
+            callBack(centerCoords);
           }
-        });
-      }
-
-    componentDidUpdate() {
-
-      this.filteredSpots = applyFilters(this.props.filters, this.props.spots);
-      this.MarkerManager.updateMarkers(this.filteredSpots);
-
-      if (this.props.geoLocation.length > 0) this.centerMapOnSearch();
+        }
+      });
     }
 
-    render () {
+  componentDidUpdate() {
+    this.filteredSpots = applyFilters(this.props.filters, this.props.spots);
+    this.MarkerManager.updateMarkers(this.filteredSpots);
+    if (this.props.geoLocation.length > 0) this.centerMapOnSearch();
+  }
 
-      const { spots } = this.props;
+  render () {
+    const { spots } = this.props;
 
-      if (Object.keys(spots) === 0 ) {
-        return ( <div> </div> );
-      }
-
-      return (
-      <div id='map-container'>
-          <div className="map" ref={ map => this.mapNode = map }>
-          </div>
-      </div>
-      )
+    if (Object.keys(spots) === 0 ) {
+      return ( <div> </div> );
     }
+
+    return (
+    <div id='map-container'>
+        <div className="map" ref={ map => this.mapNode = map }>
+        </div>
+    </div>
+    )
+  }
 }
 
 export default SpotMap;
