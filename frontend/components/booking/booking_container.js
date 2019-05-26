@@ -6,7 +6,6 @@ import Booking from './booking';
 
 const mapStateToProps = (state, ownProps) => {
   const spot = state.entities.spots[ownProps.spotId] || {};
-  
   return {
     bookings: state.entities.bookings,
     currentUserId: state.session.id,

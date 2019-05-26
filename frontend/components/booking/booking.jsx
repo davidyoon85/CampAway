@@ -25,18 +25,17 @@ class Booking extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
     if (!this.props.currentUserId) {
       this.props.openModal('login')
     } else {
       const checkInDate = this.state.check_in;
       const checkOutDate = this.state.check_out;
       const num_days = moment(checkOutDate).diff(checkInDate, 'days');
-        this.state.total_price *= num_days
       const booking = Object.assign({}, this.state);
-        booking.guest_id = this.props.currentUserId;
-        booking.spot_id = this.props.match.params.spotId;
-
+      booking.guest_id = this.props.currentUserId;
+      booking.spot_id = this.props.match.params.spotId;
+      this.state.total_price *= num_days
+      
       this.props.makeBooking(booking)
         .then(() => this.props.fetchAllBookings())
         .then(() => this.props.history.push(`/users/${this.props.currentUserId}`));
@@ -70,7 +69,7 @@ class Booking extends React.Component {
       return (
         <ul className="booking-errors">
         {this.props.errors.map((error, idx) => (
-          <li key={`error-${idx}`} className="signin-error">
+          <li key={`error-${idx}`} className="bookings_error">
             {error}
           </li>
         ))}

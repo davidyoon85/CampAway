@@ -22,18 +22,16 @@ class Api::BookingsController < ApplicationController
       if @booking.save
         render "api/bookings/show"
       else
-        render json: ["Please fill out all fields."], status: 422
+        render json: ["Please choose check-in and check-out dates."], status: 422
       end
     end
   
     def destroy
       @booking = Booking.find(params[:id])
       @booking.destroy
-  
       render :show
     end
   
-    private
     def booking_params
       params.require(:booking).permit(:guest_id, :spot_id, :check_in, :check_out, :num_guests, :total_price)
     end

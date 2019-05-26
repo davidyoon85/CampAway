@@ -78,6 +78,7 @@ class Splash extends React.Component {
                         <div className="index_section" onClick={this.handleClick(1)}>
                             <img src="https://s3.amazonaws.com/camp-away-dev/spot2_0.jpg" />
                             <div className="index_section_container">   
+                                <h3 className="index_section_header">Oh! Pear Orchards</h3>
                                 <div className="index_section_subheader">
                                     New York
                                 </div>
