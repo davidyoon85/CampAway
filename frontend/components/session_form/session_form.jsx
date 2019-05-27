@@ -60,8 +60,8 @@ class SessionForm extends React.Component {
             return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">             
-                <big className="title">Welcome back!</big>
-                <big className="subtitle">It's about time for another camping trip</big>
+                <p className="title">Welcome back!</p>
+                <p className="subtitle">It's about time for another camping trip</p>
 
                 <div onClick={this.props.closeModal} className="close-x"></div>
                 
@@ -116,11 +116,10 @@ class SessionForm extends React.Component {
             return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    <big className="title">Join CampAway</big>
-                    <big className="subtitle">Discover the best camping near me</big>
+                    <p className="title">Join CampAway</p>
+                    <p className="subtitle">Discover the best camping near me</p>
 
                 <div onClick={this.props.closeModal} className="close-x"></div>
-                {/* {this.renderErrors()} */}
                 <div className="login-form">
 
                 <div className="modal_table">
