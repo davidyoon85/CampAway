@@ -44,7 +44,3 @@ export const changeFilter = (filter, value) => ({
   filter,
   value
 });
-
-export const updateFilterValue = filter => dispatch => {
-  dispatch(changeSiteFilter(filter))
-}

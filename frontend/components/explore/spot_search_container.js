@@ -2,11 +2,11 @@ import { connect } from 'react-redux';
 import SpotSearch from './spot_search';
 import { fetchAllSpots, updateFilteredSpots } from '../../actions/spot_actions';
 import { selectSpots } from '../../reducers/selectors';
-import { receiveGeolocation } from '../../actions/location_filter_actions';
-import { updateFilter } from './../../actions/location_filter_actions';
+import { updateFilter, receiveGeolocation } from '../../actions/location_filter_actions';
+import { clearFilters } from '../../actions/filter_actions';
 
 const mapStateToProps = (state) => ({
-    spots: selectSpots(state),
+    spots: Object.values(state.entities.spots),
     geoLocation: state.ui.geoLocation["address"],
     filters: state.ui.filters
 });
@@ -16,6 +16,7 @@ const mapDispatchToProps = (dispatch) => ({
     receiveGeolocation: (loc) => dispatch(receiveGeolocation(loc)),
     updateFilter: (filter, value) => dispatch(updateFilter(filter, value)),
     updateFilteredSpots: (filteredSpots) => dispatch(updateFilteredSpots(filteredSpots)),
+    clearFilters: () => dispatch(clearFilters())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SpotSearch);

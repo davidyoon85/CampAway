@@ -9,12 +9,15 @@ class SpotMap extends React.Component {
 
       this.geoCoder = new google.maps.Geocoder();
       this.centerMapOnSearch = this.centerMapOnSearch.bind(this);
-      this.centerMap= this.centerMap.bind(this);
+      this.centerMap = this.centerMap.bind(this);
+      this.registerListeners = this.registerListeners.bind(this);
     }
 
     componentDidMount() {
+      fetchAllSpots();
+      let mapCenter = { lat: 40.751626, lng: -73.983926 };
       const mapOptions = {
-        center : { lat: 40.751626, lng: -73.983926 },
+        center : mapCenter,
         zoom: 11
       };
       let geoLocation = this.props.geoLocation;
@@ -48,7 +51,6 @@ class SpotMap extends React.Component {
               this.map.fitBounds(newBounds);
               this.props.receiveGeolocation("");
             } else {
-              debugger
               return { lat: 40.751626, lng: -73.983926 };
            }}
         });

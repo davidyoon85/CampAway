@@ -48,7 +48,6 @@ const filtersReducer = (state = defaultFilters, action) => {
       newState = merge({}, state, { group_size: 1 })
       return newState;
     case UPDATE_FILTER:
-      debugger
       const newFilter = { [action.filter]: action.value }
       return merge({}, state, newFilter)
     case CLEAR_ALL_FILTERS:
