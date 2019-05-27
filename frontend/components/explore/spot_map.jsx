@@ -3,26 +3,25 @@ import MarkerManager from '../../util/marker_manager';
 import { fetchAllSpots } from '../../actions/spot_actions';
 import { applyFilters } from '../../util/filter_util';
     
-const mapOptions = {
-  center : { lat: 40.751626, lng: -73.983926 },
-  zoom: 11
-};
-
 class SpotMap extends React.Component {
     constructor(props) {
-        super(props);
+      super(props);
 
-        this.geoCoder = new google.maps.Geocoder();
-        this.centerMapOnSearch = this.centerMapOnSearch.bind(this);
-        this.getCenter = this.getCenter.bind(this);
+      this.geoCoder = new google.maps.Geocoder();
+      this.centerMapOnSearch = this.centerMapOnSearch.bind(this);
+      this.centerMap= this.centerMap.bind(this);
     }
 
     componentDidMount() {
-        let geoLocation = this.props.geoLocation;
-        this.map = new google.maps.Map(this.mapNode, mapOptions);
-        this.MarkerManager = new MarkerManager(this.map);   
-        this.MarkerManager.updateMarkers(this.props.spots); 
-        this.registerListeners();
+      const mapOptions = {
+        center : { lat: 40.751626, lng: -73.983926 },
+        zoom: 11
+      };
+      let geoLocation = this.props.geoLocation;
+      this.map = new google.maps.Map(this.mapNode, mapOptions);
+      this.MarkerManager = new MarkerManager(this.map);   
+      this.MarkerManager.updateMarkers(this.props.spots); 
+      this.registerListeners();
     }
 
     registerListeners() {
@@ -49,24 +48,23 @@ class SpotMap extends React.Component {
               this.map.fitBounds(newBounds);
               this.props.receiveGeolocation("");
             } else {
+              debugger
               return { lat: 40.751626, lng: -73.983926 };
            }}
         });
       }
 
-    getCenter (callBack) {
+    centerMap() {
       const geolocation = this.props.geoLocation;
-      let centerCoords;
+      let mapCenter;
       this.geoCoder.geocode({ 'address': geolocation }, function (results, status) {
         if (status === "OK") {
           if (results[0]) {
             let lat = results[0].geometry.location.lat();
             let lng = results[0].geometry.location.lng();
-            centerCoords = { lat, lng }
-            callBack(centerCoords);
+            mapCenter = { lat, lng }
           } else {
-            centerCoords = { lat: 37.865101, lng: -119.538329 };
-            callBack(centerCoords);
+            mapCenter = { lat: 40.751626, lng: -73.983926 };
           }
         }
       });
@@ -79,12 +77,6 @@ class SpotMap extends React.Component {
   }
 
   render () {
-    const { spots } = this.props;
-
-    if (Object.keys(spots) === 0 ) {
-      return ( <div> </div> );
-    }
-
     return (
     <div id='map-container'>
         <div className="map" ref={ map => this.mapNode = map }>
