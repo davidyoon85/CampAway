@@ -9,7 +9,7 @@ class SpotMap extends React.Component {
 
       this.geoCoder = new google.maps.Geocoder();
       this.centerMapOnSearch = this.centerMapOnSearch.bind(this);
-      // this.centerMap = this.centerMap.bind(this);
+      this.centerMap = this.centerMap.bind(this);
       this.registerListeners = this.registerListeners.bind(this);
     }
 
@@ -20,7 +20,7 @@ class SpotMap extends React.Component {
         center : mapCenter,
         zoom: 11
       };
-      // let geoLocation = this.props.geoLocation;
+      let geoLocation = this.props.geoLocation;
       this.map = new google.maps.Map(this.mapNode, mapOptions);
       this.MarkerManager = new MarkerManager(this.map);   
       this.MarkerManager.updateMarkers(this.props.spots); 
@@ -40,37 +40,43 @@ class SpotMap extends React.Component {
     }
 
     centerMapOnSearch() {
+      debugger
         this.geoCoder.geocode({ 'address': this.props.geoLocation}, (results, status) => {
           if (status === "OK") {
             if (results[0]) {
-              this.map.setZoom(12);
+              this.map.setZoom(11);
               let center = results[0].geometry.location;
               this.map.setCenter(center);
               const newBounds = this.map.getBounds();
               this.map.fitBounds(newBounds);
+              this.props.receiveGeolocation(center);
             } else {
               return { lat: 40.751626, lng: -73.983926 };
            }}
         });
       }
 
-    centerMap() {
-      let geolocation = this.props.geoLocation;
-      this.geoCoder.geocode({ 'address': geolocation }, (results, status) => {
+    centerMap(callBack) {
+      // let geolocation = this.props.geoLocation;
+      let mapCenter;
+      this.geoCoder.geocode({ 'address': this.props.geoLocation }, (results, status) => {
         if (status === "OK") {
           if (results[0]) {
             let lat = results[0].geometry.location.lat();
             let lng = results[0].geometry.location.lng();
             mapCenter = { lat, lng }
+            callBack(mapCenter)
           } else {
             mapCenter = { lat: 40.751626, lng: -73.983926 };
+            callBack(mapCenter)
           }
         }
       });
     }
 
   componentDidUpdate() {
-    this.MarkerManager.updateMarkers(this.props.spots);
+    const filteredSpots = applyFilters(this.props.filters, this.props.spots)
+    this.MarkerManager.updateMarkers(filteredSpots);
     if (this.props.geoLocation.length > 0) this.centerMapOnSearch();
   }
 
