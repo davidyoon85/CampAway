@@ -64,7 +64,7 @@ class UserProfile extends React.Component {
                                     CampAwayer since {moment(this.props.currentUser.created_at).format("MMMM YYYY")}
                                 <br/>
                                 <span id="marker_icon" className="fas fa-map-pin"></span>
-                                    rom {this.state.city + ', ' + this.state.state}
+                                    From {this.state.city + ', ' + this.state.state}
                             </div> 
                             <div className="panel_body">
                                 <h3 id="panel_body_header">Trusted Campawayer</h3>
@@ -102,7 +102,7 @@ class UserProfile extends React.Component {
                                 <h3 id="panel_body_header">Trusted Campawayer</h3>
                                 <br />
                                 <span id="email_icon" className="far fa-check-circle"></span>
-                                    mail address
+                                    Email address
                                 <br />
                                 <span id="facebook_icon" className="far fa-check-circle"></span>
                                     Facebook
@@ -162,7 +162,7 @@ class UserProfile extends React.Component {
                                         Email address
                                     <br />
                                     <span id="facebook_icon" className="far fa-check-circle"></span>
-                                        acebook
+                                        Facebook
                                 </div>
                             </div>
 

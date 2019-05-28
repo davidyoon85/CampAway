@@ -19,7 +19,7 @@ class SpotSearch extends React.Component {
                 fetchAllSpots={this.props.fetchAllSpots}
                 filters={this.props.filters}
                 updateFilter={this.props.updateFilter}
-                clearFilters={this.props.clearFilters}
+                clearAllFilters={this.props.clearAllFilters}
                 />
 
             <SpotMap 
