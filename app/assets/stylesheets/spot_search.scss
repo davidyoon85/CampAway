@@ -209,6 +209,11 @@
         min-width: 0;
     }
 
+    .spot_search_main {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     .map {
         bottom: 10px;
         width: 100%;
@@ -219,6 +224,12 @@
     .spot_filter_section {
         height: 45px;
         font-size: .6em;
+    }
+
+    .spot_filter_item > button {
+        height: 45px;
+        font-size: .4em;
+        padding: 5px;
     }
 
     .spot_index {
@@ -241,14 +252,6 @@
 
     .spot_details {
         height: 30%;
-    }
-}
-
-@media (max-width:629px) {
-    .spot_filter_item > button {
-        height: 45px;
-        font-size: .4em;
-        padding: 5px;
     }
 }
 

@@ -14,6 +14,7 @@ class SpotSearch extends React.Component {
         <div className="spot_search_container">
             <SpotFilterContainer />
 
+            <div className="spot_search_main">
             <SpotIndex 
                 spots={this.props.spots}
                 fetchAllSpots={this.props.fetchAllSpots}
@@ -29,6 +30,7 @@ class SpotSearch extends React.Component {
                 updateFilter={this.props.updateFilter}
                 receiveGeolocation={this.props.receiveGeolocation}
             />
+            </div>
         </div>
         )
     }
