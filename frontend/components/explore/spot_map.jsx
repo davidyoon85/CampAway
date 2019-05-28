@@ -40,16 +40,15 @@ class SpotMap extends React.Component {
     }
 
     centerMapOnSearch() {
-      debugger
         this.geoCoder.geocode({ 'address': this.props.geoLocation}, (results, status) => {
           if (status === "OK") {
             if (results[0]) {
-              this.map.setZoom(11);
-              let center = results[0].geometry.location;
-              this.map.setCenter(center);
+              this.map.setZoom(12);
+              let mapCenter = results[0].geometry.location;
+              this.map.setCenter(mapCenter);
               const newBounds = this.map.getBounds();
               this.map.fitBounds(newBounds);
-              this.props.receiveGeolocation(center);
+              this.props.receiveGeolocation(mapCenter);
             } else {
               return { lat: 40.751626, lng: -73.983926 };
            }}
@@ -57,14 +56,12 @@ class SpotMap extends React.Component {
       }
 
     centerMap(callBack) {
-      // let geolocation = this.props.geoLocation;
-      let mapCenter;
       this.geoCoder.geocode({ 'address': this.props.geoLocation }, (results, status) => {
         if (status === "OK") {
           if (results[0]) {
             let lat = results[0].geometry.location.lat();
             let lng = results[0].geometry.location.lng();
-            mapCenter = { lat, lng }
+            let mapCenter = { lat, lng }
             callBack(mapCenter)
           } else {
             mapCenter = { lat: 40.751626, lng: -73.983926 };
