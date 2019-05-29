@@ -368,7 +368,7 @@ i {
   width: 62px;
 }
 
-@media (max-width:629px) {
+@media (max-width: 700px) {
   #map-container {
     position: relative;
     bottom: 0;
@@ -389,5 +389,16 @@ i {
 
   .user_session button {
     width: 55px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  #map-container {
+    position: relative;
+    bottom: 0;
+    height: 45vh;
+    width: 99%;
+    margin: 0 auto;
+    margin-top: 4%;
   }
 }

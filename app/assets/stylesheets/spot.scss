@@ -80,8 +80,9 @@
 
 #spot_details_subsection {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     margin-right: 10px;
+    width: 70%;
 }
 
 span > img {
@@ -278,6 +279,7 @@ span > p {
     font-size: 16px;
     line-height: 2;
     padding-right: 20px;
+    width: 30%;
 }
 
 .hosted_by_title {
@@ -338,7 +340,7 @@ span > p {
       color: #40d9ac;
    }
 
-@media (max-width:629px) {
+@media (max-width: 700px) {
     .spot_title {
         font-size: 2em;
     }
@@ -401,9 +403,77 @@ span > p {
     .slick-arrow {
         display: none;
     }
+
+    .slick-slide img {
+        width: 100%;
+    }
 }
 
-@media (min-width:900px) {
+@media (min-width: 701px) and (max-width: 1024px) {
+    .spot_title {
+        font-size: 2em;
+    }
+
+    .spot_body {
+        min-width: 0px;
+    }
+
+    .spot_main_section {
+        margin-bottom: 200px;
+    }
+
+    .widget_container {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .booking_widget {
+        width: 100%;
+    }
+
+    .spot_page {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .spot_div_main {
+        width: 100%;
+    }
+
+    .spot_detail_header {
+        width: 30%;
+    }
+
+    #spot_details_subsection {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .spot_div_info {
+        width: 30%;
+    }
+
+    .spot_div_details {
+        padding: 0px;
+    }
+
+    .slick-slider > button {
+        display: none
+    }
+
+    .slick-arrow {
+        display: none;
+    }
+
+    .slick-slide img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
     .spot_div_main {
         padding: 0 3%;
     }
@@ -414,5 +484,11 @@ span > p {
 
     .widget_container {
         top: -60px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1400px) {
+    .spot_div_info {
+        width: 100%;
     }
 }
