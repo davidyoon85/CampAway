@@ -158,8 +158,13 @@
 }
 
 @media (max-width: 700px) {
+    .review_spot_title {
+        margin-top: 5%;
+    }
+
     .create_review_form {
-    margin-top: 10%;
+    width: 80%;
+    margin: 0 auto;
     }
 
     .review_form {
@@ -167,7 +172,33 @@
         margin-top: 3%;
     }
 
+    .review_description {
+        margin: 0;
+        margin-top: 3%;
+    }
+
     .create_review_submit {
-        width: 87%;
+        width: 100%;
+        margin-top: 5%;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+    .create_review_form {
+        margin-top: 10%;
+        }
+    
+    .review_form {
+        width: 80%;
+        margin-top: 3%;
+    }
+
+    .review_description {
+        margin: 0;
+    }
+
+    .create_review_submit {
+        margin-top: 3%;
+        width: 100%;
     }
 }

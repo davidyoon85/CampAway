@@ -341,3 +341,87 @@
         padding-right: 5%;
     }
 }
+
+@media (min-width: 701px) and (max-width: 1024px) {
+    .user_booking_spot {
+        width: 100%;
+        min-width: 0;
+        margin-top: 0%;
+    }
+    
+    .booked_spots_header {
+        width: 93.3%;
+        padding-bottom: 0px;
+        margin: 0 auto;
+        margin-bottom: 3%;
+    }
+
+    .booked_spots_list {
+        width: 90%;
+        min-width: 0;
+        padding-left: 0%;
+    }
+    
+    .user_booking_title {
+        padding-left: 0px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .booked_spot_items {
+        margin-bottom: 5%;
+        width: 48%;
+    }
+
+    .booking_img {
+        width: 90%;
+        height: 18vh;
+        margin: 0 auto;
+        margin-bottom: 5%;
+    }
+
+    .user_booking_spot {
+        flex-direction: column;
+    }
+
+    .user_profile_sidebar {
+        width: 100%;
+        min-width: 0;
+        display: flex;
+        margin: 0 auto;
+        margin-top: 3%;
+    }
+
+    .user_booking_dates {
+        flex-direction: column;
+        padding: 20px 0px 20px 0px;
+    }
+
+    .bio_panel {
+        width: 84%;
+        font-weight: 400;
+        font-size: .9em;
+        padding: 0px;
+        border: none;
+        margin: 0 auto;
+        margin-bottom: 3%;
+    }
+
+    .panel_body {
+        display: none;
+    }
+
+    .booked_spots_number {
+        font-size: 1.1em;
+        padding-top: 2%;
+    }
+
+    .booked_user_reviews {
+        font-size: 1.1em;
+        padding-top: 2%;
+    }
+
+    .booking_delete_button {
+        padding-right: 5%;
+    }
+}

@@ -88,7 +88,7 @@
     color: white;
     padding: 0.5rem;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1.1em;
     cursor: pointer;
 }
 
@@ -121,8 +121,7 @@
 
     .search_bar_main {
         height: 6vh;
-        margin-top: 7%;
-        margin-bottom: 10%;
+        margin: 7% 0%;
     }
 
     .search_bar {
@@ -135,5 +134,28 @@
 
     .search_bar_icon {
         font-size: .7em;;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+    .search_container {
+        display: none;
+    }
+
+    .search_bar_main {
+        height: 10vh;
+        margin: 7% 0%;
+    }
+
+    .search_bar {
+        font-size: 1em;;
+    }
+
+    .search_button {
+        font-size: 1em;;
+    }
+
+    .search_bar_icon {
+        font-size: 1em;;
     }
 }
