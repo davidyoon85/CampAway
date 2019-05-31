@@ -113,7 +113,7 @@ class UserProfile extends React.Component {
                             <div className="booked_spots_header">
                                 <div className="booked_spots_number">
                                     {Object.keys(this.props.bookings).length}
-                                    <p name="trips" className="booked_spots_trips" onClick={(e) => this.tripsButton(e)}>Trips</p>
+                                    <p name="trips" className="booked_spots_trips_active" onClick={(e) => this.tripsButton(e)}>Trips</p>
                                 </div>
                                 <div className="booked_user_reviews">
                                     {userReviews.length}
@@ -174,7 +174,7 @@ class UserProfile extends React.Component {
                                     </div>
                                     <div className="booked_user_reviews">
                                         {userReviews.length}
-                                        <p name="reviews" className="booked_reviews_number" onClick={(e) => this.reviewsButton(e)}>Reviews</p>
+                                        <p name="reviews" className="booked_reviews_number_active" onClick={(e) => this.reviewsButton(e)}>Reviews</p>
                                     </div>            
                                 </div>
                                 {userReviews.map(review => {

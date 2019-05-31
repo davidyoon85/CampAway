@@ -370,16 +370,37 @@ class MasterForm extends React.Component {
         }
 
         return (
-            <div className="spot_form_main">
-                <React.Fragment>
-                    <form className="form" onSubmit={this.handleSubmit}>
-                    { step }
-                        <div className="prev_next_buttons">
-                            {this.previousButton()}
-                            {this.nextButton()}
+            <div className="spot_form_container">
+                <div className="spot_form_main">
+                    <React.Fragment>
+                        <form className="form" onSubmit={this.handleSubmit}>
+                        { step }
+                            <div className="prev_next_buttons">
+                                {this.previousButton()}
+                                {this.nextButton()}
+                            </div>
+                        </form>
+                    </React.Fragment>
+                </div>
+                <div className="spot_form_message">
+                    <div className="host_message_header">
+                        <img className="host_photo" src="https://camp-away-dev.s3.amazonaws.com/profile.jpg" />
+                        <div className="host_message_details">
+                            <p className="host_message_name">Meet David</p>
+                            <p>Host Team</p>
                         </div>
-                    </form>
-                </React.Fragment>
+                    </div>
+                    <div className="host_message">
+                        <p>“My team and I are so excited you've chosen us to be your partner in sharing your land with our community 
+                            of CampAwayers across the country.</p>
+                        <p>We want to help you achieve your hosting goals.</p>
+                        <p>
+                        <a href="mailto:dev.davidyoon@gmail.com"><nobr className="host_message_email">Email us at any time </nobr>
+                        </a>
+                         if you have any questions.
+                        </p>
+                    </div>
+                </div>
             </div>
         );
     }

@@ -297,6 +297,12 @@ span > p {
     border-bottom: 3px solid #ebebeb;
 }
 
+.booked_spots_trips_active {
+    line-height: 2;
+    cursor: pointer;
+    border-bottom: 3px solid #40d9ac;
+}
+
 .booked_spots_trips:hover {
     cursor: pointer;
     border-bottom: 3px solid #40d9ac;

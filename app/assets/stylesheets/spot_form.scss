@@ -1,7 +1,16 @@
+.spot_form_container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 65%;
+    margin: 0 auto;
+    background-color: white;
+    margin-bottom: 5%;
+}
+
 .spot_form_main {
     height: 100%;
-    width: 500px;
-    margin: 0 auto;
+    width: 50%;
     background-color: white;
     margin-top: 3%;
     margin-bottom: 5%;
@@ -9,6 +18,53 @@
     flex-wrap: wrap;
     border: 1px solid rgb(235, 235, 235);
     box-shadow: rgba(0, 0, 0, .5) 0px 5px 5px;
+}
+
+.host_photo {
+    width: 75px;
+    height: 75px;
+}
+
+.spot_form_message {
+    width: 30%;
+    min-width: 215px;
+    height: 100%;
+    background-color: white;
+    margin: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #ebebeb;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 5px;
+    padding: 20px;
+    font-size: 1em;
+}
+
+.host_message_header {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.host_message_details {
+    margin-left: 20px;
+}
+
+.host_message_name {
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.host_message p {
+    margin-bottom: 11px;
+}
+
+.host_message_email {
+    font-weight: 600;
+    border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.host_message_email:hover {
+    border-bottom: 1px solid black;
 }
 
 .form {
@@ -98,7 +154,6 @@
     width: 100%;
     border: 1px solid rgb(235, 235, 235);
     margin: 10px 0px 20px 0px;
-    // padding: 10px 10px 150px 10px;
     line-height: 1.5;
     text-align: start;
 }
@@ -125,28 +180,27 @@ textarea {
 }
 
 .previous_button {
-    width: 100px;
+    width: 80px;
+    height: 30px;
     border: 2px solid #40d9ac;
     letter-spacing: 1.1px;
-    font-size: 1em;
-    padding-left: 20px;
+    font-size: .8em;
     font-weight: 600;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 5px;
     background: #40d9ac;
     color: white;
-    padding: 0.5rem;
 }
 
 .next_button {
-    width: 100px;
+    width: 80px;
+    height: 30px;
     border: 2px solid #40d9ac;
     letter-spacing: 1.1px;
-    font-size: 1em;
+    font-size: .8em;
     font-weight: 600;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 5px;
     background: #40d9ac;
     color: white;
-    padding: 0.5rem;
 }
 
 .prev_next_buttons {
@@ -157,24 +211,22 @@ textarea {
 }
 
 .next_button:hover {
-    width: 100px;
+    width: 80px;
     border: 2px solid #40d9ac;
     background-color: white;
     color: #40d9ac;
-    padding: 0.5rem;
     font-weight: 700;
-    font-size: 15px;
+    font-size: .8em;
     transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
 }
 
 .previous_button:hover {
-    width: 100px;
+    width: 80px;
     border: 2px solid #40d9ac;
     background-color: white;
     color: #40d9ac;
-    padding: 0.5rem;
     font-weight: 700;
-    font-size: 15px;
+    font-size: .8em;
     transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
 }
 
@@ -189,9 +241,18 @@ textarea {
 }
 
 @media (max-width: 700px) {
+    .spot_form_container {
+        width: 100%;
+    }
+
     .spot_form_main {
         width: 80%;
         margin-top: 5%;
+        margin: 0 auto;
+    }
+
+    .spot_form_message {
+        display: none;
     }
 
     .form_group_title {
@@ -208,8 +269,25 @@ textarea {
 }
 
 @media (min-width: 701px) and (max-width: 1024px) {
+    .spot_form_container {
+        flex-direction: column;
+    }
+
     .spot_form_main {
-        width: 80%;
-        margin-top: 10%;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .spot_form_message {
+        width: 100%;
+        min-width: 215px;
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid #ebebeb;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 5px;
+        padding: 20px;
+        font-size: 1em;
+        margin: 0;
     }
 }
