@@ -41,7 +41,7 @@ class Splash extends React.Component {
     render() {
         return (
             <>
-            <div className="splash_main">
+            <main className="splash_main">
                 <div className="splash_subtitle1">
                     Find yourself outside.
                 </div>
@@ -126,7 +126,7 @@ class Splash extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </main>
 
             <footer>
                 <div className="foot_div">

@@ -56,7 +56,7 @@ class UserProfile extends React.Component {
             return (
                 <div className="user_profile_container">
                     <div className="user_booking_spot">
-                        <div className="user_profile_sidebar">
+                        <aside className="user_profile_sidebar">
                             <div className="bio_panel">
                                 <h3 id="bio_panel_name">{this.props.currentUser.first_name}!</h3>
                                 <br />
@@ -75,7 +75,7 @@ class UserProfile extends React.Component {
                                 <span id="facebook_icon" className="far fa-check-circle"></span>
                                     Facebook
                             </div>
-                        </div>
+                        </aside>
                         <div className="user_profile_booking_status">
                             <div className="user_status_header">
                                 No current trips. Let's <Link className="user_link_index" to={'/spots'}> get you outside!</Link>
@@ -88,7 +88,7 @@ class UserProfile extends React.Component {
                 return (
                     <div className="user_profile_container">
                         <div className="user_booking_spot">
-                        <div className="user_profile_sidebar">
+                        <aside className="user_profile_sidebar">
                             <div className="bio_panel">
                                 <h3 id="bio_panel_name">{this.props.currentUser.first_name}!</h3>
                                 <br />
@@ -107,7 +107,7 @@ class UserProfile extends React.Component {
                                 <span id="facebook_icon" className="far fa-check-circle"></span>
                                     Facebook
                             </div>
-                        </div>
+                        </aside>
 
                         <ul className="booked_spots_list">
                             <div className="booked_spots_header">
@@ -145,7 +145,7 @@ class UserProfile extends React.Component {
                 return (
                     <div className="user_profile_container">
                         <div className="user_booking_spot">
-                            <div className="user_profile_sidebar">
+                            <aside className="user_profile_sidebar">
                                 <div className="bio_panel">
                                     <h3 id="bio_panel_name">{this.props.currentUser.first_name}!</h3>
                                     <br />
@@ -164,7 +164,7 @@ class UserProfile extends React.Component {
                                     <span id="facebook_icon" className="far fa-check-circle"></span>
                                         Facebook
                                 </div>
-                            </div>
+                            </aside>
 
                             <ul className="booked_spots_list">
                                 <div className="booked_spots_header">
