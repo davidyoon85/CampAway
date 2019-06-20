@@ -18,17 +18,22 @@
   .nav_host {
       display: flex;
       align-items: center;
-      width: 65%;
       height: 40px;
       margin-top: 10px;
       font-size: .9em;
-      align-content: center;
-      border-bottom: 1px solid rgb(216, 216, 216);
       margin: 0 auto;
+      padding-bottom: 5px;
+      transition: transform .5s ease;
   }
   
   .nav_host:hover {
-    font-weight: 700;
+    transform: translateX(15px);
+  }
+
+  #drop_menu li {
+    border-bottom: 1px solid rgb(216, 216, 216);
+    width: 70%;
+    margin: auto;
   }
 
 .modal-background {
