@@ -224,12 +224,18 @@
     .spot_filter_section {
         height: 45px;
         font-size: .6em;
+        flex: 1;
+    }
+
+    .spot_filter_section > button {
+        width: 100%;
     }
 
     .spot_filter_item > button {
         height: 45px;
         font-size: .4em;
         padding: 5px;
+        width: 100%;
     }
 
     .spot_index {
@@ -275,6 +281,15 @@
     .spot_filter_section {
         height: 45px;
         font-size: .6em;
+        flex: 1;
+    }   
+
+    //testing
+    .spot_filter_section > button {
+        height: 45px;
+        font-size: .4em;
+        padding: 5px;
+        width: 100%;
     }
 
     .spot_filter_item > button {
