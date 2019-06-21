@@ -63,7 +63,85 @@ class Splash extends React.Component {
                     Discover camping...
                 </div>
 
-                <div className="splash_main_section">
+                {/* testing */}
+
+                <div className="splash_container">
+                    <div className="splash_main_section">
+                        <div className="splashy" onClick={this.handleClick(0)}>
+                            <div className="splashy_img">
+                                <img src="https://s3.amazonaws.com/camp-away-dev/spot1_0.jpg" />
+                            </div>
+                            <div className="splashy_container">    
+                                <h3 className="splashy_header">Cabin in the Woods</h3>
+                                <div className="splashy_subheader">
+                                    New York
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="splashy" onClick={this.handleClick(1)}>
+                            <div className="splashy_img">
+                                <img src="https://s3.amazonaws.com/camp-away-dev/spot2_0.jpg" />
+                            </div>
+                            <div className="splashy_container">   
+                                <h3 className="splashy_header">Oh! Pear Orchards</h3>
+                                <div className="splashy_subheader">
+                                    New York
+                                </div>
+                            </div>    
+                        </div>
+
+                        <div className="splashy" onClick={this.handleClick(2)}>
+                            <div className="splashy_img">
+                                <img src="https://s3.amazonaws.com/camp-away-dev/spot3_0.jpg" />
+                            </div>
+                            <div className="splashy_container">   
+                                <h3 className="splashy_header">Blue Mountain Camping</h3>
+                                <div className="splashy_subheader">
+                                    New York
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="splashy" onClick={this.handleClick(3)}>
+                            <div className="splashy_img">
+                                <img src="https://s3.amazonaws.com/camp-away-dev/spot4_0.jpg" />
+                            </div>
+                            <div className="splashy_container">  
+                                <h3 className="splashy_header">Enveloped in Woods</h3>
+                                <div className="splashy_subheader">
+                                    New York
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="splashy" onClick={this.handleClick(4)}>
+                            <div className="splashy_img">
+                                <img src="https://s3.amazonaws.com/camp-away-dev/spot5_0.jpg" />
+                            </div>
+                            <div className="splashy_container"> 
+                                <h3 className="splashy_header">Lakeside Forest</h3>     
+                                <div className="splashy_subheader">
+                                    New York
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="splashy" onClick={this.handleClick(8)}>
+                            <div className="splashy_img">
+                                <img src="https://s3.amazonaws.com/camp-away-dev/spot9_0.jpg" />
+                            </div>
+                            <div className="splashy_container">
+                                <h3 className="splashy_header">Rustic, Enchanted Cabin</h3>
+                                <div className="splashy_subheader">
+                                    New York
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* <div className="splash_main_section">
                     <div className="splash_section">
                         <div className="index_section" onClick={this.handleClick(0)}>
                             <img src="https://s3.amazonaws.com/camp-away-dev/spot1_0.jpg" />
@@ -125,7 +203,7 @@ class Splash extends React.Component {
                                 </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </main>
 
             <footer>
