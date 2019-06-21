@@ -241,6 +241,34 @@ textarea {
     font-weight: 600;
 }
 
+.photo_upload {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+}
+
+.photo_upload + label {
+    display: inline-block;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ebebeb;
+    border-radius: 2px;
+    padding: 12px;
+    transition: border 0.4s;
+    margin-left: 3.4%;
+}
+
+.photo_upload + label:hover {
+    border: 1px solid gray;
+}
+
+.fa-camera {
+    color: black;
+    padding-right: 3px;
+    font-size: 0.9em;
+}
+
 @media (max-width: 700px) {
     .spot_form_container {
         width: 100%;
@@ -266,6 +294,11 @@ textarea {
 
     .previous_button {
         font-size: .8em;
+    }
+
+    .photo_upload + label {
+        font-size: .6em;
+        padding: 6px;
     }
 }
 

@@ -358,8 +358,9 @@ class MasterForm extends React.Component {
                     </div>                 
                 </div>
             </>
-                <input type="file" onChange={(e) => this.setState({ photos: e.target.files })} multiple required/>
-                
+                <input type="file" id="photo_upload" className="photo_upload" accept="image/*" capture onChange={(e) => this.setState({ photos: e.target.files })} multiple required/>
+                <label className="photo_upload_button" htmlFor="photo_upload"><i className="fas fa-camera"></i>Upload</label>
+
                 { preview }
                         
                 <div className="form_signup">

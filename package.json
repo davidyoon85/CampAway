@@ -5,6 +5,7 @@
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
+    "@emotion/core": "^10.0.10",
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
@@ -22,6 +23,7 @@
     "react-redux": "^6.0.1",
     "react-router-dom": "^5.0.0",
     "react-slick": "^0.23.2",
+    "react-spinners": "^0.5.4",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
@@ -55,5 +57,8 @@
   "bugs": {
     "url": "https://github.com/davidyoon85/CampAway/issues"
   },
-  "homepage": "https://github.com/davidyoon85/CampAway#readme"
+  "homepage": "https://github.com/davidyoon85/CampAway#readme",
+  "devDependencies": {
+    "babel-plugin-emotion": "^10.0.13"
+  }
 }

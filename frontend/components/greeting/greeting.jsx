@@ -23,14 +23,12 @@ class Greeting extends React.Component {
                             />
                         </div>
                     ) : (
-                        <nav>
-                            <ul className="user_session">
-                                <li><button 
-                                    onClick={() => this.props.openModal('signup')}>Sign up</button></li>
-                                <li><button 
-                                    onClick={() => this.props.openModal('login')}>Log in</button></li>
-                            </ul>
-                        </nav>
+                        <ul className="user_session">
+                            <li><button 
+                                onClick={() => this.props.openModal('signup')}>Sign up</button></li>
+                            <li><button 
+                                onClick={() => this.props.openModal('login')}>Log in</button></li>
+                        </ul>
                     )
                 }
             </>

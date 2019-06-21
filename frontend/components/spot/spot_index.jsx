@@ -1,11 +1,18 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import SpotIndexItem from './spot_index_item';
 import { applyFilters } from '../../util/filter_util';
+import { FadeLoader } from 'react-spinners';
+
+import SpotIndexItem from './spot_index_item';
+
 
 class SpotIndex extends React.Component {
   constructor(props) {
       super(props);
+
+      this.state = {
+        loading: true
+      }
   }
 
   componentDidMount() {
@@ -13,6 +20,20 @@ class SpotIndex extends React.Component {
   }
 
   render() {
+    debugger
+
+    if (this.props.spots.length === 0) {
+      <FadeLoader
+        // css={override}
+        sizeUnit={"px"}
+        size={150}
+        color={'black'}
+        loading={this.state.loading}
+      />
+    }
+
+    debugger
+
     const { spots, filters } = this.props;
     const filteredSpots = applyFilters(filters, spots);
 
