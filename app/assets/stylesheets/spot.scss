@@ -156,8 +156,8 @@ span > p {
 .delete_spot_button:hover {
     background-color: #40d9ac;
     font-weight: 600;
-    color: white;
-    border: white;
+    color: #ffffff;
+    border: #ffffff;
 }
 
 .widget_container {
@@ -165,7 +165,7 @@ span > p {
     height: 200px;
     width: 319px;
     z-index: 1;
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .booking_widget {
@@ -205,7 +205,7 @@ span > p {
 
 .well_dates_guests {
     min-height: 50px;
-    background-color: white;
+    background-color: #ffffff;
     border: 1px solid #ebebeb;
     font-weight: 400;
     line-height: 1.42;
@@ -224,7 +224,7 @@ span > p {
 }
 
 .value {
-    white-space: nowrap;
+    #ffffff-space: nowrap;
     font-size: .9rem;
 }
 
@@ -250,7 +250,7 @@ span > p {
 }
 
 .booking_submit {
-    background-color: white;
+    background-color: #ffffff;
     border: 1px solid #ebebeb;
     padding: 10px;
     box-shadow: 0 1px 5px rgba(0,0,0,0.05);
@@ -264,13 +264,13 @@ span > p {
     font-weight: 700;
     border: 3px solid #40d9ac;
     background-color: #40d9ac;
-    color: white;
+    color: #ffffff;
 }
 
 .widget_button:hover {
     cursor: pointer;
     border: 2px solid #40d9ac;
-    background-color: white;
+    background-color: #ffffff;
     color: #40d9ac;
     transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
 }
@@ -317,7 +317,7 @@ span > p {
     position: relative;
     margin: 0 auto;
     width: 90%;
-    background: white;
+    background: #ffffff;
     height: 400px;
   }
   

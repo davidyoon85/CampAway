@@ -74,7 +74,7 @@ html {
 
  button {
    outline: none;
-   background-color: white;
+   background-color: #ffffff;
  }
 
  button:hover {
@@ -93,10 +93,15 @@ html {
     -webkit-font-smoothing: antialiased;
  }
 
+  .app_container {
+    height: 100vh;
+  }
+
  .main-class {
+  height: 88.5%;
   width: 100%;
   min-height: 50vh;
-  background: white;
+  background: #ffffff;
   margin: 0 auto;
 }
 
@@ -111,7 +116,7 @@ html {
 
  .login-form-box {
    padding: 10px;
-   background: white;
+   background: #ffffff;
    position: relative;
   }
   
@@ -185,6 +190,7 @@ html {
   }
 
   .main_nav {
+    height: 11.5%;
     width: 100%;
     min-width: 320px;
     display: flex;
@@ -271,7 +277,7 @@ html {
     height: 65px;
     font-weight: 700;
     font-size: 15px;
-    color: white;
+    color: #ffffff;
     border: 0;
     background-color: #40d9ac;
   }
@@ -282,7 +288,7 @@ html {
     height: 65px;
     font-weight: 700;
     font-size: 15px;
-    color: white;
+    color: #ffffff;
     border: 0;
     background-color: #3b5998;
   }
@@ -300,19 +306,19 @@ html {
   font-size: 16px;
   padding: 15px;
   background-color: #3b5998;
-  color: white;
+  color: #ffffff;
   border: 3px solid #3b5998;
 }
 
 .demo_button:hover {
   border: 3px solid #3b5998;
-  background-color: white;
+  background-color: #ffffff;
   color: #3b5998;
   transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
 }
 
 i {
-  color: white;
+  color: #ffffff;
 }
 
 .social_link i:hover {

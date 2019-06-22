@@ -119,7 +119,7 @@ div > h3 {
     margin: auto;
 }
 
-.splashy {
+.splash_section {
     height: 100%;
     width: 100%;
     border: 1px solid #ebebeb;
@@ -127,17 +127,17 @@ div > h3 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.splashy_img {
+.splash_section_img {
     height: 75%;
     width: 100%;
 }
 
-.splashy img {
+.splash_section img {
     width: 100%;
     height: 100%;
 }
 
-.splashy_container {
+.splash_section_details {
     height: 25%;
     display: flex;
     flex-direction: column;
@@ -146,11 +146,11 @@ div > h3 {
     justify-content: center;
 }
 
-.splashy_header {
+.splash_section_name {
     font-size: 1.2rem;
 }
 
-.splashy_subheader {
+.splash_section_location {
     text-align: left;
     padding-top: 3%;
     font-size: 1rem;
@@ -232,11 +232,11 @@ div > h3 {
         font-size: 1.3em;
     }
 
-    .splashy_header {
+    .splash_section_name {
         font-size: 1rem;
     }
 
-    .splashy_subheader {
+    .splash_section_location {
         font-size: .8rem;
     }
 }

@@ -63,147 +63,81 @@ class Splash extends React.Component {
                     Discover camping...
                 </div>
 
-                {/* testing */}
-
                 <div className="splash_container">
                     <div className="splash_main_section">
-                        <div className="splashy" onClick={this.handleClick(0)}>
-                            <div className="splashy_img">
+                        <div className="splash_section" onClick={this.handleClick(0)}>
+                            <div className="splash_section_img">
                                 <img src="https://s3.amazonaws.com/camp-away-dev/spot1_0.jpg" />
                             </div>
-                            <div className="splashy_container">    
-                                <h3 className="splashy_header">Cabin in the Woods</h3>
-                                <div className="splashy_subheader">
+                            <div className="splash_section_details">    
+                                <h3 className="splash_section_name">Cabin in the Woods</h3>
+                                <div className="splash_section_location">
                                     New York
                                 </div>
                             </div>
                         </div>
 
-                        <div className="splashy" onClick={this.handleClick(1)}>
-                            <div className="splashy_img">
+                        <div className="splash_section" onClick={this.handleClick(1)}>
+                            <div className="splash_section_img">
                                 <img src="https://s3.amazonaws.com/camp-away-dev/spot2_0.jpg" />
                             </div>
-                            <div className="splashy_container">   
-                                <h3 className="splashy_header">Oh! Pear Orchards</h3>
-                                <div className="splashy_subheader">
+                            <div className="splash_section_details">   
+                                <h3 className="splash_section_name">Oh! Pear Orchards</h3>
+                                <div className="splash_section_location">
                                     New York
                                 </div>
                             </div>    
                         </div>
 
-                        <div className="splashy" onClick={this.handleClick(2)}>
-                            <div className="splashy_img">
+                        <div className="splash_section" onClick={this.handleClick(2)}>
+                            <div className="splash_section_img">
                                 <img src="https://s3.amazonaws.com/camp-away-dev/spot3_0.jpg" />
                             </div>
-                            <div className="splashy_container">   
-                                <h3 className="splashy_header">Blue Mountain Camping</h3>
-                                <div className="splashy_subheader">
+                            <div className="splash_section_details">   
+                                <h3 className="splash_section_name">Blue Mountain Camping</h3>
+                                <div className="splash_section_location">
                                     New York
                                 </div>
                             </div>
                         </div>
 
-                        <div className="splashy" onClick={this.handleClick(3)}>
-                            <div className="splashy_img">
+                        <div className="splash_section" onClick={this.handleClick(3)}>
+                            <div className="splash_section_img">
                                 <img src="https://s3.amazonaws.com/camp-away-dev/spot4_0.jpg" />
                             </div>
-                            <div className="splashy_container">  
-                                <h3 className="splashy_header">Enveloped in Woods</h3>
-                                <div className="splashy_subheader">
+                            <div className="splash_section_details">  
+                                <h3 className="splash_section_name">Enveloped in Woods</h3>
+                                <div className="splash_section_location">
                                     New York
                                 </div>
                             </div>
                         </div>
 
-                        <div className="splashy" onClick={this.handleClick(4)}>
-                            <div className="splashy_img">
+                        <div className="splash_section" onClick={this.handleClick(4)}>
+                            <div className="splash_section_img">
                                 <img src="https://s3.amazonaws.com/camp-away-dev/spot5_0.jpg" />
                             </div>
-                            <div className="splashy_container"> 
-                                <h3 className="splashy_header">Lakeside Forest</h3>     
-                                <div className="splashy_subheader">
+                            <div className="splash_section_details"> 
+                                <h3 className="splash_section_name">Lakeside Forest</h3>     
+                                <div className="splash_section_location">
                                     New York
                                 </div>
                             </div>
                         </div>
 
-                        <div className="splashy" onClick={this.handleClick(8)}>
-                            <div className="splashy_img">
+                        <div className="splash_section" onClick={this.handleClick(8)}>
+                            <div className="splash_section_img">
                                 <img src="https://s3.amazonaws.com/camp-away-dev/spot9_0.jpg" />
                             </div>
-                            <div className="splashy_container">
-                                <h3 className="splashy_header">Rustic, Enchanted Cabin</h3>
-                                <div className="splashy_subheader">
+                            <div className="splash_section_details">
+                                <h3 className="splash_section_name">Rustic, Enchanted Cabin</h3>
+                                <div className="splash_section_location">
                                     New York
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                {/* <div className="splash_main_section">
-                    <div className="splash_section">
-                        <div className="index_section" onClick={this.handleClick(0)}>
-                            <img src="https://s3.amazonaws.com/camp-away-dev/spot1_0.jpg" />
-                            <div className="index_section_container">    
-                                <h3 className="index_section_header">Cabin in the Woods</h3>
-                                <div className="index_section_subheader">
-                                    New York
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="index_section" onClick={this.handleClick(1)}>
-                            <img src="https://s3.amazonaws.com/camp-away-dev/spot2_0.jpg" />
-                            <div className="index_section_container">   
-                                <h3 className="index_section_header">Oh! Pear Orchards</h3>
-                                <div className="index_section_subheader">
-                                    New York
-                                </div>
-                            </div>    
-                        </div>
-
-                        <div className="index_section" onClick={this.handleClick(2)}>
-                            <img src="https://s3.amazonaws.com/camp-away-dev/spot3_0.jpg" />
-                            <div className="index_section_container">   
-                                <h3 className="index_section_header">Blue Mountain Camping</h3>
-                                <div className="index_section_subheader">
-                                    New York
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="index_section" onClick={this.handleClick(3)}>
-                            <img src="https://s3.amazonaws.com/camp-away-dev/spot4_0.jpg" />
-                            <div className="index_section_container">  
-                                <h3 className="index_section_header">Enveloped in Woods</h3>
-                                <div className="index_section_subheader">
-                                    New York
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="index_section" onClick={this.handleClick(4)}>
-                            <img src="https://s3.amazonaws.com/camp-away-dev/spot5_0.jpg" />
-                            <div className="index_section_container"> 
-                                <h3 className="index_section_header">Lakeside Forest</h3>     
-                                <div className="index_section_subheader">
-                                    New York
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="index_section" onClick={this.handleClick(8)}>
-                            <img src="https://s3.amazonaws.com/camp-away-dev/spot9_0.jpg" />
-                                <div className="index_section_container">
-                                    <h3 className="index_section_header">Rustic, Enchanted Cabin</h3>
-                                    <div className="index_section_subheader">
-                                        New York
-                                    </div>
-                                </div>
-                        </div>
-                    </div>
-                </div> */}
             </main>
 
             <footer>

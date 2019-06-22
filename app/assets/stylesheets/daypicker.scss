@@ -173,20 +173,20 @@
 .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
   position: relative;
   background-color: #40d9ac;
-  color: white;
+  color: #ffffff;
   border-radius: 50%
 }
 
 .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside):hover {
   background-color: #40d9ac;
-  color: white;
+  color: #ffffff;
   border-radius: 50%
 }
 
 .DayPicker:not(.DayPicker--interactionDisabled)
   .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
   background-color: #40d9ac;
-  color: white;
+  color: #ffffff;
   border-radius: 50%
 
 }
@@ -223,7 +223,7 @@
   left: 0;
   z-index: 1;
   position: absolute;
-  background: white;
+  background: #ffffff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 

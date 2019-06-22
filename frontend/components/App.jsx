@@ -16,7 +16,7 @@ library.add(faIgloo);
 
 const App = () => {
   return (
-    <div>
+    <div className="app_container">
       <Route path="/" component={Nav} />
         <div className='main-class'>
           <Switch>

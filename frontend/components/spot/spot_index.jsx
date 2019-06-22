@@ -20,20 +20,6 @@ class SpotIndex extends React.Component {
   }
 
   render() {
-    debugger
-
-    if (this.props.spots.length === 0) {
-      <FadeLoader
-        // css={override}
-        sizeUnit={"px"}
-        size={150}
-        color={'black'}
-        loading={this.state.loading}
-      />
-    }
-
-    debugger
-
     const { spots, filters } = this.props;
     const filteredSpots = applyFilters(filters, spots);
 
