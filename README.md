@@ -46,5 +46,5 @@ Code snippet:
 </p>
 
 ## Future Plans
-In the future, I hope to add more features, including: user profile, search bar filtering. I also have plans to improve the review section, by allowing users to post photos along with their comments.
+In the future, I hope to add more features, including search bar filtering. I also have plans to incorporate SASS stylesheets.
 
