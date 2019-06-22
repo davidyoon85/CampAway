@@ -45,6 +45,10 @@
     flex-wrap: wrap;
 }
 
+.splash_section:hover {
+    cursor: pointer;
+}
+
 .index_section {
     display: flex;
     flex-direction: column;
