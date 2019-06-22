@@ -336,7 +336,6 @@ i {
 .tent_logo {
   border-radius: 50%;
   height: 40px;
-  // position: relative;
 }
 
 .tent_logo:hover {
@@ -416,6 +415,25 @@ i {
 }
 
 @media (max-width: 320px) {
+  .login-form {
+    width: 260px;
+    font-size: .5em;
+  }
+
+  .login-input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .subtitle {
+    font-size: .7em;
+    margin: 5px 5px 25px 5px;
+  }
+
+  .demo_button, .login-input, input#login_submit {
+    height: 55px;
+  }
+
   .left {
     font-size: 1.5em;
   }
