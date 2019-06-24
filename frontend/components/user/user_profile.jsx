@@ -120,7 +120,7 @@ class UserProfile extends React.Component {
                                     <p name="reviews" className="booked_reviews_number" onClick={(e) => this.reviewsButton(e)}>Reviews</p>
                                 </div>            
                             </div>
-                            {Object.values(this.props.bookings).map(booking=> {
+                            {(Object.values(this.props.bookings).reverse()).map(booking=> {
                                 return (
                                     <li className="booked_spot_items" key={booking.id}>
                                         <Link className="user_booking_title" to={`/spots/${booking.spot.id}`}>{booking.spot.title}</Link>
@@ -177,7 +177,8 @@ class UserProfile extends React.Component {
                                         <p name="reviews" className="booked_reviews_number_active" onClick={(e) => this.reviewsButton(e)}>Reviews</p>
                                     </div>            
                                 </div>
-                                {userReviews.map(review => {
+                                {(userReviews.reverse()).map(review => {
+                                  
                                     return (
                                     <li className="booked_spot_items" key={review.id}>
                                         <div className="user_booking_details">
