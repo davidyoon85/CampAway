@@ -85,6 +85,14 @@ class UserProfile extends React.Component {
                 </div>
         )} else {
             if (this.state.trips) {
+
+                let bookingArr = Object.values(this.props.bookings);
+                bookingArr.sort(function compare(b, a) {
+                    var dateA = new Date(a.check_in);
+                    var dateB = new Date(b.check_in);
+                    return dateA - dateB;
+                });
+
                 return (
                     <div className="user_profile_container">
                         <div className="user_booking_spot">
@@ -120,7 +128,8 @@ class UserProfile extends React.Component {
                                     <p name="reviews" className="booked_reviews_number" onClick={(e) => this.reviewsButton(e)}>Reviews</p>
                                 </div>            
                             </div>
-                            {(Object.values(this.props.bookings).reverse()).map(booking=> {
+                            {/* {Object.values(this.props.bookings).map(booking=> { */}
+                                {bookingArr.map(booking=> {
                                 return (
                                     <li className="booked_spot_items" key={booking.id}>
                                         <Link className="user_booking_title" to={`/spots/${booking.spot.id}`}>{booking.spot.title}</Link>
