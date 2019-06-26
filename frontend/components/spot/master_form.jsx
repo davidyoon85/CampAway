@@ -39,6 +39,10 @@ class MasterForm extends React.Component {
         this.handleFile = this.handleFile.bind(this);
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
     handleFile(event) {
         const reader = new FileReader();
         const file = event.currentTarget.files[0];

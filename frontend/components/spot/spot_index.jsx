@@ -1,10 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { applyFilters } from '../../util/filter_util';
-import { FadeLoader } from 'react-spinners';
 
 import SpotIndexItem from './spot_index_item';
-
 
 class SpotIndex extends React.Component {
   constructor(props) {

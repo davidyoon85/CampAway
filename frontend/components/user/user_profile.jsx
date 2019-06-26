@@ -52,6 +52,24 @@ class UserProfile extends React.Component {
     render() {
         const userReviews = this.props.reviews.filter(review => review.author === this.props.currentUser.id)
 
+        let numTrips = Object.keys(this.props.bookings).length;
+        let tripName = '';
+
+        if (numTrips === 1) {
+            tripName = 'Trip'
+        } else {
+            tripName = 'Trips'
+        };
+
+        let numReviews = userReviews.length;
+        let reviewName = '';
+
+        if (numReviews === 1) {
+            reviewName = 'Review'
+        } else {
+            reviewName = 'Reviews'
+        };
+
         if (Object.values(this.props.bookings).length === 0) {
             return (
                 <div className="user_profile_container">
@@ -85,7 +103,6 @@ class UserProfile extends React.Component {
                 </div>
         )} else {
             if (this.state.trips) {
-
                 let bookingArr = Object.values(this.props.bookings);
                 bookingArr.sort(function compare(b, a) {
                     var dateA = new Date(a.check_in);
@@ -120,16 +137,18 @@ class UserProfile extends React.Component {
                         <ul className="booked_spots_list">
                             <div className="booked_spots_header">
                                 <div className="booked_spots_number">
-                                    {Object.keys(this.props.bookings).length}
-                                    <p name="trips" className="booked_spots_trips_active" onClick={(e) => this.tripsButton(e)}>Trips</p>
+
+                                    {numTrips}
+                                
+                                    <p name="trips" className="booked_spots_trips_active" onClick={(e) => this.tripsButton(e)}>{tripName}</p>
+                                
                                 </div>
                                 <div className="booked_user_reviews">
-                                    {userReviews.length}
-                                    <p name="reviews" className="booked_reviews_number" onClick={(e) => this.reviewsButton(e)}>Reviews</p>
+                                    {numReviews}
+                                    <p name="reviews" className="booked_reviews_number" onClick={(e) => this.reviewsButton(e)}>{reviewName}</p>
                                 </div>            
                             </div>
-                            {/* {Object.values(this.props.bookings).map(booking=> { */}
-                                {bookingArr.map(booking=> {
+                            {bookingArr.map(booking=> {
                                 return (
                                     <li className="booked_spot_items" key={booking.id}>
                                         <Link className="user_booking_title" to={`/spots/${booking.spot.id}`}>{booking.spot.title}</Link>
@@ -178,12 +197,12 @@ class UserProfile extends React.Component {
                             <ul className="booked_spots_list">
                                 <div className="booked_spots_header">
                                     <div className="booked_spots_number">
-                                        {Object.keys(this.props.bookings).length}
-                                        <p name="trips" className="booked_spots_trips" onClick={(e) => this.tripsButton(e)}>Trips</p>
+                                        {numTrips}
+                                        <p name="trips" className="booked_spots_trips" onClick={(e) => this.tripsButton(e)}>{tripName}</p>
                                     </div>
                                     <div className="booked_user_reviews">
-                                        {userReviews.length}
-                                        <p name="reviews" className="booked_reviews_number_active" onClick={(e) => this.reviewsButton(e)}>Reviews</p>
+                                        {numReviews}
+                                        <p name="reviews" className="booked_reviews_number_active" onClick={(e) => this.reviewsButton(e)}>{reviewName}</p>
                                     </div>            
                                 </div>
                                 {(userReviews.reverse()).map(review => {
