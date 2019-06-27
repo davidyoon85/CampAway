@@ -346,6 +346,77 @@ span > p {
       color: #40d9ac;
    }
 
+@media (min-width: 1025px) {
+    .widget_container {
+        top: -50px;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+    .spot_title {
+        font-size: 2em;
+    }
+
+    .spot_body {
+        min-width: 0px;
+    }
+
+    .spot_main_section {
+        margin-bottom: 200px;
+    }
+
+    .widget_container {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .booking_widget {
+        width: 100%;
+    }
+
+    .spot_page {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .spot_div_main {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .spot_detail_header {
+        width: 30%;
+    }
+
+    #spot_details_subsection {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .spot_div_info {
+        width: 30%;
+    }
+
+    .spot_div_details {
+        padding: 0px;
+    }
+
+    .slick-slider > button {
+        display: none
+    }
+
+    .slick-arrow {
+        display: none;
+    }
+
+    .slick-slide img {
+        width: 100%;
+    }
+}
+
 @media (max-width: 700px) {
     .spot_title {
         font-size: 2em;
@@ -396,71 +467,6 @@ span > p {
 
     .spot_div_info {
         width: 90%;
-    }
-
-    .spot_div_details {
-        padding: 0px;
-    }
-
-    .slick-slider > button {
-        display: none
-    }
-
-    .slick-arrow {
-        display: none;
-    }
-
-    .slick-slide img {
-        width: 100%;
-    }
-}
-
-@media (min-width: 701px) and (max-width: 1024px) {
-    .spot_title {
-        font-size: 2em;
-    }
-
-    .spot_body {
-        min-width: 0px;
-    }
-
-    .spot_main_section {
-        margin-bottom: 200px;
-    }
-
-    .widget_container {
-        position: fixed;
-        width: 100%;
-        bottom: 0;
-    }
-
-    .booking_widget {
-        width: 100%;
-    }
-
-    .spot_page {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .spot_div_main {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .spot_detail_header {
-        width: 30%;
-    }
-
-    #spot_details_subsection {
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        width: 70%;
-    }
-
-    .spot_div_info {
-        width: 30%;
     }
 
     .spot_div_details {
