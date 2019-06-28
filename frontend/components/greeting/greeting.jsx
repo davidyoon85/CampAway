@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Greeting extends React.Component {
     constructor(props) {   
@@ -17,10 +18,18 @@ class Greeting extends React.Component {
                 {
                     this.props.currentUser ? (
                         <div className="dropdown">
-                            <img className="tent_logo" 
-                                src={window.footerURL} 
-                                onClick={() => this.props.openModal('dropdown')} 
-                            />
+                            <div className="logo_container"> 
+                                <img className="tent_logo" 
+                                    src={window.footerURL}   
+                                />
+                                <div className="dropdown_message">
+                                    <ul className="dropdown_list">
+                                        <li><Link className="nav_host" to={'/host'}>Host</Link></li>
+                                        <li><a className="nav_host" onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}`)}>Trips</a></li>                
+                                        <li><a className="nav_host" id="nav_host_logout" onClick={this.props.logout}>Log out</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     ) : (
                         <ul className="user_session">

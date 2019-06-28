@@ -11,30 +11,9 @@
       font-family: "Calibre", Helvetica, Arial, sans-serif;
   }
   
-  .nav_logged_in_logout:hover {
-    border-bottom: 1px solid rgb(216, 216, 216);
-  }
-  
-  .nav_host {
-      display: flex;
-      align-items: center;
-      height: 40px;
-      margin-top: 10px;
-      font-size: .9em;
-      margin: 0 auto;
-      padding-bottom: 5px;
-      transition: transform .5s ease;
-  }
-  
-  .nav_host:hover {
-    transform: translateX(15px);
-  }
-
-  #drop_menu li {
-    border-bottom: 1px solid rgb(216, 216, 216);
-    width: 70%;
-    margin: auto;
-  }
+.nav_logged_in_logout:hover {
+border-bottom: 1px solid rgb(216, 216, 216);
+}
 
 .modal-background {
     position: fixed;

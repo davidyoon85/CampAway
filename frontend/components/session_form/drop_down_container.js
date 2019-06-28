@@ -6,8 +6,7 @@ import { withRouter } from 'react-router';
 
 const mapStateToProps = ({ session, entities: { users } }) => {
     return {
-        currentUser: users[session.id],
-        formType: 'Drop down'
+        currentUser: users[session.id]
     };
 };
 

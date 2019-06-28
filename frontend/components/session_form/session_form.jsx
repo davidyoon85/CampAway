@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -101,18 +100,8 @@ class SessionForm extends React.Component {
                 </div>
                 </form>
             </div>
-        )
-        } 
-        else if (this.props.formType === 'Drop down') {
-            return (
-            <div id="drop_menu" onClick={() => this.props.closeModal()}>
-                <li><Link className="nav_host" to={'/host'}>Host</Link></li>
-                <li><a className="nav_host" onClick={() => this.props.history.push(`/users/${this.props.currentUser.id}`)}>Trips</a></li>                
-                <li><a className="nav_host" id="nav_host_logout" onClick={this.props.logout}>Log out</a></li>
-            </div>  
-            )      
-        } 
-        else if (this.props.formType === 'Sign up'){
+            )
+        } else if (this.props.formType === 'Sign up'){
             return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
