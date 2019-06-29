@@ -9,6 +9,11 @@ export const receiveReviews = reviews => ({
     type: RECEIVE_REVIEWS,
     reviews,
   });
+
+  export const receiveAllReviews = (reviews) => ({
+    type: RECEIVE_ALL_REVIEWS,
+    reviews
+  })
   
   export const receiveReview = review => ({
     type: RECEIVE_REVIEW,

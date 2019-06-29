@@ -13,6 +13,7 @@ class UserProfile extends React.Component {
             zipCode: this.props.currentUser.zip_code,
             trips: true,
             reviews: false,
+            userReviews:[]
         }
 
         this.tripsButton = this.tripsButton.bind(this);
@@ -23,6 +24,7 @@ class UserProfile extends React.Component {
         window.scrollTo(0, 0);
         this.props.fetchAllBookings();
         this.props.fetchAllSpots();
+
         this.getAddressInfoByZip(this.state.zipCode.toString());
     }
 
@@ -50,18 +52,18 @@ class UserProfile extends React.Component {
     }
 
     render() {
-        const userReviews = this.props.reviews.filter(review => review.author === this.props.currentUser.id)
+        let userReviews = this.props.currentUser.reviews;
 
         let numTrips = Object.keys(this.props.bookings).length;
         let tripName = '';
-
+        
         if (numTrips === 1) {
             tripName = 'Trip'
         } else {
             tripName = 'Trips'
         };
-
-        let numReviews = userReviews.length;
+    
+        let numReviews = Object.keys(this.props.reviews).length;
         let reviewName = '';
 
         if (numReviews === 1) {
@@ -206,7 +208,6 @@ class UserProfile extends React.Component {
                                     </div>            
                                 </div>
                                 {(userReviews.reverse()).map(review => {
-                                  
                                     return (
                                     <li className="booked_spot_items" key={review.id}>
                                         <div className="user_booking_details">
