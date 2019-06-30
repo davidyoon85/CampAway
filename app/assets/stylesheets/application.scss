@@ -12,18 +12,21 @@
  *
  *= require_tree .
  *= require_self
- *= require 'modal.scss'
- *= require 'splash.scss'
- *= require 'footer.scss'
- *= require 'spot.scss'
- *= require 'spot_form.scss'
- *= require 'host_spot.scss'
- *= require 'spot_search.scss'
- *= require 'search.scss'
- *= require 'booking.scss'
-*= require 'daypicker.scss'
-
  */
+
+ @import 'abstracts/daypicker';
+
+ @import 'components/booking';
+ @import 'components/host_spot';
+ @import 'components/review';
+ @import 'components/search';
+ @import 'components/spot';
+ @import 'components/spot_form';
+ @import 'components/spot_search';
+
+ @import 'layout/footer';
+ @import 'layout/modal';
+ @import 'layout/splash';
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
