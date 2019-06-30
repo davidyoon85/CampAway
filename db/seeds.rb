@@ -305,20 +305,17 @@ spot1.photos.attach(io: file, filename: "spot1_8.jpg")
 file = open('https://s3.amazonaws.com/camp-away-dev/spot2_0.jpg')
 spot2.photos.attach(io: file, filename: "spot2_0.jpg")
 
-file = open('https://s3.amazonaws.com/camp-away-dev/spot2_1.png')
-spot2.photos.attach(io: file, filename: "spot2_1.png")
+file = open('https://s3.amazonaws.com/camp-away-dev/spot2_1.jpg')
+spot2.photos.attach(io: file, filename: "spot2_1.jpg")
 
-file = open('https://s3.amazonaws.com/camp-away-dev/spot2_2.png')
-spot2.photos.attach(io: file, filename: "spot2_2.png")
+file = open('https://s3.amazonaws.com/camp-away-dev/spot2_2.jpg')
+spot2.photos.attach(io: file, filename: "spot2_2.jpg")
 
-file = open('https://s3.amazonaws.com/camp-away-dev/spot2_3.png')
-spot2.photos.attach(io: file, filename: "spot2_3.png")
+file = open('https://s3.amazonaws.com/camp-away-dev/spot2_3.jpg')
+spot2.photos.attach(io: file, filename: "spot2_3.jpg")
 
-file = open('https://s3.amazonaws.com/camp-away-dev/spot2_4.png')
-spot2.photos.attach(io: file, filename: "spot2_4.png")
-
-file = open('https://s3.amazonaws.com/camp-away-dev/spot2_5.png')
-spot2.photos.attach(io: file, filename: "spot2_5.png")
+file = open('https://s3.amazonaws.com/camp-away-dev/spot2_4.jpg')
+spot2.photos.attach(io: file, filename: "spot2_4.jpg")
 
 file = open('https://s3.amazonaws.com/camp-away-dev/spot3_0.jpg')
 spot3.photos.attach(io: file, filename: "spot3_0.jpg")
@@ -341,20 +338,20 @@ spot3.photos.attach(io: file, filename: "spot3_5.png")
 file = open('https://s3.amazonaws.com/camp-away-dev/spot4_0.jpg')
 spot4.photos.attach(io: file, filename: "spot4_0.jpg")
 
-file = open('https://s3.amazonaws.com/camp-away-dev/spot4_1.png')
-spot4.photos.attach(io: file, filename: "spot4_1.png")
+file = open('https://s3.amazonaws.com/camp-away-dev/spot4_1.jpg')
+spot4.photos.attach(io: file, filename: "spot4_1.jpg")
 
-file = open('https://s3.amazonaws.com/camp-away-dev/spot4_2.png')
-spot4.photos.attach(io: file, filename: "spot4_2.png")
+file = open('https://s3.amazonaws.com/camp-away-dev/spot4_2.jpg')
+spot4.photos.attach(io: file, filename: "spot4_2.jpg")
 
-file = open('https://s3.amazonaws.com/camp-away-dev/spot4_3.png')
-spot4.photos.attach(io: file, filename: "spot4_3.png")
+file = open('https://s3.amazonaws.com/camp-away-dev/spot4_3.jpg')
+spot4.photos.attach(io: file, filename: "spot4_3.jpg")
 
-file = open('https://s3.amazonaws.com/camp-away-dev/spot4_4.png')
-spot4.photos.attach(io: file, filename: "spot4_4.png")
+file = open('https://s3.amazonaws.com/camp-away-dev/spot4_4.jpg')
+spot4.photos.attach(io: file, filename: "spot4_4.jpg")
 
-file = open('https://s3.amazonaws.com/camp-away-dev/spot4_5.png')
-spot4.photos.attach(io: file, filename: "spot4_5.png")
+file = open('https://s3.amazonaws.com/camp-away-dev/spot4_5.jpg')
+spot4.photos.attach(io: file, filename: "spot4_5.jpg")
 
 file = open('https://s3.amazonaws.com/camp-away-dev/spot5_0.jpg')
 spot5.photos.attach(io: file, filename: "spot5_0.jpg")
@@ -392,20 +389,14 @@ spot6.photos.attach(io: file, filename: "spot6_5.jpg")
 file = open('https://s3.amazonaws.com/camp-away-dev/spot7_0.jpg')
 spot7.photos.attach(io: file, filename: "spot7_0.jpg")
 
-file = open('https://s3.amazonaws.com/camp-away-dev/spot7_1.png')
-spot7.photos.attach(io: file, filename: "spot7_1.png")
+file = open('https://s3.amazonaws.com/camp-away-dev/spot7_1.jpg')
+spot7.photos.attach(io: file, filename: "spot7_1.jpg")
 
-file = open('https://s3.amazonaws.com/camp-away-dev/spot7_2.png')
-spot7.photos.attach(io: file, filename: "spot7_2.png")
+file = open('https://s3.amazonaws.com/camp-away-dev/spot7_2.jpg')
+spot7.photos.attach(io: file, filename: "spot7_2.jpg")
 
-file = open('https://s3.amazonaws.com/camp-away-dev/spot7_3.png')
-spot7.photos.attach(io: file, filename: "spot7_3.png")
-
-file = open('https://s3.amazonaws.com/camp-away-dev/spot7_4.png')
-spot7.photos.attach(io: file, filename: "spot7_4.png")
-
-file = open('https://s3.amazonaws.com/camp-away-dev/spot7_5.png')
-spot7.photos.attach(io: file, filename: "spot7_5.png")
+file = open('https://s3.amazonaws.com/camp-away-dev/spot7_3.jpg')
+spot7.photos.attach(io: file, filename: "spot7_3.jpg")
 
 file = open('https://s3.amazonaws.com/camp-away-dev/spot8_0.jpg')
 spot8.photos.attach(io: file, filename: "spot8_0.jpg")
@@ -428,17 +419,14 @@ spot8.photos.attach(io: file, filename: "spot8_5.png")
 file = open('https://s3.amazonaws.com/camp-away-dev/spot9_0.jpg')
 spot9.photos.attach(io: file, filename: "spot9_0.jpg")
 
-file = open('https://s3.amazonaws.com/camp-away-dev/spot9_1.png')
-spot9.photos.attach(io: file, filename: "spot9_1.png")
+file = open('https://s3.amazonaws.com/camp-away-dev/spot9_1.jpg')
+spot9.photos.attach(io: file, filename: "spot9_1.jpg")
 
-file = open('https://s3.amazonaws.com/camp-away-dev/spot9_2.png')
-spot9.photos.attach(io: file, filename: "spot9_2.png")
+file = open('https://s3.amazonaws.com/camp-away-dev/spot9_2.jpg')
+spot9.photos.attach(io: file, filename: "spot9_2.jpg")
 
-file = open('https://s3.amazonaws.com/camp-away-dev/spot9_3.png')
-spot9.photos.attach(io: file, filename: "spot9_3.png")
+file = open('https://s3.amazonaws.com/camp-away-dev/spot9_3.jpg')
+spot9.photos.attach(io: file, filename: "spot9_3.jpg")
 
-file = open('https://s3.amazonaws.com/camp-away-dev/spot9_4.png')
-spot9.photos.attach(io: file, filename: "spot9_4.png")
-
-file = open('https://s3.amazonaws.com/camp-away-dev/spot9_5.png')
-spot9.photos.attach(io: file, filename: "spot9_5.png")
+file = open('https://s3.amazonaws.com/camp-away-dev/spot9_4.jpg')
+spot9.photos.attach(io: file, filename: "spot9_4.jpg")

@@ -127,7 +127,7 @@ class Splash extends React.Component {
 
                         <div className="splash_section" onClick={this.handleClick(8)}>
                             <div className="splash_section_img">
-                                <img src="https://s3.amazonaws.com/camp-away-dev/spot9_0.jpg" />
+                                <img src="https://camp-away-dev.s3.amazonaws.com/spot9_0.jpg" />
                             </div>
                             <div className="splash_section_details">
                                 <h3 className="splash_section_name">Rustic, Enchanted Cabin</h3>

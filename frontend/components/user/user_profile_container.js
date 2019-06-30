@@ -3,7 +3,7 @@ import UserProfile from './user_profile';
 import { fetchAllBookings, deleteBooking } from '../../actions/booking_actions';
 import { fetchAllSpots } from '../../actions/spot_actions';
 import { selectSpots } from '../../reducers/selectors';
-import { fetchEveryReviews, fetchReviews, deleteReview } from '../../actions/review_actions';
+import { fetchReviews, deleteReview } from '../../actions/review_actions';
 
 const mapStateToProps = (state, ownProps) => {
     return {
@@ -19,7 +19,6 @@ const mapDispatchToProps = (dispatch) => {
         fetchAllBookings: () => dispatch(fetchAllBookings()),
         deleteBooking: (id) => dispatch(deleteBooking(id)),
         fetchAllSpots: () => dispatch(fetchAllSpots()),
-        fetchEveryReviews: () => dispatch(fetchEveryReviews()),
         fetchReviews: (id) => dispatch(fetchReviews(id)),
         deleteReview: (id) => dispatch(deleteReview(id))
     }
