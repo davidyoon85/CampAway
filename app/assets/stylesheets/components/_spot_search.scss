@@ -118,7 +118,7 @@
 
 .spot_filters_container {
     display: flex;
-    border: 1px solid #ebebeb;
+    border: $border;
     width: 100%;
     background-color: #FDFDFD;
 }
@@ -132,7 +132,7 @@
     font-size: 1rem;
     font-weight: 500;
     background-color: #fff;
-    border: 1px solid #ebebeb;
+    border: $border;
     border-radius: 2px;
     cursor: pointer;
 
@@ -161,7 +161,7 @@
     top: 63px;
     z-index: 3;
     padding: 10px;
-    border: 1px solid #ebebeb;
+    border: $border;
     background-color: #fff;
     font-size: 1.5rem;
     display: flex;
@@ -174,7 +174,7 @@
     font-size: 1rem;
     font-weight: 500;
     padding: 10px;
-    border: 1px solid #ebebeb;
+    border: $border;
     margin: 5px 0px 5px 0px;
     position: relative;
     display: flex;

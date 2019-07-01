@@ -143,7 +143,6 @@
 }
 
 /* Default modifiers */
-
 .DayPicker-Day--today {
   color: $primary-color;
   font-weight: 700;
@@ -157,11 +156,9 @@
 .DayPicker-Day--disabled {
   color: #dce0e0;
   cursor: default;
-  /* background-color: #eff1f1; */
 }
 
 /* Example modifiers */
-
 .DayPicker-Day--sunday {
   background-color: #f7f8f8;
 }
@@ -188,28 +185,27 @@
   background-color: $primary-color;
   color: #fff;
   border-radius: 50%
-
 }
 
 /* DayPickerInput */
 
 .DayPickerInput {
   display: inline-block;
-}
 
-.DayPickerInput > input {
+  input {
     border: none;
     width: 100%;
     font-size: .9rem;
     font-weight: 400;
-}
+  }
 
-.DayPickerInput > input::placeholder {
+  input::placeholder {
     border: none;
     width: 100%;
     font-size: .9rem;
     font-weight: 400;
     cursor: pointer;
+  }
 }
 
 .DayPickerInput-OverlayWrapper {

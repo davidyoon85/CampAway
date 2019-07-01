@@ -62,10 +62,6 @@ input:focus, textarea {
   outline: none !important;
 }
 
-input:focus:hover, textarea:hover {
-  cursor: pointer;
-}
-
 button {
   outline: none;
   background-color: #fff;
@@ -285,35 +281,8 @@ body {
   padding-right: 20px;
 }
 
-#drop_menu {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  min-width: 150px;
-  min-height: 180px;
-  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 2;
-  background-color: #fff;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-#drop_menu a {
-  color: #000;
-  text-decoration: none;
-}
-
-.dropdown:hover #drop_menu {
-  display: block;
+.nav_host {
+  font-size: .8rem;
 }
 
 #menu_section {
@@ -329,12 +298,12 @@ body {
 }
 
 .modal_footer1 {
-  font-size: 14px;
+  font-size: .9rem;
   padding-bottom: 10px;
 }
 
 .modal_footer2 {
-  font-size: 14px;
+  font-size: .9rem;
   margin-top: 35px;
   margin-top: 5%;
 }
@@ -380,7 +349,7 @@ body {
 
 .session_error_message {
   display: block;
-  font-size: 13px;
+  font-size: 1rem;
   font-weight: 300;
   text-align: center;
   margin: 10px;
@@ -400,7 +369,7 @@ body {
 
 .splash_subtitle1 {
   font-weight: 700;
-  font-size: 2.5em;
+  font-size: 2rem;
   padding-bottom: 20px;
   width: 80%;
   text-align: left;
@@ -410,7 +379,7 @@ body {
 
 .splash_subtitle2 {
   font-weight: 300;
-  font-size: 1.1em;
+  font-size: 1rem;
   width: 80%;
   text-align: left;
   margin-left: 10%;
@@ -419,7 +388,7 @@ body {
 
 .splash_subtitle3 {
   font-weight: 700;
-  font-size: 1.8em;
+  font-size: 1.5rem;
   text-align: center;
   margin-bottom: 4%;
 }
@@ -476,16 +445,16 @@ body {
   height: 320px;
 }
 
-.index_section:hover {
-  cursor: pointer;
-}
-
-.index_section > img {
+.index_section img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 75%;
+}
+
+.index_section:hover {
+  cursor: pointer;
 }
 
 .index_section_container {
@@ -847,7 +816,6 @@ div > h3 {
 .DayPicker-Day--disabled {
   color: #dce0e0;
   cursor: default;
-  /* background-color: #eff1f1; */
 }
 
 /* Example modifiers */
@@ -884,22 +852,14 @@ div > h3 {
   display: inline-block;
 }
 
-.DayPickerInput > input {
+.DayPickerInput input {
   border: none;
   width: 100%;
   font-size: .9rem;
   font-weight: 400;
 }
 
-.DayPickerInput > input::-webkit-input-placeholder {
-  border: none;
-  width: 100%;
-  font-size: .9rem;
-  font-weight: 400;
-  cursor: pointer;
-}
-
-.DayPickerInput > input:-ms-input-placeholder {
+.DayPickerInput input::-webkit-input-placeholder {
   border: none;
   width: 100%;
   font-size: .9rem;
@@ -907,7 +867,7 @@ div > h3 {
   cursor: pointer;
 }
 
-.DayPickerInput > input::-ms-input-placeholder {
+.DayPickerInput input:-ms-input-placeholder {
   border: none;
   width: 100%;
   font-size: .9rem;
@@ -915,7 +875,15 @@ div > h3 {
   cursor: pointer;
 }
 
-.DayPickerInput > input::placeholder {
+.DayPickerInput input::-ms-input-placeholder {
+  border: none;
+  width: 100%;
+  font-size: .9rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.DayPickerInput input::placeholder {
   border: none;
   width: 100%;
   font-size: .9rem;
@@ -1004,12 +972,17 @@ div > h3 {
   padding: 20px;
   border: 1px solid #ebebeb;
   font-weight: 400;
-  font-size: .9em;
+  font-size: .8rem;
 }
 
 .bio_panel span {
   margin-right: 10px;
   width: 14px;
+}
+
+.bio_panel h3 {
+  font-weight: 400;
+  font-size: .9em;
 }
 
 .panel_body {
@@ -1018,12 +991,17 @@ div > h3 {
   padding: 20px;
   border: 1px solid #ebebeb;
   padding-right: 10px;
-  font-size: .9em;
+  font-size: .8rem;
 }
 
 .panel_body span {
   padding-right: 10px;
   width: 14px;
+}
+
+.panel_body h3 {
+  font-weight: 400;
+  font-size: .9em;
 }
 
 #email_icon {
@@ -1034,19 +1012,9 @@ div > h3 {
   margin-right: 10px;
 }
 
-.bio_panel h3 {
-  font-weight: 400;
-  font-size: .9em;
-}
-
-.panel_body h3 {
-  font-weight: 400;
-  font-size: .9em;
-}
-
 #bio_panel_name {
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: 1.1rem;
 }
 
 #panel_body_header {
@@ -1058,15 +1026,9 @@ div > h3 {
   margin: 0px 50px;
 }
 
-.user_profile_greeting {
-  font-weight: 700;
-  font-size: 1.7em;
-}
-
 .user_bookings_header {
   padding: 20px 0px 0px 20px;
   font-weight: 700;
-  font-size: 1.7em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1080,7 +1042,7 @@ div > h3 {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  min-width: 700px;
+  min-width: 600px;
   width: 70%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -1108,6 +1070,7 @@ div > h3 {
 .booking_delete_button {
   margin-left: auto;
   padding-right: 20px;
+  font-size: .9rem;
 }
 
 .booking_delete_button:hover {
@@ -1194,7 +1157,7 @@ div > h3 {
 
 .user_booking_title {
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   padding-left: 20px;
 }
 
@@ -1211,7 +1174,7 @@ div > h3 {
   display: flex;
 }
 
-.widget_guests > a {
+.widget_guests a {
   font-weight: 700;
 }
 
@@ -1224,7 +1187,7 @@ div > h3 {
 
 .booked_spots_number {
   font-weight: 500;
-  font-size: 1.3em;
+  font-size: 1.2rem;
   padding: 10px 0px 20px 0px;
 }
 
@@ -1235,7 +1198,7 @@ div > h3 {
 
 .booked_user_reviews {
   font-weight: 500;
-  font-size: 1.3em;
+  font-size: 1.2rem;
   padding: 10px 0px 20px 30px;
 }
 
@@ -1273,8 +1236,9 @@ div > h3 {
   padding-left: 10px;
 }
 
-.user_booking_details > p {
+.user_booking_details p {
   padding: 2px;
+  font-size: .9rem;
 }
 
 .user_booking_subheader {
@@ -1484,6 +1448,10 @@ div > h3 {
   padding: 10%;
 }
 
+.host_spot_options img {
+  border: 1px solid #000;
+}
+
 .active_button {
   display: block;
   border: 1px solid #000;
@@ -1494,19 +1462,12 @@ div > h3 {
   padding: 10%;
 }
 
-.host_spot_options > img {
-  border: 1px solid #000;
-}
-
 .form_signup_button {
   width: 100%;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   padding: 10px;
   border-radius: 5px;
-  font-size: .9em;
+  font-size: .9rem;
   color: #fff;
   background-color: #39C39A;
   border: 2px solid #fff;
@@ -1522,10 +1483,9 @@ div > h3 {
 }
 
 .host_options_title {
-  font-weight: 700;
   margin-bottom: 15px;
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   text-align: center;
 }
 
@@ -1604,7 +1564,7 @@ div > h3 {
 
 .review_spot_title {
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .review_description {
@@ -1628,8 +1588,7 @@ div > h3 {
   color: #fff;
   padding: 0.5rem;
   font-weight: 700;
-  font-size: 18px;
-  cursor: pointer;
+  font-size: .9rem;
   margin: 0 auto;
 }
 
@@ -1640,7 +1599,6 @@ div > h3 {
   padding: 0.5rem;
   -webkit-transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
   transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
-  cursor: pointer;
   margin: 0 auto;
 }
 
@@ -1653,7 +1611,6 @@ div > h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Calibre", Helvetica, Arial, sans-serif;
 }
 
 .review_submit_button {
@@ -1847,13 +1804,12 @@ div > h3 {
   width: 100%;
   height: 44px;
   padding: 0 0 0 5px;
-  font-size: 16px;
+  font-size: .9rem;
   background-color: transparent;
   -webkit-box-shadow: 0 0 0;
           box-shadow: 0 0 0;
   border-radius: 0;
   border: none;
-  color: #000;
 }
 
 .search_nav_bar::-webkit-input-placeholder {
@@ -1903,10 +1859,6 @@ div > h3 {
           justify-content: space-evenly;
 }
 
-.spot_filter_button {
-  border: 1px solid lightgray;
-}
-
 .search_bar_main {
   width: 80%;
   height: 10vh;
@@ -1931,7 +1883,7 @@ div > h3 {
           flex: 1;
   color: #000;
   font-weight: 400;
-  font-size: 1.1em;
+  font-size: 1rem;
   letter-spacing: 1.1;
 }
 
@@ -1968,7 +1920,7 @@ div > h3 {
   color: #fff;
   padding: 0.5rem;
   font-weight: 700;
-  font-size: 1.1em;
+  font-size: 1.2em;
   cursor: pointer;
 }
 
@@ -1978,11 +1930,8 @@ div > h3 {
   color: #39C39A;
   width: 25%;
   padding: 0.5rem;
-  font-weight: 700;
-  font-size: 18px;
   -webkit-transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
   transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
-  cursor: pointer;
 }
 
 .search_bar_icon {
@@ -1990,7 +1939,7 @@ div > h3 {
   color: #000;
   float: left;
   padding: 0px 15px 0px 15px;
-  font-size: 1.3em;
+  font-size: 1.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2589,6 +2538,7 @@ span > p {
   width: 65%;
   min-width: 350px;
   margin: 0 auto;
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2598,7 +2548,6 @@ span > p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #ffffff;
 }
 
 .form_nav_section {
@@ -2616,7 +2565,7 @@ span > p {
   width: 30%;
   min-width: 215px;
   height: 100%;
-  background-color: #ffffff;
+  background-color: #fff;
   margin: 3%;
 }
 
@@ -2637,7 +2586,7 @@ span > p {
 .left_arrow {
   font-weight: bold;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #fff;
   cursor: pointer;
   margin-right: 5px;
   border-width: 1px;
@@ -2649,7 +2598,7 @@ span > p {
 .right_arrow {
   font-weight: bold;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #fff;
   cursor: pointer;
   margin-left: 5px;
   border-width: 1px;
@@ -2681,14 +2630,14 @@ span > p {
   width: 65%;
   min-width: 350px;
   margin: 0 auto;
-  background-color: #ffffff;
+  background-color: #fff;
   margin-bottom: 5%;
 }
 
 .spot_form_main {
   display: block;
   width: 50%;
-  background-color: #ffffff;
+  background-color: #fff;
   margin-top: 1%;
   margin-bottom: 5%;
   border: 1px solid #ebebeb;
@@ -2705,7 +2654,7 @@ span > p {
   height: 67%;
   width: 30%;
   min-width: 215px;
-  background-color: #ffffff;
+  background-color: #fff;
   margin: 1% 3% 3%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2716,7 +2665,7 @@ span > p {
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 5px;
           box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 5px;
   padding: 20px;
-  font-size: 1em;
+  font-size: .9rem;
 }
 
 .host_message_header {
@@ -2732,7 +2681,7 @@ span > p {
 
 .host_message_name {
   font-weight: 600;
-  font-size: 1.2em;
+  font-size: 1.1rem;
   margin-bottom: 5px;
 }
 
@@ -2762,13 +2711,6 @@ span > p {
   width: 100%;
 }
 
-.form_header {
-  font-size: 18px;
-  color: #000;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
 .form_title {
   margin: 0 auto;
 }
@@ -2784,20 +2726,14 @@ span > p {
       flex-wrap: wrap;
 }
 
-.form_questions {
-  font-size: 15px;
-  color: #000;
-  font-weight: 700;
-}
-
 .spot_form_input {
-  background-color: #ffffff;
+  background-color: #fff;
   width: 27%;
   height: 100px;
 }
 
 .spot_form_button {
-  background-color: #ffffff;
+  background-color: #fff;
   width: 27%;
   height: 100px;
 }
@@ -2813,7 +2749,7 @@ span > p {
 .form_group_title {
   text-align: left;
   font-weight: 700;
-  font-size: 1.1em;
+  font-size: 1rem;
 }
 
 .form-control {
@@ -2824,37 +2760,37 @@ span > p {
   margin: 10px 0px 20px 0px;
   font-weight: 400;
   letter-spacing: 1.1;
-  font-size: 1em;
+  font-size: .9rem;
   color: #000;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .form-control::-webkit-input-placeholder {
   color: gray;
   font-weight: 500;
   letter-spacing: 1.1;
-  font-size: 1em;
+  font-size: .9rem;
 }
 
 .form-control:-ms-input-placeholder {
   color: gray;
   font-weight: 500;
   letter-spacing: 1.1;
-  font-size: 1em;
+  font-size: .9rem;
 }
 
 .form-control::-ms-input-placeholder {
   color: gray;
   font-weight: 500;
   letter-spacing: 1.1;
-  font-size: 1em;
+  font-size: .9rem;
 }
 
 .form-control::placeholder {
   color: gray;
   font-weight: 500;
   letter-spacing: 1.1;
-  font-size: 1em;
+  font-size: .9rem;
 }
 
 .form_control_description {
@@ -2865,38 +2801,11 @@ span > p {
   text-align: start;
 }
 
-.form_control_description > input::-webkit-input-placeholder {
-  color: gray;
+.form_control_description {
   font-weight: 500;
   letter-spacing: 1.1;
-  font-size: 14px;
-}
-
-.form_control_description > input:-ms-input-placeholder {
-  color: gray;
-  font-weight: 500;
-  letter-spacing: 1.1;
-  font-size: 14px;
-}
-
-.form_control_description > input::-ms-input-placeholder {
-  color: gray;
-  font-weight: 500;
-  letter-spacing: 1.1;
-  font-size: 14px;
-}
-
-.form_control_description > input::placeholder {
-  color: gray;
-  font-weight: 500;
-  letter-spacing: 1.1;
-  font-size: 14px;
-}
-
-.form_control_description > :placeholder-shown {
-  font-weight: 700;
-  font-size: 16px;
-  color: #757575;
+  font-size: .9rem;
+  padding: 10px;
 }
 
 textarea {
@@ -2917,13 +2826,13 @@ textarea {
   -webkit-box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 5px;
           box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 5px;
   background: #39C39A;
-  color: #ffffff;
+  color: #fff;
 }
 
 .previous_button:hover {
   width: 80px;
   border: 2px solid #39C39A;
-  background-color: #ffffff;
+  background-color: #fff;
   color: #39C39A;
   font-weight: 700;
   font-size: .8em;
@@ -2941,13 +2850,13 @@ textarea {
   -webkit-box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 5px;
           box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 5px;
   background: #39C39A;
-  color: #ffffff;
+  color: #fff;
 }
 
 .next_button:hover {
   width: 80px;
   border: 2px solid #39C39A;
-  background-color: #ffffff;
+  background-color: #fff;
   color: #39C39A;
   font-weight: 700;
   font-size: .8em;
@@ -3051,9 +2960,9 @@ textarea {
     padding: 12px;
     border-radius: 5px;
     font-size: 1.1em;
-    color: #ffffff;
+    color: #fff;
     background-color: #39C39A;
-    border: 2px solid #ffffff;
+    border: 2px solid #fff;
     font-weight: 600;
   }
   .form_container {
@@ -3065,7 +2974,7 @@ textarea {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
-    background-color: #ffffff;
+    background-color: #fff;
   }
   .form-control::-webkit-input-placeholder {
     font-size: .8em;
@@ -3086,7 +2995,7 @@ textarea {
   .spot_form_message {
     width: 70%;
     min-width: 215px;
-    background-color: #ffffff;
+    background-color: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3131,7 +3040,7 @@ textarea {
     width: 100%;
     height: 100%;
     margin-bottom: 0%;
-    background-color: #ffffff;
+    background-color: #fff;
   }
   .spot_form_main {
     width: 80%;
@@ -3147,16 +3056,16 @@ textarea {
     display: none;
   }
   .form_group_title {
-    font-size: 1em;
+    font-size: .9rem;
   }
   .next_button {
-    font-size: .8em;
+    font-size: .7rem;
   }
   .previous_button {
-    font-size: .8em;
+    font-size: 7rem;
   }
   .photo_upload + label {
-    font-size: .8em;
+    font-size: 7rem;
     padding: 6px;
   }
   .spot_form_nav {

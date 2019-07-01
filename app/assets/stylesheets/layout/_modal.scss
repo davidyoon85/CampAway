@@ -1,19 +1,19 @@
 .nav_logged_in_logout {
     margin-top: 10px;
-      display: inline-block;
-      color: #333331;
-      border: 0px;
-      width: 70px;
-      height: 25px;
-      padding-bottom: 12px;
-      font-size: 14px;
-      font-weight: 100px;
-      font-family: $font-family;
+    display: inline-block;
+    color: #333331;
+    border: 0px;
+    width: 70px;
+    height: 25px;
+    padding-bottom: 12px;
+    font-size: 14px;
+    font-weight: 100px;
+    font-family: $font-family;
 
-      &:hover {
-        border-bottom: 1px solid rgb(216, 216, 216);
-      }
-  }
+    &:hover {
+    border-bottom: 1px solid rgb(216, 216, 216);
+    }
+}
 
 .modal-background {
     position: fixed;
@@ -57,29 +57,11 @@
     align-items: center;
     justify-content: flex-end;
     padding-right: 20px;
-  }
-  
-#drop_menu {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    min-width: 150px;
-    min-height: 180px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 2;
-    background-color: #fff;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
 }
 
-#drop_menu a {
-    color: #000;
-    text-decoration: none;
+.nav_host {
+    font-size: .8rem;
 }
-  
-.dropdown:hover #drop_menu {display: block;}
   
 #menu_section {
     position: absolute;
@@ -93,12 +75,12 @@
 }
 
 .modal_footer1 {
-    font-size: 14px;
+    font-size: .9rem;
     padding-bottom: 10px;
 }
 
 .modal_footer2 {
-    font-size: 14px;
+    font-size: .9rem;
     margin-top: 35px;
     margin-top: 5%;
 }
@@ -110,7 +92,7 @@
 
 .modal_signin {
     font-weight: 700;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: $border;
     line-height: 3;
     line-height: 14px;
 
@@ -129,16 +111,16 @@
 }
 
 .modal_table1 {
-      width: 50%;
+    width: 50%;
 }
 
 .modal_table2 {
-      width: 50%;
+    width: 50%;
 }
 
 .session_error_message {
     display: block;
-    font-size: 13px;
+    font-size: 1rem;
     font-weight: 300;
     text-align: center;
     margin: 10px;

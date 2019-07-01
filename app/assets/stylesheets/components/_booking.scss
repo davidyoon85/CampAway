@@ -12,28 +12,38 @@
     margin-top: 10px;
     width: 100%;
     padding: 20px;
-    border: 1px solid #ebebeb;
+    border: $border;
     font-weight: 400;
-    font-size: .9em;
-}
+    font-size: .8rem;
 
-.bio_panel span {
-    margin-right: 10px;
-    width: 14px;
+    span {
+        margin-right: 10px;
+        width: 14px;
+    }
+
+    h3 {
+        font-weight: 400;
+        font-size: .9em;
+    }
 }
 
 .panel_body {
     margin-top: 20px;
     width: 100%;
     padding: 20px;
-    border: 1px solid #ebebeb;
+    border: $border;
     padding-right: 10px;
-    font-size: .9em;
-}
+    font-size: .8rem;
 
-.panel_body span {
-    padding-right: 10px;
-    width: 14px;
+    span {
+        padding-right: 10px;
+        width: 14px;
+    }
+
+    h3 {
+        font-weight: 400;
+        font-size: .9em;
+    }
 }
 
 #email_icon {
@@ -44,19 +54,9 @@
     margin-right: 10px;
 }
 
-.bio_panel h3 {
-    font-weight: 400;
-    font-size: .9em;
-}
-
-.panel_body h3 {
-    font-weight: 400;
-    font-size: .9em;
-}
-
 #bio_panel_name {
     font-weight: 700;
-    font-size: 1.2em;
+    font-size: 1.1rem;
 }
 
 #panel_body_header {
@@ -68,15 +68,9 @@
     margin: 0px 50px;
 }
 
-.user_profile_greeting {
-    font-weight: 700;
-    font-size: 1.7em;
-}
-
 .user_bookings_header {
     padding: 20px 0px 0px 20px;
     font-weight: 700;
-    font-size: 1.7em;
     display: flex;
     justify-content: center;
 }
@@ -84,7 +78,7 @@
 .booked_spots_list {
     display: flex;
     height: 100%;
-    min-width: 700px;
+    min-width: 600px;
     width: 70%;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -104,6 +98,7 @@
 .booking_delete_button {
     margin-left: auto;
     padding-right: 20px;
+    font-size: .9rem;
 
     &:hover {
         font-weight: 700;
@@ -111,7 +106,7 @@
 }
 
 .user_link_index {
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: $border;
 
     &:hover {
         border-bottom: 1px solid #000;
@@ -162,15 +157,15 @@
     position: relatve;
     width: 100%;
     height: 80px;
-    border: 1px solid #ebebeb;
+    border: $border;
     padding: 5%;
     box-sizing: border-box;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: $box-shadow;
 }
 
 .user_booking_title {
     font-weight: 700;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     padding-left: 20px;
 }
 
@@ -181,11 +176,11 @@
 
 .widget_guests {
     display: flex;
-} 
 
-.widget_guests > a {
-    font-weight: 700;
-}
+    a {
+        font-weight: 700;
+    }
+} 
 
 .booked_spots_header {
     display: flex;
@@ -194,7 +189,7 @@
 
 .booked_spots_number {
     font-weight: 500;
-    font-size: 1.3em;
+    font-size: 1.2rem;
     padding: 10px 0px 20px 0px;
 }
 
@@ -203,10 +198,9 @@
     text-align: center;
 }
 
-
 .booked_user_reviews {
     font-weight: 500;
-    font-size: 1.3em;
+    font-size: 1.2rem;
     padding: 10px 0px 20px 30px;
 }
 
@@ -237,10 +231,11 @@
     display: flex;
     flex-direction: column;
     padding-left: 10px;
-}
 
-.user_booking_details > p {
-    padding: 2px;
+    p {
+        padding: 2px;
+        font-size: .9rem;
+    }
 }
 
 .user_booking_subheader {
