@@ -6,7 +6,7 @@
 }
 
 .host_spot_options {
-    border: 1px solid black;
+    border: 1px solid #000;
     height: 80%;
     width: 80%;
     display: flex;
@@ -18,8 +18,8 @@
 
 .active_button{
     display: block;
-    border: 1px solid black;
-    background: #40d9ac;
+    border: 1px solid #000;
+    background: $primary-color;
     height: 80%;
     width: 80%;
     margin: 10%;
@@ -27,7 +27,7 @@
 }
 
 .host_spot_options > img {
-    border: 1px solid black;
+    border: 1px solid #000;
 }
 
 .form_signup_button {
@@ -37,18 +37,17 @@
     padding: 10px;
     border-radius: 5px;
     font-size: .9em;
-    color: #ffffff;
-    background-color: #40d9ac;
-    border: 2px solid #ffffff;
+    color: #fff;
+    background-color: $primary-color;
+    border: 2px solid #fff;
     font-weight: 600;
-}
 
-.form_signup_button:hover {
-    cursor: pointer;
-    border: 2px solid #40d9ac;
-    background-color: #ffffff;
-    color: #40d9ac;
-    transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
+    &:hover {
+        border: 2px solid $primary-color;
+        background-color: #fff;
+        color: $primary-color;
+        transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
+    }
 }
 
 .host_options_title {
@@ -74,11 +73,11 @@
 }
 
 #check_in {
-    font-family: "Calibre", Helvetica, Arial, sans-serif;
+    font-family: $font-family;
 }
 
 #check_out {
-    font-family: "Calibre", Helvetica, Arial, sans-serif;
+    font-family: $font-family;
 }
 
 @media (max-width: 700px) {

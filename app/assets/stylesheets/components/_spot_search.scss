@@ -3,7 +3,7 @@
     justify-content: center;
     width: 90%;
     min-width: 1024px;
-    background-color: #ffffff;
+    background-color: #fff;
     position: relative;
     padding-bottom: 10px;
     margin: 0 auto;
@@ -18,7 +18,7 @@
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 10px;
-    background-color: #ffffff;
+    background-color: #fff;
     overflow: scroll;
     box-sizing: border-box;
     justify-content: flex-start;
@@ -135,15 +135,15 @@
     border: 1px solid #ebebeb;
     border-radius: 2px;
     cursor: pointer;
+
+    &:hover {
+        border: 1px solid #000;
+    }
 }
 
 .spot_filter_section > button > img {
     height: 36px;
     width: 36px;
-}
-
-.spot_filter_section:hover {
-    border: 1px solid black;
 }
 
 .spot_filter_section:last-child {
@@ -180,10 +180,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.spot_filter_item > button:hover {
-    border: 1px solid black;
+    &:hover {
+        border: 1px solid #000;
+    }
 }
 
 .spot_filter_item > button > img {
@@ -194,12 +194,12 @@
 
 .active_filter_button {
     display: block;
-    border: 1px solid #40d9ac;
-    background: #40d9ac;
+    border: 1px solid $primary-color;
+    background: $primary-color;
     height: 80%;
     width: 80%;
     padding: 10px;
-    color: #ffffff;
+    color: #fff;
     transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
 }
 

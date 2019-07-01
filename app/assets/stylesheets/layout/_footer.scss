@@ -1,12 +1,10 @@
 .foot_div {
-    background-image: image_url("footer_img.png");
+    background: url("footer_img.png");
     display: flex;
-    right: 0;
     bottom: 0;
     left: 0;
     position: relative;
     width: 100%;
-    // min-height: 350px;
     background-color: #41305c;
     background-repeat: repeat-x;
     background-position: bottom center;
@@ -33,7 +31,7 @@
 
 .foot_description_title {
     color: #70539f;
-    font-size: 13px;
+    font-size: 1rem;
     text-align: left;
     font-weight: 700;
     margin-bottom: 20px;
@@ -41,15 +39,15 @@
 
 .foot_description_text {
     font-family: "Helvetica, sans-serif";
-    color: #ffffff;
-    font-size: 13px;
+    color: #fff;
+    font-size: .9rem;
     text-align: left;
     line-height: 1.8;
 }
 
 .foot_social {
     width: 25%;
-    color: #ffffff;
+    color: #fff;
     margin: 30px;
     position: relative;
     left: 7%;
@@ -61,7 +59,7 @@
 }
 
 .foot_social_text {
-    color: #ffffff;
+    color: #fff;
     font-size: 10px;
     text-align: left;
     line-height: 1.8;
@@ -69,12 +67,20 @@
 
 .social_link {
     font-family: "Helvetica, sans-serif";
-    color: #ffffff;
-    font-size: 13px;
+    color: #fff;
+    font-size: .9rem;
 }
 
 .social_link_li {
     margin-bottom: 10px;
+
+    &:hover {
+        color: #C6AAE2;
+    }
+}
+
+.social_link i:hover {
+    color: #C6AAE2;
 }
 
 .fas {
@@ -93,18 +99,13 @@
     padding-top: 10px;
 }
 
-a > i {
-    font-family: sans-serif;
-}
-
 .foot_bottom {
     background-color: #3e7e96;
     position: absolute;
     bottom: 0;
     display: flex;
     justify-content: space-between;
-    font-size: 10px;
-    color: #ffffff;
+    color: #fff;
 }   
 
 .pull-left {

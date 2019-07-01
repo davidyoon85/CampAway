@@ -3,13 +3,12 @@
 }
 
 .user_profile_sidebar {
-    background-color: #ffffff;
+    background-color: #fff;
     width: 30%;
     min-width: 260px;
 }
 
 .bio_panel {
-    // width: 280px;
     margin-top: 10px;
     width: 100%;
     padding: 20px;
@@ -105,18 +104,18 @@
 .booking_delete_button {
     margin-left: auto;
     padding-right: 20px;
-}
 
-.booking_delete_button:hover {
-    font-weight: 700;
+    &:hover {
+        font-weight: 700;
+    }
 }
 
 .user_link_index {
     border-bottom: 1px solid #ebebeb;
-}
 
-.user_link_index:hover {
-    border-bottom: 1px solid black;
+    &:hover {
+        border-bottom: 1px solid #000;
+    }
 }
 
 .user_status_header {
@@ -214,17 +213,17 @@
 .booked_reviews_number {
     line-height: 2;
     border-bottom: 3px solid #ebebeb;
+
+    &:hover {
+        cursor: pointer;
+        border-bottom: 3px solid $primary-color;
+    }
 }
 
 .booked_reviews_number_active{
     line-height: 2;
     cursor: pointer;
-    border-bottom: 3px solid #40d9ac;
-}
-
-.booked_reviews_number:hover {
-    cursor: pointer;
-    border-bottom: 3px solid #40d9ac;
+    border-bottom: 3px solid $primary-color;
 }
 
 .booking_img {

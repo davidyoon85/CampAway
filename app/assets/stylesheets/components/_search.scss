@@ -24,7 +24,7 @@
     box-shadow: 0 0 0;
     border-radius: 0;
     border: none;
-    color: black;
+    color: #000;
 }
 
 .search_nav_bar::placeholder {
@@ -36,7 +36,7 @@
 .search_icon {
     font-size: 20px;
     position: relative;
-    color: black;
+    color: #000;
     float: left;
     padding: 0px 5px 0px 15px;
     display: flex;
@@ -67,7 +67,7 @@
     border: 0;
     padding: 0.5rem 0.5rem 0.5rem 0;
     flex: 1;
-    color: black;
+    color: #000;
     font-weight: 400;
     font-size: 1.1em;
     letter-spacing: 1.1;
@@ -80,33 +80,33 @@
 }
 
 .search_button {
-    border: 3px solid #40d9ac;
+    border: 3px solid $primary-color;
     height: 100%;
     width: 25%;
     min-width: 85px;
-    background: #40d9ac;
-    color: #ffffff;
+    background: $primary-color;
+    color: #fff;
     padding: 0.5rem;
     font-weight: 700;
     font-size: 1.1em;
     cursor: pointer;
-}
 
-.search_button:hover {
-    border: 3px solid #40d9ac;
-    background-color: #ffffff;
-    color: #40d9ac;
-    width: 25%;
-    padding: 0.5rem;
-    font-weight: 700;
-    font-size: 18px;
-    transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
-    cursor: pointer;
+    &:hover {
+        border: 3px solid $primary-color;
+        background-color: #fff;
+        color: $primary-color;
+        width: 25%;
+        padding: 0.5rem;
+        font-weight: 700;
+        font-size: 18px;
+        transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
+        cursor: pointer;
+    }
 }
 
 .search_bar_icon {
     position: relative;
-    color: black;
+    color: #000;
     float: left;
     padding: 0px 15px 0px 15px;
     font-size: 1.3em;
