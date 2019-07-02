@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
+
 import { connect } from 'react-redux';
 import { fetchAllSpots } from '../actions/spot_actions';
 import { receiveGeolocation } from '../actions/location_filter_actions';
 
-class Splash extends React.Component {
+class Splash extends Component {
     constructor(props) {
         super(props);
 
@@ -67,7 +68,7 @@ class Splash extends React.Component {
                     <div className="splash_main_section">
                         <div className="splash_section" onClick={this.handleClick(0)}>
                             <div className="splash_section_img">
-                                <img src="https://s3.amazonaws.com/camp-away-dev/spot1_0.jpg" />
+                                <img src="https://s3.amazonaws.com/camp-away-dev/spot1_0.jpg" alt=""/>
                             </div>
                             <div className="splash_section_details">    
                                 <h3 className="splash_section_name">Cabin in the Woods</h3>
@@ -79,7 +80,7 @@ class Splash extends React.Component {
 
                         <div className="splash_section" onClick={this.handleClick(1)}>
                             <div className="splash_section_img">
-                                <img src="https://s3.amazonaws.com/camp-away-dev/spot2_0.jpg" />
+                                <img src="https://s3.amazonaws.com/camp-away-dev/spot2_0.jpg"  alt=""/>
                             </div>
                             <div className="splash_section_details">   
                                 <h3 className="splash_section_name">Oh! Pear Orchards</h3>
@@ -91,7 +92,7 @@ class Splash extends React.Component {
 
                         <div className="splash_section" onClick={this.handleClick(2)}>
                             <div className="splash_section_img">
-                                <img src="https://s3.amazonaws.com/camp-away-dev/spot3_0.jpg" />
+                                <img src="https://s3.amazonaws.com/camp-away-dev/spot3_0.jpg"  alt=""/>
                             </div>
                             <div className="splash_section_details">   
                                 <h3 className="splash_section_name">Blue Mountain Camping</h3>
@@ -103,7 +104,7 @@ class Splash extends React.Component {
 
                         <div className="splash_section" onClick={this.handleClick(3)}>
                             <div className="splash_section_img">
-                                <img src="https://s3.amazonaws.com/camp-away-dev/spot4_0.jpg" />
+                                <img src="https://s3.amazonaws.com/camp-away-dev/spot4_0.jpg"  alt=""/>
                             </div>
                             <div className="splash_section_details">  
                                 <h3 className="splash_section_name">Enveloped in Woods</h3>
@@ -115,7 +116,7 @@ class Splash extends React.Component {
 
                         <div className="splash_section" onClick={this.handleClick(4)}>
                             <div className="splash_section_img">
-                                <img src="https://s3.amazonaws.com/camp-away-dev/spot5_0.jpg" />
+                                <img src="https://s3.amazonaws.com/camp-away-dev/spot5_0.jpg"  alt=""/>
                             </div>
                             <div className="splash_section_details"> 
                                 <h3 className="splash_section_name">Lakeside Forest</h3>     
@@ -127,7 +128,7 @@ class Splash extends React.Component {
 
                         <div className="splash_section" onClick={this.handleClick(8)}>
                             <div className="splash_section_img">
-                                <img src="https://camp-away-dev.s3.amazonaws.com/spot9_0.jpg" />
+                                <img src="https://camp-away-dev.s3.amazonaws.com/spot9_0.jpg"  alt=""/>
                             </div>
                             <div className="splash_section_details">
                                 <h3 className="splash_section_name">Rustic, Enchanted Cabin</h3>

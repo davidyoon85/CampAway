@@ -1,0 +1,118 @@
+.widget_container {
+    position: relative;
+    height: 200px;
+    width: 319px;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.booking_widget {
+    position: relative;
+    width: 339px
+}
+
+.booking_banner {
+    min-height: 50px;
+    background-color: #fff;
+    border: $border;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    padding: 15px 10px 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333333;
+}
+
+#widget_per_night {
+    font-size: .8rem;
+    font-weight: 400;
+    color: gray;
+}
+
+.booking_well {
+    z-index: 1;
+    padding: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    border: 0;
+    transition: top 0.3s ease 0s;
+    min-height: 20px;
+}
+
+.well_dates_guests {
+    min-height: 50px;
+    background-color: #fff;
+    border: $border;
+    font-weight: 400;
+    line-height: 1.42;
+    color: #333333;
+    display: flex;
+}
+
+.label {
+    display: block;
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+    font-size: .9rem;
+    color: #333333;
+    font-weight: 600;
+}
+
+.value {
+    white-space: nowrap;
+    font-size: .9rem;
+}
+
+.booking_checkin {
+    width: 38%;
+    border-right: $border;
+    padding: 10px 10px 10px 15px;
+    transition: background-color 0.3s ease 0s;
+}
+
+.booking_checkout {
+    width: 38%;
+    border-right: $border;
+    padding: 10px 10px 10px 15px;
+    transition: background-color 0.3s ease 0s;
+}
+
+.booking_num_guests {
+    font-size: .9rem;
+}
+
+.booking_guests {
+    width: 24%;
+    cursor: pointer;
+    padding: 10px 10px 10px 15px;
+    transition: background-color 0.3s ease 0s;
+}
+
+.booking_submit {
+    background-color: #fff;
+    border: $border;
+    padding: 10px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+}
+
+.widget_button {
+    width: 100%;
+    padding: 10px 15px;
+    position: relative;
+    font-size: .9rem;
+    font-weight: 700;
+    border: 3px solid $primary-color;
+    background-color: $primary-color;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+        border: 2px solid $primary-color;
+        background-color: #fff;
+        color: $primary-color;
+        transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
+    }
+}

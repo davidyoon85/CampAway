@@ -96,7 +96,7 @@ div > h3 {
 .index_section_subheader {
     text-align: left;
     display: block;
-    color: #757575;
+    color: $font-color;
     font-size: 1em;
     font-weight: 400;
     margin-top: 7px;
@@ -156,7 +156,7 @@ div > h3 {
     text-align: left;
     padding-top: 3%;
     font-size: 1rem;
-    color: #757575;
+    color: $font-color;
 }
 
 @media (min-width: 701px) and (max-width: 1024px) {

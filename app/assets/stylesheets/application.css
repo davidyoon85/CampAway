@@ -30,7 +30,6 @@ time, mark, audio, video, button, link {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
   vertical-align: baseline;
 }
@@ -42,6 +41,10 @@ time, mark, audio, video, button, link {
 
 html {
   overflow-y: scroll;
+}
+
+body {
+  font-size: 12px;
 }
 
 a {
@@ -954,6 +957,178 @@ div > h3 {
     bottom: 0;
     position: absolute;
   }
+}
+
+.widget_container {
+  position: relative;
+  height: 200px;
+  width: 319px;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.booking_widget {
+  position: relative;
+  width: 339px;
+}
+
+.booking_banner {
+  min-height: 50px;
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  padding: 15px 10px 10px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #333333;
+}
+
+#widget_per_night {
+  font-size: .8rem;
+  font-weight: 400;
+  color: gray;
+}
+
+.booking_well {
+  z-index: 1;
+  padding: 0;
+  margin-bottom: 0;
+  background-color: transparent;
+  border: 0;
+  -webkit-transition: top 0.3s ease 0s;
+  transition: top 0.3s ease 0s;
+  min-height: 20px;
+}
+
+.well_dates_guests {
+  min-height: 50px;
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  font-weight: 400;
+  line-height: 1.42;
+  color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.label {
+  display: block;
+  padding-top: 0;
+  padding-right: 0;
+  padding-left: 0;
+  font-size: .9rem;
+  color: #333333;
+  font-weight: 600;
+}
+
+.value {
+  white-space: nowrap;
+  font-size: .9rem;
+}
+
+.booking_checkin {
+  width: 38%;
+  border-right: 1px solid #ebebeb;
+  padding: 10px 10px 10px 15px;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+}
+
+.booking_checkout {
+  width: 38%;
+  border-right: 1px solid #ebebeb;
+  padding: 10px 10px 10px 15px;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+}
+
+.booking_num_guests {
+  font-size: .9rem;
+}
+
+.booking_guests {
+  width: 24%;
+  cursor: pointer;
+  padding: 10px 10px 10px 15px;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+}
+
+.booking_submit {
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  padding: 10px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.widget_button {
+  width: 100%;
+  padding: 10px 15px;
+  position: relative;
+  font-size: .9rem;
+  font-weight: 700;
+  border: 3px solid #39C39A;
+  background-color: #39C39A;
+  color: #fff;
+  cursor: pointer;
+}
+
+.widget_button:hover {
+  border: 2px solid #39C39A;
+  background-color: #fff;
+  color: #39C39A;
+  -webkit-transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
+  transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
+}
+
+.photo_slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.spot_photo {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  background: #fff;
+  height: 400px;
+}
+
+.slider {
+  height: 420px;
+}
+
+.slick-slide {
+  padding: 7px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slick-slide img {
+  height: 400px;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: gray;
+  font-size: 1.4rem;
+  font-family: 'slick';
+}
+
+.slick-prev:hover:before, .slick-next:hover:before {
+  color: #39C39A;
 }
 
 .user_profile_container {
@@ -2028,6 +2203,7 @@ div > h3 {
 }
 
 .spot_body {
+  font-size: .9rem;
   line-height: 2;
   overflow-wrap: break-word;
   width: 70%;
@@ -2048,6 +2224,7 @@ div > h3 {
 }
 
 .spot_div_details {
+  font-size: .9rem;
   padding: 0px 0px 0px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2058,21 +2235,21 @@ div > h3 {
 }
 
 .spot_title {
-  font-size: 2.7em;
+  font-size: 2.3rem;
   font-weight: 700;
 }
 
 .spot_section_title {
-  font-size: 21px;
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 12px;
 }
 
-.spot_subsection > li {
+.spot_subsection li {
   font-size: 16px;
 }
 
-.spot_subsection > li > img {
+.spot_subsection li img {
   margin-top: 5px;
 }
 
@@ -2086,6 +2263,7 @@ div > h3 {
 }
 
 .spot_detail_header {
+  font-size: 1rem;
   font-weight: 600;
   padding: 5px 20px 0px 0px;
 }
@@ -2101,12 +2279,12 @@ div > h3 {
   width: 70%;
 }
 
-span > img {
+span img {
   width: 24px;
   height: 24px;
 }
 
-span > p {
+span p {
   padding-bottom: 10px;
 }
 
@@ -2191,139 +2369,8 @@ span > p {
   border: #fff;
 }
 
-.widget_container {
-  position: relative;
-  height: 200px;
-  width: 319px;
-  z-index: 1;
-  background-color: #fff;
-}
-
-.booking_widget {
-  position: relative;
-  width: 339px;
-}
-
-.booking_banner {
-  min-height: 50px;
-  background-color: #fff;
-  border: 1px solid #ebebeb;
-  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
-  padding: 15px 10px 10px 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  font-size: 1.3em;
-  font-weight: 700;
-  color: #333333;
-}
-
-#widget_per_night {
-  font-size: .6em;
-  font-weight: 400;
-  color: gray;
-}
-
-.booking_well {
-  z-index: 1;
-  padding: 0;
-  margin-bottom: 0;
-  background-color: transparent;
-  border: 0;
-  -webkit-transition: top 0.3s ease 0s;
-  transition: top 0.3s ease 0s;
-  min-height: 20px;
-}
-
-.well_dates_guests {
-  min-height: 50px;
-  background-color: #fff;
-  border: 1px solid #ebebeb;
-  font-weight: 400;
-  line-height: 1.42;
-  color: #333333;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.label {
-  display: block;
-  padding-top: 0;
-  padding-right: 0;
-  padding-left: 0;
-  font-size: .9rem;
-  color: #333333;
-  font-weight: 600;
-}
-
-.value {
-  white-space: nowrap;
-  font-size: .9rem;
-}
-
-.booking_checkin {
-  width: 38%;
-  border-right: 1px solid #ebebeb;
-  padding: 10px 10px 10px 15px;
-  -webkit-transition: background-color 0.3s ease 0s;
-  transition: background-color 0.3s ease 0s;
-}
-
-.booking_checkout {
-  width: 38%;
-  border-right: 1px solid #ebebeb;
-  padding: 10px 10px 10px 15px;
-  -webkit-transition: background-color 0.3s ease 0s;
-  transition: background-color 0.3s ease 0s;
-}
-
-.booking_guests {
-  width: 24%;
-  cursor: pointer;
-  padding: 10px 10px 10px 15px;
-  -webkit-transition: background-color 0.3s ease 0s;
-  transition: background-color 0.3s ease 0s;
-}
-
-.booking_submit {
-  background-color: #fff;
-  border: 1px solid #ebebeb;
-  padding: 10px;
-  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
-}
-
-.widget_button {
-  width: 100%;
-  padding: 10px 15px;
-  position: relative;
-  font-size: 1em;
-  font-weight: 700;
-  border: 3px solid #39C39A;
-  background-color: #39C39A;
-  color: #fff;
-}
-
-.widget_button:hover {
-  cursor: pointer;
-  border: 2px solid #39C39A;
-  background-color: #fff;
-  color: #39C39A;
-  -webkit-transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
-  transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
-}
-
 .hosted_container {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 2;
   padding-right: 20px;
   width: 30%;
@@ -2353,43 +2400,6 @@ span > p {
   line-height: 2;
   cursor: pointer;
   border-bottom: 3px solid #39C39A;
-}
-
-.photo_slider {
-  position: relative;
-  overflow: hidden;
-}
-
-.spot_photo {
-  position: relative;
-  margin: 0 auto;
-  width: 90%;
-  background: #fff;
-  height: 400px;
-}
-
-.slider {
-  height: 420px;
-}
-
-.slick-slide {
-  padding: 7px;
-  height: 400px;
-  overflow: hidden;
-}
-
-.slick-slide img {
-  height: 400px;
-}
-
-.slick-prev:before, .slick-next:before {
-  color: gray;
-  font-size: 24px;
-  font-family: 'slick';
-}
-
-.slick-prev:hover:before, .slick-next:hover:before {
-  color: #39C39A;
 }
 
 @media (min-width: 1025px) {
@@ -3270,7 +3280,7 @@ textarea {
 .spot_details_reviews {
   color: #757575;
   font-weight: 400;
-  font-size: .9em;
+  font-size: .8rem;
 }
 
 .infowindow-title {
@@ -3316,22 +3326,22 @@ textarea {
   cursor: pointer;
 }
 
-.spot_filter_section:hover {
-  border: 1px solid #000;
+.spot_filter_section button {
+  padding: 10px;
+  height: 100%;
 }
 
-.spot_filter_section > button > img {
+.spot_filter_section button img {
   height: 36px;
   width: 36px;
 }
 
-.spot_filter_section:last-child {
-  margin-right: 10px;
+.spot_filter_section:hover {
+  border: 1px solid #000;
 }
 
-.spot_filter_section > button {
-  padding: 10px;
-  height: 100%;
+.spot_filter_section:last-child {
+  margin-right: 10px;
 }
 
 .spot_filter_item {
@@ -3355,7 +3365,7 @@ textarea {
           align-items: flex-start;
 }
 
-.spot_filter_item > button {
+.spot_filter_item button {
   width: 100%;
   font-size: 1rem;
   font-weight: 500;
@@ -3374,14 +3384,14 @@ textarea {
           align-items: center;
 }
 
-.spot_filter_item > button:hover {
-  border: 1px solid #000;
-}
-
-.spot_filter_item > button > img {
+.spot_filter_item button img {
   width: 32px;
   height: 32px;
   padding-right: 10px;
+}
+
+.spot_filter_item button:hover {
+  border: 1px solid #000;
 }
 
 .active_filter_button {

@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
+
 import { withRouter } from 'react-router-dom';
 
 import PhotoSlideshow from './photo_slideshow';
 import ReviewIndexContainer from '../reviews/review_index_container';
 import BookingContainer from '../booking/booking_container';
 
-class Spot extends React.Component {
+class Spot extends Component {
   constructor(props) {
     super(props);
 
@@ -15,7 +16,6 @@ class Spot extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0);
     this.props.fetchSpot(this.props.match.params.spotId);
-    this.props.fetchAllBookings();
   }
 
   handleDelete(e) {
@@ -37,6 +37,7 @@ class Spot extends React.Component {
   }
 
   render() {
+    debugger
   const { spot } = this.props;
 
     if (Object.values(spot).length === 0) {
@@ -44,8 +45,6 @@ class Spot extends React.Component {
         null
       )
     } else {
-      const { firstname } = this.props.spot.user;
-
       return (
         <>
           <main className="spot_main_section">
@@ -118,25 +117,25 @@ class Spot extends React.Component {
                       {
                         spot.tent ?
                           <span>
-                            <img src="https://image.flaticon.com/icons/svg/1535/1535412.svg" />
+                            <img src="https://image.flaticon.com/icons/svg/1535/1535412.svg" alt=""/>
                             <p> Tent provided </p>
                           </span>
                         :
                           <span>
-                            <img src="https://image.flaticon.com/icons/svg/678/678406.svg" />
+                            <img src="https://image.flaticon.com/icons/svg/678/678406.svg" alt=""/>
                             <p> Bring your own tents </p>
                           </span>
                       }
                       </li>
                       <li>
                         <span>
-                          <img src="https://image.flaticon.com/icons/svg/1535/1535442.svg" />
+                          <img src="https://image.flaticon.com/icons/svg/1535/1535442.svg" alt=""/>
                           <p> {spot.sites} sites </p>
                         </span>
                       </li>
                       <li>
                         <span>
-                          <img src="https://image.flaticon.com/icons/svg/58/58038.svg" />
+                          <img src="https://image.flaticon.com/icons/svg/58/58038.svg" alt=""/>
                           <p> Up to {spot.group_size} guests per site </p>
                         </span>
                       </li>
@@ -144,12 +143,12 @@ class Spot extends React.Component {
                       {
                         spot.parking ?
                           <span>
-                            <img src="https://image.flaticon.com/icons/svg/818/818383.svg" />
+                            <img src="https://image.flaticon.com/icons/svg/818/818383.svg" alt=""/>
                           <p> Parking</p>
                           </span>
                         :
                           <span>
-                            <img src="https://image.flaticon.com/icons/svg/652/652339.svg" />
+                            <img src="https://image.flaticon.com/icons/svg/652/652339.svg" alt=""/>
                             <p> No parking</p>
                           </span>
                       }
@@ -168,12 +167,12 @@ class Spot extends React.Component {
                       {
                         spot.campfire ?
                           <span>
-                            <img src="https://image.flaticon.com/icons/svg/1535/1535413.svg" />
+                            <img src="https://image.flaticon.com/icons/svg/1535/1535413.svg" alt=""/>
                             <p> Campfires allowed</p>
                           </span>
                         :
                           <span>
-                            <img src="https://image.flaticon.com/icons/svg/678/678405.svg" />
+                            <img src="https://image.flaticon.com/icons/svg/678/678405.svg" alt=""/>
                             <p> No campfires allowed</p>
                           </span>
                       }
@@ -182,12 +181,12 @@ class Spot extends React.Component {
                       {
                         spot.pets_allow ?
                           <span>
-                            <img src="https://image.flaticon.com/icons/svg/71/71702.svg" />
+                            <img src="https://image.flaticon.com/icons/svg/71/71702.svg" alt=""/>
                             <p> Pets allowed</p>
                           </span>
                         :
                           <span>
-                            <img src="https://image.flaticon.com/icons/svg/1596/1596681.svg" />
+                            <img src="https://image.flaticon.com/icons/svg/1596/1596681.svg" alt=""/>
                             <p> No pets allowed</p>
                           </span>
                       }
@@ -196,12 +195,12 @@ class Spot extends React.Component {
                       {
                         spot.toilet ?
                           <span>
-                            <img src="https://image.flaticon.com/icons/svg/93/93156.svg" />
+                            <img src="https://image.flaticon.com/icons/svg/93/93156.svg" alt=""/>
                             <p> Toilet available</p>
                           </span>
                         :
                           <span>
-                            <img src="https://image.flaticon.com/icons/svg/75/75263.svg" />
+                            <img src="https://image.flaticon.com/icons/svg/75/75263.svg" alt=""/>
                             <p> No toilet</p>
                           </span>
                       }
@@ -210,12 +209,12 @@ class Spot extends React.Component {
                       {
                         spot.shower ?
                           <span>
-                            <img src="https://image.flaticon.com/icons/svg/1536/1536456.svg" />
+                            <img src="https://image.flaticon.com/icons/svg/1536/1536456.svg" alt=""/>
                             <p> Showers</p>
                           </span>
                         :
                           <span>
-                            <img src="https://image.flaticon.com/icons/svg/274/274595.svg" />
+                            <img src="https://image.flaticon.com/icons/svg/274/274595.svg" alt=""/>
                             <p> No Showers</p>
                           </span>
                       }
@@ -234,7 +233,7 @@ class Spot extends React.Component {
                       {
                         spot.hiking ?
                           <span>
-                          <img src="https://image.flaticon.com/icons/svg/71/71423.svg" />
+                          <img src="https://image.flaticon.com/icons/svg/71/71423.svg" alt=""/>
                           <p> Hiking Trails</p>
                           </span>
                         :
@@ -245,7 +244,7 @@ class Spot extends React.Component {
                       {
                         spot.biking ?
                           <span>
-                            <img src="https://image.flaticon.com/icons/svg/565/565350.svg" />
+                            <img src="https://image.flaticon.com/icons/svg/565/565350.svg" alt=""/>
                             <p> Biking Trails</p>
                           </span>
                         :
@@ -256,7 +255,7 @@ class Spot extends React.Component {
                       {
                         spot.biking ?
                           <span>
-                            <img src="https://image.flaticon.com/icons/svg/54/54127.svg" />
+                            <img src="https://image.flaticon.com/icons/svg/54/54127.svg" alt=""/>
                             <p> Wildlife Watching</p>
                           </span>
                         :
@@ -267,7 +266,7 @@ class Spot extends React.Component {
                       {
                         spot.paddling ?
                           <span>
-                            <img src="https://image.flaticon.com/icons/svg/38/38607.svg" />
+                            <img src="https://image.flaticon.com/icons/svg/38/38607.svg" alt=""/>
                             <p> Paddling</p>
                           </span>
                         :

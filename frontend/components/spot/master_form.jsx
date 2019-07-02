@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
+
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 
-class MasterForm extends React.Component {
+class MasterForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -191,7 +192,7 @@ class MasterForm extends React.Component {
         let preview = null;
         if (this.state.photoUrl.length > 0) {
             preview = this.state.photoUrl.map((photo, idx) => {
-                return <img key={idx} src={photo}/>
+                return <img key={idx} src={photo} alt=""/>
             })
         } 
 
@@ -408,7 +409,7 @@ class MasterForm extends React.Component {
                     </div>
                     <div className="spot_form_message">
                         <div className="host_message_header">
-                            <img className="host_photo" src="https://camp-away-dev.s3.amazonaws.com/profile.jpg" />
+                            <img className="host_photo" src="https://camp-away-dev.s3.amazonaws.com/profile.jpg" alt=""/>
                             <div className="host_message_details">
                                 <p className="host_message_name">Meet David</p>
                                 <p>Host Team</p>

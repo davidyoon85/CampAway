@@ -38,6 +38,8 @@ class Api::ReviewsController < ApplicationController
     render :show
   end
 
+  private
+
   def review_params
     params.require(:review).permit(:author, :description)
   end

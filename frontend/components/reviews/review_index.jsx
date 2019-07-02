@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
+
 import ReviewIndexItem from './review_index_item';
 
-class ReviewIndex extends React.Component {
+class ReviewIndex extends Component {
   constructor(props) {
         super(props)
     }

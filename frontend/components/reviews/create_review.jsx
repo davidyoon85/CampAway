@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-class CreateReview extends React.Component {
+class CreateReview extends Component {
   constructor(props) {
     super(props)
     this.state = {

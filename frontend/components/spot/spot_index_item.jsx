@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-class SpotIndexItem extends React.Component {
+class SpotIndexItem extends Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
@@ -21,7 +21,7 @@ class SpotIndexItem extends React.Component {
         return (
             <div className="spot_index_item" id={`spot-${this.props.spot.id}`} onClick={this.handleClick}>
                 <Link className="spot_index_item_link" to={`/spots/${this.props.spot.id}`}>
-                    <img className="spot_index_photo" src={this.props.spot.photoUrls[0]}/>
+                    <img className="spot_index_photo" src={this.props.spot.photoUrls[0]} alt=""/>
                     <div className="spot_details">
                         <div className="spot_details_title">
                             {this.props.spot.title}

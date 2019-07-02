@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
+
 import { Link } from 'react-router-dom';
 import { geocodeByAddress } from 'react-places-autocomplete';
 import moment from 'moment';
 
-class UserProfile extends React.Component {
+class UserProfile extends Component {
     constructor(props) {
         super(props)
 
@@ -155,7 +156,7 @@ class UserProfile extends React.Component {
                                     <li className="booked_spot_items" key={booking.id}>
                                         <Link className="user_booking_title" to={`/spots/${booking.spot.id}`}>{booking.spot.title}</Link>
                                         <div className="user_booking_dates">
-                                            <img className="booking_img" src={booking.spot.spotImg}></img>
+                                            <img className="booking_img" src={booking.spot.spotImg} alt="" />
                                             <div className="user_booking_details">
                                                 <p><nobr className="user_booking_subheader">Check In:</nobr> {moment(booking.check_in).format("ddd, MMM Do")}</p>
                                                 <p><nobr className="user_booking_subheader">Check Out:</nobr> {moment(booking.check_out).format("ddd, MMM Do")}</p>

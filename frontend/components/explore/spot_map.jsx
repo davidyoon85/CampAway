@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import MarkerManager from '../../util/marker_manager';
 import { fetchAllSpots } from '../../actions/spot_actions';
 import { applyFilters } from '../../util/filter_util';
     
-class SpotMap extends React.Component {
+class SpotMap extends Component {
     constructor(props) {
       super(props);
 

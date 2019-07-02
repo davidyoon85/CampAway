@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
+
 import { withRouter } from 'react-router-dom';
 
-class SpotFilter extends React.Component {
+class SpotFilter extends Component {
   constructor(props) {
     super(props)
     this.toggle = this.toggle.bind(this);
@@ -247,25 +248,25 @@ class SpotFilter extends React.Component {
                   className={this.state.tent ? 'active_filter_button' : ''} 
                   name='tent'
                   onClick={this.toggle('tent')}>
-                  <img name='tent' src="https://image.flaticon.com/icons/svg/1535/1535412.svg"/>
+                  <img name='tent' src="https://image.flaticon.com/icons/svg/1535/1535412.svg" alt=""/>
                   Tent</button>
                 <button 
                   className={this.state.campfire ? 'active_filter_button' : ''} 
                   name='campfire'
                   onClick={this.toggle('campfire')}>
-                  <img name='campfire' src="https://image.flaticon.com/icons/svg/1535/1535413.svg"/>
+                  <img name='campfire' src="https://image.flaticon.com/icons/svg/1535/1535413.svg" alt=""/>
                   Campfire</button>
                 <button 
                   className={this.state.pets_allow ? 'active_filter_button' : ''} 
                   name='pets_allow'
                   onClick={this.toggle('pets_allow')}>
-                  <img name='pets_allow' src="https://image.flaticon.com/icons/svg/71/71702.svg"/>
+                  <img name='pets_allow' src="https://image.flaticon.com/icons/svg/71/71702.svg" alt=""/>
                   Pets Allowed</button>
                   <button 
                   className={this.state.parking ? 'active_filter_button' : ''} 
                   name="parking" 
                   onClick={this.toggle('parking')}>
-                  <img name='parking'src="https://image.flaticon.com/icons/svg/818/818383.svg"/>
+                  <img name='parking'src="https://image.flaticon.com/icons/svg/818/818383.svg" alt=""/>
                   Parking</button>
               </div>)
               : (
@@ -291,19 +292,19 @@ class SpotFilter extends React.Component {
                   className={this.state.biking ? 'active_filter_button' : ''} 
                   name="biking"
                   onClick={this.toggle('biking')}>
-                  <img name='biking' src="https://image.flaticon.com/icons/svg/565/565350.svg"/>
+                  <img name='biking' src="https://image.flaticon.com/icons/svg/565/565350.svg" alt=""/>
                   Biking</button>
                 <button 
                   className={this.state.hiking ? 'active_filter_button' : ''} 
                   name="hiking"
                   onClick={this.toggle('hiking')}>
-                  <img name='hiking' src="https://image.flaticon.com/icons/svg/71/71423.svg"/>
+                  <img name='hiking' src="https://image.flaticon.com/icons/svg/71/71423.svg" alt=""/>
                   Hiking</button>
                 <button 
                   className={this.state.paddling ? 'active_filter_button' : ''} 
                   name="paddling"
                   onClick={this.toggle('paddling')}>
-                  <img name='paddling' src="https://image.flaticon.com/icons/svg/38/38607.svg"/>
+                  <img name='paddling' src="https://image.flaticon.com/icons/svg/38/38607.svg" alt=""/>
                   Paddling</button>
               </div>)
               : (

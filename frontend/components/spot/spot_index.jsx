@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
+
 import { withRouter } from 'react-router-dom';
 import { applyFilters } from '../../util/filter_util';
 
 import SpotIndexItem from './spot_index_item';
 
-class SpotIndex extends React.Component {
+class SpotIndex extends Component {
   constructor(props) {
       super(props);
 

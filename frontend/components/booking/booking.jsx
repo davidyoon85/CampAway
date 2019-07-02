@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import moment from 'moment';
 import { formatDate, parseDate } from 'react-day-picker/moment';
 import { withRouter } from 'react-router-dom';
 
-class Booking extends React.Component {
+class Booking extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -143,6 +143,5 @@ class Booking extends React.Component {
     )
   }
 }
-
 
 export default withRouter(Booking)

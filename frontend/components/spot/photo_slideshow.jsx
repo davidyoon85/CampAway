@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
+
 import Slider from 'react-slick';
 
-class PhotoSlideshow extends React.Component {
+class PhotoSlideshow extends Component {
   constructor(props) {
     super(props);
   }
@@ -41,7 +42,7 @@ class PhotoSlideshow extends React.Component {
           photos.map((photo, id) => {
             return (
               <div key={id}>
-                <img src={photo} />
+                <img src={photo} alt=""/>
               </div>
             )
           })

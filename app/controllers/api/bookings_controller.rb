@@ -31,6 +31,8 @@ class Api::BookingsController < ApplicationController
       @booking.destroy
       render :show
     end
+
+    private
   
     def booking_params
       params.require(:booking).permit(:guest_id, :spot_id, :check_in, :check_out, :num_guests, :total_price)

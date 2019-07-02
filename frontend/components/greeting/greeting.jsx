@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
+
 import { Link } from 'react-router-dom';
 
-class Greeting extends React.Component {
+class Greeting extends Component {
     constructor(props) {   
         super(props);
     }
@@ -21,6 +22,7 @@ class Greeting extends React.Component {
                             <div className="logo_container"> 
                                 <img className="tent_logo" 
                                     src={window.footerURL}   
+                                    alt="logo"
                                 />
                                 <div className="dropdown_message">
                                     <ul className="dropdown_list">
