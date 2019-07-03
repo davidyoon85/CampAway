@@ -33,6 +33,19 @@
     text-align: left;
     margin-left: 10%;  
     margin-top: 5%; 
+
+    @include large {
+        font-size: 1.4em;
+        margin: 0 auto;
+        margin-top: 5%;
+    }
+
+    @include medium {
+        font-size: 1.4em;
+        margin: 0 auto;
+        margin-top: 4%;
+        width: 90%;
+    }
 }
 
 .splash_subtitle2 {
@@ -42,6 +55,17 @@
     text-align: left;
     margin-left: 10%; 
     line-height: 1.4;
+
+    @include large {
+        font-size: .9em;
+        margin: 0 auto;
+    }
+
+    @include medium {
+        font-size: .9em;
+        margin: 0 auto;
+        width: 90%;
+    }
 }
 
 .splash_subtitle3 {
@@ -49,6 +73,10 @@
     font-size: 1.5rem;
     text-align: center;
     margin-bottom: 4%;
+
+    @include medium {
+        font-size: 1.3em;
+    }
 }
 
 .splash_main {
@@ -62,6 +90,12 @@
     flex-direction: column;
     justify-content: center;
     margin: 0% 15% 8% 15%;
+
+    @include large {
+        width: 95%;
+        margin: 0 auto;
+        margin-bottom: 10%;
+    }
 }
 
 .splash_section {
@@ -84,6 +118,27 @@
     min-width: 270px;
     min-height: 320px;
     height: 320px;
+
+    @include large {
+        margin: 2% 1% 5% 1%;
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+        margin: 2% 1% 0 1%;
+        min-height: 320px;
+        height: 320px;
+
+    @include medium {
+        margin: 2% 1% 5% 1%;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 2% 1% 0 1%;
+        min-width: 270px;
+        min-height: 320px;
+        height: 320px;
+    }
+}
 
     img {
         display: flex;
@@ -133,11 +188,20 @@ div > h3 {
 
 .splash_main {
     margin-bottom: 6%;
+
+    @include medium {
+        margin-bottom: 10%;
+    }
 }
 
 .splash_container {
     width: 75%;
     margin: 0 auto;
+
+    @include medium {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 
 .splash_main_section {
@@ -146,6 +210,12 @@ div > h3 {
     grid-gap: 2rem;
     width: 100%;
     margin: auto;
+
+    @include medium {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 10%;
+    }
 }
 
 .splash_section {
@@ -177,6 +247,10 @@ div > h3 {
 
 .splash_section_name {
     font-size: 1.2rem;
+
+    @include medium {
+        font-size: 1rem;
+    }
 }
 
 .splash_section_location {
@@ -184,90 +258,8 @@ div > h3 {
     padding-top: 3%;
     font-size: 1rem;
     color: $font-color;
-}
 
-@media (min-width: 701px) and (max-width: 1024px) {
-    .splash_main_section {
-        width: 95%;
-        margin: 0 auto;
-        margin-bottom: 10%;
-    }
-
-    .index_section {
-        margin: 2% 1% 5% 1%;
-        display: flex;
-        flex-direction: column;
-        width: 48%;
-        margin: 2% 1% 0 1%;
-        min-height: 320px;
-        height: 320px;
-    }
-    
-    .splash_subtitle1 {
-        font-size: 1.4em;
-        margin: 0 auto;
-        margin-top: 5%;
-    }
-
-    .splash_subtitle2 {
-        font-size: .9em;
-        margin: 0 auto;
-    }
-
-    .splash_subtitle3 {
-        font-size: 1.3em;
-    }
-  }
-
-@media (max-width: 700px) {
-    .splash_container {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .splash_main {
-        margin-bottom: 10%;
-    }
-
-    .splash_main_section {
-        width: 100%;
-        margin: 0 auto;
-        margin-bottom: 10%;
-    }
-
-    .index_section {
-        margin: 2% 1% 5% 1%;
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-        margin: 2% 1% 0 1%;
-        min-width: 270px;
-        min-height: 320px;
-        height: 320px;
-    }
-    
-    .splash_subtitle1 {
-        font-size: 1.4em;
-        margin: 0 auto;
-        margin-top: 4%;
-        width: 90%;
-    }
-
-    .splash_subtitle2 {
-        font-size: .9em;
-        margin: 0 auto;
-        width: 90%;
-    }
-
-    .splash_subtitle3 {
-        font-size: 1.3em;
-    }
-
-    .splash_section_name {
-        font-size: 1rem;
-    }
-
-    .splash_section_location {
+    @include medium {
         font-size: .8rem;
     }
 }

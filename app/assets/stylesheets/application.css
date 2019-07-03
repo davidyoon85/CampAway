@@ -779,6 +779,23 @@ i {
   margin-top: 5%;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .splash_subtitle1 {
+    font-size: 1.4em;
+    margin: 0 auto;
+    margin-top: 5%;
+  }
+}
+
+@media (max-width: 700px) {
+  .splash_subtitle1 {
+    font-size: 1.4em;
+    margin: 0 auto;
+    margin-top: 4%;
+    width: 90%;
+  }
+}
+
 .splash_subtitle2 {
   font-weight: 300;
   font-size: 1rem;
@@ -788,11 +805,32 @@ i {
   line-height: 1.4;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .splash_subtitle2 {
+    font-size: .9em;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .splash_subtitle2 {
+    font-size: .9em;
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
 .splash_subtitle3 {
   font-weight: 700;
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 4%;
+}
+
+@media (max-width: 700px) {
+  .splash_subtitle3 {
+    font-size: 1.3em;
+  }
 }
 
 .splash_main {
@@ -813,6 +851,14 @@ i {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0% 15% 8% 15%;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .splash_main_section {
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 10%;
+  }
 }
 
 .splash_section {
@@ -845,6 +891,41 @@ i {
   min-width: 270px;
   min-height: 320px;
   height: 320px;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .index_section {
+    margin: 2% 1% 5% 1%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 48%;
+    margin: 2% 1% 0 1%;
+    min-height: 320px;
+    height: 320px;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) and (max-width: 700px) {
+  .index_section {
+    margin: 2% 1% 5% 1%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 90%;
+    margin: 2% 1% 0 1%;
+    min-width: 270px;
+    min-height: 320px;
+    height: 320px;
+  }
 }
 
 .index_section img {
@@ -902,9 +983,22 @@ div > h3 {
   margin-bottom: 6%;
 }
 
+@media (max-width: 700px) {
+  .splash_main {
+    margin-bottom: 10%;
+  }
+}
+
 .splash_container {
   width: 75%;
   margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+  .splash_container {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 .splash_main_section {
@@ -915,6 +1009,14 @@ div > h3 {
   grid-gap: 2rem;
   width: 100%;
   margin: auto;
+}
+
+@media (max-width: 700px) {
+  .splash_main_section {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10%;
+  }
 }
 
 .splash_section {
@@ -957,6 +1059,12 @@ div > h3 {
   font-size: 1.2rem;
 }
 
+@media (max-width: 700px) {
+  .splash_section_name {
+    font-size: 1rem;
+  }
+}
+
 .splash_section_location {
   text-align: left;
   padding-top: 3%;
@@ -964,85 +1072,7 @@ div > h3 {
   color: #757575;
 }
 
-@media (min-width: 701px) and (max-width: 1024px) {
-  .splash_main_section {
-    width: 95%;
-    margin: 0 auto;
-    margin-bottom: 10%;
-  }
-  .index_section {
-    margin: 2% 1% 5% 1%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 48%;
-    margin: 2% 1% 0 1%;
-    min-height: 320px;
-    height: 320px;
-  }
-  .splash_subtitle1 {
-    font-size: 1.4em;
-    margin: 0 auto;
-    margin-top: 5%;
-  }
-  .splash_subtitle2 {
-    font-size: .9em;
-    margin: 0 auto;
-  }
-  .splash_subtitle3 {
-    font-size: 1.3em;
-  }
-}
-
 @media (max-width: 700px) {
-  .splash_container {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .splash_main {
-    margin-bottom: 10%;
-  }
-  .splash_main_section {
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 10%;
-  }
-  .index_section {
-    margin: 2% 1% 5% 1%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 90%;
-    margin: 2% 1% 0 1%;
-    min-width: 270px;
-    min-height: 320px;
-    height: 320px;
-  }
-  .splash_subtitle1 {
-    font-size: 1.4em;
-    margin: 0 auto;
-    margin-top: 4%;
-    width: 90%;
-  }
-  .splash_subtitle2 {
-    font-size: .9em;
-    margin: 0 auto;
-    width: 90%;
-  }
-  .splash_subtitle3 {
-    font-size: 1.3em;
-  }
-  .splash_section_name {
-    font-size: 1rem;
-  }
   .splash_section_location {
     font-size: .8rem;
   }
