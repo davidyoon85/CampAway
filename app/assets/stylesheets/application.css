@@ -1327,6 +1327,22 @@ div > h3 {
   position: relative;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .DayPickerInput-OverlayWrapper {
+    position: relative;
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .DayPickerInput-OverlayWrapper {
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+}
+
 .DayPickerInput-Overlay {
   left: 0;
   z-index: 1;
@@ -1336,20 +1352,23 @@ div > h3 {
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
-.DayPicker-day--selectedStart {
-  background-color: red;
-}
-
-.DayPicker-Day--selectedEnd {
-  background-color: red;
+@media (min-width: 701px) and (max-width: 1024px) {
+  .DayPickerInput-Overlay {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: auto;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    bottom: 0;
+    position: absolute;
+  }
 }
 
 @media (max-width: 700px) {
-  .DayPickerInput-OverlayWrapper {
-    position: absolute;
-    left: 0;
-    width: 100%;
-  }
   .DayPickerInput-Overlay {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1367,25 +1386,12 @@ div > h3 {
   }
 }
 
-@media (min-width: 701px) and (max-width: 1024px) {
-  .DayPickerInput-OverlayWrapper {
-    position: relative;
-    left: 0;
-    width: 100%;
-  }
-  .DayPickerInput-Overlay {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: auto;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-    bottom: 0;
-    position: absolute;
-  }
+.DayPicker-day--selectedStart {
+  background-color: red;
+}
+
+.DayPicker-Day--selectedEnd {
+  background-color: red;
 }
 
 .widget_container {
