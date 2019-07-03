@@ -37,7 +37,6 @@ class Spot extends Component {
   }
 
   render() {
-    debugger
   const { spot } = this.props;
 
     if (Object.values(spot).length === 0) {

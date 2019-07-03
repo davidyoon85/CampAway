@@ -1431,6 +1431,7 @@ div > h3 {
 }
 
 .review-user-description {
+  font-size: .9rem;
   overflow-wrap: break-word;
 }
 
@@ -1786,6 +1787,7 @@ div > h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 1rem;
 }
 
 .review_submit_button {
@@ -1905,6 +1907,7 @@ div > h3 {
 }
 
 .review_name {
+  font-size: .9rem;
   font-weight: 600;
 }
 

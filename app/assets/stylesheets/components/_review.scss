@@ -64,7 +64,7 @@
     font-weight: 700;
     display: flex;
     align-items: center;
-    // font-family: $font-family;
+    font-size: 1rem;
 }
 
 .review_submit_button {
@@ -146,6 +146,7 @@
 }
 
 .review_name {
+    font-size: .9rem;
     font-weight: 600;
 }
 
