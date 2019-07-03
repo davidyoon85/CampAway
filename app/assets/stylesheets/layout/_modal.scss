@@ -169,6 +169,10 @@
     right: 90px;
     height: 100px;
     width: 100px;
+
+    @include medium {
+        right: 75px;
+    }
 }
 
 .modal-child {
@@ -231,16 +235,6 @@
     margin: 0 auto;
     width: 90%;
     margin-bottom: 15px;
-}
-
-@media (max-width: 700px) {
-    .dropdown {
-        padding-right: 15px;
-    }
-
-    .dropdown_modal-child {
-        right: 75px;
-    }
 }
 
 //modal drop down animation
