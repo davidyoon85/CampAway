@@ -1,36 +1,36 @@
 .photo_slider {
-    position: relative;
-    overflow: hidden;
-  }
+   position: relative;
+   overflow: hidden;
+}
   
-  .spot_photo {
-    position: relative;
-    margin: 0 auto;
-    width: 90%;
-    background: #fff;
-    height: 400px;
-  }
+.spot_photo {
+   position: relative;
+   margin: 0 auto;
+   width: 90%;
+   background: #fff;
+   height: 400px;
+}
   
-   .slider {
-      height: 420px;
-   }
-  
-   .slick-slide {
-      padding: 7px;
-      height: 400px;
-      overflow: hidden;
+.slider {
+   height: 420px;
+}
 
-      img {
-        height: 400px;
-      }
-   }  
-  
-   .slick-prev:before, .slick-next:before {
-      color: gray;
-      font-size: 1.4rem;
-      font-family: 'slick';
+.slick-slide {
+   padding: 7px;
+   height: 400px;
+   overflow: hidden;
+
+   img {
+      height: 400px;
    }
-  
-   .slick-prev:hover:before, .slick-next:hover:before {
-      color: $primary-color;
-   }
+}  
+
+.slick-prev:before, .slick-next:before {
+   color: gray;
+   font-size: 1.4rem;
+   font-family: 'slick';
+}
+
+.slick-prev:hover:before, .slick-next:hover:before {
+   color: $primary-color;
+}

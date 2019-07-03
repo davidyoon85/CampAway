@@ -6,6 +6,21 @@
     background-color: #fff;
     width: 30%;
     min-width: 260px;
+
+    @include large {
+        width: 100%;
+        min-width: 0;
+        display: flex;
+        margin: 0 auto;
+        margin-top: 3%;
+    }
+
+    @include medium {
+        width: 100%;
+        min-width: 0;
+        display: flex;
+        margin: 0 auto;
+    }
 }
 
 .bio_panel {
@@ -15,6 +30,26 @@
     border: $border;
     font-weight: 400;
     font-size: .8rem;
+
+    @include large {
+        width: 84%;
+        font-weight: 400;
+        font-size: .9em;
+        padding: 0px;
+        border: none;
+        margin: 0 auto;
+        margin-bottom: 3%;
+    }
+
+    @include medium {
+        width: 80%;
+        font-weight: 400;
+        font-size: .9em;
+        padding: 0px;
+        border: none;
+        margin: 0 auto;
+        margin-bottom: 3%;
+    }
 
     span {
         margin-right: 10px;
@@ -34,6 +69,14 @@
     border: $border;
     padding-right: 10px;
     font-size: .8rem;
+
+    @include large {
+        display: none;
+    }
+
+    @include medium {
+        display: none;
+    }
 
     span {
         padding-right: 10px;
@@ -84,6 +127,18 @@
     justify-content: space-between;
     margin: 0 auto;
     padding-left: 5%;
+
+    @include large {
+        width: 90%;
+        min-width: 0;
+        padding-left: 0%;
+    }
+
+    @include medium {
+        width: 100%;
+        min-width: 0;
+        padding-left: 0%;
+    }
 }
 
 .booked_spot_items {
@@ -93,12 +148,32 @@
     border-bottom: 1px solid lightgray;
     width: 80%;;
     margin: 0px 0px 20px 0px;
+
+    @include large {
+        margin-bottom: 5%;
+        width: 48%;
+    }
+
+    @include medium {
+        margin: 0 auto;
+        margin-bottom: 5%;
+        width: 90%;
+    }
+    }
 }
 
 .booking_delete_button {
     margin-left: auto;
     padding-right: 20px;
     font-size: .9rem;
+
+    @include large {
+        padding-right: 5%;
+    }
+
+    @include medium {
+        padding-right: 5%;
+    }
 
     &:hover {
         font-weight: 700;
@@ -120,11 +195,25 @@
 //user bookings display
 .user_booking_spot {
     display: flex;
+    flex-direction: column;
     width: 70%;
     min-width: 870px;
     margin: 0 auto;
     margin-top: 3%;
     margin-bottom: 3%;
+
+    @include large {
+        width: 100%;
+        min-width: 0;
+        margin-top: 0%;
+    }
+
+    @include medium {
+        flex-direction: column;
+        width: 100%;
+        min-width: 0;
+        margin-top: 0%;
+    }
 }
 
 .user_booking_spot_container {
@@ -167,11 +256,33 @@
     font-weight: 700;
     font-size: 1.2rem;
     padding-left: 20px;
+
+    @include large {
+        padding-left: 0px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    @include medium {
+        padding-left: 0px;
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 
 .user_booking_dates {
     padding: 20px 0px 0px 20px;
     display: flex;
+
+    @include large {
+        flex-direction: column;
+        padding: 20px 0px 20px 0px;
+    }
+
+    @include medium {
+        flex-direction: column;
+        padding: 20px 0px 20px 0px;
+    }
 }
 
 .widget_guests {
@@ -185,12 +296,36 @@
 .booked_spots_header {
     display: flex;
     padding-bottom: 20px;
+
+    @include large {
+        width: 93.3%;
+        padding-bottom: 0px;
+        margin: 0 auto;
+        margin-bottom: 3%;
+    }
+
+    @include medium {
+        width: 80%;
+        padding-bottom: 0px;
+        margin: 0 auto;
+        margin-bottom: 3%;
+    }
 }
 
 .booked_spots_number {
     font-weight: 500;
     font-size: 1.2rem;
     padding: 10px 0px 20px 0px;
+
+    @include large {
+        font-size: 1.1em;
+        padding-top: 2%;
+    }
+
+    @include medium {
+        font-size: 1.1em;
+        padding-top: 5%;
+    }
 }
 
 .booking_num_guests {
@@ -202,6 +337,16 @@
     font-weight: 500;
     font-size: 1.2rem;
     padding: 10px 0px 20px 30px;
+
+    @include large {
+        font-size: 1.1em;
+        padding-top: 2%;
+    }
+
+    @include medium {
+        font-size: 1.1em;
+        padding-top: 5%;
+    }
 }
 
 .booked_reviews_number {
@@ -225,6 +370,20 @@
     min-width: 240px;
     min-height: 144px;
     height: 14.4vh;
+
+    @include large {
+        width: 90%;
+        height: 18vh;
+        margin: 0 auto;
+        margin-bottom: 5%;
+    }
+
+    @include medium {
+        width: 90%;
+        height: 25vh;
+        margin: 0 auto;
+        margin-bottom: 5%;
+    }
 }
 
 .user_booking_details {
@@ -256,172 +415,4 @@
 .user_booking_review {
     overflow-wrap: break-word;
     padding: 5px 0px 15px 0px;
-}
-
-@media (max-width: 700px) {
-    .user_booking_spot {
-        width: 100%;
-        min-width: 0;
-        margin-top: 0%;
-    }
-    
-    .booked_spots_header {
-        width: 80%;
-        padding-bottom: 0px;
-        margin: 0 auto;
-        margin-bottom: 3%;
-    }
-
-    .booked_spots_list {
-        width: 100%;
-        min-width: 0;
-        padding-left: 0%;
-    }
-    
-    .user_booking_title {
-        padding-left: 0px;
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .booked_spot_items {
-        margin: 0 auto;
-        margin-bottom: 5%;
-        width: 90%;
-    }
-
-    .booking_img {
-        width: 90%;
-        height: 25vh;
-        margin: 0 auto;
-        margin-bottom: 5%;
-    }
-
-    .user_booking_spot {
-        flex-direction: column;
-    }
-
-    .user_profile_sidebar {
-        width: 100%;
-        min-width: 0;
-        display: flex;
-        margin: 0 auto;
-    }
-
-    .user_booking_dates {
-        flex-direction: column;
-        padding: 20px 0px 20px 0px;
-    }
-
-    .bio_panel {
-        width: 80%;
-        font-weight: 400;
-        font-size: .9em;
-        padding: 0px;
-        border: none;
-        margin: 0 auto;
-        margin-bottom: 3%;
-    }
-
-    .panel_body {
-        display: none;
-    }
-
-    .booked_spots_number {
-        font-size: 1.1em;
-        padding-top: 5%;
-    }
-
-    .booked_user_reviews {
-        font-size: 1.1em;
-        padding-top: 5%;
-    }
-
-    .booking_delete_button {
-        padding-right: 5%;
-    }
-}
-
-@media (min-width: 701px) and (max-width: 1024px) {
-    .user_booking_spot {
-        width: 100%;
-        min-width: 0;
-        margin-top: 0%;
-    }
-    
-    .booked_spots_header {
-        width: 93.3%;
-        padding-bottom: 0px;
-        margin: 0 auto;
-        margin-bottom: 3%;
-    }
-
-    .booked_spots_list {
-        width: 90%;
-        min-width: 0;
-        padding-left: 0%;
-    }
-    
-    .user_booking_title {
-        padding-left: 0px;
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .booked_spot_items {
-        margin-bottom: 5%;
-        width: 48%;
-    }
-
-    .booking_img {
-        width: 90%;
-        height: 18vh;
-        margin: 0 auto;
-        margin-bottom: 5%;
-    }
-
-    .user_booking_spot {
-        flex-direction: column;
-    }
-
-    .user_profile_sidebar {
-        width: 100%;
-        min-width: 0;
-        display: flex;
-        margin: 0 auto;
-        margin-top: 3%;
-    }
-
-    .user_booking_dates {
-        flex-direction: column;
-        padding: 20px 0px 20px 0px;
-    }
-
-    .bio_panel {
-        width: 84%;
-        font-weight: 400;
-        font-size: .9em;
-        padding: 0px;
-        border: none;
-        margin: 0 auto;
-        margin-bottom: 3%;
-    }
-
-    .panel_body {
-        display: none;
-    }
-
-    .booked_spots_number {
-        font-size: 1.1em;
-        padding-top: 2%;
-    }
-
-    .booked_user_reviews {
-        font-size: 1.1em;
-        padding-top: 2%;
-    }
-
-    .booking_delete_button {
-        padding-right: 5%;
-    }
 }
