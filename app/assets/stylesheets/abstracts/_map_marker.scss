@@ -1,0 +1,26 @@
+.infowindow {
+    display: flex;
+    align-content: center;
+}
+
+.infowindow-title {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#infoWindowDetails {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.infowindow-price {
+    font-size: 11px;
+}
+
+#infoWindowImage {
+    padding-right: 10px;
+    height: 62px;
+    width: 62px;
+}

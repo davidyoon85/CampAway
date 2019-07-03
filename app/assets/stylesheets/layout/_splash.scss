@@ -1,3 +1,30 @@
+.title {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px;
+    color: #000;
+    font-family: $font-family;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    display: block;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    margin: 10px;
+    color: $font-color;
+    font-family: $font-family;
+    margin-bottom: 35px;
+
+    @include small {
+        font-size: .7em;
+        margin: 5px 5px 25px 5px;
+    }
+}
+
 .splash_subtitle1 {
     font-weight: 700;
     font-size: 2rem;

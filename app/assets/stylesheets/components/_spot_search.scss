@@ -201,6 +201,26 @@
     transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
 }
 
+#map-container {
+    @include medium {
+        position: relative;
+        bottom: 0;
+        height: 45vh;
+        width: 99%;
+        margin: 0 auto;
+        margin-top: 4%;
+    }
+
+    @include large {
+        position: relative;
+        bottom: 0;
+        height: 45vh;
+        width: 99%;
+        margin: 0 auto;
+        margin-top: 4%;
+    }
+}
+
 @media (min-width: 701px) and (max-width: 1024px) {
     .spot_search_container {
         min-width: 0;

@@ -79,6 +79,43 @@ body {
     height: 100%;
 }
 
+.app_container {
+    height: 100vh;
+}
+  
+.main-class {
+    height: 88.5%;
+    width: 100%;
+    min-height: 50vh;
+    background: #fff;
+    margin: 0 auto;
+}
+  
+input {
+    margin: auto 0;
+}
+
+li {
+    display: inline;
+    color: #000;
+}
+
+h1 {
+    display: inline;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+input::placeholder {
+    color: #000;   
+}
+
+i {
+    color: #fff;
+}
+
 //Flexbox Center
 @mixin flex-center() {
     display: flex;
@@ -96,5 +133,5 @@ body {
 }
 
 @mixin large {
-    @media (max-width: 1024px) { @content; }
+    @media (min-width: 701px) and (max-width: 1024px) { @content; }
 }
