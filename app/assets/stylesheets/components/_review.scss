@@ -35,13 +35,12 @@
 
     @include medium {
         width: 100%;
-        margin-top: 3%;
     }
 }
 
 .review_spot_title {
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 2rem;
 
     @include medium {
         margin-top: 5%;
@@ -49,19 +48,18 @@
 }
 
 .review_description {
-    margin: 25px;
     padding: 10px;
     color: #000;
     border-radius: 1px;
     resize: none;
     line-height: 1.9;
+    margin-top: 5%;
 
     @include large {
         margin: 0;
     }
 
     @include medium {
-        margin: 0;
         margin-top: 3%;
     }
 
@@ -73,13 +71,14 @@
 .create_review_submit {
     border: 3px solid $primary-color;
     height: 50px;
-    width: 250px;
+    width: 100%;
     background: $primary-color;
     color: #fff;
     padding: 0.5rem;
     font-weight: 700;
     font-size: .9rem;
     margin: 0 auto;
+    margin-top: 5%;
 
     &:hover {
         border: 3px solid $primary-color;
@@ -87,7 +86,16 @@
         color: $primary-color;
         padding: 0.5rem;
         transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
-        margin: 0 auto
+        margin: 0 auto;
+        margin-top: 5%;
+
+        @include large {
+            margin-top: 3%;
+        }
+    
+        @include medium {
+            margin-top: 5%;
+        }
     }
 
     @include large {
@@ -96,7 +104,6 @@
     }
 
     @include medium {
-        width: 100%;
         margin-top: 5%;
     }
 }

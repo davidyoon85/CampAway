@@ -124,7 +124,7 @@ i {
 }
 
 @mixin large {
-    @media (min-width: 701px) and (max-width: 1024px) { @content; }
+    @media (max-width: 1024px) { @content; }
 }
 
 @mixin extra-large {

@@ -31,10 +31,6 @@
       @include large {
          width: 100%;
       }
-
-      @include medium {
-         width: 100%;
-      }
    }
 }  
 
@@ -43,19 +39,11 @@
       @include large {
          display: none
       }
-
-      @include medium {
-         display: none
-      }
    }
 }
 
 .slick-arrow {
    @include large {
-      display: none;
-   }
-
-   @include medium {
       display: none;
    }
 }

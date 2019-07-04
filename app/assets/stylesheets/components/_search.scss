@@ -11,10 +11,6 @@
     @include large {
         display: none;
     }
-
-    @include medium {
-        display: none;
-    }
 }
 
 .search_form {
@@ -71,7 +67,6 @@
     }
 
     @include medium {
-        margin: 7% 0%;
         width: 90%;
         height: 7vh;
     }

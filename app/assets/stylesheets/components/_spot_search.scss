@@ -40,11 +40,6 @@
         width: 100%;
         height: 100%;
     }
-
-    @include medium {
-        width: 100%;
-        height: 100%;
-    }
 }
 
 .spot_index_item {
@@ -60,7 +55,6 @@
     }
 
     @include medium {
-        padding: 5px;
         width: 100%;
     }
 
@@ -68,10 +62,6 @@
         padding-right: 10px;
 
         @include large {
-            padding-right: 5px;
-        }
-
-        @include medium {
             padding-right: 5px;
         }
     }
@@ -92,10 +82,6 @@
     @include large {
         height: 70%;
     }
-
-    @include medium {
-        height: 70%;
-    }
 }
 
 .spot_details {
@@ -110,10 +96,6 @@
     @include large {
         height: 30%;
     }
-
-    @include medium {
-        height: 30%;
-    }
 }
 
 .map {
@@ -125,13 +107,6 @@
     height: 73vh;
 
     @include large {
-        bottom: 10px;
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
-
-    @include medium {
         bottom: 10px;
         width: 100%;
         height: 100%;
@@ -215,12 +190,6 @@
         flex: 1;
     }
 
-    @include medium {
-        height: 45px;
-        font-size: .6em;
-        flex: 1;
-    }
-
     @include small {
         margin: 1%;
     }
@@ -233,10 +202,6 @@
             height: 45px;
             font-size: 1.3em;
             padding: 5px;
-            width: 100%;
-        }
-
-        @include medium {
             width: 100%;
         }
 
@@ -294,9 +259,6 @@
         }
 
         @include medium {
-            height: 45px;
-            font-size: .4em;
-            padding: 5px;
             width: 100%;
         }
     
@@ -320,15 +282,6 @@
 }
 
 #map-container {
-    @include medium {
-        position: relative;
-        bottom: 0;
-        height: 45vh;
-        width: 99%;
-        margin: 0 auto;
-        margin-top: 4%;
-    }
-
     @include large {
         position: relative;
         bottom: 0;

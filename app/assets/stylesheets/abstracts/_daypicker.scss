@@ -238,14 +238,9 @@
   }
 
   @include medium {
-    display: flex;
-    justify-content: center;
     margin-left: 13%;
     margin-right: 13%;
     width: 74%;
-    transform: scale(1, 1);
-    bottom: 0;
-    position: absolute;
   }
 }
 

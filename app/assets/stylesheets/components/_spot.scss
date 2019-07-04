@@ -20,11 +20,6 @@
         width: 100%;
         margin: 0 auto;
     }
-
-    @include medium {
-        width: 100%;
-        margin: 0 auto;
-    }
 }
 
 .spot_div_main {
@@ -67,10 +62,6 @@
     @include large {
         min-width: 0px;
     }
-
-    @include medium {
-        min-width: 0px;
-    }
 }
 
 .spot_div_info {
@@ -101,10 +92,6 @@
     @include large {
         padding: 0px;
     }
-
-    @include medium {
-        padding: 0px;
-    }
 }
 
 .spot_title {
@@ -112,10 +99,6 @@
     font-weight: 700;
 
     @include large {
-        font-size: 1.7rem;
-    }
-
-    @include medium {
         font-size: 1.7rem;
     }
 }
@@ -149,10 +132,6 @@
     @include large {
         width: 30%;
     }
-
-    @include medium {
-        width: 30%;
-    }
 }
 
 #spot_details_subsection {
@@ -162,13 +141,6 @@
     width: 70%;
 
     @include large {
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        width: 70%;
-    }
-
-    @include medium {
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
@@ -296,20 +268,10 @@ span {
         width: 100%;
         bottom: 0;
     }
-
-    @include medium {
-        position: fixed;
-        width: 100%;
-        bottom: 0;
-    }
 }
 
 .booking_widget {
     @include large {
-        width: 100%;
-    }
-
-    @include medium {
         width: 100%;
     }
 }
