@@ -34,7 +34,6 @@
     @include large {
         width: 84%;
         font-weight: 400;
-        font-size: .7rem;
         padding: 0px;
         border: none;
         margin: 0 auto;
@@ -44,7 +43,6 @@
     @include medium {
         width: 80%;
         font-weight: 400;
-        font-size: .7rem;
         padding: 0px;
         border: none;
         margin: 0 auto;
@@ -316,12 +314,10 @@
     padding: 10px 0px 20px 0px;
 
     @include large {
-        font-size: .9rem;
         padding-top: 2%;
     }
 
     @include medium {
-        font-size: .9rem;
         padding-top: 5%;
     }
 }
@@ -337,12 +333,10 @@
     padding: 10px 0px 20px 30px;
 
     @include large {
-        font-size: .9rem;
         padding-top: 2%;
     }
 
     @include medium {
-        font-size: .9rem;
         padding-top: 5%;
     }
 }

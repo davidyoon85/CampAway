@@ -781,7 +781,6 @@ i {
 
 @media (max-width: 1024px) {
   .splash_subtitle1 {
-    font-size: 1.4em;
     margin: 0 auto;
     margin-top: 5%;
   }
@@ -805,7 +804,6 @@ i {
 
 @media (max-width: 1024px) {
   .splash_subtitle2 {
-    font-size: .9em;
     margin: 0 auto;
   }
 }
@@ -1651,7 +1649,6 @@ div > h3 {
   .bio_panel {
     width: 84%;
     font-weight: 400;
-    font-size: .7rem;
     padding: 0px;
     border: none;
     margin: 0 auto;
@@ -1663,7 +1660,6 @@ div > h3 {
   .bio_panel {
     width: 80%;
     font-weight: 400;
-    font-size: .7rem;
     padding: 0px;
     border: none;
     margin: 0 auto;
@@ -2018,14 +2014,12 @@ div > h3 {
 
 @media (max-width: 1024px) {
   .booked_spots_number {
-    font-size: .9rem;
     padding-top: 2%;
   }
 }
 
 @media (max-width: 700px) {
   .booked_spots_number {
-    font-size: .9rem;
     padding-top: 5%;
   }
 }
@@ -2043,14 +2037,12 @@ div > h3 {
 
 @media (max-width: 1024px) {
   .booked_user_reviews {
-    font-size: .9rem;
     padding-top: 2%;
   }
 }
 
 @media (max-width: 700px) {
   .booked_user_reviews {
-    font-size: .9rem;
     padding-top: 5%;
   }
 }
@@ -2645,15 +2637,7 @@ div > h3 {
   position: relative;
   -webkit-box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.1);
           box-shadow: 1px 2px 5px 2px rgba(0, 0, 0, 0.1);
-  margin-top: 4%;
-  margin-bottom: 5%;
-}
-
-@media (max-width: 1024px) {
-  .search_bar_main {
-    height: 10vh;
-    margin: 7% 0%;
-  }
+  margin: 5% 0;
 }
 
 @media (max-width: 700px) {
@@ -2675,15 +2659,9 @@ div > h3 {
   letter-spacing: 1.1;
 }
 
-@media (max-width: 1024px) {
-  .search_bar {
-    font-size: .7rem;
-  }
-}
-
 @media (max-width: 700px) {
   .search_bar {
-    font-size: .5rem;
+    font-size: .8rem;
   }
 }
 
@@ -2736,7 +2714,7 @@ div > h3 {
 
 @media (max-width: 700px) {
   .search_button:hover {
-    font-size: .5rem;
+    font-size: .7rem;
   }
 }
 
@@ -2748,7 +2726,7 @@ div > h3 {
 
 @media (max-width: 700px) {
   .search_button {
-    font-size: .5rem;
+    font-size: .7rem;
   }
 }
 
@@ -2768,13 +2746,13 @@ div > h3 {
 
 @media (max-width: 1024px) {
   .search_bar_icon {
-    font-size: .8rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 700px) {
   .search_bar_icon {
-    font-size: .5rem;
+    font-size: .8rem;
   }
 }
 
