@@ -165,19 +165,19 @@ i {
           align-items: center;
   width: 80%;
   padding: 10px 0px 10px 25px;
-  font-size: 2.7em;
+  font-size: 2.4rem;
   font-weight: 600;
 }
 
 @media (max-width: 320px) {
   .left {
-    font-size: 1.5em;
+    font-size: 1.3rem;
   }
 }
 
 @media (max-width: 700px) {
   .left {
-    font-size: 1.7em;
+    font-size: 1.5rem;
   }
 }
 
@@ -199,7 +199,7 @@ i {
 @media (max-width: 700px) {
   .right {
     padding-right: 10px;
-    font-size: .8em;
+    font-size: .6rem;
   }
 }
 
@@ -274,7 +274,7 @@ i {
 }
 
 .dropdown_list li {
-  font-size: .9em;
+  font-size: .7rem;
   margin: 0 auto;
   -webkit-transition: -webkit-transform .5s ease;
   transition: -webkit-transform .5s ease;
@@ -501,7 +501,7 @@ i {
 @media (max-width: 320px) {
   .login-form {
     width: 260px;
-    font-size: .5em;
+    font-size: .4rem;
   }
 }
 
@@ -1693,7 +1693,7 @@ div > h3 {
   .bio_panel {
     width: 84%;
     font-weight: 400;
-    font-size: .9em;
+    font-size: .7rem;
     padding: 0px;
     border: none;
     margin: 0 auto;
@@ -1705,7 +1705,7 @@ div > h3 {
   .bio_panel {
     width: 80%;
     font-weight: 400;
-    font-size: .9em;
+    font-size: .7rem;
     padding: 0px;
     border: none;
     margin: 0 auto;
@@ -1720,7 +1720,7 @@ div > h3 {
 
 .bio_panel h3 {
   font-weight: 400;
-  font-size: .9em;
+  font-size: .7rem;
 }
 
 .panel_body {
@@ -1751,7 +1751,7 @@ div > h3 {
 
 .panel_body h3 {
   font-weight: 400;
-  font-size: .9em;
+  font-size: .7rem;
 }
 
 #email_icon {
@@ -2064,14 +2064,14 @@ div > h3 {
 
 @media (min-width: 701px) and (max-width: 1024px) {
   .booked_spots_number {
-    font-size: 1.1em;
+    font-size: .9rem;
     padding-top: 2%;
   }
 }
 
 @media (max-width: 700px) {
   .booked_spots_number {
-    font-size: 1.1em;
+    font-size: .9rem;
     padding-top: 5%;
   }
 }
@@ -2089,14 +2089,14 @@ div > h3 {
 
 @media (min-width: 701px) and (max-width: 1024px) {
   .booked_user_reviews {
-    font-size: 1.1em;
+    font-size: .9rem;
     padding-top: 2%;
   }
 }
 
 @media (max-width: 700px) {
   .booked_user_reviews {
-    font-size: 1.1em;
+    font-size: .9rem;
     padding-top: 5%;
   }
 }
@@ -2251,7 +2251,7 @@ div > h3 {
             justify-content: center;
     padding: 12px;
     border-radius: 5px;
-    font-size: 1.1em;
+    font-size: .9rem;
     color: #fff;
     background-color: #39C39A;
     border: 2px solid #fff;
@@ -2261,7 +2261,7 @@ div > h3 {
 
 @media (max-width: 700px) {
   .form_signup_button {
-    font-size: 1em;
+    font-size: .8rem;
   }
 }
 
@@ -2719,13 +2719,13 @@ div > h3 {
 
 @media (min-width: 701px) and (max-width: 1024px) {
   .search_bar {
-    font-size: 1em;
+    font-size: .7rem;
   }
 }
 
 @media (max-width: 700px) {
   .search_bar {
-    font-size: .7em;
+    font-size: .5rem;
   }
 }
 
@@ -2762,7 +2762,7 @@ div > h3 {
   color: #fff;
   padding: 0.5rem;
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: .9rem;
   cursor: pointer;
 }
 
@@ -2778,19 +2778,19 @@ div > h3 {
 
 @media (max-width: 700px) {
   .search_button:hover {
-    font-size: .7em;
+    font-size: .5rem;
   }
 }
 
 @media (min-width: 701px) and (max-width: 1024px) {
   .search_button {
-    font-size: 1em;
+    font-size: .8rem;
   }
 }
 
 @media (max-width: 700px) {
   .search_button {
-    font-size: .7em;
+    font-size: .5rem;
   }
 }
 
@@ -2810,13 +2810,13 @@ div > h3 {
 
 @media (min-width: 701px) and (max-width: 1024px) {
   .search_bar_icon {
-    font-size: 1em;
+    font-size: .8rem;
   }
 }
 
 @media (max-width: 700px) {
   .search_bar_icon {
-    font-size: .7em;
+    font-size: .5rem;
   }
 }
 
@@ -2981,13 +2981,13 @@ div > h3 {
 
 @media (min-width: 701px) and (max-width: 1024px) {
   .spot_title {
-    font-size: 2em;
+    font-size: 1.7rem;
   }
 }
 
 @media (max-width: 700px) {
   .spot_title {
-    font-size: 2em;
+    font-size: 1.7rem;
   }
 }
 
@@ -3575,7 +3575,7 @@ span p {
 @media (min-width: 701px) and (max-width: 1024px) {
   .spot_form_message {
     width: 70%;
-    font-size: 1em;
+    font-size: .7rem;
     margin: 0;
   }
 }
@@ -3719,23 +3719,23 @@ span p {
 
 @media (min-width: 701px) and (max-width: 1024px) {
   .form-control::-webkit-input-placeholder {
-    font-size: .8em;
+    font-size: .6rem;
   }
   .form-control:-ms-input-placeholder {
-    font-size: .8em;
+    font-size: .6rem;
   }
   .form-control::-ms-input-placeholder {
-    font-size: .8em;
+    font-size: .6rem;
   }
   .form-control::placeholder {
-    font-size: .8em;
+    font-size: .6rem;
   }
 }
 
 @media (max-width: 700px) {
   .form-control {
     height: 30px;
-    font-size: .8em;
+    font-size: .6rem;
     margin: 5% 0%;
   }
 }
@@ -3759,7 +3759,7 @@ textarea {
   color: #000;
   font-weight: 500;
   letter-spacing: 1.1;
-  font-size: 1em;
+  font-size: .8rem;
   resize: none;
 }
 
@@ -3768,7 +3768,7 @@ textarea {
   height: 30px;
   border: 2px solid #39C39A;
   letter-spacing: 1.1px;
-  font-size: .8em;
+  font-size: .6rem;
   font-weight: 600;
   -webkit-box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 5px;
           box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 5px;
@@ -3782,7 +3782,7 @@ textarea {
   background-color: #fff;
   color: #39C39A;
   font-weight: 700;
-  font-size: .8em;
+  font-size: .6rem;
   -webkit-transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
   transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
 }
@@ -3798,7 +3798,7 @@ textarea {
   height: 30px;
   border: 2px solid #39C39A;
   letter-spacing: 1.1px;
-  font-size: .8em;
+  font-size: .6rem;
   font-weight: 600;
   -webkit-box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 5px;
           box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 5px;
@@ -3812,7 +3812,7 @@ textarea {
   background-color: #fff;
   color: #39C39A;
   font-weight: 700;
-  font-size: .8em;
+  font-size: .6rem;
   -webkit-transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
   transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
 }
@@ -3864,7 +3864,7 @@ textarea {
   -webkit-transition: border 0.4s;
   transition: border 0.4s;
   margin-bottom: 5%;
-  font-size: .9em;
+  font-size: .7rem;
 }
 
 .photo_upload + label:hover {
@@ -3884,7 +3884,7 @@ textarea {
     -webkit-transition: border 0.4s;
     transition: border 0.4s;
     margin-bottom: 5%;
-    font-size: 1.1em;
+    font-size: .9rem;
   }
 }
 
@@ -3898,7 +3898,7 @@ textarea {
 .fa-camera {
   color: #000;
   padding-right: 3px;
-  font-size: 0.9em;
+  font-size: 0.6em;
 }
 
 .spot_search_container {

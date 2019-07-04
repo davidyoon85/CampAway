@@ -245,7 +245,7 @@
 
     @include large {
         width: 70%;
-        font-size: 1em;
+        font-size: .7rem;
         margin: 0;
     }
 
@@ -356,13 +356,13 @@
         font-size: .9rem;
 
         @include large {
-            font-size: .8em;
+            font-size: .6rem;
         }
     }
 
     @include medium {
         height: 30px;
-        font-size: .8em;
+        font-size: .6rem;
         margin: 5% 0%;
     }
 }
@@ -386,7 +386,7 @@ textarea {
      color: #000;
      font-weight: 500;
      letter-spacing: 1.1;
-     font-size: 1em;
+     font-size: .8rem;
      resize: none
 }
 
@@ -395,7 +395,7 @@ textarea {
     height: 30px;
     border: 2px solid $primary-color;
     letter-spacing: 1.1px;
-    font-size: .8em;
+    font-size: .6rem;
     font-weight: 600;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 5px;
     background: $primary-color;
@@ -407,7 +407,7 @@ textarea {
         background-color: #fff;
         color: $primary-color;
         font-weight: 700;
-        font-size: .8em;
+        font-size: .6rem;
         transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
     }
 
@@ -421,7 +421,7 @@ textarea {
     height: 30px;
     border: 2px solid $primary-color;
     letter-spacing: 1.1px;
-    font-size: .8em;
+    font-size: .6rem;
     font-weight: 600;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 3px 5px;
     background: $primary-color;
@@ -433,7 +433,7 @@ textarea {
         background-color: #fff;
         color: $primary-color;
         font-weight: 700;
-        font-size: .8em;
+        font-size: .6rem;
         transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
     }
 
@@ -476,7 +476,7 @@ textarea {
     padding: 10px;
     transition: border 0.4s;
     margin-bottom: 5%;
-    font-size: .9em;
+    font-size: .7rem;
 
     &:hover {
         border: 1px solid gray;
@@ -493,7 +493,7 @@ textarea {
         padding: 12px;
         transition: border 0.4s;
         margin-bottom: 5%;
-        font-size: 1.1em;
+        font-size: .9rem;
     }
 
     @include medium {
@@ -505,5 +505,5 @@ textarea {
 .fa-camera {
     color: #000;
     padding-right: 3px;
-    font-size: 0.9em;
+    font-size: 0.6em;
 }
