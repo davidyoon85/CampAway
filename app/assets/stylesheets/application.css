@@ -318,7 +318,7 @@ i {
 }
 
 .foot_div {
-  background: url("../images/footer_img.png");
+  background-image: url("footer_img.png");
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
