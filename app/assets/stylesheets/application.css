@@ -1614,6 +1614,29 @@ div > h3 {
   min-width: 260px;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .user_profile_sidebar {
+    width: 100%;
+    min-width: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 3%;
+  }
+}
+
+@media (max-width: 700px) {
+  .user_profile_sidebar {
+    width: 100%;
+    min-width: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+  }
+}
+
 .bio_panel {
   margin-top: 10px;
   width: 100%;
@@ -1621,6 +1644,30 @@ div > h3 {
   border: 1px solid #ebebeb;
   font-weight: 400;
   font-size: .8rem;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .bio_panel {
+    width: 84%;
+    font-weight: 400;
+    font-size: .9em;
+    padding: 0px;
+    border: none;
+    margin: 0 auto;
+    margin-bottom: 3%;
+  }
+}
+
+@media (max-width: 700px) {
+  .bio_panel {
+    width: 80%;
+    font-weight: 400;
+    font-size: .9em;
+    padding: 0px;
+    border: none;
+    margin: 0 auto;
+    margin-bottom: 3%;
+  }
 }
 
 .bio_panel span {
@@ -1640,6 +1687,18 @@ div > h3 {
   border: 1px solid #ebebeb;
   padding-right: 10px;
   font-size: .8rem;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .panel_body {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .panel_body {
+    display: none;
+  }
 }
 
 .panel_body span {
@@ -1701,6 +1760,22 @@ div > h3 {
   padding-left: 5%;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .booked_spots_list {
+    width: 90%;
+    min-width: 0;
+    padding-left: 0%;
+  }
+}
+
+@media (max-width: 700px) {
+  .booked_spots_list {
+    width: 100%;
+    min-width: 0;
+    padding-left: 0%;
+  }
+}
+
 .booked_spot_items {
   padding: 10px;
   display: -webkit-box;
@@ -1715,10 +1790,37 @@ div > h3 {
   margin: 0px 0px 20px 0px;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .booked_spot_items {
+    margin-bottom: 5%;
+    width: 48%;
+  }
+}
+
+@media (max-width: 700px) {
+  .booked_spot_items {
+    margin: 0 auto;
+    margin-bottom: 5%;
+    width: 90%;
+  }
+}
+
 .booking_delete_button {
   margin-left: auto;
   padding-right: 20px;
   font-size: .9rem;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .booking_delete_button {
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 700px) {
+  .booking_delete_button {
+    padding-right: 5%;
+  }
 }
 
 .booking_delete_button:hover {
@@ -1741,11 +1843,35 @@ div > h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 70%;
   min-width: 870px;
   margin: 0 auto;
   margin-top: 3%;
   margin-bottom: 3%;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .user_booking_spot {
+    width: 100%;
+    min-width: 0;
+    margin-top: 0%;
+  }
+}
+
+@media (max-width: 700px) {
+  .user_booking_spot {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    margin-top: 0%;
+  }
 }
 
 .user_booking_spot_container {
@@ -1809,11 +1935,47 @@ div > h3 {
   padding-left: 20px;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .user_booking_title {
+    padding-left: 0px;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .user_booking_title {
+    padding-left: 0px;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
 .user_booking_dates {
   padding: 20px 0px 0px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .user_booking_dates {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px 0px 20px 0px;
+  }
+}
+
+@media (max-width: 700px) {
+  .user_booking_dates {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px 0px 20px 0px;
+  }
 }
 
 .widget_guests {
@@ -1833,10 +1995,42 @@ div > h3 {
   padding-bottom: 20px;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .booked_spots_header {
+    width: 93.3%;
+    padding-bottom: 0px;
+    margin: 0 auto;
+    margin-bottom: 3%;
+  }
+}
+
+@media (max-width: 700px) {
+  .booked_spots_header {
+    width: 80%;
+    padding-bottom: 0px;
+    margin: 0 auto;
+    margin-bottom: 3%;
+  }
+}
+
 .booked_spots_number {
   font-weight: 500;
   font-size: 1.2rem;
   padding: 10px 0px 20px 0px;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .booked_spots_number {
+    font-size: 1.1em;
+    padding-top: 2%;
+  }
+}
+
+@media (max-width: 700px) {
+  .booked_spots_number {
+    font-size: 1.1em;
+    padding-top: 5%;
+  }
 }
 
 .booking_num_guests {
@@ -1848,6 +2042,20 @@ div > h3 {
   font-weight: 500;
   font-size: 1.2rem;
   padding: 10px 0px 20px 30px;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .booked_user_reviews {
+    font-size: 1.1em;
+    padding-top: 2%;
+  }
+}
+
+@media (max-width: 700px) {
+  .booked_user_reviews {
+    font-size: 1.1em;
+    padding-top: 5%;
+  }
 }
 
 .booked_reviews_number {
@@ -1871,6 +2079,24 @@ div > h3 {
   min-width: 240px;
   min-height: 144px;
   height: 14.4vh;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .booking_img {
+    width: 90%;
+    height: 18vh;
+    margin: 0 auto;
+    margin-bottom: 5%;
+  }
+}
+
+@media (max-width: 700px) {
+  .booking_img {
+    width: 90%;
+    height: 25vh;
+    margin: 0 auto;
+    margin-bottom: 5%;
+  }
 }
 
 .user_booking_details {
@@ -1911,164 +2137,6 @@ div > h3 {
 .user_booking_review {
   overflow-wrap: break-word;
   padding: 5px 0px 15px 0px;
-}
-
-@media (max-width: 700px) {
-  .user_booking_spot {
-    width: 100%;
-    min-width: 0;
-    margin-top: 0%;
-  }
-  .booked_spots_header {
-    width: 80%;
-    padding-bottom: 0px;
-    margin: 0 auto;
-    margin-bottom: 3%;
-  }
-  .booked_spots_list {
-    width: 100%;
-    min-width: 0;
-    padding-left: 0%;
-  }
-  .user_booking_title {
-    padding-left: 0px;
-    width: 90%;
-    margin: 0 auto;
-  }
-  .booked_spot_items {
-    margin: 0 auto;
-    margin-bottom: 5%;
-    width: 90%;
-  }
-  .booking_img {
-    width: 90%;
-    height: 25vh;
-    margin: 0 auto;
-    margin-bottom: 5%;
-  }
-  .user_booking_spot {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .user_profile_sidebar {
-    width: 100%;
-    min-width: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0 auto;
-  }
-  .user_booking_dates {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 20px 0px 20px 0px;
-  }
-  .bio_panel {
-    width: 80%;
-    font-weight: 400;
-    font-size: .9em;
-    padding: 0px;
-    border: none;
-    margin: 0 auto;
-    margin-bottom: 3%;
-  }
-  .panel_body {
-    display: none;
-  }
-  .booked_spots_number {
-    font-size: 1.1em;
-    padding-top: 5%;
-  }
-  .booked_user_reviews {
-    font-size: 1.1em;
-    padding-top: 5%;
-  }
-  .booking_delete_button {
-    padding-right: 5%;
-  }
-}
-
-@media (min-width: 701px) and (max-width: 1024px) {
-  .user_booking_spot {
-    width: 100%;
-    min-width: 0;
-    margin-top: 0%;
-  }
-  .booked_spots_header {
-    width: 93.3%;
-    padding-bottom: 0px;
-    margin: 0 auto;
-    margin-bottom: 3%;
-  }
-  .booked_spots_list {
-    width: 90%;
-    min-width: 0;
-    padding-left: 0%;
-  }
-  .user_booking_title {
-    padding-left: 0px;
-    width: 90%;
-    margin: 0 auto;
-  }
-  .booked_spot_items {
-    margin-bottom: 5%;
-    width: 48%;
-  }
-  .booking_img {
-    width: 90%;
-    height: 18vh;
-    margin: 0 auto;
-    margin-bottom: 5%;
-  }
-  .user_booking_spot {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .user_profile_sidebar {
-    width: 100%;
-    min-width: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0 auto;
-    margin-top: 3%;
-  }
-  .user_booking_dates {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 20px 0px 20px 0px;
-  }
-  .bio_panel {
-    width: 84%;
-    font-weight: 400;
-    font-size: .9em;
-    padding: 0px;
-    border: none;
-    margin: 0 auto;
-    margin-bottom: 3%;
-  }
-  .panel_body {
-    display: none;
-  }
-  .booked_spots_number {
-    font-size: 1.1em;
-    padding-top: 2%;
-  }
-  .booked_user_reviews {
-    font-size: 1.1em;
-    padding-top: 2%;
-  }
-  .booking_delete_button {
-    padding-right: 5%;
-  }
 }
 
 .host_option_main {
@@ -2123,6 +2191,29 @@ div > h3 {
   font-weight: 600;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .form_signup_button {
+    width: 100%;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #39C39A;
+    border: 2px solid #fff;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 700px) {
+  .form_signup_button {
+    font-size: 1em;
+  }
+}
+
 .form_signup_button:hover {
   border: 2px solid #39C39A;
   background-color: #fff;
@@ -2147,6 +2238,12 @@ div > h3 {
   width: 33%;
 }
 
+@media (max-width: 700px) {
+  .form-group-options {
+    width: 33%;
+  }
+}
+
 .form_signup {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2162,15 +2259,6 @@ div > h3 {
 
 #check_out {
   font-family: "Calibre", Helvetica, Arial, sans-serif;
-}
-
-@media (max-width: 700px) {
-  .form-group-options {
-    width: 33%;
-  }
-  .form_signup_button {
-    font-size: 1em;
-  }
 }
 
 .spot_review_container {
@@ -2200,6 +2288,19 @@ div > h3 {
           align-items: center;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .create_review_form {
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 700px) {
+  .create_review_form {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
 .review_form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2211,9 +2312,29 @@ div > h3 {
   width: 40%;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .review_form {
+    width: 80%;
+    margin-top: 3%;
+  }
+}
+
+@media (max-width: 700px) {
+  .review_form {
+    width: 100%;
+    margin-top: 3%;
+  }
+}
+
 .review_spot_title {
   font-weight: 700;
   font-size: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .review_spot_title {
+    margin-top: 5%;
+  }
 }
 
 .review_description {
@@ -2223,6 +2344,19 @@ div > h3 {
   border-radius: 1px;
   resize: none;
   line-height: 1.9;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .review_description {
+    margin: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .review_description {
+    margin: 0;
+    margin-top: 3%;
+  }
 }
 
 .review_description:placeholder-shown {
@@ -2239,6 +2373,20 @@ div > h3 {
   font-weight: 700;
   font-size: .9rem;
   margin: 0 auto;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .create_review_submit {
+    margin-top: 3%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .create_review_submit {
+    width: 100%;
+    margin-top: 5%;
+  }
 }
 
 .create_review_submit:hover {
@@ -2390,45 +2538,6 @@ div > h3 {
   font-size: 14px;
 }
 
-@media (max-width: 700px) {
-  .review_spot_title {
-    margin-top: 5%;
-  }
-  .create_review_form {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .review_form {
-    width: 100%;
-    margin-top: 3%;
-  }
-  .review_description {
-    margin: 0;
-    margin-top: 3%;
-  }
-  .create_review_submit {
-    width: 100%;
-    margin-top: 5%;
-  }
-}
-
-@media (min-width: 701px) and (max-width: 1024px) {
-  .create_review_form {
-    margin-top: 10%;
-  }
-  .review_form {
-    width: 80%;
-    margin-top: 3%;
-  }
-  .review_description {
-    margin: 0;
-  }
-  .create_review_submit {
-    margin-top: 3%;
-    width: 100%;
-  }
-}
-
 .search_container {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -2441,6 +2550,18 @@ div > h3 {
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-left: 30px;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .search_container {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .search_container {
+    display: none;
+  }
 }
 
 .search_form {
@@ -2526,6 +2647,21 @@ div > h3 {
   margin-bottom: 5%;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .search_bar_main {
+    height: 10vh;
+    margin: 7% 0%;
+  }
+}
+
+@media (max-width: 700px) {
+  .search_bar_main {
+    margin: 7% 0%;
+    width: 90%;
+    height: 7vh;
+  }
+}
+
 .search_bar {
   border: 0;
   padding: 0.5rem 0.5rem 0.5rem 0;
@@ -2536,6 +2672,18 @@ div > h3 {
   font-weight: 400;
   font-size: 1rem;
   letter-spacing: 1.1;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .search_bar {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 700px) {
+  .search_bar {
+    font-size: .7em;
+  }
 }
 
 .search_bar::-webkit-input-placeholder {
@@ -2575,6 +2723,18 @@ div > h3 {
   cursor: pointer;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .search_button {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 700px) {
+  .search_button {
+    font-size: .7em;
+  }
+}
+
 .search_button:hover {
   border: 3px solid #39C39A;
   background-color: #fff;
@@ -2583,6 +2743,12 @@ div > h3 {
   padding: 0.5rem;
   -webkit-transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
   transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
+}
+
+@media (max-width: 700px) {
+  .search_button:hover {
+    font-size: .7em;
+  }
 }
 
 .search_bar_icon {
@@ -2600,42 +2766,12 @@ div > h3 {
 }
 
 @media (min-width: 701px) and (max-width: 1024px) {
-  .search_container {
-    display: none;
-  }
-  .search_bar_main {
-    height: 10vh;
-    margin: 7% 0%;
-  }
-  .search_bar {
-    font-size: 1em;
-  }
-  .search_button {
-    font-size: 1em;
-  }
   .search_bar_icon {
     font-size: 1em;
   }
 }
 
 @media (max-width: 700px) {
-  .search_container {
-    display: none;
-  }
-  .search_bar_main {
-    margin: 7% 0%;
-    width: 90%;
-    height: 7vh;
-  }
-  .search_bar {
-    font-size: .7em;
-  }
-  .search_button {
-    font-size: .7em;
-  }
-  .search_button:hover {
-    font-size: .7em;
-  }
   .search_bar_icon {
     font-size: .7em;
   }
@@ -3030,6 +3166,12 @@ span p {
   margin: 0 auto;
 }
 
+@media (max-width: 320px) {
+  .spot_form_container {
+    min-width: 320px;
+  }
+}
+
 .spot_form_nav {
   width: 65%;
   min-width: 350px;
@@ -3046,6 +3188,44 @@ span p {
           align-items: center;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .spot_form_nav {
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .spot_form_nav {
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    bottom: 0;
+  }
+}
+
+.form_nav_empty {
+  width: 30%;
+  min-width: 215px;
+  height: 100%;
+  background-color: #fff;
+  margin: 3%;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .form_nav_empty {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .form_nav_empty {
+    display: none;
+  }
+}
+
 .form_nav_section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3057,18 +3237,61 @@ span p {
   margin-right: 5%;
 }
 
-.form_nav_empty {
-  width: 30%;
-  min-width: 215px;
-  height: 100%;
-  background-color: #fff;
-  margin: 3%;
+@media (min-width: 701px) and (max-width: 1024px) {
+  .form_nav_section {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: #f9f9f9;
+    margin-right: 0%;
+  }
+}
+
+@media (max-width: 700px) {
+  .form_nav_section {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: #f9f9f9;
+    margin-right: 0%;
+  }
 }
 
 .arrow_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .arrow_container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 50%;
+  }
+}
+
+@media (max-width: 700px) {
+  .arrow_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 50%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .fa-angle-left {
@@ -3091,6 +3314,26 @@ span p {
   padding: 5px 13px;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .left_arrow {
+    padding: 10px 60px;
+    height: 80%;
+  }
+}
+
+@media (max-width: 700px) {
+  .left_arrow {
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 320px) {
+  .left_arrow {
+    height: 80%;
+    padding: 10px 40px;
+  }
+}
+
 .right_arrow {
   font-weight: bold;
   color: #333333;
@@ -3103,6 +3346,26 @@ span p {
   padding: 5px 13px;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .right_arrow {
+    padding: 10px 60px;
+    height: 80%;
+  }
+}
+
+@media (max-width: 700px) {
+  .right_arrow {
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 320px) {
+  .right_arrow {
+    height: 80%;
+    padding: 10px 40px;
+  }
+}
+
 .null_arrow {
   opacity: .3;
   font-weight: bold;
@@ -3113,6 +3376,27 @@ span p {
   border-style: solid;
   border-color: #C0C0C0;
   padding: 5px 13px;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .null_arrow {
+    padding: 10px 60px;
+    height: 80%;
+  }
+}
+
+@media (max-width: 700px) {
+  .null_arrow {
+    padding: 20px 40px;
+    border-color: #C0C0C0;
+  }
+}
+
+@media (max-width: 320px) {
+  .null_arrow {
+    height: 80%;
+    padding: 10px 40px;
+  }
 }
 
 .form_container {
@@ -3130,6 +3414,28 @@ span p {
   margin-bottom: 5%;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .form_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    background-color: #fff;
+  }
+}
+
+@media (max-width: 700px) {
+  .form_container {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 0%;
+  }
+}
+
 .spot_form_main {
   display: block;
   width: 50%;
@@ -3139,6 +3445,27 @@ span p {
   border: 1px solid #ebebeb;
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 5px;
           box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 5px;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .spot_form_main {
+    width: 70%;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 700px) {
+  .spot_form_main {
+    width: 80%;
+    margin-top: 5%;
+    height: 80%;
+  }
+}
+
+@media (max-width: 320px) {
+  .spot_form_main {
+    width: 90%;
+  }
 }
 
 .host_photo {
@@ -3162,6 +3489,20 @@ span p {
           box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 5px;
   padding: 20px;
   font-size: .9rem;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .spot_form_message {
+    width: 70%;
+    font-size: 1em;
+    margin: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .spot_form_message {
+    display: none;
+  }
 }
 
 .host_message_header {
@@ -3248,6 +3589,12 @@ span p {
   font-size: 1rem;
 }
 
+@media (max-width: 700px) {
+  .form_group_title {
+    font-size: .9rem;
+  }
+}
+
 .form-control {
   height: 35px;
   border: 1px solid #ebebeb;
@@ -3287,6 +3634,29 @@ span p {
   font-weight: 500;
   letter-spacing: 1.1;
   font-size: .9rem;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .form-control::-webkit-input-placeholder {
+    font-size: .8em;
+  }
+  .form-control:-ms-input-placeholder {
+    font-size: .8em;
+  }
+  .form-control::-ms-input-placeholder {
+    font-size: .8em;
+  }
+  .form-control::placeholder {
+    font-size: .8em;
+  }
+}
+
+@media (max-width: 700px) {
+  .form-control {
+    height: 30px;
+    font-size: .8em;
+    margin: 5% 0%;
+  }
 }
 
 .form_control_description {
@@ -3336,6 +3706,12 @@ textarea {
   transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
 }
 
+@media (max-width: 700px) {
+  .previous_button {
+    font-size: 7rem;
+  }
+}
+
 .next_button {
   width: 80px;
   height: 30px;
@@ -3358,6 +3734,12 @@ textarea {
   font-size: .8em;
   -webkit-transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
   transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
+}
+
+@media (max-width: 700px) {
+  .next_button {
+    font-size: .7rem;
+  }
 }
 
 .prev_next_buttons {
@@ -3408,31 +3790,7 @@ textarea {
   border: 1px solid gray;
 }
 
-.fa-camera {
-  color: #000;
-  padding-right: 3px;
-  font-size: 0.9em;
-}
-
 @media (min-width: 701px) and (max-width: 1024px) {
-  .spot_form_nav {
-    position: fixed;
-    width: 100%;
-    height: 10%;
-    bottom: 0;
-  }
-  .form_nav_empty {
-    display: none;
-  }
-  .form_nav_section {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 100%;
-    width: 100%;
-    background-color: #f9f9f9;
-    margin-right: 0%;
-  }
   .photo_upload + label {
     display: inline-block;
     width: 100%;
@@ -3447,192 +3805,19 @@ textarea {
     margin-bottom: 5%;
     font-size: 1.1em;
   }
-  .form_signup_button {
-    width: 100%;
-    text-align: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 12px;
-    border-radius: 5px;
-    font-size: 1.1em;
-    color: #fff;
-    background-color: #39C39A;
-    border: 2px solid #fff;
-    font-weight: 600;
-  }
-  .form_container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-    background-color: #fff;
-  }
-  .form-control::-webkit-input-placeholder {
-    font-size: .8em;
-  }
-  .form-control:-ms-input-placeholder {
-    font-size: .8em;
-  }
-  .form-control::-ms-input-placeholder {
-    font-size: .8em;
-  }
-  .form-control::placeholder {
-    font-size: .8em;
-  }
-  .spot_form_main {
-    width: 70%;
-    margin-top: 50px;
-  }
-  .spot_form_message {
-    width: 70%;
-    min-width: 215px;
-    background-color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    border: 1px solid #ebebeb;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 5px;
-            box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 5px;
-    padding: 20px;
-    font-size: 1em;
-    margin: 0;
-  }
-  .arrow_container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 50%;
-  }
-  .right_arrow {
-    padding: 10px 60px;
-    height: 80%;
-  }
-  .left_arrow {
-    padding: 10px 60px;
-    height: 80%;
-  }
-  .null_arrow {
-    padding: 10px 60px;
-    height: 80%;
-    border-color: #C0C0C0;
-  }
 }
 
 @media (max-width: 700px) {
-  .form_container {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 0%;
-    background-color: #fff;
-  }
-  .spot_form_main {
-    width: 80%;
-    margin-top: 5%;
-    height: 80%;
-  }
-  .form-control {
-    height: 30px;
-    font-size: .8em;
-    margin: 5% 0%;
-  }
-  .spot_form_message {
-    display: none;
-  }
-  .form_group_title {
-    font-size: .9rem;
-  }
-  .next_button {
-    font-size: .7rem;
-  }
-  .previous_button {
-    font-size: 7rem;
-  }
   .photo_upload + label {
     font-size: 7rem;
     padding: 6px;
   }
-  .spot_form_nav {
-    position: fixed;
-    width: 100%;
-    height: 10%;
-    bottom: 0;
-  }
-  .form_nav_empty {
-    display: none;
-  }
-  .form_nav_section {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 100%;
-    width: 100%;
-    background-color: #f9f9f9;
-    margin-right: 0%;
-  }
-  .arrow_container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 50%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .right_arrow {
-    padding: 20px 40px;
-  }
-  .left_arrow {
-    padding: 20px 40px;
-  }
-  .null_arrow {
-    padding: 20px 40px;
-    border-color: #C0C0C0;
-  }
 }
 
-@media (max-width: 320px) {
-  .spot_form_container {
-    min-width: 320px;
-  }
-  .arrow_container {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    align-items: center;
-  }
-  .right_arrow {
-    height: 80%;
-    padding: 10px 40px;
-  }
-  .left_arrow {
-    height: 80%;
-    padding: 10px 40px;
-  }
-  .null_arrow {
-    height: 80%;
-    padding: 10px 40px;
-  }
-  .spot_form_main {
-    width: 90%;
-    margin-top: 5%;
-    height: 80%;
-  }
+.fa-camera {
+  color: #000;
+  padding-right: 3px;
+  font-size: 0.9em;
 }
 
 .spot_search_container {

@@ -41,6 +41,23 @@
     border: 2px solid #fff;
     font-weight: 600;
 
+    @include large {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 12px;
+        border-radius: 5px;
+        font-size: 1.1em;
+        color: #fff;
+        background-color: $primary-color;
+        border: 2px solid #fff;
+        font-weight: 600;
+    }
+
+    @include medium {
+        font-size: 1em;
+    }
+
     &:hover {
         border: 2px solid $primary-color;
         background-color: #fff;
@@ -63,6 +80,10 @@
 
 .form-group-options {
     width: 33%;
+
+    @include medium {
+        width: 33%;
+    }
 }
 
 .form_signup {
@@ -77,14 +98,3 @@
 #check_out {
     font-family: $font-family;
 }
-
-@media (max-width: 700px) {
-    .form-group-options {
-        width: 33%;
-    }
-
-    .form_signup_button {
-        font-size: 1em;
-    }
-}
-
