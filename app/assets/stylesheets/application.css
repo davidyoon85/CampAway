@@ -1542,6 +1542,13 @@ div > h3 {
   height: 400px;
 }
 
+@media (max-width: 700px) {
+  .spot_photo {
+    width: 100%;
+    height: 50vh;
+  }
+}
+
 .slider {
   height: 420px;
 }
@@ -1554,6 +1561,42 @@ div > h3 {
 
 .slick-slide img {
   height: 400px;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .slick-slide img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .slick-slide img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .slick-slider button {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .slick-slider button {
+    display: none;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .slick-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .slick-arrow {
+    display: none;
+  }
 }
 
 .slick-prev:before, .slick-next:before {
@@ -2787,6 +2830,18 @@ div > h3 {
           flex-direction: column;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .spot_main_section {
+    margin-bottom: 200px;
+  }
+}
+
+@media (max-width: 700px) {
+  .spot_main_section {
+    margin-bottom: 200px;
+  }
+}
+
 .spot_page {
   width: 75%;
   margin-left: 12.5%;
@@ -2795,8 +2850,35 @@ div > h3 {
   display: flex;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .spot_page {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .spot_page {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 .spot_div_main {
   width: 70%;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .spot_div_main {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .spot_div_main {
+    width: 100%;
+  }
 }
 
 .spot_div {
@@ -2833,6 +2915,18 @@ div > h3 {
   margin: 0 auto;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .spot_body {
+    min-width: 0px;
+  }
+}
+
+@media (max-width: 700px) {
+  .spot_body {
+    min-width: 0px;
+  }
+}
+
 .spot_div_info {
   height: 340px;
   width: 26%;
@@ -2843,6 +2937,18 @@ div > h3 {
           box-shadow: 0px 0px 3px #ebebeb;
   border: 1px solid #ebebeb;
   margin: 2% 1% 1% 1%;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .spot_div_info {
+    width: 30%;
+  }
+}
+
+@media (max-width: 700px) {
+  .spot_div_info {
+    width: 90%;
+  }
 }
 
 .spot_div_details {
@@ -2856,9 +2962,33 @@ div > h3 {
           justify-content: flex-start;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .spot_div_details {
+    padding: 0px;
+  }
+}
+
+@media (max-width: 700px) {
+  .spot_div_details {
+    padding: 0px;
+  }
+}
+
 .spot_title {
   font-size: 2.3rem;
   font-weight: 700;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  .spot_title {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 700px) {
+  .spot_title {
+    font-size: 2em;
+  }
 }
 
 .spot_section_title {
@@ -2890,6 +3020,18 @@ div > h3 {
   padding: 5px 20px 0px 0px;
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+  .spot_detail_header {
+    width: 30%;
+  }
+}
+
+@media (max-width: 700px) {
+  .spot_detail_header {
+    width: 30%;
+  }
+}
+
 #spot_details_subsection {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2899,6 +3041,38 @@ div > h3 {
           justify-content: flex-end;
   margin-right: 10px;
   width: 70%;
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
+  #spot_details_subsection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 70%;
+  }
+}
+
+@media (max-width: 700px) {
+  #spot_details_subsection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 70%;
+  }
 }
 
 span img {
@@ -3031,122 +3205,29 @@ span p {
 }
 
 @media (min-width: 701px) and (max-width: 1024px) {
-  .spot_title {
-    font-size: 2em;
-  }
-  .spot_body {
-    min-width: 0px;
-  }
-  .spot_main_section {
-    margin-bottom: 200px;
-  }
   .widget_container {
     position: fixed;
     width: 100%;
     bottom: 0;
   }
+}
+
+@media (max-width: 700px) {
+  .widget_container {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1024px) {
   .booking_widget {
-    width: 100%;
-  }
-  .spot_page {
-    width: 100%;
-    margin: 0 auto;
-  }
-  .spot_div_main {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .spot_detail_header {
-    width: 30%;
-  }
-  #spot_details_subsection {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 70%;
-  }
-  .spot_div_info {
-    width: 30%;
-  }
-  .spot_div_details {
-    padding: 0px;
-  }
-  .slick-slider > button {
-    display: none;
-  }
-  .slick-arrow {
-    display: none;
-  }
-  .slick-slide img {
     width: 100%;
   }
 }
 
 @media (max-width: 700px) {
-  .spot_title {
-    font-size: 2em;
-  }
-  .spot_body {
-    min-width: 0px;
-  }
-  .spot_photo {
-    width: 100%;
-    height: 50vh;
-  }
-  .spot_main_section {
-    margin-bottom: 200px;
-  }
-  .widget_container {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-  }
   .booking_widget {
-    width: 100%;
-  }
-  .spot_page {
-    width: 100%;
-    margin: 0 auto;
-  }
-  .spot_div_main {
-    width: 100%;
-  }
-  .spot_detail_header {
-    width: 30%;
-  }
-  #spot_details_subsection {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 70%;
-  }
-  .spot_div_info {
-    width: 90%;
-  }
-  .spot_div_details {
-    padding: 0px;
-  }
-  .slick-slider > button {
-    display: none;
-  }
-  .slick-arrow {
-    display: none;
-  }
-  .slick-slide img {
     width: 100%;
   }
 }

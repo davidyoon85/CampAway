@@ -1,16 +1,43 @@
 .spot_main_section {
     display: flex;
     flex-direction: column;
+
+    @include large {
+        margin-bottom: 200px;
+    }
+
+    @include medium {
+        margin-bottom: 200px;
+    }
   }
 
 .spot_page {
     width: 75%;
     margin-left: 12.5%;
     display: flex;
+
+    @include large {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    @include medium {
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 
 .spot_div_main {
     width: 70%;
+
+    @include large {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    @include medium {
+        width: 100%;
+    }
 }
 
 .spot_div {
@@ -36,6 +63,14 @@
     width: 70%;
     min-width: 250px;
     margin: 0 auto;
+
+    @include large {
+        min-width: 0px;
+    }
+
+    @include medium {
+        min-width: 0px;
+    }
 }
 
 .spot_div_info {
@@ -47,6 +82,14 @@
     box-shadow: 0px 0px 3px #ebebeb;
     border: $border;
     margin: 2% 1% 1% 1%;
+
+    @include large {
+        width: 30%;
+    }
+
+    @include medium {
+        width: 90%;
+    }
 }
 
 .spot_div_details {
@@ -54,11 +97,27 @@
     padding: 0px 0px 0px 20px;
     display: flex;
     justify-content: flex-start;
+
+    @include large {
+        padding: 0px;
+    }
+
+    @include medium {
+        padding: 0px;
+    }
 }
 
 .spot_title {
     font-size: 2.3rem;
     font-weight: 700;
+
+    @include large {
+        font-size: 2em;
+    }
+
+    @include medium {
+        font-size: 2em;
+    }
 }
 
 .spot_section_title {
@@ -86,6 +145,14 @@
     font-size: 1rem;
     font-weight: 600;
     padding: 5px 20px 0px 0px;
+
+    @include large {
+        width: 30%;
+    }
+
+    @include medium {
+        width: 30%;
+    }
 }
 
 #spot_details_subsection {
@@ -93,6 +160,20 @@
     justify-content: flex-end;
     margin-right: 10px;
     width: 70%;
+
+    @include large {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 70%;
+    }
+
+    @include medium {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 70%;
+    }
 }
 
 span {
@@ -205,142 +286,30 @@ span {
     border-bottom: 3px solid $primary-color;
 }
 
-@media (min-width: 1025px) {
-    .widget_container {
+.widget_container {
+    @include extra-large {
         top: -50px;
     }
-}
 
-@media (min-width: 701px) and (max-width: 1024px) {
-    .spot_title {
-        font-size: 2em;
-    }
-
-    .spot_body {
-        min-width: 0px;
-    }
-
-    .spot_main_section {
-        margin-bottom: 200px;
-    }
-
-    .widget_container {
+    @include large {
         position: fixed;
         width: 100%;
         bottom: 0;
     }
 
-    .booking_widget {
-        width: 100%;
-    }
-
-    .spot_page {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .spot_div_main {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .spot_detail_header {
-        width: 30%;
-    }
-
-    #spot_details_subsection {
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        width: 70%;
-    }
-
-    .spot_div_info {
-        width: 30%;
-    }
-
-    .spot_div_details {
-        padding: 0px;
-    }
-
-    .slick-slider > button {
-        display: none
-    }
-
-    .slick-arrow {
-        display: none;
-    }
-
-    .slick-slide img {
-        width: 100%;
-    }
-}
-
-@media (max-width: 700px) {
-    .spot_title {
-        font-size: 2em;
-    }
-
-    .spot_body {
-        min-width: 0px;
-    }
-
-    .spot_photo {
-        width: 100%;
-        height: 50vh;
-    }
-
-    .spot_main_section {
-        margin-bottom: 200px;
-    }
-
-    .widget_container {
+    @include medium {
         position: fixed;
         width: 100%;
         bottom: 0;
     }
+}
 
-    .booking_widget {
+.booking_widget {
+    @include large {
         width: 100%;
     }
 
-    .spot_page {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .spot_div_main {
-        width: 100%;
-    }
-
-    .spot_detail_header {
-        width: 30%;
-    }
-
-    #spot_details_subsection {
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        width: 70%;
-    }
-
-    .spot_div_info {
-        width: 90%;
-    }
-
-    .spot_div_details {
-        padding: 0px;
-    }
-
-    .slick-slider > button {
-        display: none
-    }
-
-    .slick-arrow {
-        display: none;
-    }
-
-    .slick-slide img {
+    @include medium {
         width: 100%;
     }
 }
