@@ -48,5 +48,5 @@ Code snippet:
 </p>
 
 ## Future Plans
-In the future, I hope to add more features, including search bar filtering. I also have plans to incorporate SASS stylesheets.
+In the future, I hope to optimize page load speeds as well as implement a user's profile page.
 
