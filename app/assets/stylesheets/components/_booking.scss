@@ -167,16 +167,16 @@
     padding-right: 20px;
     font-size: .9rem;
 
+    &:hover {
+        font-weight: 700;
+    }
+    
     @include large {
         padding-right: 5%;
     }
 
     @include medium {
         padding-right: 5%;
-    }
-
-    &:hover {
-        font-weight: 700;
     }
 }
 

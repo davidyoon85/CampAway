@@ -113,14 +113,6 @@
     font-size: 1.2em;
     cursor: pointer;
 
-    @include large {
-        font-size: 1em;
-    }
-
-    @include medium {
-        font-size: .7em;
-    }
-
     &:hover {
         border: 3px solid $primary-color;
         background-color: #fff;
@@ -132,6 +124,14 @@
         @include medium {
             font-size: .7em;
         }
+    }
+
+    @include large {
+        font-size: 1em;
+    }
+
+    @include medium {
+        font-size: .7em;
     }
 }
 

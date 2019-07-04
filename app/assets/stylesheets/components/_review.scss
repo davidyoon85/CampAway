@@ -81,6 +81,15 @@
     font-size: .9rem;
     margin: 0 auto;
 
+    &:hover {
+        border: 3px solid $primary-color;
+        background-color: #fff;
+        color: $primary-color;
+        padding: 0.5rem;
+        transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
+        margin: 0 auto
+    }
+
     @include large {
         margin-top: 3%;
         width: 100%;
@@ -89,15 +98,6 @@
     @include medium {
         width: 100%;
         margin-top: 5%;
-    }
-
-    &:hover {
-        border: 3px solid $primary-color;
-        background-color: #fff;
-        color: $primary-color;
-        padding: 0.5rem;
-        transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
-        margin: 0 auto
     }
 }
 

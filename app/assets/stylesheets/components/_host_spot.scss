@@ -41,6 +41,13 @@
     border: 2px solid #fff;
     font-weight: 600;
 
+    &:hover {
+        border: 2px solid $primary-color;
+        background-color: #fff;
+        color: $primary-color;
+        transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
+    }
+
     @include large {
         width: 100%;
         text-align: center;
@@ -56,13 +63,6 @@
 
     @include medium {
         font-size: 1em;
-    }
-
-    &:hover {
-        border: 2px solid $primary-color;
-        background-color: #fff;
-        color: $primary-color;
-        transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
     }
 }
 

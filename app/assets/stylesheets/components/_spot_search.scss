@@ -205,6 +205,10 @@
     border-radius: 2px;
     cursor: pointer;
 
+    &:hover {
+        border: 1px solid #000;
+    }
+
     @include large {
         height: 45px;
         font-size: .6em;
@@ -245,10 +249,6 @@
             width: 36px;   
         }
     }
-
-    &:hover {
-        border: 1px solid #000;
-    }
 }
 
 .spot_filter_section:last-child {
@@ -281,6 +281,10 @@
         margin: 5px 0px 5px 0px;
         position: relative;
 
+        &:hover {
+            border: 1px solid #000;
+        }
+
         @include flex-center();
 
         @include large {
@@ -300,10 +304,6 @@
             width: 32px;
             height: 32px;
             padding-right: 10px;
-        }
-
-        &:hover {
-            border: 1px solid #000;
         }
     }
 }
