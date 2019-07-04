@@ -1,6 +1,6 @@
 import React from 'react';
-import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
-import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import { Route, Switch } from 'react-router-dom';
+import { ProtectedRoute } from '../util/route_util';
 import Nav from './nav/nav';
 import Splash from './splash';
 import SpotContainer from './spot/spot_container';

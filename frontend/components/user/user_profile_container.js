@@ -1,5 +1,6 @@
-import { connect } from 'react-redux'
 import UserProfile from './user_profile';
+
+import { connect } from 'react-redux'
 import { fetchAllBookings, deleteBooking } from '../../actions/booking_actions';
 import { fetchAllSpots } from '../../actions/spot_actions';
 import { selectSpots } from '../../reducers/selectors';

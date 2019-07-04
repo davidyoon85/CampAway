@@ -26,11 +26,9 @@ class Splash extends Component {
         this.props.history.push('/spots');
     }
 
-    handleClick(num) {
-        return (e) => {
-            let spotIndex = Object.values(this.props.state.entities.spots)[num]
-            this.props.history.push(`/spots/${spotIndex.id}`);
-        }
+    handleClick(e) {
+        let spotIndex = Object.values(this.props.state.entities.spots)[e]
+        this.props.history.push(`/spots/${spotIndex.id}`);
     }
 
     update(field) {
@@ -66,7 +64,7 @@ class Splash extends Component {
 
                 <div className="splash_container">
                     <div className="splash_main_section">
-                        <div className="splash_section" onClick={this.handleClick(0)}>
+                        <div className="splash_section" onClick={() => this.handleClick(0)}>
                             <div className="splash_section_img">
                                 <img src="https://s3.amazonaws.com/camp-away-dev/spot1_0.jpg" alt=""/>
                             </div>
@@ -78,7 +76,7 @@ class Splash extends Component {
                             </div>
                         </div>
 
-                        <div className="splash_section" onClick={this.handleClick(1)}>
+                        <div className="splash_section" onClick={() => this.handleClick(1)}>
                             <div className="splash_section_img">
                                 <img src="https://s3.amazonaws.com/camp-away-dev/spot2_0.jpg"  alt=""/>
                             </div>
@@ -90,7 +88,7 @@ class Splash extends Component {
                             </div>    
                         </div>
 
-                        <div className="splash_section" onClick={this.handleClick(2)}>
+                        <div className="splash_section" onClick={() => this.handleClick(2)}>
                             <div className="splash_section_img">
                                 <img src="https://s3.amazonaws.com/camp-away-dev/spot3_0.jpg"  alt=""/>
                             </div>
@@ -102,7 +100,7 @@ class Splash extends Component {
                             </div>
                         </div>
 
-                        <div className="splash_section" onClick={this.handleClick(3)}>
+                        <div className="splash_section" onClick={() => this.handleClick(3)}>
                             <div className="splash_section_img">
                                 <img src="https://s3.amazonaws.com/camp-away-dev/spot4_0.jpg"  alt=""/>
                             </div>
@@ -114,7 +112,7 @@ class Splash extends Component {
                             </div>
                         </div>
 
-                        <div className="splash_section" onClick={this.handleClick(4)}>
+                        <div className="splash_section" onClick={() => this.handleClick(4)}>
                             <div className="splash_section_img">
                                 <img src="https://s3.amazonaws.com/camp-away-dev/spot5_0.jpg"  alt=""/>
                             </div>
@@ -126,7 +124,7 @@ class Splash extends Component {
                             </div>
                         </div>
 
-                        <div className="splash_section" onClick={this.handleClick(8)}>
+                        <div className="splash_section" onClick={() => this.handleClick(8)}>
                             <div className="splash_section_img">
                                 <img src="https://camp-away-dev.s3.amazonaws.com/spot9_0.jpg"  alt=""/>
                             </div>

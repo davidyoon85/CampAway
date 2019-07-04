@@ -19,9 +19,9 @@ class Booking extends Component {
     this.renderErrors = this.renderErrors.bind(this);
   }
 
-  componentDidMount() {
-    this.props.fetchAllBookings();
-  }
+  // componentDidMount() {
+  //   this.props.fetchAllBookings();
+  // }
 
   handleSubmit(e) {
     e.preventDefault();
