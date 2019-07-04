@@ -8,6 +8,18 @@
     padding-bottom: 10px;
     margin: 0 auto;
     flex-direction: column;
+
+    @include large {
+        min-width: 0;
+    }
+
+    @include medium {
+        min-width: 90%;
+    }
+
+    @include small {
+        min-width: 95%;
+    }
 }
 
 .spot_index {
@@ -23,6 +35,16 @@
     box-sizing: border-box;
     justify-content: flex-start;
     margin-top: 10px;
+
+    @include large {
+        width: 100%;
+        height: 100%;
+    }
+
+    @include medium {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .spot_index_item {
@@ -31,6 +53,28 @@
     flex-wrap: wrap;
     width: 50%;
     height: 360px;
+
+    @include large {
+        padding: 5px;
+        width: 50%;
+    }
+
+    @include medium {
+        padding: 5px;
+        width: 100%;
+    }
+
+    &:nth-child(odd) {
+        padding-right: 10px;
+
+        @include large {
+            padding-right: 5px;
+        }
+
+        @include medium {
+            padding-right: 5px;
+        }
+    }
 }
 
 .spot_index_item_link {
@@ -41,13 +85,17 @@
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.spot_index_item:nth-child(odd) {
-    padding-right: 10px;
-}
-
 .spot_index_photo {
     width: 100%;
     height: 60%;
+
+    @include large {
+        height: 70%;
+    }
+
+    @include medium {
+        height: 70%;
+    }
 }
 
 .spot_details {
@@ -58,6 +106,14 @@
     width: 100%;
     height: 40%;
     overflow: auto;
+
+    @include large {
+        height: 30%;
+    }
+
+    @include medium {
+        height: 30%;
+    }
 }
 
 .map {
@@ -67,6 +123,20 @@
     width: 45%;
     position: absolute;
     height: 73vh;
+
+    @include large {
+        bottom: 10px;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    @include medium {
+        bottom: 10px;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
 }
 
 .spot_details_title {
@@ -135,9 +205,40 @@
     border-radius: 2px;
     cursor: pointer;
 
+    @include large {
+        height: 45px;
+        font-size: .6em;
+        flex: 1;
+    }
+
+    @include medium {
+        height: 45px;
+        font-size: .6em;
+        flex: 1;
+    }
+
+    @include small {
+        margin: 1%;
+    }
+
     button {
         padding: 10px;
         height: 100%;
+
+        @include large {
+            height: 45px;
+            font-size: 1.3em;
+            padding: 5px;
+            width: 100%;
+        }
+
+        @include medium {
+            width: 100%;
+        }
+
+        @include small {
+            padding: 2px;
+        }
 
         img {
             height: 36px;
@@ -152,6 +253,10 @@
 
 .spot_filter_section:last-child {
     margin-right: 10px;
+
+    @include small {
+        margin-right: 1%;
+    }
 }
 
 .spot_filter_item {
@@ -177,6 +282,19 @@
         position: relative;
 
         @include flex-center();
+
+        @include large {
+            height: 45px;
+            font-size: .4em;
+            padding: 5px;
+        }
+
+        @include medium {
+            height: 45px;
+            font-size: .4em;
+            padding: 5px;
+            width: 100%;
+        }
     
         img {
             width: 32px;
@@ -218,139 +336,5 @@
         width: 99%;
         margin: 0 auto;
         margin-top: 4%;
-    }
-}
-
-@media (min-width: 701px) and (max-width: 1024px) {
-    .spot_search_container {
-        min-width: 0;
-    }
-
-    .spot_search_main {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .map {
-        bottom: 10px;
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
-
-    .spot_filter_section {
-        height: 45px;
-        font-size: .6em;
-        flex: 1;
-    }   
-
-    .spot_filter_section > button {
-        height: 45px;
-        font-size: 1.3em;
-        padding: 5px;
-        width: 100%;
-    }
-
-    .spot_filter_item > button {
-        height: 45px;
-        font-size: .4em;
-        padding: 5px;
-    }
-
-    .spot_index {
-        width: 100%;
-        height: 100%;
-    }
-
-    .spot_index_item {
-        padding: 5px;
-        width: 50%;
-    }
-
-    .spot_index_item:nth-child(odd) {
-        padding-right: 5px;
-    }
-
-    .spot_index_photo {
-        height: 70%;
-    }
-
-    .spot_details {
-        height: 30%;
-    }
-}
-
-@media (max-width: 700px) {
-    .spot_search_container {
-        min-width: 90%;
-    }
-
-    .spot_search_main {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .map {
-        bottom: 10px;
-        width: 100%;
-        height: 100%;
-        position: relative;
-    }
-
-    .spot_filter_section {
-        height: 45px;
-        font-size: .6em;
-        flex: 1;
-    }
-
-    .spot_filter_section > button {
-        width: 100%;
-    }
-
-    .spot_filter_item > button {
-        height: 45px;
-        font-size: .4em;
-        padding: 5px;
-        width: 100%;
-    }
-
-    .spot_index {
-        width: 100%;
-        height: 100%;
-    }
-
-    .spot_index_item {
-        padding: 5px;
-        width: 100%;
-    }
-
-    .spot_index_item:nth-child(odd) {
-        padding-right: 5px;
-    }
-
-    .spot_index_photo {
-        height: 70%;
-    }
-
-    .spot_details {
-        height: 30%;
-    }
-}
-
-@media (max-width: 320px) {
-    .spot_search_container {
-        min-width: 95%;
-    }
-
-    .spot_filter_section {
-        margin: 1%;
-    }
-
-    .spot_filter_section button {
-        padding: 2px;
-    }
-
-    .spot_filter_section:last-child {
-        margin-right: 1%;
     }
 }
