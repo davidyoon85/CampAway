@@ -62,8 +62,6 @@
   },
   "homepage": "https://github.com/davidyoon85/CampAway#readme",
   "devDependencies": {
-    "babel-plugin-emotion": "^10.0.13",
-    "brotli-gzip-webpack-plugin": "^0.5.0",
-    "webpack-bundle-analyzer": "^3.3.2"
+    "babel-plugin-emotion": "^10.0.13"
   }
 }
