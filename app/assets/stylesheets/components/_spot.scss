@@ -275,3 +275,17 @@ span {
         width: 100%;
     }
 }
+
+.spot_index_empty {
+    font-size: 1rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    @include large {
+        & .spot_index {
+            overflow: hidden;
+        }
+    }
+}
