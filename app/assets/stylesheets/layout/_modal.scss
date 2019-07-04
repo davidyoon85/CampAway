@@ -41,7 +41,7 @@
    
 .login-input {
     margin-left: 20px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 0 auto;
 
     @include small {
@@ -70,11 +70,13 @@
     font-weight: 700;
     font-size: 1rem;
     color: #fff;
-    border: 0;
+    border: 3px solid $primary-color;
     background-color: $primary-color;
+    transition: background-color 0.3s ease 0s;
 
     &:hover {
-        background-color: $primary-color;
+        background-color: #fff;
+        color: $primary-color;
     }
 
     @include small {
@@ -88,7 +90,7 @@
     width: 90%;
     height: 70px;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 15px;
     background-color: #3b5998;
     color: #fff;
@@ -129,7 +131,7 @@
     width: 90%;
     height: 70px;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 15px;
   
     
@@ -138,7 +140,7 @@
         width: 80%;
         height: 38px;
         font-weight: 700;
-        font-size: 1.1rem;
+        font-size: 1rem;
         padding: 15px;
     }
 }

@@ -507,7 +507,7 @@ i {
 
 .login-input {
   margin-left: 20px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin: 0 auto;
 }
 
@@ -538,12 +538,15 @@ i {
   font-weight: 700;
   font-size: 1rem;
   color: #fff;
-  border: 0;
+  border: 3px solid #39C39A;
   background-color: #39C39A;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
 }
 
 #login_submit:hover {
-  background-color: #39C39A;
+  background-color: #fff;
+  color: #39C39A;
 }
 
 @media (max-width: 320px) {
@@ -558,7 +561,7 @@ i {
   width: 90%;
   height: 70px;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding: 15px;
   background-color: #3b5998;
   color: #fff;
@@ -602,7 +605,7 @@ i {
   width: 90%;
   height: 70px;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding: 15px;
 }
 
@@ -611,7 +614,7 @@ i {
   width: 80%;
   height: 38px;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding: 15px;
 }
 
@@ -2097,6 +2100,7 @@ div > h3 {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-left: 10px;
+  font-size: 1rem;
 }
 
 .user_booking_details p {
@@ -3221,7 +3225,6 @@ span p {
   color: #333333;
   background-color: #fff;
   cursor: pointer;
-  margin-right: 5px;
   border-width: 1px;
   border-style: solid;
   border-color: #f6f6f6;
@@ -3253,7 +3256,7 @@ span p {
   color: #333333;
   background-color: #fff;
   cursor: pointer;
-  margin-left: 5px;
+  margin-left: 10px;
   border-width: 1px;
   border-style: solid;
   border-color: #f6f6f6;
@@ -3285,7 +3288,7 @@ span p {
   font-weight: bold;
   color: #e2e2e2;
   background-color: #fcfcfc;
-  margin-left: 5px;
+  margin-left: 10px;
   border-width: 1px;
   border-style: solid;
   border-color: #C0C0C0;
@@ -3339,13 +3342,13 @@ span p {
             align-items: center;
     width: 100%;
     background-color: #fff;
+    margin-bottom: 15%;
   }
 }
 
 @media (max-width: 700px) {
   .form_container {
     height: 100%;
-    margin-bottom: 0%;
   }
 }
 
@@ -3362,6 +3365,7 @@ span p {
 
 @media (max-width: 1024px) {
   .spot_form_main {
+    width: 60%;
     margin-top: 50px;
   }
 }
@@ -3405,8 +3409,7 @@ span p {
 
 @media (max-width: 1024px) {
   .spot_form_message {
-    width: 50%;
-    font-size: .7rem;
+    width: 60%;
     margin: 0;
   }
 }
@@ -3721,7 +3724,6 @@ textarea {
 
 @media (max-width: 700px) {
   .photo_upload + label {
-    font-size: .7rem;
     padding: 6px;
   }
 }
