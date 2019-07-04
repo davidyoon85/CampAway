@@ -152,7 +152,7 @@ i {
 }
 
 .left {
-  font-family: 'Viga', sans-serif;
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
   letter-spacing: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -365,7 +365,7 @@ i {
 }
 
 .foot_description_text {
-  font-family: "Helvetica, sans-serif";
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
   color: #fff;
   font-size: .9rem;
   text-align: left;
@@ -393,7 +393,7 @@ i {
 }
 
 .social_link {
-  font-family: "Helvetica, sans-serif";
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
   color: #fff;
   font-size: .9rem;
 }
@@ -947,7 +947,7 @@ div > h3 {
   display: block;
   margin: 0;
   letter-spacing: 1.1px;
-  font-family: Calibre, Helvetica, Arial, sans-serif;
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
   font-size: 1.1em;
   font-weight: 700;
   -webkit-box-sizing: border-box;
