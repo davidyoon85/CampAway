@@ -1,5 +1,7 @@
 # CampAway
-CampAway is a full-stack clone of Hipcamp, which is a site to browse and book camping grounds.
+CampAway is a responsive single-page app clone of Hipcamp, which is a site to browse and book camping grounds.
+
+The technlogies used to create CampAway include: React, Redux, PostgresSQL, Ruby on Rails, AWS, Google Maps API, Sass/SCSS, HTML5, and CSS3.
 
 <p align="center">
 <img src="./app/assets/images/campaway.png" width="700" height="400" align="middle"/>
@@ -46,5 +48,5 @@ Code snippet:
 </p>
 
 ## Future Plans
-In the future, I hope to add more features, including search bar filtering. I also have plans to incorporate SASS stylesheets.
+In the future, I hope to optimize page load speeds as well as implement a user's profile page.
 
