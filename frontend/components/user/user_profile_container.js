@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
         bookings: state.entities.bookings,
         currentUser: state.entities.users[ownProps.match.params.userId],
         spots: selectSpots(state),
-        reviews: Object.values(state.entities.users)[0].reviews
+        reviews: state.entities.reviews,
     }
 }
 

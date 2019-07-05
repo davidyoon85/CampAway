@@ -52,7 +52,12 @@ export const receiveReviews = reviews => ({
     ))
   );
 
-  export const deleteReview = (reviewId) => dispatch => (
-    APIUtil.deleteReview(reviewId).then(
-      review => dispatch(removeReview(reviewId)))
-  );
+  export const deleteReview = (reviewId) => dispatch => {
+    return (
+      APIUtil.deleteReview(reviewId).then(
+        review => {
+          return dispatch(removeReview(reviewId))
+        }
+      )
+    )
+  };

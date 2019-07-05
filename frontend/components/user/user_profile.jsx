@@ -53,8 +53,8 @@ class UserProfile extends Component {
     }
 
     render() {
-        let userReviews = this.props.currentUser.reviews;
-
+        let userReviews = Object.values(this.props.reviews);
+        
         let numTrips = Object.keys(this.props.bookings).length;
         let tripName = '';
         

@@ -19,10 +19,6 @@ class Booking extends Component {
     this.renderErrors = this.renderErrors.bind(this);
   }
 
-  // componentDidMount() {
-  //   this.props.fetchAllBookings();
-  // }
-
   handleSubmit(e) {
     e.preventDefault();
     if (!this.props.currentUserId) {
@@ -35,7 +31,6 @@ class Booking extends Component {
       booking.guest_id = this.props.currentUserId;
       booking.spot_id = this.props.match.params.spotId;
       this.state.total_price *= num_days
-      
       this.props.makeBooking(booking)
         .then(() => this.props.fetchAllBookings())
         .then(() => this.props.history.push(`/users/${this.props.currentUserId}`));

@@ -14,21 +14,23 @@ export const fetchAllBookings = () => dispatch => (
   )
 )
 
-export const makeBooking = (booking) => dispatch => (
-  APIUtil.createBooking(booking).then(
-    booking => {
-      return dispatch(receiveBooking(booking))
-    }
+export const makeBooking = (booking) => dispatch => {
+  return (
+    APIUtil.createBooking(booking).then(
+      booking => {
+        return dispatch(receiveBooking(booking))
+      }
+    )
   )
-)
+}
 
-export const deleteBooking = (bookingId) => dispatch => (
+export const deleteBooking = (bookingId) => dispatch => {
   APIUtil.deleteBooking(bookingId).then(
     booking => {
-      dispatch(removeBooking(bookingId))
+      return dispatch(removeBooking(bookingId))
     }
   )
-)
+}
 
 export const receiveBooking = (booking) => ({
   type: RECEIVE_BOOKING,
