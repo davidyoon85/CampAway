@@ -52,9 +52,7 @@ class UserProfile extends Component {
         })
     }
 
-    render() {
-        let userReviews = Object.values(this.props.reviews);
-        
+    render() {        
         let numTrips = Object.keys(this.props.bookings).length;
         let tripName = '';
         
@@ -173,6 +171,7 @@ class UserProfile extends Component {
                     </div>
                 )
             } else {
+                let reviewArr = Object.values(this.props.reviews);
                 return (
                     <div className="user_profile_container">
                         <div className="user_booking_spot">
@@ -208,7 +207,7 @@ class UserProfile extends Component {
                                         <p name="reviews" className="booked_reviews_number_active" onClick={(e) => this.reviewsButton(e)}>{reviewName}</p>
                                     </div>            
                                 </div>
-                                {(userReviews.reverse()).map(review => {
+                                {(reviewArr.reverse()).map(review => {
                                     return (
                                     <li className="booked_spot_items" key={review.id}>
                                         <div className="user_booking_details">

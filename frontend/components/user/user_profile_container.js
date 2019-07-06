@@ -7,6 +7,7 @@ import { selectSpots } from '../../reducers/selectors';
 import { fetchReviews, deleteReview } from '../../actions/review_actions';
 
 const mapStateToProps = (state, ownProps) => {
+    debugger
     return {
         bookings: state.entities.bookings,
         currentUser: state.entities.users[ownProps.match.params.userId],
