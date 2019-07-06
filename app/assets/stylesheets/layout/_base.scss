@@ -130,3 +130,7 @@ i {
 @mixin extra-large {
     @media (max-width: 1025px) { @content; }
 }
+
+@mixin max {
+    @media (min-width: 1026px) { @content; }
+}

@@ -1382,9 +1382,29 @@ div > h3 {
   background-color: #fff;
 }
 
+@media (max-width: 1024px) {
+  .widget_container {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 1026px) {
+  .widget_container {
+    top: -50px;
+  }
+}
+
 .booking_widget {
   position: relative;
   width: 339px;
+}
+
+@media (max-width: 1024px) {
+  .booking_widget {
+    width: 100%;
+  }
 }
 
 .booking_banner {
@@ -1502,7 +1522,7 @@ div > h3 {
 }
 
 .widget_button:hover {
-  border: 2px solid #39C39A;
+  border: 3px solid #39C39A;
   background-color: #fff;
   color: #39C39A;
   -webkit-transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;
@@ -2134,6 +2154,22 @@ div > h3 {
 .user_booking_review {
   overflow-wrap: break-word;
   padding: 5px 0px 15px 0px;
+}
+
+.booking_error_message {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 10px;
+  margin: 0 auto;
+  width: 100%;
+  border-top: 0;
+  padding: 10px;
+}
+
+.bookings_error {
+  color: red;
 }
 
 .host_option_main {
@@ -3093,26 +3129,6 @@ span p {
   line-height: 2;
   cursor: pointer;
   border-bottom: 3px solid #39C39A;
-}
-
-@media (min-width: 1025px) {
-  .widget_container {
-    top: -50px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .widget_container {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-  }
-}
-
-@media (max-width: 1024px) {
-  .booking_widget {
-    width: 100%;
-  }
 }
 
 .spot_index_empty {

@@ -4,11 +4,25 @@
     width: 319px;
     z-index: 1;
     background-color: #fff;
+
+    @include large {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+
+    @include max {
+        top: -50px;
+    }
 }
 
 .booking_widget {
     position: relative;
-    width: 339px
+    width: 339px;
+
+    @include large {
+        width: 100%;
+    }
 }
 
 .booking_banner {
@@ -110,7 +124,7 @@
     cursor: pointer;
 
     &:hover {
-        border: 2px solid $primary-color;
+        border: 3px solid $primary-color;
         background-color: #fff;
         color: $primary-color;
         transition: background-color 0.3s ease 0s, border-color 0.4s ease 0s, color 0.4s ease 0s;

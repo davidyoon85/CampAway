@@ -258,24 +258,6 @@ span {
     border-bottom: 3px solid $primary-color;
 }
 
-.widget_container {
-    @include extra-large {
-        top: -50px;
-    }
-
-    @include large {
-        position: fixed;
-        width: 100%;
-        bottom: 0;
-    }
-}
-
-.booking_widget {
-    @include large {
-        width: 100%;
-    }
-}
-
 .spot_index_empty {
     font-size: 1rem;
     display: flex;

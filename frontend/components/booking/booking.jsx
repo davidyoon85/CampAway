@@ -8,15 +8,12 @@ class Booking extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      check_in: new Date(),
-      check_out: new Date(),
       num_guests: 1,
       total_price: this.props.spot.price
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDateChange = this.handleDateChange.bind(this);
-    this.renderErrors = this.renderErrors.bind(this);
   }
 
   handleSubmit(e) {
@@ -24,8 +21,9 @@ class Booking extends Component {
     if (!this.props.currentUserId) {
       this.props.openModal('login')
     } else {
-      const checkInDate = this.state.check_in;
-      const checkOutDate = this.state.check_out;
+      let checkInDate = this.state.check_in;
+      let checkOutDate = this.state.check_out;
+
       const num_days = moment(checkOutDate).diff(checkInDate, 'days');
       const booking = Object.assign({}, this.state);
       booking.guest_id = this.props.currentUserId;
@@ -131,6 +129,8 @@ class Booking extends Component {
               <div className="booking_submit">
                 <input className="widget_button" type="submit" value="Request to book"/>
               </div>
+
+              <div className="booking_error_message">{this.renderErrors()}</div>
             </div>
           </div>
         </form>
