@@ -22,7 +22,8 @@ class Api::BookingsController < ApplicationController
       if @booking.save
         render "api/bookings/show"
       else
-        render json: ["Please select check-in and check-out dates."], status: 401
+        render json: @booking.errors.full_messages, status: 401
+        # render json: ["Please select check-in and check-out dates."], status: 401
       end
     end
   

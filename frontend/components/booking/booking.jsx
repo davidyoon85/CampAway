@@ -126,11 +126,11 @@ class Booking extends Component {
                 </div>
               </div>
 
+              <div className="booking_error_message">{this.renderErrors()}</div>
+
               <div className="booking_submit">
                 <input className="widget_button" type="submit" value="Request to book"/>
               </div>
-
-              <div className="booking_error_message">{this.renderErrors()}</div>
             </div>
           </div>
         </form>

@@ -97,8 +97,11 @@ img {
   height: 50vh;
 }
 
+ul {
+  list-style: none;
+}
+
 li {
-  display: inline;
   color: #000;
 }
 
@@ -1376,7 +1379,7 @@ div > h3 {
 
 .widget_container {
   position: relative;
-  height: 200px;
+  min-height: 200px;
   width: 319px;
   z-index: 1;
   background-color: #fff;
@@ -2158,18 +2161,20 @@ div > h3 {
 
 .booking_error_message {
   display: block;
-  font-size: 1rem;
+  font-size: .9rem;
   font-weight: 400;
   text-align: center;
   margin: 10px;
   margin: 0 auto;
   width: 100%;
   border-top: 0;
-  padding: 10px;
+  border-left: 1px solid #ebebeb;
+  border-right: 1px solid #ebebeb;
 }
 
 .bookings_error {
   color: red;
+  padding: 7px;
 }
 
 .host_option_main {
