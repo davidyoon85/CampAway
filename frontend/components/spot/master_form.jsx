@@ -47,6 +47,10 @@ class MasterForm extends Component {
         window.scrollTo(0, 0);
     }
 
+    componentWillUnmount() {
+        this.setState({ errors: [] })
+    }
+
     handleFile(event) {
         const reader = new FileReader();
         const file = event.currentTarget.files[0];
@@ -126,30 +130,14 @@ class MasterForm extends Component {
     validate(title, body, price, photos, sites, group_size, check_in, check_out, address) {
         const errors = [];
       
-        if (title.length === 0) {
-          errors.push("Title can't be empty.");
-        } 
-        if (body.length === 0) {
-          errors.push("Description can't be blank.");
-        }  
-        if (price < 1) {
-          errors.push("Price should be over $0.");
-        } 
-        if (sites < 1) {
-            errors.push("Number of sites should be over 0.")
-        }
-        if (group_size < 1) {
-            errors.push("Group size should be over 0.");
-        }
-        if (check_in.length === 0 || check_out.length === 0) {
-            errors.push("Select check in and/or check out time.")
-        }
-        if (address.length === 0) {
-            errors.push("Address cannot be blank.")
-        }
-        if (photos.length === 0) {
-            errors.push("Upload at least 1 photo.")
-        }
+        if (title.length === 0) errors.push("Title can't be empty.");
+        if (body.length === 0) errors.push("Description can't be blank.");
+        if (price < 1) errors.push("Price should be over $0.");
+        if (sites < 1) errors.push("Number of sites should be over 0.")
+        if (group_size < 1) errors.push("Group size should be over 0.");
+        if (check_in.length === 0 || check_out.length === 0) errors.push("Select check in and/or check out time.")
+        if (address.length === 0) errors.push("Address cannot be blank.")
+        if (photos.length === 0) errors.push("Upload at least 1 photo.")
 
         return errors;
       }
@@ -288,7 +276,7 @@ class MasterForm extends Component {
                         id="price"
                         name="price"
                         type="number"
-                        value={this.state.group_size}
+                        value={this.state.price}
                         onChange={this.handleChange}
                         required
                     />

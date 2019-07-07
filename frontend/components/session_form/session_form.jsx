@@ -46,7 +46,7 @@ class SessionForm extends Component {
         return (
             <ul>
                 {this.props.errors.map((error, i) => (
-                    <li key={`errors-${i}`}>
+                    <li className="session-error-message" key={`errors-${i}`}>
                         {error}
                     </li>
                 ))}

@@ -726,6 +726,11 @@ i {
   margin-bottom: 15px;
 }
 
+.session-error-message {
+  color: red;
+  font-size: .9rem;
+}
+
 @-webkit-keyframes drop {
   0% {
     -webkit-transform: translateY(-180px);
@@ -2172,7 +2177,7 @@ div > h3 {
 }
 
 .bookings_error {
-  padding: 5px 10px;
+  padding: 3px 10px;
 }
 
 .host_option_main {
@@ -2304,6 +2309,10 @@ div > h3 {
 .host_form_errors {
   margin-bottom: 5%;
   font-size: .8rem;
+}
+
+.host_form_errors p {
+  padding: 1px 0;
 }
 
 .spot_review_container {
