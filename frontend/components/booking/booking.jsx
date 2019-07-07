@@ -18,6 +18,7 @@ class Booking extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+
     if (!this.props.currentUserId) {
       this.props.openModal('login')
     } else {
@@ -28,7 +29,8 @@ class Booking extends Component {
       const booking = Object.assign({}, this.state);
       booking.guest_id = this.props.currentUserId;
       booking.spot_id = this.props.match.params.spotId;
-      this.state.total_price *= num_days
+      booking.total_price *= num_days
+      debugger
       this.props.makeBooking(booking)
         .then(() => this.props.fetchAllBookings())
         .then(() => this.props.history.push(`/users/${this.props.currentUserId}`));
