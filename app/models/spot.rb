@@ -29,7 +29,7 @@
 #
 
 class Spot < ApplicationRecord
-  validates :title, :body, :host_id, presence: true
+  validates :title, :body, :check_in, :check_out, :price, :lat, :long, :group_size, :sites, :host_id, presence: true
 
   belongs_to :host,
     foreign_key: :host_id,

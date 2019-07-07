@@ -36,6 +36,13 @@ class Spot extends Component {
     }
   }
 
+  from24to12(time) {
+    var b = time.replace(/\D/g,'');
+    var h = b.substring(0, b.length - 2);
+    var m = b.substring(b.length - 2);
+    return (h%12 || 12) + ':' + m + ' ' + (h>11? 'PM':'AM');
+  }
+
   render() {
   const { spot } = this.props;
 
@@ -44,6 +51,11 @@ class Spot extends Component {
         null
       )
     } else {
+      let check_in = spot.check_in;
+      let check_out = spot.check_out;
+      const checkIn = this.from24to12(check_in);
+      const checkOut = this.from24to12(check_out);
+
       return (
         <>
           <main className="spot_main_section">
@@ -93,11 +105,11 @@ class Spot extends Component {
                     <ul>
                     <li>
                       <nobr className="bold">Check In After: </nobr>
-                      {spot.check_in}
+                      {checkIn}
                     </li><p></p>
                     <li>
                       <nobr className="bold">Check Out Before: </nobr>
-                      {spot.check_out}
+                      {checkOut}
                     </li>
                     </ul>
                   </div>

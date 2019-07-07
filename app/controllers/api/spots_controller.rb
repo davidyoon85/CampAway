@@ -9,7 +9,7 @@ class Api::SpotsController < ApplicationController
         if @spot.save
             render :show
         else
-            render json: ["Invalid inputs"], status: 401
+            render json: @spot.errors.full_messages, status: 401
         end
     end
 

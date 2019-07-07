@@ -2286,6 +2286,10 @@ div > h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -2297,6 +2301,11 @@ div > h3 {
 
 #check_out {
   font-family: "Calibre", Helvetica, Arial, sans-serif;
+}
+
+.host_form_errors {
+  margin-bottom: 5%;
+  font-size: .8rem;
 }
 
 .spot_review_container {

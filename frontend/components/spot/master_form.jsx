@@ -31,12 +31,15 @@ class MasterForm extends Component {
             paddling: false,
             photoFile: [],
             photoUrl: [],
-            address: ''
+            address: '',
+            errors: [],
+            photos: ''
         };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.validate = this.validate.bind(this);
         this.handleFile = this.handleFile.bind(this);
     }
 
@@ -77,6 +80,15 @@ class MasterForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
+
+        const { title, body, price, photos, sites, group_size, check_in, check_out, address } = this.state;
+
+        const errors = this.validate(title, body, price, photos, sites, group_size, check_in, check_out, address);
+        if (errors.length > 0) {
+          this.setState({ errors });
+          return;
+        }
+
         const formData = new FormData();
 
         for (let i = 0; i < this.state.photos.length; i++) {
@@ -102,11 +114,45 @@ class MasterForm extends Component {
         formData.append('spot[biking]', this.state.biking);
         formData.append('spot[wildlife]', this.state.wildlife);
         formData.append('spot[paddling]', this.state.paddling);
-        
-        this.props.hostSpot(formData).then((response) => {
-            this.props.history.push(`/spots/${Object.keys(response.spot)[0]}`);
-        });
+
+        this.props.hostSpot(formData)
+            .then((response) => {
+                return (
+                this.props.history.push(`/spots/${Object.keys(response.spot)[0]}`)
+                )
+            })  
     }
+
+    validate(title, body, price, photos, sites, group_size, check_in, check_out, address) {
+        const errors = [];
+      
+        if (title.length === 0) {
+          errors.push("Title can't be empty.");
+        } 
+        if (body.length === 0) {
+          errors.push("Description can't be blank.");
+        }  
+        if (price < 1) {
+          errors.push("Price should be over $0.");
+        } 
+        if (sites < 1) {
+            errors.push("Number of sites should be over 0.")
+        }
+        if (group_size < 1) {
+            errors.push("Group size should be over 0.");
+        }
+        if (check_in.length === 0 || check_out.length === 0) {
+            errors.push("Select check in and/or check out time.")
+        }
+        if (address.length === 0) {
+            errors.push("Address cannot be blank.")
+        }
+        if (photos.length === 0) {
+            errors.push("Upload at least 1 photo.")
+        }
+
+        return errors;
+      }
 
     handleClick(event) {
         event.preventDefault();
@@ -180,7 +226,7 @@ class MasterForm extends Component {
         return (
             <ul>
                 {this.props.errors.map((error, i) => (
-                    <li key={`errors-${i}`}>
+                    <li key={`errors-${i}`} className="master_form_error">
                         {error}
                     </li>
                 ))}
@@ -189,6 +235,8 @@ class MasterForm extends Component {
     }
 
     render() {
+        const { errors } = this.state;
+
         let preview = null;
         if (this.state.photoUrl.length > 0) {
             preview = this.state.photoUrl.map((photo, idx) => {
@@ -208,6 +256,7 @@ class MasterForm extends Component {
                         id="title"
                         name="title"
                         type="text"
+                        value={this.state.title}
                         onChange={this.handleChange}
                         required
                     />
@@ -220,6 +269,7 @@ class MasterForm extends Component {
                         id="body"
                         name="body"
                         type="text"
+                        value={this.state.body}
                         onChange={this.handleChange}
                         maxLength="500"
                         cols='20'
@@ -238,6 +288,7 @@ class MasterForm extends Component {
                         id="price"
                         name="price"
                         type="number"
+                        value={this.state.group_size}
                         onChange={this.handleChange}
                         required
                     />
@@ -249,6 +300,7 @@ class MasterForm extends Component {
                         id="sites"
                         name="sites"
                         type="number"
+                        value={this.state.sites}
                         onChange={this.handleChange}
                         required
                     />
@@ -260,30 +312,33 @@ class MasterForm extends Component {
                         id="group_size"
                         name="group_size"
                         type="number"
+                        value={this.state.group_size}
                         onChange={this.handleChange}
                         required
                     />
                 </div>
                 <div className="form-group">
-                    <label className="form_group_title">Check In Time</label>
+                    <label className="form_group_title" htmlFor="check_in">Check In Time</label>
                     <input
                         className="form-control"
                         list="check_in"
                         id="check_in"
                         name="check_in"
                         type="time"
+                        value={this.state.check_in}
                         onChange={this.handleChange}
                         required
                     />
                 </div>
                 <div className="form-group">
-                    <label className="form_group_title">Check Out Time</label>
+                    <label className="form_group_title" htmlFor="check_out">Check Out Time</label>
                     <input
                         className="form-control"
                         list="check_out"
                         id="check_out"
                         name="check_out"
                         type="time"
+                        value={this.state.check_out}
                         onChange={this.handleChange}
                         required
                     />
@@ -295,6 +350,7 @@ class MasterForm extends Component {
                         id="address"
                         name="address"
                         type="text"
+                        value={this.state.address}
                         onChange={this.handleChange}
                         required
                     />
@@ -375,14 +431,21 @@ class MasterForm extends Component {
                     </div>                 
                 </div>
             </>
-                <input type="file" id="photo_upload" className="photo_upload" accept="image/*" onChange={(e) => this.setState({ photos: e.target.files })} multiple required/>
+                <input type="file" id="photo_upload" className="photo_upload" accept="image/*" onChange={(e) => this.setState({ photos: e.target.files })} multiple />
                 <label className="photo_upload_button" htmlFor="photo_upload"><i className="fas fa-camera"></i>Upload</label>
 
                 { preview }
                         
                 <div className="form_signup">
+                    <div className="host_form_errors">
+                        {errors.map(error => (
+                            <p key={error}> &#10060; {error}</p>
+                        ))}
+                    </div>
                     <input type="submit" className="form_signup_button" value="Create Spot" />
                 </div>
+
+                <div className="spot_error_message">{this.renderErrors()}</div>
                 
             </React.Fragment>
         }
@@ -402,7 +465,7 @@ class MasterForm extends Component {
             <div className="form_container">
                     <div className="spot_form_main">
                         <React.Fragment>
-                            <form className="form" onSubmit={this.handleSubmit}>
+                            <form className="form" onSubmit={this.handleSubmit} >
                             { step }
                             </form>
                         </React.Fragment>

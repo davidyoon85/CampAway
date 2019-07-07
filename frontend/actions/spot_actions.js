@@ -23,7 +23,7 @@ export const deleteSpot = (spotId) => dispatch => (
   APIUtil.deleteSpot(spotId).then(spotId => dispatch(destroySpot(spotId)))
 );
 
-export const receiveErrors = errors => ({
+export const receiveSpotErrors = errors => ({
   type: RECEIVE_SPOTS_ERRORS,
   errors
 });

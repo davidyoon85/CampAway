@@ -88,6 +88,7 @@
 
 .form_signup {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -97,4 +98,9 @@
 
 #check_out {
     font-family: $font-family;
+}
+
+.host_form_errors {
+    margin-bottom: 5%;
+    font-size: .8rem;
 }
