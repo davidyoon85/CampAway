@@ -1623,7 +1623,7 @@ div > h3 {
 }
 
 .infowindow-price {
-  font-size: 11px;
+  font-size: .8rem;
 }
 
 #infoWindowImage {
@@ -3963,7 +3963,7 @@ textarea {
 
 .spot_details_title {
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: 1rem;
   padding: 5px;
   width: 98%;
 }
@@ -3975,7 +3975,7 @@ textarea {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-size: .9em;
+  font-size: .8rem;
 }
 
 .spot_details_price {
