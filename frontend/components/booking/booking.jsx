@@ -63,7 +63,7 @@ class Booking extends Component {
         <ul className="booking-errors">
         {this.props.errors.map((error, idx) => (
           <li key={`error-${idx}`} className="bookings_error">
-            {error}
+            &#10060; {error}
           </li>
         ))}
       </ul>

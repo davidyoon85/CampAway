@@ -439,7 +439,7 @@ class MasterForm extends Component {
                 <div className="form_signup">
                     <div className="host_form_errors">
                         {errors.map(error => (
-                            <p key={error}> &#10060; {error}</p>
+                            <p key={error}>&#10060; {error}</p>
                         ))}
                     </div>
                     <input type="submit" className="form_signup_button" value="Create Spot" />
