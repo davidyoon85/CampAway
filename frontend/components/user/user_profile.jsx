@@ -80,11 +80,15 @@ class UserProfile extends Component {
                             <div className="bio_panel">
                                 <h3 id="bio_panel_name">{this.props.currentUser.first_name}!</h3>
                                 <br />
-                                <span id="heart_icon" className="fas fa-heart"></span>
-                                    CampAwayer since {startDate}
+                                <div className="bio_sections">
+                                    <span id="heart_icon" className="fas fa-heart"></span>
+                                    <nobr>CampAwayer since {startDate}</nobr>
+                                </div>
                                 <br/>
-                                <span id="marker_icon" className="fas fa-map-pin"></span>
-                                    From {this.state.city + ', ' + this.state.state}
+                                <div className="bio_sections">
+                                    <span id="marker_icon" className="fas fa-map-pin"></span>
+                                    <nobr>From {this.state.city + ', ' + this.state.state}</nobr>
+                                </div>
                             </div> 
                             <div className="panel_body">
                                 <h3 id="panel_body_header">Trusted Campawayer</h3>
@@ -119,11 +123,15 @@ class UserProfile extends Component {
                             <div className="bio_panel">
                                 <h3 id="bio_panel_name">{this.props.currentUser.first_name}!</h3>
                                 <br />
-                                <span id="heart_icon" className="fas fa-heart"></span>
-                                    CampAwayer since {startDate}
+                                <div className="bio_sections">
+                                    <span id="heart_icon" className="fas fa-heart"></span>
+                                    <nobr>CampAwayer since {startDate}</nobr>
+                                </div>
                                 <br/>
-                                <span id="marker_icon" className="fas fa-map-pin"></span>
-                                    From {this.state.city + ', ' + this.state.state}
+                                <div className="bio_sections">
+                                    <span id="marker_icon" className="fas fa-map-pin"></span>
+                                    <nobr>From {this.state.city + ', ' + this.state.state}</nobr>
+                                </div>
                             </div> 
                             <div className="panel_body">
                                 <h3 id="panel_body_header">Trusted Campawayer</h3>
@@ -183,11 +191,15 @@ class UserProfile extends Component {
                                 <div className="bio_panel">
                                     <h3 id="bio_panel_name">{this.props.currentUser.first_name}!</h3>
                                     <br />
-                                    <span id="heart_icon" className="fas fa-heart"></span>
-                                        CampAwayer since {startDate}
+                                    <div className="bio_sections">
+                                        <span id="heart_icon" className="fas fa-heart"></span>
+                                        <nobr>CampAwayer since {startDate}</nobr>
+                                    </div>
                                     <br/>
-                                    <span id="marker_icon" className="fas fa-map-pin"></span>
-                                        From {this.state.city + ', ' + this.state.state}
+                                    <div className="bio_sections">
+                                        <span id="marker_icon" className="fas fa-map-pin"></span>
+                                        <nobr>From {this.state.city + ', ' + this.state.state}</nobr>
+                                    </div>
                                 </div> 
                                 <div className="panel_body">
                                     <h3 id="panel_body_header">Trusted Campawayer</h3>

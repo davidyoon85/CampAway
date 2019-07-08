@@ -425,7 +425,7 @@ i {
 }
 
 #marker_icon {
-  padding: 10px 7px 0px 3px;
+  padding: 0px 7px 0px 3px;
 }
 
 #facebook_icon {
@@ -1743,6 +1743,15 @@ div > h3 {
 .panel_body h3 {
   font-weight: 400;
   font-size: .7rem;
+}
+
+.bio_sections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #email_icon {
