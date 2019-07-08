@@ -12,16 +12,16 @@ class MasterForm extends Component {
             currentStep: 1,
             title: '',
             body: '',
-            price: 0,
+            price: '',
             pets_allow: false,
-            group_size: 0,
+            group_size: '',
             check_in: '',
             check_out: '',
-            lat: 0,
-            long: 0,
+            lat: '',
+            long: '',
             campfire: false,
             tent: false,
-            sites: 0,
+            sites: '',
             parking: false,
             toilet: false,
             shower: false,
@@ -420,7 +420,7 @@ class MasterForm extends Component {
                 </div>
             </>
                 <input type="file" id="photo_upload" className="photo_upload" accept="image/*" onChange={(e) => this.setState({ photos: e.target.files })} multiple />
-                <label className="photo_upload_button" htmlFor="photo_upload"><i className="fas fa-camera"></i>Upload</label>
+                <label className="photo_upload_button" htmlFor="photo_upload"><i className="fas fa-camera"></i><span>Upload</span></label>
 
                 { preview }
                         

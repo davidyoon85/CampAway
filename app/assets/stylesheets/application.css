@@ -3752,7 +3752,9 @@ textarea {
 }
 
 .photo_upload + label {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   font-weight: 500;
   text-align: center;
@@ -3764,6 +3766,9 @@ textarea {
   transition: border 0.4s;
   margin-bottom: 5%;
   font-size: .7rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .photo_upload + label:hover {
@@ -3772,7 +3777,6 @@ textarea {
 
 @media (max-width: 1024px) {
   .photo_upload + label {
-    display: inline-block;
     width: 100%;
     font-weight: 500;
     text-align: center;
@@ -3793,10 +3797,15 @@ textarea {
   }
 }
 
+.photo_upload_button span {
+  margin: auto;
+  font-size: .8rem;
+}
+
 .fa-camera {
   color: #000;
   padding-right: 3px;
-  font-size: 0.6em;
+  font-size: 1.2rem;
 }
 
 .spot_search_container {
