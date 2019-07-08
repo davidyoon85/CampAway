@@ -1,4 +1,5 @@
 const path = require('path');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
     entry: './frontend/index.jsx',
@@ -18,6 +19,9 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new BundleAnalyzerPlugin()
+    ],
     devtool: 'eval-source-map',
     resolve: {
         extensions: ['.js', '.jsx', '*'],
