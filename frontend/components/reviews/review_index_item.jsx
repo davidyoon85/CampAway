@@ -1,15 +1,16 @@
 import React from 'react';
-import moment from 'moment';
 import { Link } from 'react-router-dom';
+import { format } from 'date-fns';
 
 const ReviewIndexItem = ({ review, deleteReview, currentUser }) => {
   if (review.user.id === currentUser) {
+    let createDate = format(review.created_at, 'MMMM Do, YYYY')
     return (
       <div className='review-index-item'>
         <div className='review-item-values'>
           <li className='review-user-name'>
             <div className="review_name">{review.user.first_name}</div>
-            <div className="review_date">{moment(review.created_at).format("MMMM Do, YYYY")}</div>
+            <div className="review_date">{createDate}</div>
           </li>
           <li className='review-user-description'>{review.description}</li>
         </div>
@@ -20,12 +21,13 @@ const ReviewIndexItem = ({ review, deleteReview, currentUser }) => {
       </div>
     )
   } else {
+    let createDate = format(review.created_at, 'MMMM Do, YYYY')
     return (
       <div className='review-index-item'>
         <div className='review-item-values'>
           <li className='review-user-name'>
             <div className="review_name">{review.user.first_name}</div>
-            <div className="review_date">{moment(review.created_at).format("MMMM Do, YYYY")}</div>
+            <div className="review_date">{createDate}</div>
           </li>
           <li className='review-user-description'>
             {review.description}

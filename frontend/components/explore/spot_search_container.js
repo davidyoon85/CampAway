@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import SpotSearch from './spot_search';
 import { fetchAllSpots } from '../../actions/spot_actions';
-import { selectSpots } from '../../reducers/selectors';
 import { updateFilter, receiveGeolocation } from '../../actions/location_filter_actions';
 import { clearAllFilters } from '../../actions/filter_actions';
 

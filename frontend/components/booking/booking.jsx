@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
-import moment from 'moment';
 import { formatDate, parseDate } from 'react-day-picker/moment';
 import { withRouter } from 'react-router-dom';
+import { format, differenceInDays } from 'date-fns';
 
 class Booking extends Component {
   constructor(props) {
@@ -25,12 +25,13 @@ class Booking extends Component {
       let checkInDate = this.state.check_in;
       let checkOutDate = this.state.check_out;
 
-      const num_days = moment(checkOutDate).diff(checkInDate, 'days');
+      const num_days = differenceInDays(checkOutDate, checkInDate);
+
       const booking = Object.assign({}, this.state);
       booking.guest_id = this.props.currentUserId;
       booking.spot_id = this.props.match.params.spotId;
       booking.total_price *= num_days
-      debugger
+
       this.props.makeBooking(booking)
         .then(() => this.props.fetchAllBookings())
         .then(() => this.props.history.push(`/users/${this.props.currentUserId}`));
@@ -39,7 +40,8 @@ class Booking extends Component {
 
     handleDateChange(type) {
       return day => {
-        let currentDay = moment(day).format("YYYY-MM-DD");
+        let currentDay = format(day, "YYYY-MM-DD");
+
         this.setState({ [type]: currentDay });
       };
     }
