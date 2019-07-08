@@ -414,6 +414,9 @@ i {
 }
 
 .fas {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   font-weight: 700;
 }
 
@@ -2669,7 +2672,7 @@ div > h3 {
 }
 
 .search_icon {
-  font-size: 20px;
+  font-size: 1.4rem;
   position: relative;
   color: #000;
   float: left;
@@ -2709,7 +2712,7 @@ div > h3 {
 @media (max-width: 700px) {
   .search_bar_main {
     width: 90%;
-    height: 7vh;
+    height: 9vh;
   }
 }
 
@@ -2801,7 +2804,7 @@ div > h3 {
   color: #000;
   float: left;
   padding: 0px 15px 0px 15px;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2812,13 +2815,13 @@ div > h3 {
 
 @media (max-width: 1024px) {
   .search_bar_icon {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 }
 
 @media (max-width: 700px) {
   .search_bar_icon {
-    font-size: .8rem;
+    font-size: 1.2rem;
   }
 }
 

@@ -50,7 +50,7 @@ class Splash extends Component {
                 </div>
 
                 <div className="search_bar_main">
-                    <i className="fas fa-search fa-lg search_bar_icon"></i>
+                    <i className="fas fa-search search_bar_icon"></i>
                     <form className="search_form" onSubmit={this.handleSubmit}>
                         <input placeholder="Try New York..." className="search_bar" onChange={this.update('searchParams')}
                             value={this.state['searchParams']}/>

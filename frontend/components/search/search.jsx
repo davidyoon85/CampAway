@@ -32,7 +32,7 @@ class Search extends Component {
     } else {
       return (
        <div className="search_container">
-         <i className="fas fa-search fa-xs search_icon"></i>
+         <i className="fas fa-search search_icon"></i>
          <form className="search_form" onSubmit={this.handleSubmit}>
            <input placeholder="Search..." className="search_nav_bar" onChange={this.update('searchParams')}
              value={this.state['searchParams']}
