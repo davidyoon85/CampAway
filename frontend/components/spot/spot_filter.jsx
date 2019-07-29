@@ -5,9 +5,6 @@ import { withRouter } from 'react-router-dom';
 class SpotFilter extends Component {
   constructor(props) {
     super(props)
-    this.toggle = this.toggle.bind(this);
-    this.handlePricingFilter = this.handlePricingFilter.bind(this);
-    this.handleGroupFilter = this.handleGroupFilter.bind(this);
 
     this.state = {
       pets_allow: false,
@@ -27,6 +24,10 @@ class SpotFilter extends Component {
       group10: false,
       group20: false
     }
+
+    this.toggle = this.toggle.bind(this);
+    this.handlePricingFilter = this.handlePricingFilter.bind(this);
+    this.handleGroupFilter = this.handleGroupFilter.bind(this);
 
     this.showAmenities = this.showAmenities.bind(this);
     this.hideAmenities = this.hideAmenities.bind(this);

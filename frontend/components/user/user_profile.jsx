@@ -51,7 +51,7 @@ class UserProfile extends Component {
         })
     }
 
-    render() {        
+    render() {      
         let numTrips = Object.keys(this.props.bookings).length;
         let tripName = '';
         
@@ -184,6 +184,14 @@ class UserProfile extends Component {
                 )
             } else {
                 let reviewArr = Object.values(this.props.reviews);
+                let spotReviews = []
+                this.props.spots.forEach(spot => {
+                    if (spot.reviews.length > 0) {
+                        spotReviews = spotReviews.concat(spot.reviews)
+                    }
+                })
+                let userReview = spotReviews.filter(review => review.author === 260)
+                debugger
                 return (
                     <div className="user_profile_container">
                         <div className="user_booking_spot">

@@ -140,7 +140,7 @@ class MasterForm extends Component {
         if (photos.length === 0) errors.push("Upload at least 1 photo.")
 
         return errors;
-      }
+    }
 
     handleClick(event) {
         event.preventDefault();
