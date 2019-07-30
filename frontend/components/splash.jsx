@@ -158,15 +158,15 @@ class Splash extends Component {
                                 </div>
 
                                 <div className="social_link_li">
-                                    <a href="https://github.com/davidyoon85" className="social_link"><i className="fab fa-github"> Github</i></a>
+                                    <a href="https://github.com/davidyoon85" className="social_link"><i className="fab fa-github">&nbsp; Github</i></a>
                                 
                                 </div>
                                 <div className="social_link_li">
-                                    <a href="https://www.linkedin.com/in/davidyoon85" className="social_link"><i className="fab fa-linkedin"> Linkedin</i></a>
+                                    <a href="https://www.linkedin.com/in/davidyoon85" className="social_link"><i className="fab fa-linkedin">&nbsp; Linkedin</i></a>
                                 
                                 </div>
                                 <div className="social_link_li">
-                                    <a href="https://davidyoon85.github.io" className="social_link"><i id="portfolio_link" className="fas fa-user"> Portfolio</i></a>
+                                    <a href="https://davidyoon85.github.io" className="social_link"><i id="portfolio_link" className="fas fa-user"> &nbsp; Portfolio</i></a>
                                   
                                 </div>
                             </div>
