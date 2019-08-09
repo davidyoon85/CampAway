@@ -1,38 +1,32 @@
-export const fetchReviews = spotId => (
+export const fetchReviews = spotId =>
   $.ajax({
-    method: 'GET',
+    method: "GET",
     url: `api/spots/${spotId}/reviews`
-  })
-);
+  });
 
-export const fetchReview = reviewId => (
+export const fetchReview = reviewId =>
   $.ajax({
-    method: 'GET',
+    method: "GET",
     url: `api/reviews/${reviewId}`
-  })
-);
+  });
 
-export const createReview = (spotId, review) => (
+export const createReview = (spotId, review) =>
   $.ajax({
-    method: 'POST',
+    method: "POST",
     url: `api/spots/${spotId}/reviews`,
-    data: {review}
-  })
-);
+    data: { review }
+  });
 
-export const updateReview = (spotId, review) => (
+export const updateReview = (spotId, review) =>
   $.ajax({
-    method: 'PATCH',
+    method: "PATCH",
     url: `api/spots/${spotId}/reviews/${review.id}`,
-    data: {review}
-  })
-);
+    data: { review }
+  });
 
 export const deleteReview = reviewId => {
-  return (
-    $.ajax({
-      method: 'DELETE',
-      url: `api/reviews/${reviewId}`
-    })
-  )
+  return $.ajax({
+    method: "DELETE",
+    url: `api/reviews/${reviewId}`
+  });
 };

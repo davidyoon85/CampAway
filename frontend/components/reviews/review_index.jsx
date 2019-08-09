@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import ReviewIndexItem from './review_index_item';
+import ReviewIndexItem from "./review_index_item";
 
 class ReviewIndex extends Component {
   constructor(props) {
-        super(props)
-    }
+    super(props);
+  }
 
   componentDidMount() {
     window.scrollTo(0, 0);
@@ -13,27 +13,25 @@ class ReviewIndex extends Component {
   }
 
   render() {
-    if (!this.props.reviews) {
+    const { reviews, deleteReview, currentUser } = this.props;
+
+    if (!reviews) {
       return null;
     }
-    const spotId = this.props.match.params.spotId
+    const spotId = this.props.match.params.spotId;
 
-    const reviews = Object.values(this.props.reviews).map(review => {
+    const reviewsList = Object.values(reviews).map(review => {
       return (
         <ReviewIndexItem
           key={review.id}
           review={review}
-          deleteReview={this.props.deleteReview}
-          currentUser={this.props.currentUser}
+          deleteReview={deleteReview}
+          currentUser={currentUser}
         />
-      )
-    })
+      );
+    });
 
-    return (
-      <ul className="reviews_container">
-        {reviews}
-      </ul>
-    );
+    return <ul className="reviews_container">{reviewsList}</ul>;
   }
 }
 

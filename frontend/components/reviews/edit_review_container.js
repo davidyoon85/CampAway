@@ -1,16 +1,20 @@
-import { connect } from 'react-redux';
-import { fetchReview, updateReview, deleteReview } from '../../actions/review_actions';
-import { fetchSingleSpot } from '../../actions/spot_actions';
-import EditReview from './edit_review';
-import { withRouter } from 'react-router';
+import { connect } from "react-redux";
+import {
+  fetchReview,
+  updateReview,
+  deleteReview
+} from "../../actions/review_actions";
+import { fetchSingleSpot } from "../../actions/spot_actions";
+import EditReview from "./edit_review";
+import { withRouter } from "react-router";
 
 const mapStateToProps = (state, ownProps) => {
   return {
     reviews: state.entities.reviews,
     review: state.entities.reviews[ownProps.match.params.reviewId],
     current_user: state.session.id,
-    spot: state.entities.spots[ownProps.match.params.spotId],
-  }
+    spot: state.entities.spots[ownProps.match.params.spotId]
+  };
 };
 
 const mapDispatchToProps = dispatch => ({
@@ -20,4 +24,7 @@ const mapDispatchToProps = dispatch => ({
   fetchSingleSpot: spotId => dispatch(fetchSingleSpot(spotId))
 });
 
-export default connect(mapStateToProps,mapDispatchToProps)(withRouter(EditReview));
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withRouter(EditReview));

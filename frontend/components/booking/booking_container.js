@@ -1,8 +1,12 @@
-import { connect } from 'react-redux';
-import { makeBooking, deleteBooking, fetchAllBookings} from '../../actions/booking_actions';
-import { fetchSingleSpot } from '../../actions/spot_actions';
-import { openModal } from '../../actions/modal_actions';
-import Booking from './booking';
+import { connect } from "react-redux";
+import {
+  makeBooking,
+  deleteBooking,
+  fetchAllBookings
+} from "../../actions/booking_actions";
+import { fetchSingleSpot } from "../../actions/spot_actions";
+import { openModal } from "../../actions/modal_actions";
+import Booking from "./booking";
 
 const mapStateToProps = (state, ownProps) => {
   const spot = state.entities.spots[ownProps.spotId] || {};
@@ -12,7 +16,7 @@ const mapStateToProps = (state, ownProps) => {
     spots: state.entities.spots,
     spot,
     errors: state.errors.bookings
-  }
+  };
 };
 
 const mapDispatchToProps = dispatch => {
@@ -25,4 +29,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Booking);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Booking);

@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import { withRouter } from 'react-router-dom';
-import { applyFilters } from '../../util/filter_util';
+import { withRouter } from "react-router-dom";
+import { applyFilters } from "../../util/filter_util";
 
-import SpotIndexItem from './spot_index_item';
+import SpotIndexItem from "./spot_index_item";
 
 class SpotIndex extends Component {
   constructor(props) {
-      super(props);
+    super(props);
 
-      this.state = {
-        loading: true
-      }
+    this.state = {
+      loading: true
+    };
   }
 
   componentDidMount() {
@@ -25,24 +25,24 @@ class SpotIndex extends Component {
     if (filteredSpots.length === 0) {
       return (
         <div className="spot_index">
-          <div className='spot_index_empty'>
+          <div className="spot_index_empty">
             <h2> No spots match your current search. </h2>
           </div>
         </div>
-      )
+      );
     } else {
       return (
-          <div className="spot_index">
-            {filteredSpots.map((spot) => (
-              <SpotIndexItem 
-                push={this.props.history.push} 
-                spot={spot} 
-                key={spot.id} 
-                user={this.props.user}
-              />
-            ))}
-          </div>
-      )
+        <div className="spot_index">
+          {filteredSpots.map(spot => (
+            <SpotIndexItem
+              push={this.props.history.push}
+              spot={spot}
+              key={spot.id}
+              user={this.props.user}
+            />
+          ))}
+        </div>
+      );
     }
   }
 }

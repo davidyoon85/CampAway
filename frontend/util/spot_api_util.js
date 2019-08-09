@@ -1,40 +1,34 @@
-export const fetchAllSpots = () => (
+export const fetchAllSpots = () =>
   $.ajax({
-    method: 'GET',
-    url: '/api/spots',
-  })
-);
+    method: "GET",
+    url: "/api/spots"
+  });
 
-export const fetchSingleSpot = (id) => (
+export const fetchSingleSpot = id =>
   $.ajax({
-    method: 'GET',
-    url: `/api/spots/${id}`,
-  })
-);
+    method: "GET",
+    url: `/api/spots/${id}`
+  });
 
-export const hostSpot = (formData) => {
-  return (
-  $.ajax({
-    url: '/api/spots',
-    method: 'POST',
+export const hostSpot = formData => {
+  return $.ajax({
+    url: "/api/spots",
+    method: "POST",
     data: formData,
     contentType: false,
     processData: false
-  })
-  )
+  });
 };
 
-export const deleteSpot = (spotId) => (
+export const deleteSpot = spotId =>
   $.ajax({
-    method: 'DELETE',
+    method: "DELETE",
     url: `/api/spots/${spotId}`
-  })
-);
+  });
 
-export const fetchSearchSpots = (searchParams) => (
+export const fetchSearchSpots = searchParams =>
   $.ajax({
     method: "GET",
     url: "api/spots",
     data: { searchParams }
-  })
-);
+  });

@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import DayPickerInput from 'react-day-picker/DayPickerInput';
-import { formatDate, parseDate } from 'react-day-picker/moment';
-import { withRouter } from 'react-router-dom';
-import { format, differenceInDays } from 'date-fns';
+import React, { Component } from "react";
+import DayPickerInput from "react-day-picker/DayPickerInput";
+import { formatDate, parseDate } from "react-day-picker/moment";
+import { withRouter } from "react-router-dom";
+import { format, differenceInDays } from "date-fns";
 
 class Booking extends Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class Booking extends Component {
     this.state = {
       num_guests: 1,
       total_price: this.props.spot.price
-    }
+    };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDateChange = this.handleDateChange.bind(this);
@@ -20,64 +20,69 @@ class Booking extends Component {
     e.preventDefault();
 
     if (!this.props.currentUserId) {
-      this.props.openModal('login')
+      this.props.openModal("login");
     } else {
-      let checkInDate = this.state.check_in;
-      let checkOutDate = this.state.check_out;
+      const { check_in, check_out } = this.state;
 
-      const num_days = differenceInDays(checkOutDate, checkInDate);
+      const num_days = differenceInDays(check_out, check_in);
 
       const booking = Object.assign({}, this.state);
       booking.guest_id = this.props.currentUserId;
       booking.spot_id = this.props.match.params.spotId;
-      booking.total_price *= num_days
+      booking.total_price *= num_days;
 
-      this.props.makeBooking(booking)
+      this.props
+        .makeBooking(booking)
         .then(() => this.props.fetchAllBookings())
-        .then(() => this.props.history.push(`/users/${this.props.currentUserId}`));
-      }  
+        .then(() =>
+          this.props.history.push(`/users/${this.props.currentUserId}`)
+        );
     }
+  }
 
-    handleDateChange(type) {
-      return day => {
-        let currentDay = format(day, "YYYY-MM-DD");
+  handleDateChange(type) {
+    return day => {
+      let currentDay = format(day, "YYYY-MM-DD");
 
-        this.setState({ [type]: currentDay });
-      };
-    }
+      this.setState({ [type]: currentDay });
+    };
+  }
 
-    nextDay(day) {
-      const nextDay = new Date(day)
-      nextDay.setDate(day.getDate()+2)
-      return nextDay
-    }
+  nextDay(day) {
+    const nextDay = new Date(day);
+    nextDay.setDate(day.getDate() + 2);
+    return nextDay;
+  }
 
-    handleNumGuests(change) {
-      return e => {
-        if (change === '+' && (this.state.num_guests + 1 <= this.props.spot.group_size)) {
-          this.setState({ num_guests: (this.state.num_guests += 1) });
-        } else if (change === '-' && (this.state.num_guests - 1 >= 1)) {
-          this.setState({ num_guests: (this.state.num_guests -= 1) });
-        }
+  handleNumGuests(change) {
+    const { num_guests } = this.props;
+    return e => {
+      if (change === "+" && num_guests + 1 <= this.props.spot.group_size) {
+        this.setState({ num_guests: (num_guests += 1) });
+      } else if (change === "-" && num_guests - 1 >= 1) {
+        this.setState({ num_guests: (num_guests -= 1) });
       }
-    }
+    };
+  }
 
-    renderErrors() {
-      return (
-        <ul className="booking-errors">
+  renderErrors() {
+    return (
+      <ul className="booking-errors">
         {this.props.errors.map((error, idx) => (
           <li key={`error-${idx}`} className="bookings_error">
             &#10060; {error}.
           </li>
         ))}
       </ul>
-      )
-    }
+    );
+  }
 
   render() {
     const { spot } = this.props;
     const today = new Date();
-    const checkIn = this.state.check_in ? this.nextDay(new Date(this.state.check_in)) : this.nextDay(today)
+    const checkIn = this.state.check_in
+      ? this.nextDay(new Date(this.state.check_in))
+      : this.nextDay(today);
 
     return (
       <div className="widget_container">
@@ -93,39 +98,41 @@ class Booking extends Component {
                   <div className="label">Check in</div>
                   <DayPickerInput
                     formatDate={formatDate}
-                    parseDate={parseDate}       
-                    onDayChange={this.handleDateChange('check_in')}
+                    parseDate={parseDate}
+                    onDayChange={this.handleDateChange("check_in")}
                     placeholder="Select Date"
                     dayPickerProps={{
-                      disabledDays: { 
+                      disabledDays: {
                         before: today
                       }
                     }}
                   />
                 </div>
                 <div className="booking_checkout">
-                <div className="label">Check out</div>
+                  <div className="label">Check out</div>
 
-                <DayPickerInput
-                  formatDate={formatDate}
-                  parseDate={parseDate}  
-                  onDayChange={this.handleDateChange('check_out')}
-                  placeholder="Select Date"
-                  dayPickerProps={{
-                    month: checkIn,
+                  <DayPickerInput
+                    formatDate={formatDate}
+                    parseDate={parseDate}
+                    onDayChange={this.handleDateChange("check_out")}
+                    placeholder="Select Date"
+                    dayPickerProps={{
+                      month: checkIn,
                       disabledDays: {
                         before: checkIn
                       }
-                  }}
-                />
+                    }}
+                  />
                 </div>
 
                 <div className="booking_guests">
                   <div className="label">Guests</div>
                   <div className="widget_guests">
-                    <a onClick={this.handleNumGuests('-')}>-</a>
-                    <p className="booking_num_guests">{this.state.num_guests}</p>
-                    <a onClick={this.handleNumGuests('+')}>+</a>
+                    <a onClick={this.handleNumGuests("-")}>-</a>
+                    <p className="booking_num_guests">
+                      {this.state.num_guests}
+                    </p>
+                    <a onClick={this.handleNumGuests("+")}>+</a>
                   </div>
                 </div>
               </div>
@@ -133,14 +140,18 @@ class Booking extends Component {
               <div className="booking_error_message">{this.renderErrors()}</div>
 
               <div className="booking_submit">
-                <input className="widget_button" type="submit" value="Request to book"/>
+                <input
+                  className="widget_button"
+                  type="submit"
+                  value="Request to book"
+                />
               </div>
             </div>
           </div>
         </form>
       </div>
-    )
+    );
   }
 }
 
-export default withRouter(Booking)
+export default withRouter(Booking);

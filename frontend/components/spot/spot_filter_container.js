@@ -1,6 +1,6 @@
-import { connect } from 'react-redux';
-import SpotFilter from './spot_filter';
-import { fetchAllSpots } from '../../actions/spot_actions';
+import { connect } from "react-redux";
+import SpotFilter from "./spot_filter";
+import { fetchAllSpots } from "../../actions/spot_actions";
 import {
   receiveSingleFilter,
   removeSingleFilter,
@@ -9,12 +9,11 @@ import {
   removePricingFilter,
   receiveGroupFilter,
   removeGroupFilter
-  } from '../../actions/filter_actions';
-
+} from "../../actions/filter_actions";
 
 const mapStateToProps = state => ({
-  filters: state.ui.filters,
-})
+  filters: state.ui.filters
+});
 
 const mapDispatchToProps = dispatch => ({
   fetchAllSpots: () => dispatch(fetchAllSpots()),
@@ -24,7 +23,10 @@ const mapDispatchToProps = dispatch => ({
   removePricingFilter: amount => dispatch(removePricingFilter(amount)),
   receiveGroupFilter: amount => dispatch(receiveGroupFilter(amount)),
   removeGroupFilter: amount => dispatch(removeGroupFilter(amount)),
-  clearAllFilters: () => dispatch(clearAllFilters()),
-})
+  clearAllFilters: () => dispatch(clearAllFilters())
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(SpotFilter)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SpotFilter);
