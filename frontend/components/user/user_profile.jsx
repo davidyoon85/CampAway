@@ -13,8 +13,7 @@ class UserProfile extends Component {
       state: "",
       zipCode: this.props.currentUser.zip_code,
       trips: true,
-      reviews: false,
-      userReviews: []
+      reviews: false
     };
 
     this.tripsButton = this.tripsButton.bind(this);
@@ -52,28 +51,33 @@ class UserProfile extends Component {
     });
   }
 
-  render() {
-    const { bookings, reviews, deleteReview, deleteBooking } = this.props;
+  getUserReviews() {
+    const reviews = [];
+    this.props.spots.forEach(spot => {
+      if (spot.reviews.length) {
+        reviews.push(...spot.reviews);
+      }
+    });
 
+    const userReviews = reviews.filter(
+      spot => spot.author == this.props.match.params.userId
+    );
+
+    return userReviews;
+  }
+
+  render() {
+    const { bookings, deleteReview, deleteBooking } = this.props;
+
+    let userReviews = this.getUserReviews();
     let numTrips = Object.keys(bookings).length;
     let tripName = "";
-
-    if (numTrips === 1) {
-      tripName = "Trip";
-    } else {
-      tripName = "Trips";
-    }
-
-    let numReviews = Object.keys(reviews).length;
+    let numReviews = userReviews.length;
     let reviewName = "";
-
-    if (numReviews === 1) {
-      reviewName = "Review";
-    } else {
-      reviewName = "Reviews";
-    }
-
     let startDate = format(this.props.currentUser.created_at, "MMMM YYYY");
+
+    numTrips === 1 ? (tripName = "Trip") : (tripName = "Trips");
+    numReviews === 1 ? (reviewName = "Review") : (reviewName = "Reviews");
 
     if (Object.values(bookings).length === 0) {
       return (
@@ -241,7 +245,8 @@ class UserProfile extends Component {
           </div>
         );
       } else {
-        let reviewArr = Object.values(reviews);
+        let reviewArr = userReviews;
+
         return (
           <div className="user_profile_container">
             <div className="user_booking_spot">
