@@ -246,6 +246,11 @@ class UserProfile extends Component {
         );
       } else {
         let reviewArr = userReviews;
+        reviewArr.sort(function compare(b, a) {
+          var dateA = new Date(a.check_in);
+          var dateB = new Date(b.check_in);
+          return dateA - dateB;
+        });
 
         return (
           <div className="user_profile_container">
