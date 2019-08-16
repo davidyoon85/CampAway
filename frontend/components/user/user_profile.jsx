@@ -247,8 +247,8 @@ class UserProfile extends Component {
       } else {
         let reviewArr = userReviews;
         reviewArr.sort(function compare(b, a) {
-          var dateA = new Date(a.check_in);
-          var dateB = new Date(b.check_in);
+          var dateA = new Date(a.created_at);
+          var dateB = new Date(b.created_at);
           return dateA - dateB;
         });
 
