@@ -249,7 +249,7 @@ class UserProfile extends Component {
         reviewArr.sort(function compare(b, a) {
           var dateA = new Date(a.created_at);
           var dateB = new Date(b.created_at);
-          return dateA - dateB;
+          return dateB - dateA;
         });
 
         return (
