@@ -14,6 +14,7 @@ class Booking extends Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDateChange = this.handleDateChange.bind(this);
+    this.handleNumGuests = this.handleNumGuests.bind(this);
   }
 
   handleSubmit(e) {
@@ -55,12 +56,13 @@ class Booking extends Component {
   }
 
   handleNumGuests(change) {
-    const { num_guests } = this.props;
+    const { num_guests } = this.state;
+    let guests = num_guests;
     return e => {
       if (change === "+" && num_guests + 1 <= this.props.spot.group_size) {
-        this.setState({ num_guests: (num_guests += 1) });
+        this.setState({ num_guests: (guests += 1) });
       } else if (change === "-" && num_guests - 1 >= 1) {
-        this.setState({ num_guests: (num_guests -= 1) });
+        this.setState({ num_guests: (guests -= 1) });
       }
     };
   }
@@ -128,11 +130,11 @@ class Booking extends Component {
                 <div className="booking_guests">
                   <div className="label">Guests</div>
                   <div className="widget_guests">
-                    <a onClick={this.handleNumGuests("-")}>-</a>
+                    <a onClick={this.handleNumGuests("-")}> - </a>
                     <p className="booking_num_guests">
                       {this.state.num_guests}
                     </p>
-                    <a onClick={this.handleNumGuests("+")}>+</a>
+                    <a onClick={this.handleNumGuests("+")}> + </a>
                   </div>
                 </div>
               </div>
