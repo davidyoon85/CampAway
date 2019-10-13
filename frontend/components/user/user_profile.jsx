@@ -43,14 +43,16 @@ class UserProfile extends Component {
   }
 
   getAddressInfoByZip(zip) {
-    debugger;
-    geocodeByAddress(zip).then(results => {
-      debugger;
-      return this.setState({
-        city: results[0].address_components[1].long_name,
-        state: results[0].address_components[2].short_name
+    geocodeByAddress(zip)
+      .then(results => {
+        return this.setState({
+          city: results[0].address_components[1].long_name,
+          state: results[0].address_components[2].short_name
+        });
+      })
+      .catch(err => {
+        console.error("Invalid Zip Code Provided.");
       });
-    });
   }
 
   getUserReviews() {
