@@ -17,12 +17,13 @@ export const createReview = (spotId, review) =>
     data: { review }
   });
 
-export const updateReview = (spotId, review) =>
-  $.ajax({
+export const updateReview = (spotId, review) => {
+  return $.ajax({
     method: "PATCH",
     url: `api/spots/${spotId}/reviews/${review.id}`,
     data: { review }
   });
+};
 
 export const deleteReview = reviewId => {
   return $.ajax({

@@ -85,7 +85,7 @@ class Booking extends Component {
     const checkIn = this.state.check_in
       ? this.nextDay(new Date(this.state.check_in))
       : this.nextDay(today);
-
+    debugger;
     return (
       <div className="widget_container">
         <form onSubmit={this.handleSubmit}>

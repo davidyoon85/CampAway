@@ -28,7 +28,6 @@ class EditReview extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
     this.props
       .updateReview(this.props.match.params.spotId, this.state)
       .then(() => this.goBack());
@@ -44,14 +43,6 @@ class EditReview extends Component {
   }
 
   render() {
-    const { review, spot } = this.props;
-    if (!review) {
-      return null;
-    }
-
-    if (!spot) {
-      return null;
-    }
     return (
       <div className="create_review_form">
         <div className="review_spot_title">{this.props.spot.title}</div>
