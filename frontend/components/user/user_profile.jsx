@@ -43,7 +43,9 @@ class UserProfile extends Component {
   }
 
   getAddressInfoByZip(zip) {
+    debugger;
     geocodeByAddress(zip).then(results => {
+      debugger;
       return this.setState({
         city: results[0].address_components[1].long_name,
         state: results[0].address_components[2].short_name
@@ -96,7 +98,12 @@ class UserProfile extends Component {
                 <br />
                 <div className="bio_sections">
                   <span id="marker_icon" className="fas fa-map-pin" />
-                  <nobr>From {this.state.city + ", " + this.state.state}</nobr>
+                  <nobr>
+                    From{" "}
+                    {this.state.city
+                      ? this.state.city + ", " + this.state.state
+                      : "Invalid Zip Code"}
+                  </nobr>
                 </div>
               </div>
               <div className="panel_body">
