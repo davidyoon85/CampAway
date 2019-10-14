@@ -9,17 +9,27 @@ import Spinner from "../loader/spinner";
 class SpotIndex extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      loading: true
+    };
   }
 
   componentDidMount() {
     window.scrollTo(0, 0);
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.filters.location !== this.props.filters.location) {
+      this.setState({ loading: false });
+    }
+  }
+
   render() {
     const { spots, filters } = this.props;
     const filteredSpots = applyFilters(filters, spots);
 
-    if (spots.length === 0)
+    if (this.state.loading)
       return (
         <div className="spot_index">
           <Spinner />
