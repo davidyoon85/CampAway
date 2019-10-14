@@ -18,7 +18,7 @@ class SpotIndex extends Component {
   render() {
     const { spots, filters } = this.props;
     const filteredSpots = applyFilters(filters, spots);
-    debugger;
+
     if (spots.length === 0)
       return (
         <div className="spot_index">
