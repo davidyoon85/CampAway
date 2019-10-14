@@ -15,21 +15,22 @@
  *= require application.css
  */
 
- @import 'layout/base';
- @import 'layout/nav';
- @import 'layout/footer';
- @import 'layout/modal';
- @import 'layout/splash';
- 
- @import 'abstracts/daypicker';
- @import 'abstracts/booking_widget';
- @import 'abstracts/slick';
- @import 'abstracts/map_marker';
+@import "layout/base";
+@import "layout/nav";
+@import "layout/footer";
+@import "layout/modal";
+@import "layout/splash";
 
- @import 'components/booking';
- @import 'components/host_spot';
- @import 'components/review';
- @import 'components/search';
- @import 'components/spot';
- @import 'components/spot_form';
- @import 'components/spot_search';
+@import "abstracts/daypicker";
+@import "abstracts/booking_widget";
+@import "abstracts/slick";
+@import "abstracts/map_marker";
+
+@import "components/booking";
+@import "components/host_spot";
+@import "components/review";
+@import "components/search";
+@import "components/spot";
+@import "components/spot_form";
+@import "components/spot_search";
+@import "components/loader";

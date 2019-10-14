@@ -4,14 +4,11 @@ import { withRouter } from "react-router-dom";
 import { applyFilters } from "../../util/filter_util";
 
 import SpotIndexItem from "./spot_index_item";
+import Spinner from "../loader/spinner";
 
 class SpotIndex extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      loading: true
-    };
   }
 
   componentDidMount() {
@@ -21,7 +18,13 @@ class SpotIndex extends Component {
   render() {
     const { spots, filters } = this.props;
     const filteredSpots = applyFilters(filters, spots);
-
+    debugger;
+    if (spots.length === 0)
+      return (
+        <div className="spot_index">
+          <Spinner />
+        </div>
+      );
     if (filteredSpots.length === 0) {
       return (
         <div className="spot_index">

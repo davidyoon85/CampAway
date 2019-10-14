@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import MarkerManager from "../../util/marker_manager";
-import { fetchAllSpots } from "../../actions/spot_actions";
 import { applyFilters } from "../../util/filter_util";
 
 class SpotMap extends Component {
@@ -14,13 +13,12 @@ class SpotMap extends Component {
   }
 
   componentDidMount() {
-    fetchAllSpots();
     let mapCenter = { lat: 40.751626, lng: -73.983926 };
     const mapOptions = {
       center: mapCenter,
       zoom: 11
     };
-    let geoLocation = this.props.geoLocation;
+
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
     this.MarkerManager.updateMarkers(this.props.spots);
