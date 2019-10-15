@@ -19,22 +19,10 @@ class SpotIndex extends Component {
     window.scrollTo(0, 0);
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevProps.filters.location !== this.props.filters.location) {
-      this.setState({ loading: false });
-    }
-  }
-
   render() {
     const { spots, filters } = this.props;
     const filteredSpots = applyFilters(filters, spots);
 
-    if (this.state.loading)
-      return (
-        <div className="spot_index">
-          <Spinner />
-        </div>
-      );
     if (filteredSpots.length === 0) {
       return (
         <div className="spot_index">
