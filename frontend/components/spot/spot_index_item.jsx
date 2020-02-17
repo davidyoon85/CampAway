@@ -19,7 +19,7 @@ class SpotIndexItem extends Component {
     if (!this.props.spot.photoUrls) {
       this.props.spot.photoUrls = defaultPhoto;
     }
-    debugger;
+
     return (
       <div
         className="spot_index_item"
