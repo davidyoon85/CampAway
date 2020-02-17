@@ -16,11 +16,11 @@ export const fetchAllBookings = () => dispatch => (
 
 export const makeBooking = (booking) => dispatch => (
   APIUtil.createBooking(booking).then(booking => (
-      dispatch(receiveBooking(booking))
+    dispatch(receiveBooking(booking))
   ), err => (
     dispatch(receiveBookingErrors(err.responseJSON))
   ))
-); 
+);
 
 export const deleteBooking = (bookingId) => dispatch => {
   APIUtil.deleteBooking(bookingId).then(

@@ -28,6 +28,7 @@ class EditReview extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    debugger;
     this.props
       .updateReview(this.props.match.params.spotId, this.state)
       .then(() => this.goBack());
