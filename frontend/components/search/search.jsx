@@ -1,52 +1,42 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
 
-class Search extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      searchParams: ""
-    };
+function Search(props) {
+  const [searchParams, setSearchParams] = useState("");
 
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.update = this.update.bind(this);
-  }
-
-  update(field) {
-    return e =>
-      this.setState({
-        [field]: e.currentTarget.value
-      });
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-    this.props.receiveGeolocation(e.target.children[0].value);
-    this.props.history.push("/spots");
-  }
-
-  render() {
-    if (
-      this.props.location.pathname === "/host" ||
-      this.props.location.pathname.includes("review")
-    ) {
-      return null;
-    } else {
-      return (
-        <div className="search_container">
-          <i className="fas fa-search search_icon" />
-          <form className="search_form" onSubmit={this.handleSubmit}>
-            <input
-              placeholder="Search..."
-              className="search_nav_bar"
-              onChange={this.update("searchParams")}
-              value={this.state["searchParams"]}
-            />
-          </form>
-        </div>
-      );
+  function update() {
+    return e => {
+      setSearchParams(e.currentTarget.value);
     }
   }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    props.receiveGeolocation(e.target.children[0].value);
+    props.history.push("/spots");
+  }
+
+  if (
+    props.location.pathname === "/host" ||
+    props.location.pathname.includes("review")
+  ) {
+    return null;
+  } else {
+    return (
+      <div className="search_container">
+        <i className="fas fa-search search_icon" />
+        <form className="search_form" onSubmit={handleSubmit}>
+          <input
+            placeholder="Search..."
+            className="search_nav_bar"
+            onChange={update()}
+            value={searchParams}
+          />
+        </form>
+      </div>
+    );
+  }
+
 }
 
 export default withRouter(Search);
