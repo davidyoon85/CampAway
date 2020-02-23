@@ -53,19 +53,19 @@ class Greeting extends Component {
             </div>
           </div>
         ) : (
-          <ul className="user_session">
-            <li>
-              <button onClick={() => this.props.openModal("signup")}>
-                Sign up
+            <ul className="user_session">
+              <li>
+                <button onClick={() => this.props.openModal("signup")}>
+                  Sign up
               </button>
-            </li>
-            <li>
-              <button onClick={() => this.props.openModal("login")}>
-                Log in
+              </li>
+              <li>
+                <button onClick={() => this.props.openModal("login")}>
+                  Log in
               </button>
-            </li>
-          </ul>
-        )}
+              </li>
+            </ul>
+          )}
       </>
     );
   }

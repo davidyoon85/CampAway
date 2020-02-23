@@ -1,51 +1,45 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 
-class CreateReview extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      description: ""
-    };
+function CreateReview(props) {
+  const [description, setDescription] = useState('')
 
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  componentDidMount() {
+  useEffect(() => {
     window.scrollTo(0, 0);
-    this.props.fetchSingleSpot(this.props.match.params.spotId);
-  }
+    props.fetchSingleSpot(props.match.params.spotId);
+  }, [])
 
-  update(field) {
+  function update() {
     return e => {
-      this.setState({ [field]: e.target.value });
+      setDescription(e.target.value)
     };
   }
 
-  handleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault();
-    this.props
-      .createReview(this.props.match.params.spotId, this.state)
+
+    let payload = { 'description': description }
+    props.createReview(props.match.params.spotId, payload)
       .then(() =>
-        this.props.history.push(`/spots/${this.props.match.params.spotId}`)
+        props.history.push(`/spots/${props.match.params.spotId}`)
       );
   }
 
-  render() {
-    if (!this.props.spot) {
-      return null;
-    }
+  if (!props.spot) {
+
+    return null;
+  } else {
 
     return (
       <div className="create_review_form">
-        <div className="review_spot_title">{this.props.spot.title}</div>
-        <form className="review_form" onSubmit={this.handleSubmit}>
+        <div className="review_spot_title">{props.spot.title}</div>
+        <form className="review_form" onSubmit={handleSubmit}>
           <textarea
             className="review_description"
             cols="50"
             rows="10"
             maxLength="500"
-            value={this.state.description}
-            onChange={this.update("description")}
+            value={description}
+            onChange={update()}
             placeholder="Leave a review about your experience here!"
           />
           <input
@@ -57,6 +51,8 @@ class CreateReview extends Component {
       </div>
     );
   }
+
+
 }
 
 export default CreateReview;
