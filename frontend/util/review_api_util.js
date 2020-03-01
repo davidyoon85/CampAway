@@ -10,12 +10,13 @@ export const fetchReview = reviewId =>
     url: `api/reviews/${reviewId}`
   });
 
-export const createReview = (spotId, review) =>
-  $.ajax({
+export const createReview = (spotId, review) => {
+  return $.ajax({
     method: "POST",
     url: `api/spots/${spotId}/reviews`,
     data: { review }
   });
+};
 
 export const updateReview = (spotId, review) => {
   return $.ajax({
