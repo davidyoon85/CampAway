@@ -1,39 +1,35 @@
-import React, { Component } from "react";
+import React from "react";
 
 import SpotMap from "./spot_map";
 import SpotIndex from "../spot/spot_index";
 import SpotFilterContainer from "../spot/spot_filter_container";
 
-class SpotSearch extends Component {
-  constructor(props) {
-    super(props);
-  }
+function SpotSearch({ spots, fetchAllSpots, filters, updateFilter, clearAllFilters, geoLocation, receiveGeolocation }) {
 
-  render() {
-    return (
-      <div className="spot_search_container">
-        <SpotFilterContainer />
+  return (
+    <div className="spot_search_container">
+      <SpotFilterContainer />
 
-        <div className="spot_search_main">
-          <SpotIndex
-            spots={this.props.spots}
-            fetchAllSpots={this.props.fetchAllSpots}
-            filters={this.props.filters}
-            updateFilter={this.props.updateFilter}
-            clearAllFilters={this.props.clearAllFilters}
-          />
+      <div className="spot_search_main">
+        <SpotIndex
+          spots={spots}
+          fetchAllSpots={fetchAllSpots}
+          filters={filters}
+          updateFilter={updateFilter}
+          clearAllFilters={clearAllFilters}
+        />
 
-          <SpotMap
-            spots={this.props.spots}
-            geoLocation={this.props.geoLocation}
-            filters={this.props.filters}
-            updateFilter={this.props.updateFilter}
-            receiveGeolocation={this.props.receiveGeolocation}
-          />
-        </div>
+        <SpotMap
+          spots={spots}
+          geoLocation={geoLocation}
+          filters={filters}
+          updateFilter={updateFilter}
+          receiveGeolocation={receiveGeolocation}
+        />
       </div>
-    );
-  }
+    </div>
+  );
+
 }
 
 export default SpotSearch;
