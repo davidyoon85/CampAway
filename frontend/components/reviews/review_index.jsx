@@ -6,7 +6,7 @@ function ReviewIndex(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
     props.fetchReviews(props.match.params.spotId);
-  }, [])
+  }, []);
 
   const { reviews, deleteReview, currentUser } = props;
 
